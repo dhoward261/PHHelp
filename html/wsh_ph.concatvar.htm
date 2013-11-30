@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.concatvar</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.concatvar Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Concatenates a string to a system variable.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.concatvar ( type, id, string )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+The type of the system variable.  1 denotes a local variable, 2 denotes a temp variable, and 3 denotes a global variable.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The number of the system variable.  1 thru 10 are valid for local and temp variables.  1 thru 20 are valid for global variables.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+string
+
+</td>
+<td class=ph9>
+
+The string that you would like to concatenate to the system variable.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the value of the system variable after the string has been concatenated to it.  
+
+</body>
+</html>
+

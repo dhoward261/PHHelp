@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sendsmtpemail</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sendsmtpemail PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends an email message using SMTP.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sendsmtpemail ( s, n, s, s, s, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The IP or DSN of the SMTP server.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The port of the SMTP server.  This is typically port 25.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The email address you are sending the email from.  Most SMTP servers require you to enter a valid email address registered on the SMTP server.  You may optionally enter a userid and password if your SMTP server requires authentication.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The email addresses you wish to send a message to.  Separate multiple email addresses with commas.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The subject of the email.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The text of the email message.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful.  Any other value signifies an error occurred.  You can specify multiple recipients by separating the email addresses with commas.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to send email using raw SMTP rather than the MAPI interface that the ph_sendemail function uses.  If an error occurs while sending using SMTP, the PowerHome system will not hang like it does when sending using MAPI.
+<br><br>
+If your SMTP server requires authentication, then supply the userid and password in the third parameter after the "From" email address.  Separate the "from" email address, userid, and password with commas (do not add spaces).
+
+</div>
+</body>
+</html>
+

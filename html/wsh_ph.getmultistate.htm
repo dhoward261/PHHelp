@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.getmultistate</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.getmultistate Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the value of a Multi-state input point defined in the Analog I/O screen.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.getmultistate ( id )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the multi-state input as defined within the Analog I/O screen.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns the value associated with ID of the specified multi-state input.  Returns - 100 if the ID cannot be found. When this function is executed, the controller, unit, and point is looked up within the Analog I/O table and these values are then passed to the controller. If these values are entered improperly in the Analog I/O screen, then the following errors may be returned:  - 1 is returned if the controller is not available, - 3 is returned if the unit is out of range, - 4 is returned if the point is out of range. 
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to return the raw state of Elk multi-state inputs (0, 1, 2, or 3).  Elk multi-state inputs are defined within the Analog I/O screen as "Elk Input".  The multi-state input functions go direct to the controller to access the value stored there.  Use the ph.getanalog and ph.getotheranalog functions to get the data stored within the PowerHome database for multi-state inputs.
+
+</div>
+</body>
+</html>

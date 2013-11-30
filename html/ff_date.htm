@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>date</title>
+</head>
+<body>
+<div class=ph1>
+
+date PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Converts a string whose value is a valid date to a value of data type date.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+date ( string )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+string
+
+</td>
+<td class=ph9>
+
+A string containing a valid date (such as Jan 1, 1998, or 12-31-99) that you want returned as a date
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Date. Returns the date in string as a date. If string does not contain a valid date, Date returns NULL.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The value of the string must be a valid date.
+<br><br>
+Valid dates can include any combination of day (1-31), month (1-12 or the name or abbreviation of a month), and year (two or four digits). Leading zeros are optional for month and day. If the month is a name or an abbreviation, it can come before or after the day; if it is a number, it must be in the month location specified in the Windows control panel. A 4-digit number is assumed to be a year.
+
+<br><br>
+An expression has a more limited set of data types than the functions that can be part of the expression. Although the Date function returns a date value, the whole expression is promoted to a DateTime value. Therefore, if your expression consists of a single Date function, it will appear that Date returns the wrong data type. 
+
+</div>
+</body>
+</html>
+

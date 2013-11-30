@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>setprofilestring</title>
+</head>
+<body>
+<div class=ph1>
+
+setprofilestring PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Creates or modifies a value within an INI file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+setprofilestring ( filename, section, key, value )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+filename
+
+</td>
+<td class=ph9>
+
+A string containing the full path and filename of the INI file.  If you don't include the full path, then PowerHome searches the path for filename.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+section
+
+</td>
+<td class=ph9>
+
+A string containing the section to modify.  If section does not exist, PowerHome will create it.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+key
+
+</td>
+<td class=ph9>
+
+A string containing the key within a section to modify.  If key does not exist, PowerHome will create it.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+A string containing the value you wish assigned to the key.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 1 if successful and - 1 if the filename cannot be found or accessed.
+
+</div>
+</body>
+</html>

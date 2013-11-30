@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sendemailfile</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sendemailfile PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends an email message with file attachments.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sendemailfile ( s, s, s, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The email addresses you wish to send a message to.  Separate multiple email addresses with commas.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The subject of the email.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The text of the email message.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The full path and filename of the file to attach to the email.  Separate multiple files with the | (vertical bar) character.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful, 1 if an error occurred while logging in to the mail system, and 2 if an error occurred while sending the email message.  You can specify multiple recipients by separating the email addresses with commas.  Specify multiple files by separating the path/filename with the | (vertical bar) character.
+
+</div>
+</body>
+</html>
+

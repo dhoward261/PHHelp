@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setsystemvar</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_setsystemvar PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the value of a system variable.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_setsystemvar ( s, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the system variable you would like to modify.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string which you would like assigned to the system variable.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful and a 1 if the system variable is undefined.  Not all system variables can be modified by the user.  Examples of non-modifiable system variables are the multi-x X10P0 thru X10P19 system variables as well as MBRET, DIALUPIP, etc.
+
+</body>
+</html>
+

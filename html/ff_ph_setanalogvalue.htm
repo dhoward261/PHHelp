@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setanalogvalue</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_setanalogvalue PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Allows the setting of the raw value, the calc value, and the calc message along with the optional firing of any triggers of Analog device types.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_setanalogvalue ( id, value, calcvalue, calcmsg, flags )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the analog device type.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+Long.  The raw value to set the analog device type to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+calcvalue
+
+</td>
+<td class=ph9>
+
+String.  The calc value to set for the specified analog device.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+calcmsg
+
+</td>
+<td class=ph9>
+
+String.  The calc message to set for the analog device.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+flags
+
+</td>
+<td class=ph9>
+
+Integer.  The flags for controlling which values are used and how the function performs.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns 0 if successful.  Returns 1 if the ID cant be found and 2 if an error occurs while updating the analogio table.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to directly set the values of an analog device type without using a controller.<br><br>The flags parameter is the sum of individual flag values.  These flag values are:<br><br>
+<b>1</b> - Update the raw value with the supplied raw value.<br>
+<b>2</b> - Update the calc value with the supplied calc value.<br>
+<b>4</b> - Update the calc message with the supplied calc message.<br>
+<b>8</b> - Update the Device Status screen and any Remote DS clients with the new values.<br>
+<b>16</b> - Fire any triggers associated with the updating of the specified analog device type.<br><br>
+The proper flags value to update an analog device's raw value, calc value, and update the Device Status screen would be 11 (1 + 2 + 8).  No triggers will be fired and the calc message will be unchanged.
+<b>32</b> - Apply the calctoraw formula to the calcvalue and set the raw value.<br>
+<b>64</b> - Apply the rawtocalc formula to the value and set the calcvalue.<br>
+
+</div>
+</body>
+</html>

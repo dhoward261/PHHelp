@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getsystemvar</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getsystemvar PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves a system variable and returns the value as a string.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getsystemvar ( s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the system variable you wish to retrieve.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  The data stored within the system variable will be returned as a string.  All system variables are available except for the expanded multi-x variables.  The standard X10P0 thru X10P19 and X10P0TIME thru X10P9TIME are available and return the multi-x values stored within the Global multi-x buffer.  If you need to retrieve a housecode specific multi-x value, use the ph_multix function.
+
+</body>
+</html>
+

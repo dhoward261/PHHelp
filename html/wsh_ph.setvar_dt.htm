@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.setvar_dt</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.setvar_dt Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the value of a LOCAL, TEMP, or GLOBAL system variable with a datetime value.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.setvar_dt ( n, n, dt )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The type of system variable you would like to set.  Valid values are 1 for LOCAL variables, 2 for TEMP variables, and 3 for GLOBAL variables.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The number of the appropriate system variable.  Valid values are 1 – 10 for LOCAL and TEMP variables and 1 – 20 for GLOBAL variables.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+dt
+
+</td>
+<td class=ph9>
+
+The datetime value you would like to have stored.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful and a 1 the system variable is undefined.  You must pass the value to be stored as a datetime.  All LOCAL, TEMP, and GLOBAL variables are stored internally as strings and this value will be converted.  A mask of ‘yyyy-mm-dd hh:mm:ss.fff’ will be applied.
+
+</body>
+</html>
+

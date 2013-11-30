@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_multix</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_multix PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Gets values from a previous incoming X-10 buffer.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_multix ( s, start, length )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the buffer you wish to access.  Use “” for the global buffer.  Use "EXT" for the extended buffer.  Use “A” for housecode A, etc.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+start
+
+</td>
+<td class=ph9>
+
+An integer identifying the start of the command you wish returned.  A value of 1 will return commands starting with the most recent command.  A value of 20 will return starting with the oldest command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+length
+
+</td>
+<td class=ph9>
+
+An integer identifying the number of commands to return.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  The returned commands in the format of housecode, unitcode, and command.  If the last command was housecode K, unitcode 5, command on, the returned value would be “K0502”.  If the length is greater than 1, then the commands are returned one after the other as a single string.  For the extended buffer, the returned data is in the form of unit and data.  For example, if the unit is 145 and the data is 32, the returned value would be "145032".
+
+</body>
+</html>
+

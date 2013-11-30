@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.getdigital</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.getdigital Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the value of an digital input / output defined in the Digital I/O screen.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.getdigital ( id )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the digital I/O as defined within the Digital I/O screen.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns the status of the digital I/O if successful (0 = off, 1 = on). Returns - 100 if the ID cannot be found.   When this function is executed, the controller, unit, and point is looked up within the Digital I/O table and these values are then passed to the controller.  If these values are entered improperly in the Digital I/O screen, then the following errors may be returned:  - 1 is returned if the controller is not available, - 2 is returned if the controller does not support digital I/O, - 3 is returned if the unit is out of range, - 4 is returned if the point is out of range.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function is similar to the ph.getotherdigital function except that the point MUST be defined within the Digital I/O screen.
+
+</div>
+</body>
+</html>

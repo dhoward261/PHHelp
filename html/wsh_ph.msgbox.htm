@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.msgbox</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.msgbox Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Displays a message box window.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.msgbox ( title, message, timeout )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+title
+
+</td>
+<td class=ph9>
+
+String.  The title to display within the title bar of the window.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+message
+
+</td>
+<td class=ph9>
+
+String.  The text to display within the body of the window.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+timeout
+
+</td>
+<td class=ph9>
+
+Integer.  The number of seconds for the window to display before automatically closing itself.  Use 0 for the window to not close itself automatically.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to quickly display a message to the user.  It is important to note that this function DOES not wait for the user to press a button or the window to timeout.  PowerHome execution WILL NOT be halted and will continue as normal.  There is NO way to detect if the user has closed the window or if the window has timed out short of programatically looping and checking for the existance of the window.  This function is intended ONLY for the display of informational text.  If you wish to display messages and continue processing after the user has closed the message box, use the macro command "Message Box".
+
+</div>
+</body>
+</html>

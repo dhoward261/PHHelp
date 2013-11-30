@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_locatehandle</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_locatehandle PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Locates and returns the handle of a process identifed by the specified parameters.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_locatehandle ( parentexe, parentclass, parenttitle, parentinstance, parentflags, childclass, childtitle, childinstance, childflags )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentexe
+
+</td>
+<td class=ph9>
+
+String.  A string representing the filename of the parent processes executable.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentclass
+
+</td>
+<td class=ph9>
+
+String.  The class of the process that is the parent of the process to be located.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parenttitle
+
+</td>
+<td class=ph9>
+
+String.  The title of the window that is the parent of the process to be located.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentinstance
+
+</td>
+<td class=ph9>
+
+Integer.  The instance of the parent whose child process you're locating.  The first instance is 0.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentflags
+
+</td>
+<td class=ph9>
+
+Integer.  Flags representing which of the previous parameters to use for locating the parent.  Individual values should be added.  1 - Use parentexe, 2 - Use parentclass, 4 - Use parenttitle exact, 8 - Use parenttitle partial.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+childclass
+
+</td>
+<td class=ph9>
+
+String.  The class of the child process you're searching for.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+childtitle
+
+</td>
+<td class=ph9>
+
+String.  The title of the child process you're searching for.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+childinstance
+
+</td>
+<td class=ph9>
+
+Integer.  The instance of the child process you're searching for.  The first instance is 0.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+childflags
+
+</td>
+<td class=ph9>
+
+Integer.  Flags that determine which of the child parameters to use.  Individual values should be added.  If the handle to locate is identified by the parent, use 0 to ignore the child parameters.  1 - Use child parameters, 2 - Use childclass, 4 - Use childtitle exact, 8 - Use childtitle partial.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns the handle of the located process.  Use the PowerHome "Object Spy" window for help in populating this function.
+
+</div>
+</body>
+</html>

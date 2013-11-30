@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>case</title>
+</head>
+<body>
+<div class=ph1>
+
+case PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Tests the values of a column or expression and returns values based on the results of the test.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+case ( expression WHEN value1 THEN result1 { WHEN value2 THEN result2  { ... } } { ELSE resultelse } )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+expression
+
+</td>
+<td class=ph9>
+
+The expression whose values you want to test  Expression is compared to each valuen.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+WHEN (optional)
+
+</td>
+<td class=ph9>
+
+Introduces a value-result pair. At least one WHEN is required.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+valuen
+
+</td>
+<td class=ph9>
+
+One or more values that you want to compare to values of expression. A value can be:
+<div class=ph14>A single value</div>
+<div class=ph14>A list of values separated by commas (for example, 2, 4, 6, 8)	A TO clause (for example, 1 TO 20) IS followed by a relational operator and comparison value (for example, IS>5)</div>
+<div class=ph14>Any combination of the above with an implied OR between expressions (for example, 1,3,5,7,9,27 TO 33, IS>42)</div>
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+THEN
+
+</td>
+<td class=ph9>
+
+Introduces the result to be returned when column matches the corresponding valuen
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+resultn
+
+</td>
+<td class=ph9>
+
+An expression whose value is returned by Case for the corresponding valuen. All resultn values must have the same data type.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+ELSE (optional)
+
+</td>
+<td class=ph9>
+
+Specifies that for any values of column that don't match the values of valuen already specified, Case returns resultelse.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+resultelse
+
+</td>
+<td class=ph9>
+
+An expression whose value is returned by Case when the value of column doesn't match any WHEN valuen expression.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+The data type of resultn. Returns the result you specify in resultn.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+If more than one WHEN clause matches column, Case returns the result of the first matching one.
+
+</div>
+</body>
+</html>

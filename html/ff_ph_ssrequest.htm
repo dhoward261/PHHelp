@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_ssrequest</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_ssrequest PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+This function makes properly formatted requests to a PowerHome Socket Server (Another instance of PowerHome or the Distributed Control Client).
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_ssrequest ( s, n, s, s, s, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The IP or DNS equivalent of the Socket Server.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The port of the Socket Server
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The userid of the Socket Server
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The password for the Socket Server
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The Socket Server request type.  (The DCC only supports the "FORMULA" request type)
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The actual data to pass to the Socket Server.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the value returned from the remote Socket Server.
+
+</div>
+</body>
+</html>

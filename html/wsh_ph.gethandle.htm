@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.gethandle</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.gethandle Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns the handle of an internal PowerHome window.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.gethandle ( type )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+An integer representing the particular window whose handle you wish to be returned.  Use 0 for the PowerHome frame window (returns same value as ph.handle).  Use 1 for the Client Control Center.  Use 2 for the Device Status window.  Use 3 for the PowerHome Web window.  Use 4 for the Insteon Explorer window.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long. Returns the Windows handle of the specified window.  Returns 0 if the window is not open or an invalid type is specified.
+
+</div>
+</body>
+</html>

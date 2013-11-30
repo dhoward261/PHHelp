@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_htmlcolor</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_htmlcolor PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns the HTML hexadecimal equivalent of a combined RGB color.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_htmlcolor ( n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+A long value representing a color.  This color value is determined by combining Red, Green, and Blue values ranging from 0 to 255 using the following formula: Red + (Green * 256) + (Blue * 65536).
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the HTML hexadecimal equivalent of the combined RGB color in the form of #RRGGBB.  For example: If you had a color value of 255 (pure red) then the output from this function would be #FF0000.
+
+</div>
+</body>
+</html>
+

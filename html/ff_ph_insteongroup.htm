@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_insteongroup</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_insteongroup PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends commands to an Insteon PLC group using the group ID.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_insteongroup ( id, cmd1, cmd2 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of PLC Insteon Group.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+cmd1
+
+</td>
+<td class=ph9>
+
+Integer.  The command 1 to send to the group.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+cmd2
+
+</td>
+<td class=ph9>
+
+Integer.  The command 2 to send to the group.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns a 0 if successful. -1 is returned if the controller is not available, -2 is returned if the controller does not support Insteon, -100 is returned if the group ID cannot be found.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this funciton to send Insteon commands to a PLC group. Valid commands are 17 for on, 18 for fast on, 19 for off, 20 for fast off, 21 to brighten, and 22 to dim. You can also use the enumerated values: ion, ifaston, ioff, ifastoff, ibright, idim. Set cmd2 to 0 for all cmd1 values. Using a cmd1 value of 17 will cause the group to turn on to their individual group values using their individual ramprates. An 18 command (ifaston) causes all devices in the group to go full on ignoring the ramprate.  Add 1000 to the standard Insteon commands to always force a group cleanup regardless of the controller setting.  Add 2000 to the standard Insteon commands to never send a group cleanup regardless of the controller setting.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_directsql</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_directsql PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Execute SQL directly against the PowerHome database.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_directsql ( sql )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+sql
+
+</td>
+<td class=ph9>
+
+A string containing a valid SQL statement.  Inserts, Updates, and Deletes are all valid.  See ph_sqlselect to perform Selects against the database.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if the SQL was successfully executed.  Otherwise a value equivalent to the SQL error when attempting to execute the SQL is returned.
+
+</body>
+</html>
+

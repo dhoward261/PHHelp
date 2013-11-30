@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sql</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sql PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Executes a SQL statement against the PowerHome database and return the resultset as a string.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sql ( type, sql )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+Integer.  The format in which you want the data returned.  0 for tab separated columns with cr/lf separated lines, 1 for comma separated columns and rows, 2 for XML data, and 3 for HTML table.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+sql
+
+</td>
+<td class=ph9>
+
+String.  A string containing the SQL select statement to run.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the data formatted based upon the type parameter.
+
+</div>
+</body>
+</html>

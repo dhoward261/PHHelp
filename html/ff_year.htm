@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>year</title>
+</head>
+<body>
+<div class=ph1>
+
+year PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Gets the year of a date value.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+year ( date )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+date
+
+</td>
+<td class=ph9>
+
+The date value from which you want the year
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns an integer whose value is a 4-digit year adapted from the year portion of date if it succeeds and 1900 if an error occurs.
+<br><br>
+If the year is two digits, then the century is chosen as follows. If the year is between 00 to 49, PowerHome assumes 20 as the first two digits; if it is between 50 and 99, PowerHome assumes 19.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Obtains the year portion of date. PowerHome handles years from 1000 to 3000 inclusive.
+
+<br><br>
+If your data includes dates before 1950, such as birth dates, always specify a 4-digit year so that year and other functions interpret the date as intended
+<br><br>
+ 
+</body>
+</html>
+

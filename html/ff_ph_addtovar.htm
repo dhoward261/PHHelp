@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_addtovar</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_addtovar PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Adds a value to a system variable
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_addtovar ( type, id, value )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+The type of the system variable.  1 denotes a local variable, 2 denotes a temp variable, and 3 denotes a global variable.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The number of the system variable.  1 thru 10 are valid for local and temp variables.  1 thru 20 are valid for global variables.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+A positive or negative double value that you want the system variable adjusted by.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Double.  Returns the value of the system variable after it has been adjusted by value.  This function should only be used when it is known that the system variable contains numeric data.
+
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.setglobal_dt</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.setglobal_dt Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the value of a global variable with a datetime value.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.setglobal_dt ( s, dt )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the ID of the global variable to set.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+dt
+
+</td>
+<td class=ph9>
+
+A datetime value which you would like assigned to the specified global variable.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful and a 1 if an error occurred while updating the global variable.  The value to be stored must be a datetime value.  All global variables are stored internally as strings and will be converted.  This value will have a mask of ‘yyyy-mm-dd hh:mm:ss.fff’ applied.
+
+</body>
+</html>
+

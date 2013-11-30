@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.replaceallmulti</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.replaceallmulti Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Searchs and replaces text within a string of data.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.replaceallmulti ( input, search, replace )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+input
+
+</td>
+<td class=ph9>
+
+String.  The data to be searched and replaced.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+search
+
+</td>
+<td class=ph9>
+
+String.  A ~255 separated list of searches.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+replace
+
+</td>
+<td class=ph9>
+
+String.  A ~255 separated list of replaces.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Returns the input string after all replacements have been completed.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to search and replace all occurences of data.  You can search and replace multiple different searches by separating them with the PowerHome escape character ~255.  If you have fewer replaces than you have searches, then the last replace will be used for the remaining searches.
+
+</div>
+</body>
+</html>

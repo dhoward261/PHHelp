@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Insteon Explorer - KPL Config</title>
+</head>
+<body>
+<div class=ph1>
+
+Insteon Explorer - KPL Config
+
+</div>
+
+<div class=ph2>
+
+<a name="kplconfig">KPL Config</a>
+
+</div>
+
+<p>This screen allows you to configure the KeyPadLincs (KPL's) in your Insteon network.  To read the current settings of a KPL, double-click the desired KPL from the list below.  You may set the local level and ramprate as well as the X10 address.  You can also set the KPL to be either 6 or 8 button mode as well as the intra-button linking and toggle versus non-toggle buttons.<br><br>When a KPL is in 6 button mode, it effectively has a total of 5 groups (1, 3, 4, 5, and 6).  The wide top and bottom buttons are group 1 with the top button being a non-toggle on and the bottom being a non-toggle off.  In 8 button mode, the KPL has 8 groups from 1 to 8 with each button defaulting to a toggle on/off button.  Group 1 is always the local load.<br><br>When in 6 button mode, buttons 3, 4, 5, and 6 can be set to either toggle, non-toggle on, or non-toggle off.  When in 8 button mode, all 8 buttons can be set the same as 6 button mode's 3 thru 6.<br><br>You may configure buttons other than group 1 to control the local load but the current versions of KPL's do not allow any dim level other than what was last used so you cannot setup a KPL to have a button control the local load with 25%, 50%, 75%, and 100% settings.  For this type of functionality, it would be recommended to have the desired load controlled by either an InlineLinc or SwitchLinc and then have the KPL send group commands to the device controlling the load.<br><br>To set buttons as toggle, non-toggle on, and non-toggle off: The current versions of KPL's have a flaw where the current status of a button as non-toggle on or non-toggle off cannot be determined.  All that can be known is that the button is either toggle or non-toggle.  This same flaw also prevents us from setting in software whether the button will be non-toggle on or non-toggle off.  All we can do is set a button as toggle or non-toggle.  To set a button as non-toggle on or non-toggle off, first start with the buttons as standard toggle buttons.  Then go to the KPL and manually press the buttons until the buttons you wish to set as non-toggle on are lit and the buttons you wish to set as non-toggle off are not lit.  Go back to this util and then set the appropriate buttons from toggle to either non-toggle on or non-toggle off.  It doesnt matter (other than the button is not set to be toggle) as the button will be set as non-toggle on or non-toggle off based upon the current status of the button's lights.<br><br>To setup intrabutton linking: Intra-button linking allows you to set a KPL's buttons to control one another.  Keep in mind that intra-button linking in no way trigger's the group controlled by a button and ONLY controls the status of the button's light.  If you wish to have a secondary button (a button other than group 1) control the main button (group 1), then you must do both intra-button linking as well as create a link with the secondary button as a controller and the main button as a responder.  To control the lights of secondary buttons from other secondary buttons or the main button, you only need to do intra-button linking.  Placing a check in the "LED On" box will cause the light of the button to track the light of the controlling button.  For example: If you place a check in LED On boxes 3 and 4 of button 5, then when button 5 is on, both button 3 and 4 will be on.  When button 5 is off, both button 3 and 4 will be off.  By placing a check in the "LED Off" box, the checked buttons will be off when the controlling button is on.  In the preceding example, if the checks are in LED Off of 3 and 4 of the Button 5 group, then when button 5 is turned on, buttons 3 and 4 will turn off if they were on.  Turning button 5 off, will not have an effect on buttons 3 and 4.  Numerous combinations can be obtained by checking the various LED On and LED Off boxes of the button groups and experimentation will likely be necessary to achieve desired results.</p>
+
+</body>
+</html>

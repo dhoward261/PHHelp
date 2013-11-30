@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Insteon Explorer - Manual Linking</title>
+</head>
+<body>
+<div class=ph1>
+
+Insteon Explorer - Manual Linking
+
+</div>
+
+<p>The Manual Linking tab allows a user to experiment with the new commands for automatically linking Insteon devices without pressing the "Set" button or using the older "Poke" commands.  Only the very newest Insteon devices support these commands and the bugs are still being worked out.  This screen may be useful for creating links between new, third party Insteon devices that do not support the "poke" memory method of link creation.</p>
+
+<p>Manual Linking in no way updates the PowerHome database as is done using the "Links" tab and currently is in experimental status.</p>
+
+<div class=ph2>
+
+<a name="plcclink">PLC as Controller Linking</a>
+
+</div>
+
+<p>Pressing the "Launch" button will place the currently connected PowerHome PLC into "link" mode as a "Controller" for the currently selected "PLC Group Number".  The "link" will be complete if you press and hold another Insteon device's "set" button or by placing a device that supports it into "All-link" mode (see below).</p>
+
+<div class=ph2>
+
+<a name="plcrlink">PLC as Responder Linking</a>
+
+</div>
+
+<p>Pressing the "Link" button will cause the PLC to be linked as a "responder" to any device that is currently in link mode as a "Controller".</p>
+
+<div class=ph2>
+
+<a name="plccunlink">PLC as Controller Un-Linking</a>
+
+</div>
+
+<p>Pressing the "Launch" button will place the currently connected PowerHome PLC into "unlink" mode.  Once the PLC is in "unlink" mode, placing any other Insteon device into "link" mode will cause that device to "unlink" from the PLC if it was previously linked.</p>
+
+<div class=ph2>
+
+<a name="plcrunlink">PLC as Responder Un-Linking</a>
+
+</div>
+
+<p>Pressing the "Un-Link" button will cause the PLC to "unlink" from a device that is currently in "unlink" as a controller mde.</p>
+
+<div class=ph2>
+
+<a name="alllink">All-Linking</a>
+
+</div>
+
+<p>Allows you to place a remote device (that supports the new command set) into either "link" or "unlink" mode programmatically without having to press a device's "set" button.  Select the Device ID, the group number, and then press either "Link" or "Un-Link" as appropriate.</p>
+
+</body>
+</html>

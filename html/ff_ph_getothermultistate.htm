@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getothermultistate</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getothermultistate PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the value of a Multi-state input point defined in the Analog I/O screen.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getothermultistate ( id, unit, point )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the controller whiose multi-state input you wish to have returned.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+unit
+
+</td>
+<td class=ph9>
+
+The Unit of multi-state input.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+point
+
+</td>
+<td class=ph9>
+
+The Point of the multi-state input.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns the value associated with the specified multi-state input.  Returns - 1 if the specified ontroller ID cannot be found.  - 3 is returned if the unit is out of range, - 4 is returned if the point is out of range. 
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to return the raw state of Elk multi-state inputs (0, 1, 2, or 3).  Elk multi-state inputs are defined within the Analog I/O screen as "Elk Input".  This function is similar to the ph_getmultistate function except that the multi-state input does not have to be defined within the Analog I/O screen.  The multi-state input functions go direct to the controller to access the value stored there.  Use the ph_getanalog and ph_getotheranalog functions to get the data stored within the PowerHome database for multi-state inputs.
+
+</div>
+</body>
+</html>

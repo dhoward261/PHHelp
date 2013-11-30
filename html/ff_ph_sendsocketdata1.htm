@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sendsocketdata1</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sendsocketdata1 PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends and retrieves data using a socket to a remote IP/ Port.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sendsocketdata1 ( url, port, flags, data )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+url
+
+</td>
+<td class=ph9>
+
+String.  The IP or hostname of the remote device to communicate with.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+port
+
+</td>
+<td class=ph9>
+
+Long.  The Port of the remote device to communicate with.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+flags
+
+</td>
+<td class=ph9>
+
+Integer.  Flags controlling how the function performs.  Indivdual flag values are added together to create the Flags value.  Use 0 to have the function return on "CloseConnection".  Use 1 to have the function return on "SendComplete".  Use 2 to have special characters translated before sending.  Use 4 to have special characters returned translated.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+String.  The data to send via a socket to the remote device.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns data from the remote device.  If an error occurs, it will be in the form: "*ERROR* - XXX".  Special characters can be sent using this function by converting them to 3 digit ASCII and escaping the sequence with a '\' character.  So to send a carriage return as part of the data, use \013 and be sure to include a 2 in the flags sum.  If the data being returned by the function is likely to contain characters outside of the normal character range (32 to 125) then add a 4 to the flags sum so that these characters will be returned in the escaped 3 digit ASCII form.  Keep in mind if you are using escaped characters that the backslash character (\) must now be escaped as \092.<br><br>You may also encode special characters in a hexadecimal format rather than a decimal format.  In this case, the escape sequence consists of the "\" character followed by either an upper or lower case "x" followed by two upper or lower case hexadecimal digits.  A carriage return using the hex format would be \x0D.  You must also include a 2 in the flags sum as is the case with decimal escape codes.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this funciton to send and receive raw data using sockets.
+
+</div>
+</body>
+</html>

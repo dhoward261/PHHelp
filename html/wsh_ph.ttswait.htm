@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ttswait</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ttswait Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Pauses the specified number of milliseconds or until the default TTS engine is done speaking.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ttswait ( ms )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+ms
+
+</td>
+<td class=ph9>
+
+Long.  The number of milliseconds in which to wait.  Use - 1 to wait indefinately until speaking is done.  If the speaking is done before the timeout value, the function will return.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if the function returns because speaking was done.  Returns 1 if the function returns because of a timeout.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function when speaking TTS asynchronously and you wish to pause PowerHome execution.
+
+</div>
+</body>
+</html>

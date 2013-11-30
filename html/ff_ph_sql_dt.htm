@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sql_dt</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sql_dt PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Executes a SQL statement against the PowerHome database and returns the result as a datetime.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sql_dt ( sql )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+sql
+
+</td>
+<td class=ph9>
+
+String.  A string containing the SQL select statement to run.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+DateTime.  Returns the result as a datetime value.  The SQL may return multiple rows, but only data from the first row will be returned by the function.  The SQL should only return a single column of data.
+
+</div>
+</body>
+</html>

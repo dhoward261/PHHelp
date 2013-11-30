@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sendkeysmq</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sendkeysmq PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Simulates keystrokes directly to a handle by posting WM_KEYDOWN messages to the handles message queue.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sendkeysmq ( n, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The handle you wish keystrokes sent to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing the send keys commands to generate.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function uses the same send keys commands as the ph_sendkeys function.  However, this function can simulate keystrokes to applications that are minimized or do not currently have focus.  Note that using this method of generating keystrokes is not quite the same as ph_sendkeys.  For example:  To send keystrokes to a Notepad window, you would typically use ph_switchto to bring the Notepad window to the foreground and then use ph_sendkeys.  To send these same keystrokes using ph_sendkeysmq, you must first identify the handle of the "Edit" box within the notepad window (typically using ph_findwindow to retrieve the handle of the Notepad window followed by ph_findwindowex to retrieve the handle of the "Edit" window).
+
+</div>
+</body>
+</html>

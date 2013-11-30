@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.webaddblob</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.webaddblob Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Adds blob data to a PSP blob output page.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.webaddblob ( type, parm1 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+The type of blob data to add.  Use 1 to convert parm1 string data into blob data.  Use 2 to read the file specified in parm1 into the blob output.  Use 3 to retrieve the URL specified in parm1 into the blob output.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm1
+
+</td>
+<td class=ph9>
+
+String.  If the type is 1, the string is converted to a blob and added to the blob output page.  If the type is 2, then parm1 should point to the full path and filename of a file to append to the blob output page.  If type is 3, then parm1 should contain the URL of a file or webpage to be retrieved and appended to the blob output file.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful, 1 if an error ocurrs.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function is only useful from within PSP pages.  Every PSP page contains a blob output page.  In a normal PSP page, output blob page is empty and the file is searched for formulas enclosed within PSP tags that are evaluated and then replaced with the results.  The resulting file is then returned from the webserver.  If data is added to the blob output page using the ph.webaddblob function, then the blob output page is instead returned from the webserver instead of the evaluated PSP.<br><br>See also ph.webclearblob.
+
+</div>
+</body>
+</html>

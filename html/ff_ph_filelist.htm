@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_filelist</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_filelist PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves a list of files/directories from a specified drive and location.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_filelist ( filespec, include, exclude, sorted, outputtype )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+filespec
+
+</td>
+<td class=ph9>
+
+String.  The file search specification for the returned filelist.  Wildcards are allowed.  Ex: "c:\program files\powerhome\*.pbd"
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+include
+
+</td>
+<td class=ph9>
+
+Long.  Only include files with the specified attributes.  Use 0 to include all files.  Individual attributes should be added together.  Typical values are: 1 - ReadOnly, 2 - Hidden, 4 - System, 16 - Directory, 32 - Archive, 2048 - Compressed, 16384 - Encrypted.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+exclude
+
+</td>
+<td class=ph9>
+
+Long.  Exclude files with these attributes.  Use 0 to not exclude files.  Individual attributes should be added together.  Typical values are: 1 - ReadOnly, 2 - Hidden, 4 - System, 16 - Directory, 32 - Archive, 2048 - Compressed, 16384 - Encrypted.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+sorted
+
+</td>
+<td class=ph9>
+
+Integer.  Use 0 to return an unsorted list.  Any other value to sort.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+outputtype
+
+</td>
+<td class=ph9>
+
+Integer.  How the output should be returned.  Use 0 to return the list as values separted by cr/lf, 1 to return as comma separated values, 2 to return as XML, and 3 to return as an HTML Table.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the list of files/directories in the format specified by the outputtype.
+
+</div>
+</body>
+</html>

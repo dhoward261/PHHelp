@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_openiewindow</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_openiewindow PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Allows the user to open a specialized window object consisting of an Internet Explorer control.  Full control of this window is available by sending Windows messages.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_openiewindow ( title, url, flags, x, y, width, height, timeout )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+title
+
+</td>
+<td class=ph9>
+
+String.  The Title you wish to appear on the IE window.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+url
+
+</td>
+<td class=ph9>
+
+String.  The URL you wish to be opened in the Internet Explorer window control.  You can use the system variable [HANDLE] to have the handle of the IE Wndow substituted within the URL.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+flags
+
+</td>
+<td class=ph9>
+
+Integer.  Individual flag values summed together to control how the window appears.  The individual flag values are: 1 to suppress the Title bar.  2 to make the Window not resizeable.  4 to remove the Control menu.  8 to remove the minimize box.  16 to remove the maximize box.  32 to suppress the display of the countdown timer if a timeout value is passed.  64 to suppress scrollbars.  128 to have the IE Window NOT be a child window of the PowerHome environment.  256 to have the window open maximized.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+x
+
+</td>
+<td class=ph9>
+
+Integer.  The X location you wish the IE Window to appear.  Use - 1 to have the window centered horizontally.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+y
+
+</td>
+<td class=ph9>
+
+Integer.  The Y location you wish the IE Window to appear.  Use - 1 to have the window centered vertically.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+width
+
+</td>
+<td class=ph9>
+
+Integer.  The width of the IE Window.  Use - 1 to set the width of the window to the screen width.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+height
+
+</td>
+<td class=ph9>
+
+Integer.  The height of the IE Window.  Use - 1 to set the height of the window to the screen height.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+timeout
+
+</td>
+<td class=ph9>
+
+Integer.  The time in seconds for the IE Window to remain open.  Use 0 if you don't wish the window to timeout and close automatically.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Unsigned Long.  Returns the handle of the new IE Window.  Using this handle, Windows Messages can be sent to remotely control aspects of the window.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+You can use this function to create highly configurable user display windows to also control aspects of PowerHome if the URL contains control code to manipulate the PH environment.
+
+</div>
+</body>
+</html>

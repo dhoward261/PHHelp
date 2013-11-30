@@ -1,0 +1,416 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Plugins</title>
+</head>
+<BODY>
+<DIV class=ph1>Plugins </DIV>
+<P>Plugins are extensions to the PowerHome program and can provide additional 
+functionality that is not built into PowerHome. Each plugin runs in it's own 
+separate thread so as not to burden PowerHome with processing and eliminates the 
+possibility of problems within a plugin causing PowerHome to hang.</P>
+<P>Plugins are developed using the PowerHome Plugin SDK and may be developed by 
+programming savvy users or other third parties using a variety of languages. 
+Plugins are able to directly control and interact with the PowerHome environment 
+as well as monitor the internal processes of PowerHome by listening to the 
+messages sent by the UDP Broadcast server. Plugins are also capable of being 
+directly interacted with by PowerHome using the ph_picmd and can fire it's own 
+specific triggers.</P>
+<P>Plugins are defined within the Setup section of the PowerHome Explorer under 
+the "Plugins" section. To properly setup a plugin, you must know it's activeX 
+class name and any initialization parameters that may be required. These values 
+are specific to the plugin and you should consult the plugin manufacturer for 
+the proper settings.</P>
+<P>Below are the settings and a brief overview of the plugins that are supplied 
+with the PowerHome installation. These plugins will have been installed in the 
+plugins subdirectory beneath the PowerHome directory.</P>
+<P><B>PowerHome Plugin Skeleton</B><BR>Launch Data (ActiveX Classname): 
+PowerHome_Plugin.phplugin<BR>Initialization Data: None 
+<P>This plugin is a generic skeleton plugin with no real value other than as a 
+learning aid for creating actual plugins. The sourcecode is available as well as 
+the complete VB project on the PowerHome download website. This plugin accepts 3 
+different command values from the ph_picmd function. Command 1 will cause the 
+plugin to display a messagebox with the data passed in the data3 parameter. 
+Command 2 will evaluate the data in data3 as a formula by passing the formula to 
+PowerHome for evaluation. Command 3 will cause the plugin to fire the generic 
+plugin trigger for command 1, option 1.</P>
+<P><B>UDP Listener</B><BR>Launch Data (ActiveX Classname): 
+PH_UDPListener.phudp<BR>Initialization Data: The UDP port to listen on
+<P>This plugin listens for UDP broadcasts on the specified port. There are no 
+commands accessible using the ph_picmd function. UDP broadcasts received on the 
+specified port will cause the plugin to fire a generic plugin trigger on command 
+1, option 1. Data available in the [TEMP] variables will be the port the UDP was 
+received on, the UDP message, and the IP address of the device originating the 
+UDP message. If you need to listen for UDP broadcasts on multiple ports, create 
+a plugin entry for each port.</P>
+<P><B>Raw Socket</B><BR>Launch Data (ActiveX Classname): 
+PH_Socket.phsocket<BR>Initialization Data: The IP address to connect to, a 
+space, the port to connect to. Can also be left blank to connect manually after 
+launch
+<P>This plugin provides raw socket connectivity for PowerHome. If an IP and port 
+is supplied in the Init Data, then a connection will be established when the 
+plugin is loaded. Otherwise, you can initiate a connection manually using the 
+ph_picmd function. This plugin supports several commands via the ph_picmd 
+function. Command 1 will cause the plugin to send the data in the data3 
+parameter over the socket if a connection is established. Command 2 will 
+establish a connection manually to the IP in the data3 parameter and the port in 
+the data1 parameter (you must not be currently connected). Command 3 will 
+disconnect the socket if it's currently connected. Command 4 will return the 
+status of the current connection (0 = connected, 1 = not connected). Command 5 
+returns the current remote IP of the socket. Command 6 returns the remote port 
+of the socket.<BR>The plugin will also fire generic plugin triggers. The trigger 
+for command 1, option 1 will be fired when data is received on the socket. The 
+trigger for command 1, option 2 will be fired when the socket establishes a 
+connection. The trigger for command 1, option 3 will be fired when the socket 
+disconnects.</P>
+<P><B>Raw COMM</B><BR>Launch Data (ActiveX Classname): 
+PH_Socket.phsocket<BR>Initialization Data: The COM port, a space, the comma 
+separated settings string. Can be left blank to establish a connection manually. 
+In all cases where a "settings" string is required, it consists of the BPS, the 
+data bits, the parity, and the stop bits all separated by commas. An example of 
+9600 BPS, 8 data bits, No parity, and 1 stop bit would be: 9600,N,8,1
+<P>This plugin provides raw COM port functionality for PowerHome. If a COM port 
+and settings string is supplied in the Init Data parameter then the connection 
+will be established when the plugin is loaded. Several commands are available 
+using the ph_picmd function. Command 1 will send the string in data3 out the COM 
+if a connection is already established. This string can contain binary 
+characters by escaping them with the "\" character followed by 3 digits for a 
+decimal representation of the ASCII code or followed by an "x" and 2 digits for 
+a hexadecimal representation of the ASCII code. Command 2 will send a single 
+character represented by the ASCII value contained in the data1 parameter 
+(assuming the COM is connected). Command 3 will manually connect to the COM port 
+in data1 using the settings supplied in data3 (you must be disconnected first). 
+Command 4 disconnect the COM port if already connected. Command 5 will return 
+the current connection status (0 = connected, 1 = disconnected). Command 6 will 
+return the COM port. Command 7 will return the settings.<BR>This plugin will 
+also fire a generic plugin trigger whenever data is received on a connected COM 
+port. The trigger fired will be command 1, option 1 with the length of the data, 
+the string data with binary characters escaped, and the string data with ALL 
+characters escaped available in the [TEMP] variables.</P>
+<P><STRONG>Caller ID<BR></STRONG>Launch Data (ActiveX Classname): PH_<SPAN 
+class=highlight>CID</SPAN>.ph<SPAN class=highlight>cid</SPAN><BR>Initialization 
+Data: The full path and filename pointing to the phcid.ini configuration 
+file.&nbsp; The phcid.ini file will need to be edited to set the proper 
+configuration.&nbsp; The first section to configure is the [config] 
+section.&nbsp; Set the "port" value to the COM port your CID modem is listening 
+to.&nbsp; The default settings of "9600,N,8,1" should be fine for most 
+modems.&nbsp; There will be several "CIDInit" parameters with all but one 
+commented out (preceeded with a semicolon).&nbsp; Select the CID Initialization 
+parameter for your modem and make sure it is the only uncommented one.&nbsp; For 
+a caller ID modem, set the "format" to 1.&nbsp; For a NetCallerID box, set the 
+"format" to 2.&nbsp; "Lookupnames" can be set to 1 to have CID supplied names 
+substituted with names of your choosing as defined in the [Names] section.&nbsp; 
+A value of 0 will use CID supplied names.&nbsp; The [HangUp] section can be 
+configured to optionally automatically hang up on user defined numbers.
+<P>This plugin provides Caller ID support within PowerHome.&nbsp; With a 
+properly configured Caller ID modem or NetCallerID box, PowerHome will fire 
+triggers when the phone rings based upon caller ID information.&nbsp; When a 
+call comes in, the plugin will fire a generic plugin trigger on command 1, 
+option 1 for all calls.&nbsp; The CID number will be in [TEMP5] and the CID name 
+will be in [TEMP10].&nbsp; If you have configured the CID plugin to hang up on 
+certain numbers, calls that are hung up on will ALSO fire a generic plugin 
+trigger on command 1, option 2.&nbsp; The same information will be available in 
+the [TEMP] variables.&nbsp; In addition to the triggers, the plugin also 
+provides support for directly communicating with the modem via the ph_picmd 
+function.&nbsp; Command 1 and 2 are available in the CID plugin.&nbsp; Command 1 
+will send the string in data3 direct to the modem. This string can contain 
+binary characters by escaping them with the "\" character followed by 3 digits 
+for a decimal representation of the ASCII code or followed by an "x" and 2 
+digits for a hexadecimal representation of the ASCII code. Command 2 will send 
+the string in data3 to the modem with no interpretation and will automatically 
+embed a carriage return at the end.</P>
+<P><STRONG>File Monitor<BR></STRONG>Launch Data (ActiveX Classname): 
+PH_FileMon.phfilemon<BR>Initialization Data: Enter the full path and filename of 
+the INI file for this particular instance of the File Monitor plugin.&nbsp; If 
+you're using the defaults, then this value will be: c:\program 
+files\powerhome\plugins\phfilemon.ini</P>
+<P>The PowerHome File Monitor plugin allows the user to specify up to 256 files 
+to monitor for changes.&nbsp; It does this by monitoring the date/time stamp of 
+the file.&nbsp; Any change to a monitored files date/time stamp will cause the 
+plugin to fire an appropriate Generic Plugin trigger.&nbsp; If more than 256 
+files need to be monitored, then another instance of the plugin can be loaded 
+for an additional 256 files to be monitored.&nbsp; Since the plugin runs in it's 
+own thread, it takes no PowerHome resources.</P>
+<P>Configuring the phfilemon.ini file:</P>
+<UL>
+  <LI>Open the phfilemon.ini file in Notepad.&nbsp; You'll need to configure the 
+  File Monitor plugin by modifying this file.</LI>
+  <LI>Under [Setup] section, set the "FileCount" parameter to the number of 
+  files you will be defining in the INI file for monitoring.</LI>
+  <LI>Under the [Files] section, set the full path and filename of the files you 
+  wish to monitor.&nbsp; If you wish to monitor 3 separate files, you will set 
+  the FileCount parameter to 3 and you will have 3 parameters beneath the 
+  [Files] section running from File1 to File3.</LI>
+  <LI>Once you've finished editing your INI file, close and save the 
+file.</LI></UL>
+<P>Using the PowerHome File Monitor Plugin:</P>
+<UL>
+  <LI>The File Monitor plugin will fire Generic Plugin triggers anytime a change 
+  is detected on any of the monitored files.&nbsp; The trigger fired will be 
+  "Command 1" and the "Trigger Value" will match the File Number of the 
+  monitored file.&nbsp; For example, if "File2" in the INI file is "c:\program 
+  files\powerhome\pwrhome.ini" and this file changes, the plugin will fire a 
+  Generic Plugin trigger on the Plugin ID, Command 1, Option 2 (Option 2 for 
+  File 2).&nbsp; The [TEMP5] variable will contain the datetime of the modified 
+  file and [TEMP10] will contain the path and filename of the modified 
+file.</LI>
+  <LI>The File Monitor plugin also allows for a small selection of commands to 
+  be sent to it using ph_picmd function.&nbsp; The allowed command numbers 
+  are:</LI></UL>
+<OL>
+  <OL>
+    <LI>&nbsp;Retrieve number of monitored files.<BR>&nbsp;lData1 = 
+    Unused<BR>&nbsp;lData2 = Unused<BR>&nbsp;sData3 = Unused<BR>&nbsp;sData4 = 
+    Unused<BR>Returns the number of monitored files.</LI>
+    <LI>Retrieve the path/filename of a specified monitored 
+    file.<BR>&nbsp;lData1 = The filenumber of file to be 
+    returned.<BR>&nbsp;lData2 = Unused<BR>&nbsp;sData3 = Unused<BR>&nbsp;sData4 
+    = Unused<BR>Returns the full path/filename of the specified file 
+    number.&nbsp; If the file number is out of range, 998 will be returned.</LI>
+    <LI>Add a new file to be monitored into the first available spot.&nbsp; A 
+    spot is considered available if the path/filename is empty.<BR>&nbsp;lData1 
+    = Unused<BR>&nbsp;lData2 = Unused<BR>&nbsp;sData3 = The full path and 
+    filename of the file to be added for monitoring.<BR>&nbsp;sData4 = 
+    Unused<BR>Returns the filenumber that the file was added to.</LI>
+    <LI>Change an existing monitored filenumber to a new path and 
+    filename.<BR>&nbsp;lData1 = The file number to change<BR>&nbsp;lData2 = 
+    Unused<BR>&nbsp;sData3 = The full path and filename of the new file to be to 
+    be monitored.<BR>&nbsp;sData4 = Unused<BR>Returns the filenumber that was 
+    changed.&nbsp; 998 is returned if the file number is out of range.&nbsp; To 
+    stop a file from being monitored, set it's filenumber path and filename to 
+    an empty string.</LI></OL></OL>
+<UL>
+  <LI>A 999 will be returned for any unsupported commands.</LI></UL>
+<P><STRONG>xPL Plugin<BR></STRONG>Launch Data (ActiveX Classname): 
+PH_XPL.phxpl<BR>Initialization Data: Enter the full path and filename of the INI 
+file for this particular instance of the xPL plugin.&nbsp; If you're using the 
+defaults, then this value will be: c:\program 
+files\powerhome\plugins\phxpl.ini</P>
+<P>The PowerHome Generic xPL Plugin provides send and receive support for xPL 
+messages to PowerHome.&nbsp; It is the first of a series of steps to 
+implementing the xPL protocol from within PowerHome.&nbsp; The next step is to 
+provide an xPL controller within PowerHome so PowerHome can send and receive 
+controller commands from other xPL gateways.&nbsp; If you would like to learn 
+more about xPL as well as the programs available, visit <A 
+href="http://wiki.xplproject.org.uk/index.php/Main_Page">http://wiki.xplproject.org.uk/index.php/Main_Page</A>.</P>
+<P>Using the xPL Plugin, users can send xPL messages using the ph_picmd 
+function.&nbsp; Multiple filters for incoming messages can be set and the plugin 
+will fire Generic Plugin triggers on incoming messages.&nbsp; You can also have 
+multiple instances of the xPL Plugin running with a completely different set of 
+filters and triggers.&nbsp; You MUST have an xPL Hub running on the PowerHome 
+machine.&nbsp; It is also useful to have some xPL compliant programs running on 
+either the PowerHome machine or on other machines on your internal network in 
+order for the plugin to be useful.&nbsp; Keep in mind that you MUST have an xPL 
+Hub running on every machine that is hosting an xPL program.&nbsp; You will also 
+most likely need to configure personal firewalls such as Comodo or ZoneAlarm in 
+order to allow the xPL traffic to be transmitted and received. </P>
+<P>Configuring the phfilemon.ini file:</P>
+<UL>
+  <LI>Open the phxpl.ini file in Notepad.&nbsp; You'll need to configure the xPL 
+  plugin by modifying this file.</LI>
+  <LI>Under the [Setup] section, set the "Instance" parameter to a unique 
+  instance name for this iteration of the plugin.&nbsp; The instance name MUST 
+  be lower case letters a thru z and numbers 0-9 only.&nbsp; No spaces, no 
+  dashes, or any others characters are acceptable.&nbsp; The total length of the 
+  instance name MUST be 16 characters or less.&nbsp; If you will be running 
+  multiple instances of the xPL plugin, you MUST make a copy of the phxpl.ini 
+  file with a different filename (such as phxpl1.ini).&nbsp; Make sure that each 
+  xPL plugin instance has a separate, unique "Instance" parameter.</LI>
+  <LI>Set the "Target" parameter to a valid xPL target application ID for direct 
+  communications.&nbsp; Use "*" without the quotes to broadcast your xPL 
+  messages to all xPL clients.&nbsp; The "Target" parameter only affects the 
+  sending of xPL messages. </LI>
+  <LI>Set the "Interval" parameter to a value between 5 and 9 inclusive.&nbsp; 
+  This is how often an xPL heartbeat message will be sent by the plugin.&nbsp; 
+  The default value of 5 should be fine.</LI>
+  <LI>Set the "PassHBeat" parameter to "yes" if you want the plugin to pass xPL 
+  heartbeat messages to the filter processor (a filter may still block the 
+  message depending upon the filters).&nbsp; If you set the parameter to "no" 
+  then heartbeat messages are outright discarded. </LI>
+  <LI>Set the "PassConfig" parameter to "yes" if you want the plugin to pass xPL 
+  config messages to the filter processor (a filter may still block the message 
+  depending upon the filters).&nbsp; If you set the parameter to "no" then 
+  config messages are outright discarded. </LI>
+  <LI>Under the [Filters] section, you can define up to 16 different filters for 
+  incoming messages.&nbsp; Keep in mind that filters ONLY affect incoming 
+  messages.&nbsp; Messages sent from the plugin are automatically 
+  discarded.&nbsp; When an xPL message is received, it's first checked to see if 
+  it originates from the current plugin instance.&nbsp; If it does, it's 
+  discarded.&nbsp; It's then checked for accuracy in following proper xPL format 
+  and if it fails, it's discarded.&nbsp; The message is then determined whether 
+  it's a heartbeat or config message and depending upon the settings in the 
+  [Setup] section, may be discarded.&nbsp; If a message makes it this far, it is 
+  then checked against the filters in order from 1 to 16 (or less if you have 
+  less).&nbsp; If a message does not MATCH a filter, it is discarded.&nbsp; In 
+  order for the plugin to fire a trigger on a message, it MUST match at least 
+  one plugin.&nbsp; This means that you MUST declare at least ONE filter.&nbsp; 
+  More information on Filters can be found on the xPL website under the Core 
+  Protocol documentation.&nbsp; Below is a very brief overview of filters to get 
+  started with. </LI>
+  <LI>The filter to match ALL incoming xPL messages is: *.*.*.*.*.*</LI>
+  <LI>An xPL message consists of 6 separate sections separated by a single 
+  period.&nbsp; You can use the asterisk (*) character to wildcard a 
+  section.&nbsp; The sections are: xPL command, source vendor, source device, 
+  source instance, schema, and type.&nbsp; A typical message might look like: 
+  xpl-cmnd.pha.phpi.xpl.x10.basic.&nbsp; This would be a fully qualified message 
+  and would be matched by the ALL filter above or the following filters:</LI></UL>
+<OL>
+  <OL>
+    <LI>*.pha.*.*.x10.*</LI>
+    <LI>*.pha.phpi.*.*.*</LI>
+    <LI>*.*.*.*.x10.*</LI>
+    <LI>xpl-cmnd.*.*.*.*.*</LI>
+    <LI>xpl-cmnd.pha.phpi.xpl.x10.basic</LI></OL></OL>
+<UL>
+  <LI>In order for a trigger to be fired, the incoming message MUST match at 
+  least one filter.&nbsp; The particular filter that is matched, WILL ALSO 
+  determine the particular trigger that is fired.&nbsp; As such, the order in 
+  which you define filters is important.&nbsp; It would do no good to define the 
+  following filters in this particular order: </LI></UL>
+<OL dir=ltr style="MARGIN-RIGHT: 0px">
+  <OL>
+    <LI>*.pha.*.*.*.*</LI>
+    <LI>*.pha.phpi.*.*.*</LI></OL></OL>
+<UL>
+  <LI>since the first filter will always be matched before the second filter has 
+  a chance to be checked.&nbsp; As such, filters should typically be defined in 
+  order of most restrictive to least restrictive.&nbsp; Leave unused filter 
+  lines blank. </LI>
+  <LI>Once you've finished defining your filters, close and save the INI 
+  file.&nbsp; </LI></UL>
+<P>At this point, you should already have an xPL Hub up and running.&nbsp; 
+Launch PowerHome and open the PowerHome Explorer.&nbsp; Navigate to 
+Setup|Controllers and create a new blank plugin line.&nbsp; Give the plugin an 
+appropriate ID and use the following information for the "Launch Data (ActiveX 
+Classname)": PH_XPL.phxpl</P>
+<P>For the "Initialization Data" field, enter the full path and filename of the 
+INI file for this particular instance of the xPL plugin.&nbsp; If you're using 
+just a single instance or this is the first instance, the default value would 
+be: c:\program files\powerhome\plugins\phxpl.ini</P>
+<P>Close the PowerHome Explorer and restart or reinitialize PowerHome in order 
+for the plugin to be loaded.&nbsp; Once PowerHome restarts, go to 
+Help|About|Plugins and verify that the plugin successfully started.</P>
+<P>Using the PowerHome xPL Generic Plugin:</P>
+<UL>
+  <LI>To send xPL messages, use the ph_picmd function.&nbsp; The simplest way to 
+  send an xPL message is shown in the example below:</LI></UL>
+<OL dir=ltr>
+  <OL>
+    <LI>ph_picmd(5,"XPL",1,0,0,"x10.basic","command=ON~ndevice=B5")</LI>
+    <LI>In the example above, the first parameter is 5 which is the number of 
+    seconds to wait for the plugin to process the command before timing 
+out.</LI>
+    <LI>The second parameter is "XPL" which is our sample programs ID for the 
+    xPL plugin (defined in the Plugins screen of the PowerHome Explorer).</LI>
+    <LI>The third parameter is the command type for the plugin to perform.&nbsp; 
+    In this case, the value is 1 which tells the plugin to send a simple xPL 
+    message using the INI file supplied target and the INI file supplied 
+    Instance as part of the source ID.&nbsp; The hops will be set to 1.</LI>
+    <LI>The fourth parameter (0 in the example) is the type of xPL message to 
+    send.&nbsp; A value of 0 is for an xpl-cmnd message.</LI>
+    <LI>The fifth parameter is not used so is left as 0.</LI>
+    <LI>The sixth parameter is "x10.basic" which is the xPL schema and 
+type.</LI>
+    <LI>The seventh parameter ("command=ON~ndevice=B5" in the example) is the 
+    body of the xPL message.&nbsp; This particular message has two name/value 
+    pairs consisting of command and device.&nbsp; It's important to note that a 
+    "~n" is used to separate the name/value pairs.&nbsp; The "~n" is the 
+    PowerHome equivalent to the line feed character and is required to separate 
+    name/value pairs when constructing your xPL messages.&nbsp; You MUST not 
+    embed any spaces, commas, or other characters in the body unless it's 
+    actually a part of the value section of a name/value pair.</LI></OL></OL>
+<UL>
+  <LI>The available command types for use in the ph_picmd function are:</LI></UL>
+<OL dir=ltr style="MARGIN-RIGHT: 0px">
+  <OL>
+    <LI>Send Simple xPL message.<BR>lData1 = xPL command type (0 = xpl-cmnd, 1 = 
+    xpl-stat, 2 = xpl-trig)<BR>lData2 = Unused<BR>sData3 = xPL schema and 
+    type<BR>sData4 = xPL message body.&nbsp; Separate name/value pairs with a 
+    line feed character (~n in PowerHome)</LI>
+    <LI>Send Raw xPL message.<BR>lData1 = xPL command type (0 = xpl-cmnd, 1 = 
+    xpl-stat, 2 = xpl-trig)<BR>lData2 = Unused<BR>sData3 = Source ID (in the 
+    format of xxx-yyy.zzz), Target ID (in the format of xxx-yyy.zzz or *), and 
+    schema/type.&nbsp; Separate the 3 individual components with a line feed 
+    character.<BR>sData4 = xPL message body.&nbsp; Separate name/value pairs 
+    with a line feed character (~n in PowerHome)</LI>
+    <LI>Set the default target for messages sent with command 1.<BR>lData1 = 
+    Unused<BR>lData2 = Unused<BR>sData3 = New target in the form of xxx-yyy.zzz 
+    or * for broadcast.<BR>sData4 = Unused</LI>
+    <LI>Retrieve the current default target for sending xPL messages.<BR>lData1 
+    = Unused<BR>lData2 = Unused<BR>sData3 = Unused<BR>sData4 = Unused</LI>
+    <LI>Set the values for whether or not to pass Heartbeat and Config 
+    messages.<BR>lData1 = 0 to NOT pass Heartbeat messages.&nbsp; &gt; 0 to pass 
+    Heartbeat messages.&nbsp; &lt; 0 for no change.<BR>lData2 = 0 to NOT pass 
+    Config messages.&nbsp; &gt; 0 to pass Config messages.&nbsp; &lt; 0 for no 
+    change.<BR>sData3 = Unused<BR>sData4 = Unused</LI>
+    <LI>Return whether the plugin is configured to pass Heartbeat messages or 
+    not.<BR>lData1 = Unused<BR>lData2 = Unused<BR>sData3 = Unused<BR>sData4 = 
+    Unused</LI>
+    <LI>Return whether the plugin is configured to pass Config messages or 
+    not.<BR>lData1 = Unused<BR>lData2 = Unused<BR>sData3 = Unused<BR>sData4 = 
+    Unused</LI></OL></OL>
+<UL>
+  <LI>The return value from the ph_picmd function will be as follows:</LI></UL>
+<BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+  <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+    <P>0 = success<BR>1 = error<BR>99 = bad command<BR>100 = plugin not 
+    enabled</P></BLOCKQUOTE></BLOCKQUOTE>
+<UL>
+  <LI>On command 2, a "2" can be returned if the sData3 parameter was not 
+  properly constructed.</LI>
+  <LI>On command 4, the return value will be the current Target ID.</LI>
+  <LI>On commands 6 and 7, "1" will be returned if the value is true, "0" will 
+  be returned on false.</LI>
+  <LI>If a match is made on one of the 16 filters, then the plugin will fire a 
+  "Generic Plugin" trigger.&nbsp; The particular values for the "Trigger ID 
+  Number" and "Trigger Value" will depend upon the type of xPL message received 
+  and the particular filter that was matched.&nbsp; To fire a single trigger on 
+  ANY matching xPL message, use a "Trigger ID Number" of "(Any)" and a "Trigger 
+  Value" of "(Any)".</LI>
+  <LI>The Trigger ID Number fired is dependant upon the filter matched (in the 
+  case of broadcast messages) or if it's a direct message matching the source ID 
+  of the xPL plugin.&nbsp; The Source ID of the xPL plugin will be: 
+  pha-phpi.INSTANCE where INSTANCE is the instance defined in the INI 
+  file.&nbsp; If the message is a direct message that exactly matches the source 
+  ID of the plugin, the Trigger ID Number will "Command 1".&nbsp; If it's a 
+  broadcast message that matches Filter1, then "Command 2" will be fired.&nbsp; 
+  A Filter2 match will fire "Command 3".&nbsp; Following this sequence, this 
+  means that valid Trigger ID Numbers will be from Command 1 to Command 
+  17.&nbsp; You can use (Any) to fire on any match.</LI>
+  <LI>The Trigger Value fired is dependant upon the type of xPL message.&nbsp; 
+  Option 1 will be fired for xpl-cmnd messages.&nbsp; Option 2 will be fired for 
+  xpl-stat messages.&nbsp; Option 3 will be fired for xpl-trig messages.&nbsp; 
+  You can use (Any) to fire on any type of message.</LI>
+  <LI>When the trigger is fired, both the [TEMP] and [LOCAL] variables will 
+  populated with trigger related data.&nbsp; The data populated will be as 
+  follows:</LI></UL>
+<BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+  <BLOCKQUOTE dir=ltr style="MARGIN-RIGHT: 0px">
+    <P>[TEMP1] = The ID of the trigger<BR>[TEMP2] = 0<BR>[TEMP3] = The number of 
+    name/value pairs in the body of the xPL message<BR>[TEMP4] = The number of 
+    hops in the xPL message<BR>[TEMP5] = The Schema and type of xPL 
+    message<BR>[TEMP6] = 27<BR>[TEMP7] = The ID of xPL plugin<BR>[TEMP8] = The 
+    Trigger ID Number (1 for Direct message, 2 - 17 for Filter 1 thru 
+    16)<BR>[TEMP9] = The Trigger Value (1 for xpl-cmnd, 2 for xpl-stat, 3 for 
+    xpl-trig)<BR>[TEMP10] = The Source ID of the xPL message<BR>[LOCAL1] = The 
+    value of the 1st Name/Value pair<BR>[LOCAL2] = The value of the 2nd 
+    Name/Value pair<BR>[LOCAL3] = The value of the 3rd Name/Value 
+    pair<BR>[LOCAL4] = The value of the 4th Name/Value pair<BR>[LOCAL5] = The 
+    value of the 5th Name/Value pair<BR>[LOCAL6] = The value of the 6th 
+    Name/Value pair<BR>[LOCAL7] = The value of the 7th Name/Value 
+    pair<BR>[LOCAL8] = The raw body section of the xPL message (The name/value 
+    pairs)<BR>[LOCAL9] = The target of the xPL message<BR>[LOCAL10] = The 
+    complete raw xPL message</P></BLOCKQUOTE></BLOCKQUOTE>
+<UL>
+  <LI>Since xPL messages have their name/value pairs in a predictable order 
+  (based upon the message), you should be able to quickly reference up to the 
+  first seven values in the [LOCAL1] thru [LOCAL7] variables.&nbsp; If the 
+  message has more than 7 name/value pairs OR if you wish to access the NAME as 
+  well as the VALUE, you'll need to parse [LOCAL8] since it will contain ALL of 
+  the name/value pairs in raw format.</LI></UL>
+<P>&nbsp;</P>
+
+</BODY>
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.windowstate</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.windowstate Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the state of the PowerHome frame window.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.windowstate ( n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+An integer representing the state the PowerHome frame should be set to.  A value of 0 makes the frame normal, a value of 1 makes the frame minimized, and a value of 2 makes the frame maximized.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+If in Kiosk mode (ph.setmode), ph.windowstate(0) will return a 1 and NOT set the window to normal.  The only valid values for Kiosk mode are 1 and 2.
+
+</div>
+</body>
+</html>
+

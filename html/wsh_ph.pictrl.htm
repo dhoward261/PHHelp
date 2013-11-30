@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.pictrl</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.pictrl Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Enables the user to control low level functions of a generic plugin
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.pictrl ( id, cmd, type )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+A string representing the ID of the plugin to control.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+cmd
+
+</td>
+<td class=ph9>
+
+A string representing the command.  Available commands are detailed below.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+An integer value containing additional data used by some commands.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns data dependant upon the requested command type.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+"reinit" will reinitialize a plugin. If the type parameter is 0, PowerHome will first execute the plugins PHPI_Close function (and wait up to 10 seconds for the function to return) followed by unloading and reloading the plugin.  Any other value for the type parameter causes PowerHome to bypass the PHPI_Close function and immediately unload and reload the plugin.<br><br>
+"enable" will call the plugin function PHPI_Enable.<br><br>
+"disable" will the the plugin function PHPI_Disable.<br><br>
+"status" will call the plugin function PHPI_Status.<br><br>
+"getbusycnt" will return the number of queued commands for a plugin.  Since plugins run in their own thread, multiple command may queue up for a plugin.  If the "getbusycnt" never comes down to 0, then the plugin itself may be hung and you may want to "reinit" it.
+
+</div>
+</body>
+</html>

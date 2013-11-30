@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>dec</title>
+</head>
+<body>
+<div class=ph1>
+
+dec PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Converts a string to a decimal number using the currently defined region settings.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+dec ( s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string whose value you want returned as a decimal value.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Decimal. Returns the value of the string as a decimal. If the string is not a valid number or if it contains an incompatible datatype, Dec returns 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The dec function is region aware.  This function will work with the string representation of a number using the current region settings specified within the OS.  This function is very useful for regions where the period character is used as the thousands separator and the comma character is used as a decimal point.  Without this function, PowerHome interprets numbers using the standard region settings for the United States.
+
+</div>
+</body>
+</html>

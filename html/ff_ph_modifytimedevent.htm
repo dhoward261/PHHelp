@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_modifytimedevent</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_modifytimedevent PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Modifies an existing Timed Event.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_modifytimedevent ( id, active, reftime, flags )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the Timed Event you wish to modify.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+active
+
+</td>
+<td class=ph9>
+
+Integer.  Use 0 to set the Timed Event inactive.  Use 1 to set the Timed Event active.  Controlled by the flags parameter.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+reftime
+
+</td>
+<td class=ph9>
+
+DateTime.  The new reftime for the specified Timed Event.  Controlled by the flags parameter.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+flags
+
+</td>
+<td class=ph9>
+
+Integer.  Determines which parameters are used to update the Timed Event.  Add values together.  1 - Recalculate a new StartTime, 2 - Update the Active parameter, 4 - Set a new RefTime and recalculate StartTime
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful.  1 if the Timed Event specified does not exist.
+
+</div>
+</body>
+</html>

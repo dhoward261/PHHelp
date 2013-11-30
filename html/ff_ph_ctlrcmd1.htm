@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_ctlrcmd1</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_ctlrcmd1 PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends a raw command to a PowerHome controller using the internal communication structure.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_ctlrcmd1 ( ctlr, command, parm1, parm2, parm3, parm4, local )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+ctlr
+
+</td>
+<td class=ph9>
+
+String.  The ID of the controller to send the command to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+command
+
+</td>
+<td class=ph9>
+
+Integer. The command to send to the controller.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm1
+
+</td>
+<td class=ph9>
+
+Integer.  Parameter 1 for the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm2
+
+</td>
+<td class=ph9>
+
+Long.  Parameter 2 for the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm3
+
+</td>
+<td class=ph9>
+
+String.  Parameter 3 for the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm4
+
+</td>
+<td class=ph9>
+
+String.  Parameter 4 for the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+local
+
+</td>
+<td class=ph9>
+
+Integer.  The start of the LOCAL variable block in which the return data will be returned.  Use 0 to discard the return values.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful.  Returns - 1 if the controller ID does not exist.<br><br>The 4 return values will be contained within LOCAL variables if the local parameter is > 0.  The return values will be returned in 4 consecutive LOCAL variables.  If the local parameter is 4, then ret1 will be in [LOCAL4], ret2 will be in [LOCAL5], ret3 will be in [LOCAL6], and ret4 will be in [LOCAL7].  If not enough LOCAL variables exist, the upper return values will be discarded.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function is nearly identical to ph_ctlrcmd except that the return values are in LOCAL variables instead of having to parse the return string.  Use this command to send raw commands to PowerHome controllers.
+
+</div>
+</body>
+</html>

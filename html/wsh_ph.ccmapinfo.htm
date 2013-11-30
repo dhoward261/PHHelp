@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ccmapinfo</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ccmapinfo Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Generates HTML image map data for a Control Center tab.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ccmapinfo ( id, image, mapname, nexturl, target, pagetype, imagetype, flags )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the Control Center tab to generate image map data.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+image
+
+</td>
+<td class=ph9>
+
+String.  The path and filename of the graphic file to be included in the image map HTML.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+mapname
+
+</td>
+<td class=ph9>
+
+String.  A string representing the name of the image map within the HTML.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+nexturl
+
+</td>
+<td class=ph9>
+
+String.  A string representing the next URL to be loaded as a result of clicking on the image map.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+target
+
+</td>
+<td class=ph9>
+
+String.  The target in which to send the nexturl data.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+pagetype
+
+</td>
+<td class=ph9>
+
+Integer.  The pagetype for the resulting CCMAP page for navigation type buttons.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+imagetype
+
+</td>
+<td class=ph9>
+
+Integer.  The imagetype for the resulting CCMAP page for navigation type buttons.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+flags
+
+</td>
+<td class=ph9>
+
+Integer.  The flags for the resulting CCMAP page for navigation type buttons.
+
+</td>
+</tr>
+
+
+
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the HTML image map data.  
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+You can combine this function with the ph.ccimage function to create a dynamic HTML image map file for a Control Center tab.
+
+</div>
+</body>
+</html>

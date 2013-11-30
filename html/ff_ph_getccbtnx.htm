@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getccbtnx</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getccbtnx PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the x for the specified Control Center button. This is the horizontal position of the buttons upper left hand corner.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getccbtnx ( id, seq )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the Control Center tab containing the button.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+seq
+
+</td>
+<td class=ph9>
+
+The sequence value of the button.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long. Returns the x value of the specified button. Returns - 1 if the button is not found.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The sequence value is the sequence number assigned to a button in the Control Center Button Details screen in the PowerHome Explorer (in the explorer window, the sequence is actually multiplied by 10). Use the functions ph_getcclastbtn and ph_getcclasttab to retrieve the tab ID and sequence of the last button pressed in the Control Center. You can use the ph_lookupccbtn function to retrieve the first sequence of a button matching the passed parameters. It is not necessary for the Control Center to be open in order to retrieve or make changes to buttons. 
+
+</div>
+</body>
+</html>

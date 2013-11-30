@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_timedeventsctrl</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_timedeventsctrl PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Allows control and status of PowerHome Timed Events.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_timedeventsctrl ( command, data )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+command
+
+</td>
+<td class=ph9>
+
+String.  The command or query you wish to perform.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+Integer.  Data to be passed for the command.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns data if the command is a query otherwise returns 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this command to programmatically control and query PowerHome Timed Events.  Use "on" for command to turn timed events on.  Use a data value of 1 to execute past due timed events.  Use a data value of 0 to not execute past due timed events.  Use "off" for command to turn timed events off.  Use "status" for command to determine whether timed events are currently on or off.   If timed events are on, 1 will be returned.  If timed events are off, 0 will be returned.  Use "pdec" for command (Past Due Event Count) to return how many timed events are past due.
+
+</div>
+</body>
+</html>

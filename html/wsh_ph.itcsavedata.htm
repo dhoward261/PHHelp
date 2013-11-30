@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.itcsavedata</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.itcsavedata Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Saves previously retrieved data in the specified Internet Transfer Control to the specified file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.itcsavedata ( n, s, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+A number from 1 to 10 representing the ITC you wish to save data from.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing the file to save to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The writemode to use.  A 0 will append data to the file.  Any other value will overwrite the file.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful.  If the ITC has NOT been created, then 1 is returned.  2 is returned if the specified ITC is outside of the range of 1 to 10.  3 is returned if the ITC is busy.  4 is returned if a runtime error occurs.  5 is returned if the file cannot be opened.
+
+</div>
+</body>
+</html>

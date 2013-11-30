@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ctlrdisconnect</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ctlrdisconnect Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Disconnects PowerHome from either an X-10, IR, or Other controller.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ctlrdisconnect ( type, num )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+A string representing the type of the controller to disconnnect from.  Valid values are “IR”, “X10”, or "Other".
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+num
+
+</td>
+<td class=ph9>
+
+An integer representing the number of the controller to disconnect from.  Valid values are 1 thru 5 for each of the 5 IR, X-10 or Other controllers.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a value dependent upon the particular controller defined.  A 0 will indicate a successful disconnect.  Any other value indicates an error.
+
+</div>
+</body>
+</html>
+

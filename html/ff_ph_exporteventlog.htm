@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_exporteventlog</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_exporteventlog PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Allows you to export the PowerHome eventlog into a file format of your choice with the option to trim the log.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_exporteventlog ( start, end, type, filename, colheading, trim )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+start
+
+</td>
+<td class=ph9>
+
+A datetime representing the first row to export.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+end
+
+</td>
+<td class=ph9>
+
+A datetime representing the last row to export.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+An integer representing the type of file to export to.  See Usage for details.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+filename
+
+</td>
+<td class=ph9>
+
+A string representing the directory and filename to export to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+colheading
+
+</td>
+<td class=ph9>
+
+An integer representing whether column headings should be exported or not.  A value of 0 will save without column headings.  Any other value will save with column headings.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+trim
+
+</td>
+<td class=ph9>
+
+An integer representing whether to trim the exported records or not.  A value of 0 will cause the log NOT to be trimmed.  Any other value will have the exported records trimmed from the weblog and eventlog tables.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns the number of rows actually exported.  Returns a negative number if an error occurs.  - 1 is returned if an error occurs during the retrieval.  - 2 is returned if an error occurs while exporting the rows.  - 3 is returned if an error occurs while trimming the weblog table.  - 4 is returned if an error occurs while trimming the eventlog table.
+
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The following export types are supported.  0 = Excel, 1 = Text, 2 = Comma separated values, 3 = SYLK, 4 = WKS (Lotus), 5 = WK1 (Lotus), 6 = DIF, 7 = Dbase2, 8 = Dbase3, 9 = SQL Insert statements, 10 = Clipboard, 11 = PSR Report, 12 = Windows Metafile, 13 = HTML Table, 14 = Excel 5, 15 = XML, 16 = XSLFO, 17 = PDF, 18 = Excel 8.  Any other value will default to type 1 which is text.
+
+</div>
+</body>
+</html>

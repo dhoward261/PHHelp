@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Insteon Explorer - Links</title>
+</head>
+<body>
+<div class=ph1>
+
+Insteon Explorer - Links
+
+</div>
+
+<div class=ph2>
+
+<a name="currdevice">Current Device</a>
+
+</div>
+
+<p>The Current Device window shows you the currently selected device whose controllers and responders you wish to view or modify.  You may select a device to view by dropping down the "Insteon Device ID" column and scrolling to the appropriate device.  You may also type the first few characters in this box to quickly jump to the appropriate place in the dropdown list.</p>
+
+<p>Controllers of the selected device will be shown in the "Controllers (of Current Device)" list below.  Responders (devices controlled by this device) will be shown in the "Responders (of Current Device)" list below.  You may double-click anywhere in the "Current Device" row to refresh the "Controllers" and "Responders" windows if you wish to monitor on-going link activity.</p>
+
+<p>Directly below the Current Device window and to the far left of the Links tab is a list of Insteon devices currently identified within PowerHome.  Use this window to highlight devices to add as "Controllers" or "Responders" of the "Current Device".  You may highlight a single device at a time by left-clicking on it.  Highlight multiple devices by holding either the "Ctrl" or "Shift" keys while clicking on a device ID.  You may alternately highlight / un-highlight ALL devices ID's by clicking on the "ID" column heading.</p>
+
+<p>Once ID's are highlighted in the Device List, add them as either "Controllers" or "Responders" of the "Current Device" by dragging and dropping the currently highlighted devices to either the "Controllers" or "Responders" window or both to create cross-links.</p>
+
+<p>Above the Device List are two buttons, the "Remove" button and the "Reverify" button.  Both buttons may be either clicked or dragged to.  The "Remove" button will delete any links dragged and dropped on it or all highlighted links in both the "Controllers" and "Responders" window if clicked.  The deletion is simply a removal from the PowerHome database and does not affect actual link information in the devices themselves.  To completely delete a link from both PowerHome AND the Insteon devices, drag and drop highlighted links from the "Controllers" or "Responders" window to the "Device List"</p>
+
+<p>The "Reverify" button will flag any links dragged to it for reverification.  If the button is instead clicked, then all highlighted links in the "Controllers" and "Responders" windows will be flagged for reverification.  This is handy because on occasion, poor Insteon communications can cause PowerHome to believe that a link no longer exists.  This will usually be characterized by a "NOT FOUND" in the link status fields.  After flagging links for reverification, you must "Save" in order for PowerHome to start reverifying links.  Reverification causes PowerHome to requery the Insteon devices and validate that the flagged links truly exist properly within the device.</p>
+
+<div class=ph2>
+
+<a name="refresh">Refresh</a>
+
+</div>
+
+<p>The "Refresh" option will requery the PowerHome database for any changes to Insteon devices.  If you either Manually Added or Auto-Discovered a new Insteon device, you must "Refresh" in order for this device to appear in the Current Device list or Devices list.  This option will also requery the "Controllers" and "Responders" link information.  If you have made changes, you will be given the option to save them before the refresh takes place.</p>
+
+<p>This option is similar to "double-clicking" the "Current Device" in that the currently displayed screen of information will be refreshed, but different since ALL of the database information will be refreshed.  Double-clicking ONLY refreshes the Controller and Responder information for the currently selected device.</p>
+
+<div class=ph2>
+
+<a name="copypaste">Copy / Paste</a>
+
+</div>
+
+<p>The "Copy" and "Paste" options allow you to easily duplicate links from one device to another.  When the "Copy" option is selected, all selected "Controller" rows and selected "Responder" rows will be copied to a temporary buffer.  You will also be given the option to include the "Current Device" as a "Responder" in subsequent "Paste" operations.  You may then select another Current Device and choose the "Paste" option to copy the saved links to the new device.  Depending upon the device and link, you may need to fill in additional information such as remote button number or group.  These areas will be shown in red in their respective window.</p>
+
+<div class=ph2>
+
+<a name="rebuild">Rebuild</a>
+
+</div>
+
+<p>The "Rebuild" option causes PowerHome to rebuild all the links in the currently selected device.  It does not matter what "Controller" or "Responder" rows are currently selected and only works on the currently selected Insteon device.  This option will rebuild all of the links that PowerHome has listed as "Controller" or "Responder" links and will reprogram them into the selected device.  This option is useful if you've performed a "hard reset" on the device and wish to rebuild the links.  This option is also useful if the links in the device are fragmented (the list of links contain blank entries).  You will be asked to confirm this operation.  As soon as confirming, the rebuild will be added to the Pending queue immediately WITHOUT needing to save.</p>
+
+<div class=ph2>
+
+<a name="save">Save</a>
+
+</div>
+
+<p>The "Save" option allows you to save any changes that you've made to the Current Device's links.  You must save (or abandon) your changes before selecting another Insteon device as the Current Device.  As soon as your changes are saved, the associated link changes will be added to the Insteon Pending Operations queue.</p>
+
+<div class=ph2>
+
+<a name="controllers">Controllers</a>
+
+</div>
+
+<p>This window lists Insteon devices that "control" the Current Device.  Columns with a maroon heading color pertain to the controlling device.  Columns with a blue heading color pertain to the controlled device (the device displayed in the "Current Device" window).  You can edit the controllers group, the responders button, and the responders level and ramprate.  You can select single rows by clicking the row, multiple rows by holding either the Control or Shift keys while clicking.  You can also select or deselect ALL rows by clicking on the headings or anywhere else that is not specifically a row.  Selected rows may be deleted (removed from the Insteon device AND the PowerHome database) by dragging and dropping to the "Device List" on the left.  You may also drag and drop the selected rows to the "Remove" button to have the links merely deleted from the PowerHome database (the actual links in the device will still remain).</p>
+
+<div class=ph2>
+
+<a name="ccreate">Controllers Create</a>
+
+</div>
+
+<p>The "Create" option will attempt to create PowerHome Insteon Devices for all selected Controllers with an ID of [ID NOT FOUND].  To use this option, you must first select the controllers with [ID NOT FOUND] you wish to correct.  PowerHome will first add them to the PLC internal database and then attempt communication with a Ping command.  If the Ping is successful, then the PowerHome Insteon Device will be created with an ID in the form of "NEW SPIDER ??" where ?? is a sequential unique number.</p>
+
+<div class=ph2>
+
+<a name="responders">Responders</a>
+
+</div>
+
+<p>This window lists Insteon devices that "respond" to (are controlled by) the device shown in the Current Devices window.  Columns with a green heading color pertain to the controlled (responding) device.  Columns with a blue heading color pertain to the controlling device (the device displayed in the Current Device window).  You can edit the controllers group, the responders button, and the responders level and ramprate.  You can select single rows by clicking the row, multiple rows by holding either the Control or Shift keys while clicking.  You can also select or deselect ALL rows by clicking on the headings or anywhere else that is not specifically a row.  Selected rows may be deleted by dragging and dropping to the "Device List" on the left.  This will delete the actual links from the associated devices as well as from the PowerHome database.  If you opt to drag and drop the selected links to the "Remove" button instead, then the links will ONLY be deleted from the PowerHome database leaving the actual links in the devices intact.</p>
+
+<div class=ph2>
+
+<a name="rcreate">Responders Create</a>
+
+</div>
+
+<p>The "Create" option will attempt to create PowerHome Insteon Devices for all selected Responders with an ID of [ID NOT FOUND].  To use this option, you must first select the responders with [ID NOT FOUND] you wish to correct.  PowerHome will first add them to the PLC internal database and then attempt communication with a Ping command.  If the Ping is successful, then the PowerHome Insteon Device will be created with an ID in the form of "NEW SPIDER ??" where ?? is a sequential unique number.</p>
+
+</body>
+</html>

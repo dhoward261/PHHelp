@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_secondsdiff</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_secondsdiff PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns the number of seconds one time occurs after another.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_secondsdiff ( time1, time2 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+time1
+
+</td>
+<td class=ph9>
+
+A time value that is the start time of the interval being measured
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+time2
+
+</td>
+<td class=ph9>
+
+A time value that is the end time of the interval
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Double. Returns the number of seconds time2 occurs after time1. This function always assumes that time2 occurs after time1.  If time1 is 23:59:59 and time2 is 00:00:01 then the returned value will be 2 even though time2 is less than time1.  Partial seconds are returned in decimal format.
+
+</div>
+</body>
+</html>
+

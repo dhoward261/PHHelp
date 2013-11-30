@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_ccdescribe</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_ccdescribe PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Reports the values of properties of a Control Center tab and controls within the tab. Each object in the Control Center tab has a set of properties.  You specify one or more properties as a string and ph_ccdescribe returns the values of the properties.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_ccdescribe ( tab, propertylist )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+tab
+
+</td>
+<td class=ph9>
+
+The number of the Control Center tab you are describing.  The tabs are numbered sequentially from left to right starting with 1.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+propertylist
+
+</td>
+<td class=ph9>
+
+A string whose value is a blank-separated list of properties.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns a string that includes a value for each property. A newline character (~n) separates the value of each item in propertylist.  If propertylist contains an invalid item, ph_ccdescribe returns an exclamation point (!) for that item and ignores the rest of propertylist. ph_ccdescribe returns a question mark (?) if there is no value for a property.
+
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_extendmacrowait</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_extendmacrowait PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Extends the amount of wait time for a macro which is currently in a wait state.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_extendmacrowait ( s, n, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing the ID of the waiting macro.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+Double representing the number of seconds to extend the wait.  Fractions of a second can be represented in decimal format.
+
+</td>
+</tr>
+
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+Integer representing the method of extending the wait.  A 0 will extend the macros wait time from the time this function is executed.  Any other value will extend the wait from the time the macro is currently set to expire.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if the macros wait time was successfully extended.  Returns a 1 if the specified macro ID is not waiting.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to extend the wait time of a macro that is currently waiting (Initiated by the Macro command "Wait").  If multiple macros with the same ID are waiting, this command will only extend the wait time of the oldest waiting macro.  Extending the wait time of a macro does not effect its status as the oldest waiting macro.   Typically this function would be used in conjunction with the ph_ismacrowaiting function to first check if a macro is waiting and then either waiting or extending the wait of a currently waiting macro so as not to have more than 1 macro of the same ID waiting.
+
+</div>
+</body>
+</html>
+

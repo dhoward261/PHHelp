@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_gettetime</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_gettetime PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns the DateTime for a Timed Event.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_gettetime ( id, type )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the Timed Event to return the DateTime for
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+Integer.  The type of DateTime to be returned.  Use 0 for the Start Time.  Any other value returns the Ref Time.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+DateTime.  The DateTime value for the specified Timed Event ID.
+
+</div>
+</body>
+</html>

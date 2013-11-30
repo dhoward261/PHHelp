@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.savedesktopimage</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.savedesktopimage Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Takes a snapshot of the current desktop window and saves it to a graphic file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.savedesktopimage ( filename, width, height )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+filename
+
+</td>
+<td class=ph9>
+
+String.  The path and filename to save the desktop image to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+width
+
+</td>
+<td class=ph9>
+
+Long.  The optional resize width of the saved image.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+height
+
+</td>
+<td class=ph9>
+
+Long.  The optional resize height of the saved image.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this funciton save a snapshot of the current desktop window to a graphic file.  The graphic type to save as will be determined by the filename extension.  Supported types are BMP, JPEG, PNG, TIFF, WBMP, and GIF.  Setting the width and height values to 0 will cause the saved graphic file to be at the current desktop resolution.  If you wish to resize the graphic before saving, set the width and height values appropriately.
+
+</div>
+</body>
+</html>

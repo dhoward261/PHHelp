@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_ttsctrl</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_ttsctrl PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Allows control over both the normal TTS engine and Alert TTS engine.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_ttsctrl ( cmd, control, data )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+cmd
+
+</td>
+<td class=ph9>
+
+Integer.  The particular command you wish to issue to an engine.  Use 0 to speak the data parameter asynchronously.  Use 1 to speak the data parameter synchronously with no timeout.  Use 2 to set the voice TTS voice to the value in the data parameter.  Use 3 to pause the TTS engine.  Use 4 to resume the TTS engine.  Use 5 to wait until the TTS engine is done speaking with the timeout specified in the data parameter.  Use 6 to get the current status of the TTS engine.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+control
+
+</td>
+<td class=ph9>
+
+Integer.  The engine you wish to control.  Use 0 for the default TTS engine.  Any other value for the Alert TTS engine.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+String.  Optional data to be passed depending upon the command type.  Commands 0 and 2 will speak the text in the data parameter.  Command 2 will set the TTS engine to the voice contained in the data parameter.  Commands 3, 4, and 6 should have this value set as the empty string ("").  Command 5 will convert the data parameter to a number and use that as the timeout value.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 on commands 0, 1, 2, 3, 4, and 5.  Returns the status of the TTS engine on command 6.  With command 6, a return of 0 means the TTS engine is not currently speaking.  A value of 1 means that the TTS engine is currently speaking or is paused in speaking.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The Alert TTS engine allows you override the default TTS engine.  If the default TTS engine is in the middle of speaking, you can issue an Alert TTS command and the default engine will be paused, the Alert TTS will be spoken and when done, will resume speaking where it left off in the default TTS engine.  The default and alert TTS engines may have different voices.  In order to use the Alert TTS engine, you must have your TTS engine in the Setup section of PowerHome set to "SAPI 5/w Alert".
+
+</div>
+</body>
+</html>

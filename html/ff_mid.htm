@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>mid</title>
+</head>
+<body>
+<div class=ph1>
+
+mid PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Obtains a specified number of characters from a specified position in a string.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+mid ( string, start {, length } )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+string
+
+</td>
+<td class=ph9>
+
+The string from which you want characters returned
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+start
+
+</td>
+<td class=ph9>
+
+A long specifying the position of the first character you want returned (the position of the first character of the string is 1)
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+length  (optional)
+
+</td>
+<td class=ph9>
+
+A long whose value is the number of characters you want returned. If you do not enter length or if length is greater than the number of characters to the right of start, Mid returns the remaining characters in the string
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String. Returns characters specified in length of string starting at character start. If start is greater than the number of characters in string, the Mid function returns the empty string (""). If length is greater than the number of characters remaining after the start character, Mid returns the remaining characters. The return string is not filled with spaces to make it the specified length.
+
+</body>
+</html>
+

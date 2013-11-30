@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_movefile</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_movefile PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Moves the specified file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_movefile ( s, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing the full path and filename of the source file.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing the full path and filename of the target file.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if the source file was successfully moved.  Returns -1 if an error occurred opening the source file.  Returns -2 if an error occurred opening the target file.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+You cannot write to a target file if a file with the same name already exists in the target directory. If you want to copy over a target file, you can use ph_filecopy and set the replace argument to 1.
+
+</div>
+</body>
+</html>
+
+

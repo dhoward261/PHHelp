@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>match</title>
+</head>
+<body>
+<div class=ph1>
+
+match PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Determines whether a string's value contains a particular pattern of characters.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+match ( string, textpattern )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+string
+
+</td>
+<td class=ph9>
+
+The string in which you want to look for a pattern of characters
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+textpattern
+
+</td>
+<td class=ph9>
+
+A string whose value is the text pattern
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Boolean. Returns TRUE if string matches textpattern and FALSE if it does not. Match also returns FALSE if either argument has not been assigned a value or the pattern is invalid.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Match enables you to evaluate whether a string contains a general pattern of characters. To find out whether a string contains a specific substring, use the Pos function.
+<br><br>
+Textpattern is similar to a regular expression. It consists of metacharacters, which have special meaning, and ordinary characters, which match themselves. You can specify that the string begin or end with one or more characters from a set, or that it contain any characters except those in a set.
+
+<br><br>
+A text pattern consists of metacharacters, which have special meaning in the match string, and nonmetacharacters, which match the characters themselves.<br>
+
+The following tables explain the meaning and use of these metacharacters:<br><br>
+
+<table border=1 cellspacing=0 cellpadding=2>
+ <tr>
+  <td class=ph15><b>Metacharacter</b></td>
+  <td class=ph15><b>Meaning</b></td>
+  <td class=ph15><b>Example</b></td>
+ </tr>
+ <tr>
+  <td class=ph15>Caret (^)</td>
+  <td class=ph15>Matches the beginning of a string</td>
+  <td class=ph15>^C matches C at the beginning of a string</td>
+ </tr>
+ <tr>
+  <td class=ph15>Dollar sign ($)</td>
+  <td class=ph15>Matches the end of a string</td>
+  <td class=ph15>s$ matches s at the end of a string</td>
+ </tr>
+ <tr>
+  <td class=ph15>Period (.)</td>
+  <td class=ph15>Matches any character</td>
+  <td class=ph15>. . . matches three consecutive characters</td>
+ </tr>
+ <tr>
+  <td class=ph15>Backslash (\)</td>
+  <td class=ph15>Removes the following metacharacter's special characteristics so that it matches itself</td>
+  <td class=ph15>\$ matches $</td>
+ </tr>
+ <tr>
+  <td class=ph15>Character class (a group of characters enclosed in square brackets [ ])</td>
+  <td class=ph15>Matches any of the enclosed characters</td>
+  <td class=ph15>[AEIOU] matches A, E, I, O, or U.  You can use hyphens to abbreviate ranges of characters in a character class. For example, [A-Za-z] matches any letter</td>
+ </tr>
+ <tr>
+  <td class=ph15>Complemented character class (first character inside the brackets is a caret)</td>
+  <td class=ph15>Matches any character not in the group following the caret</td>
+  <td class=ph15>[^0-9] matches any character except a digit, and [^A-Za-z] matches any character except a letter</td>
+ </tr>
+</table>
+<br>
+The metacharacters asterisk (*), plus (+), and question mark (?) are unary operators that are used to specify repetitions in a regular expression:<br><br>
+
+<table border=1 cellspacing=0 cellpadding=2>
+ <tr>
+  <td class=ph15><b>Metacharacter</b></td>
+  <td class=ph15><b>Meaning</b></td>
+  <td class=ph15><b>Example</b></td>
+ </tr>
+ <tr>
+  <td class=ph15>* (asterisk)</td>
+  <td class=ph15>Indicates zero or more occurrences</td>
+  <td class=ph15>A* matches zero or more As (no As, A, AA, AAA, and so on)</td>
+ </tr>
+ <tr>
+  <td class=ph15>+ (plus)</td>
+  <td class=ph15>Indicates one or more occurrences</td>
+  <td class=ph15>A+ matches one A or more than one A (A, AAA, and so on)</td>
+ </tr>
+ <tr>
+  <td class=ph15>? (question mark)</td>
+  <td class=ph15>Indicates zero or one occurrence</td>
+  <td class=ph15>A? matches an empty string ("") or A</td>
+ </tr>
+</table>
+<br>
+Sample patterns:<br>
+The following table shows various text patterns and sample text that matches each pattern:<br><br>
+
+<table border=1 cellspacing=0 cellpadding=2>
+ <tr>
+  <td class=ph15><b>This pattern</b></td>
+  <td class=ph15><b>Matches</b></td>
+ </tr>
+ <tr>
+  <td class=ph15>AB</td>
+  <td class=ph15>Any string that contains AB; such as ABA, DEABC, graphAB_one</td>
+ </tr>
+ <tr>
+  <td class=ph15>B*</td>
+  <td class=ph15>Any string that contains 0 or more Bs; such as AC, B, BB, BBB, ABBBC, and so on</td>
+ </tr>
+ <tr>
+  <td class=ph15>AB*C</td>
+  <td class=ph15>Any string containing the pattern AC or ABC or ABBC, and so on (0 or more Bs)</td>
+ </tr>
+ <tr>
+  <td class=ph15>AB+C</td>
+  <td class=ph15>Any string containing the pattern ABC or ABBC or ABBBC, and so on (1 or more Bs)</td>
+ </tr>
+ <tr>
+  <td class=ph15>ABB*C</td>
+  <td class=ph15>Any string containing the pattern ABC or ABBC or ABBBC, and so on (1 B plus 0 or more Bs)</td>
+ </tr>
+ <tr>
+  <td class=ph15>^AB</td>
+  <td class=ph15>Any string starting with AB</td>
+ </tr>
+ <tr>
+  <td class=ph15>AB?C</td>
+  <td class=ph15>Any string containing the pattern AC or ABC (0 or 1 B)</td>
+ </tr>
+ <tr>
+  <td class=ph15>^[ABC]</td>
+  <td class=ph15>Any string starting with A, B, or C</td>
+ </tr>
+ <tr>
+  <td class=ph15>[^ABC]</td>
+  <td class=ph15>A string containing any characters other than A, B, or C</td>
+ </tr>
+ <tr>
+  <td class=ph15>^[^abc]</td>
+  <td class=ph15>A string that begins with any character except a, b, or c</td>
+ </tr>
+ <tr>
+  <td class=ph15>^[^a-z]$</td>
+  <td class=ph15>Any single-character string that is not a lowercase letter (^ and $ indicate the beginning and end of the string)</td>
+ </tr>
+ <tr>
+  <td class=ph15>[A-Z]+</td>
+  <td class=ph15>Any string with one or more uppercase letters</td>
+ </tr>
+ <tr>
+  <td class=ph15>^[0-9]+$</td>
+  <td class=ph15>Any string consisting only of digits</td>
+ </tr>
+ <tr>
+  <td class=ph15>^[0-9][0-9][0-9]$</td>
+  <td class=ph15>Any string consisting of exactly three digits</td>
+ </tr>
+ <tr>
+  <td class=ph15>^([0-9][0-9][0-9])$</td>
+  <td class=ph15>Any consisting of exactly three digits enclosed in parentheses</td>
+ </tr>
+</table>
+
+</div>
+</body>
+</html>
+

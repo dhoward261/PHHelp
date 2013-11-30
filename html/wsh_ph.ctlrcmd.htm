@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ctlrcmd</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ctlrcmd Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends a raw command to a PowerHome controller using the internal communication structure.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ctlrcmd ( ctlr, command, parm1, parm2, parm3, parm4 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+ctlr
+
+</td>
+<td class=ph9>
+
+String.  The ID of the controller to send the command to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+command
+
+</td>
+<td class=ph9>
+
+Integer.  The command to send to the controller.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm1
+
+</td>
+<td class=ph9>
+
+Integer.  Parameter 1 for the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm2
+
+</td>
+<td class=ph9>
+
+Long.  Parameter 2 for the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm3
+
+</td>
+<td class=ph9>
+
+String.  Parameter 3 for the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm4
+
+</td>
+<td class=ph9>
+
+String.  Parameter 4 for the command.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the 4 return parameters from the communication structure.  These values are separated with ~255 escape characters.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this command to send raw commands to PowerHome controllers.  Details on the use of this function will be documented at a later date.
+
+</div>
+</body>
+</html>

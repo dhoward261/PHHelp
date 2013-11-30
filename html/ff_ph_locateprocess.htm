@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_locateprocess</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_locateprocess PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Locates the process value for the specified exe.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_locateprocess ( exe, instance )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+exe
+
+</td>
+<td class=ph9>
+
+String.  The exe filename or path and exe filename whose process you want.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+instance
+
+</td>
+<td class=ph9>
+
+Integer.  The instance of the exe to locate.  The first instance is 0.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns the process of the specified EXE.  If the exe value contains a full path, then the search will be on the full path and filename, otherwise, the search will be just for the filename.
+
+</div>
+</body>
+</html>

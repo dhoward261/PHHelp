@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.geturlviaproxy</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.geturlviaproxy Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Gets the resulting HTML code from a URL using the specified proxy server values.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.geturlviaproxy ( s, s, n, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the URL you wish to retrieve.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the proxy server you wish to use. 
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+An integer identifying the port of the proxy server.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the userid and password for the proxy server.  Separate the userid from the password using a colon character.  Example: userid:password.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  The HTML text from the URL.  You can include the http:// but it is not necessary.  You may also embed any passed parameters to be used in a GET request.  
+
+</body>
+</html>
+

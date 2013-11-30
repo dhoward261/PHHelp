@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.saveitcurl</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.saveitcurl Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Saves the data from the specified URL using a Microsoft ITC (Internet Transfer Control)
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.saveitcurl ( s, s, n, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The URL you wish to save.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The directory / filename you wish to save to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The write mode to use when saving.  A 0 will cause the data to be appended to the file if it exists.  Any other value will replace the file if it exists.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The timeout in seconds for the request to be executed.  Use 0 for infinity.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful.  1 is returned if the file cannot be opened.  2 is returned if the timeout value is exceeded.  3 is returned if the ITC encounters an error.  4 is returned if a runtime error occurs.
+
+</div>
+</body>
+</html>

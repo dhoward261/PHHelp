@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_secondsdiffsec</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_secondsdiffsec PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns the difference between two times (represented as a double number containing the number of seconds past midnight)
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_secondsdiffsec ( time1, time2 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+time1
+
+</td>
+<td class=ph9>
+
+Double representing the earlier time.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+time2
+
+</td>
+<td class=ph9>
+
+Double representing the later time.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Double.  Returns the difference between the two times.  If time2 happens to be less than time1 (such as when crossing midnight), then 86400.0 will be added to time2 to account for the extra day.
+
+</div>
+</body>
+</html>

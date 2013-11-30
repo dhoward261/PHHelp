@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setwebcookie</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_setwebcookie PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets a web cookie within the PowerHome web server.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_setwebcookie ( name, value, path, domain, expires )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+name
+
+</td>
+<td class=ph9>
+
+String.  The name of the cookie.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+String.  The value to assign to the cookie.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+path
+
+</td>
+<td class=ph9>
+
+String.  An optional path parameter for the cookie.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+domain
+
+</td>
+<td class=ph9>
+
+String.  An optional domain parameter for the cookie.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+expires
+
+</td>
+<td class=ph9>
+
+Double.  An optional parameter for setting the expiration of a cookie.  The expiration date will be calculated using this parameter in minutes from the current time.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function only has meaning when run from within the context of a PowerHome PSP page.
+
+</div>
+</body>
+</html>

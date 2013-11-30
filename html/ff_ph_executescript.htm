@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_executescript</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_executescript PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Executes a single WSH (Windows Script Host) statement.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_executescript ( n, s, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+Timeout.  Specifies the time in milliseconds after which the user will be presented with an option to continue or discontinue execution of the script.  A value of –1 means the script will never timeout.  A value of 0 will fire the timeout event when it is detected that the script is hung.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+Additional code to be added to the Windows Script Host control.  To not add code, pass in a blank string.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The statement to execute.  The statement can be a function, but the result will not be returned
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  0 is returned upon success, 2 with an Initialize error, 3 with an AddCode error, and 4 with execute error.
+
+</body>
+</html>

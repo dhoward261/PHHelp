@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.comopensimple</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.comopensimple Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Opens the specified COM control.  PowerHome provides the user with 5 COM controls that can be opened and characters received and written to.  Same as ph.comopen with reduced parameters.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.comopensimple ( comnum, comport, settings, id )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+comnum
+
+</td>
+<td class=ph9>
+
+The number of the COM control you are referencing. Valid values are 1 thru 5.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+comport
+
+</td>
+<td class=ph9>
+
+The COM port you wish to open.  Typically a number from 1 to 8 but can be higher.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+settings
+
+</td>
+<td class=ph9>
+
+A string containing bps, parity, databits, and stopbits all separated by commas.  To set the COM port to 9600 bps, parity NONE, 8 databits, and 1 stopbit, the settings string would be: "9600,N,8,1"
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of a macro to be called when characters are received.  
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns 0 if successful. Returns 1 if a comnum < 1 or > 5 is specified. Returns 2 if the specified COM is already open.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Allows the user to easily implement serial communications from within PowerHome.  The COM control has an internal incoming buffer of 2048 characters.  There are also two internal variables that track status of the incoming buffer.  The buffercount variable keeps track of how many total characters are in the incoming buffer.  The bufferptr variable points to the position of the last read character.  Both these values start at zero.  As characters arrive at the buffer, the buffercount variable is increased.  If this value was zero and the ID parameter is not blank, the macro represented by the ID will be placed in the execution queue.  As you read characters from the incoming buffer, the bufferptr variable is increased.  When the bufferptr is equal to the buffercount (all characters have been read) both variables are reset to 0.  If more characters are received, the macro will again be fired.
+
+</div>
+</body>
+</html>

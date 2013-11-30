@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.x10lookup</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.x10lookup Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns the X-10 device ID when given the housecode and unitcode.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.x10lookup ( hc, uc )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+hc
+
+</td>
+<td class=ph9>
+
+String.  The housecode to lookup.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+uc
+
+</td>
+<td class=ph9>
+
+Integer.  The unitcode to lookup.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the X-10 device ID from the X-10 Devices table.  Returns an empty string if the housecode/unitcode combination is not found.
+
+</div>
+</body>
+</html>

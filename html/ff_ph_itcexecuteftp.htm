@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_itcexecuteftp</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_itcexecuteftp PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Executes an FTP request in the specified Internet Transfer Control.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_itcexecuteftp ( n, s, s, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+A number from 1 to 10 representing the ITC you wish to execute an FTP request.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing the FTP operation.  See Usage below.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The ID of a macro to be executed when the operation completes.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The request timout in seconds.  Use 0 for infinity.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful.  If the specified ITC has not been created, then 1 is returned.  2 is returned if the specified ITC is outside of the range of 1 to 10.  3 is returned if the ITC is currently busy.  4 is returned if a runtime error occurs.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function call is asynchronous.  When an FTP request is made, this function returns immediately and the request is processed in the background.  When the operation is complete, the specified Macro will then be executed.  When the macro is executed, it will have a complete copy of LOCAL and TEMP variables that were assigned when the function was executed.  However, the [TEMP1] variable will contain the response code.  A value of 10 means that the control has disconnected.  A value of 11 means that an error occurred.  A value of 12 means that the request completed successfully.  If an error occurs (response code 11 in [TEMP1]), then the error code will be in the [TEMP2] variable and the error info will be in the [TEMP3] variable.
+
+The FTP operation is contained within a single string with multiple parameters separated by a space.  Below is a list of valid parameters:<br><br>
+<table border=1 cellspacing=0 cellpadding=2>
+ <tr>
+  <td class=ph15><b>Operation</b></td>
+  <td class=ph15><b>Description</b></td>
+ </tr>
+ <tr>
+  <td class=ph15><b>CD</b> <i>file1</i></td>
+  <td class=ph15>Change Directory. Changes to the directory specified in <i>file1</i>.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>CDUP</b></td>
+  <td class=ph15>Change to parent directory. Equivalent to "CD.."</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>CLOSE</b></td>
+  <td class=ph15>Closes the current FTP connection.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>DELETE</b> <i>file1</i></td>
+  <td class=ph15>Deletes the file specified in <i>file1</i>.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>DIR</b> <i>file1</i></td>
+  <td class=ph15>Directory. Searches the directory specified in <i>file1</i>. (Wildcards are permitted but the remote host dictates the syntax.) If no <i>file1</i> is specified, a full directory of the current working directory is returned.<br><br>Use ph_itcgetdata or ph_itcsavedata to access the returned data.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>GET</b> <i>file1</i> <i>file2</i></td>
+  <td class=ph15>Retrieves the remote file specified in <i>file1</i>, and creates a new local file specified in <i>file2</i>.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>LS</b> <i>file1</i></td>
+  <td class=ph15>List. Searches the directory specified in <i>file1</i>. (Wildcards are permitted but the remote host dictates the syntax.)<br><br>Use ph_itcgetdata or ph_itcsavedata to access the returned data.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>MKDIR</b> <i>file1</i></td>
+  <td class=ph15>Make Directory. Creates a directory as specified in <i>file1</i>. Success is dependent on user privileges on the remote host.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>PUT</b> <i>file1</i> <i>file2</i></td>
+  <td class=ph15>Copies a local file specified in <i>file1</i> to the remote host specified in <i>file2</i>.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>PWD</b></td>
+  <td class=ph15>Print Working Directory. Returns the current directory name.<br><br>Use ph_itcgetdata or ph_itcsavedata to access the returned data.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>QUIT</b></td>
+  <td class=ph15>Terminates the current user.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>RECV</b> <i>file1</i> <i>file2</i></td>
+  <td class=ph15>Retrieves the remote file specified in <i>file1</i>, and creates a new local file specified in <i>file2</i>. Equivalent to GET.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>RENAME</b> <i>file1</i> <i>file2</i></td>
+  <td class=ph15>Renames the remote file named in <i>file1</i> to the new name specified in <i>file2</i>. Success is dependent on user privileges on the remote host.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>RMDIR</b> <i>file1</i></td>
+  <td class=ph15>Remove Directory. Removes the remote directory specified in <i>file1</i>. Success is dependent on user privileges on the remote host.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>SEND</b> <i>file1</i> <i>file2</i></td>
+  <td class=ph15>Copies a local file, specified in <i>file1</i>, to the remote host, specified in <i>file2</i>. Equivalent to PUT.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>SIZE</b> <i>file1</i></td>
+  <td class=ph15>Returns the size of the directory specified in <i>file1</i>.</td>
+ </tr>
+</table>
+</div>
+</body>
+</html>

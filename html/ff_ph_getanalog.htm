@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getanalog</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getanalog PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the value of an analog input / output defined in the Analog I/O screen.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getanalog ( id )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the analogl I/O as defined within the Analog I/O screen.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String. Returns the CALCULATED value of the analog I/O if successful. Returns "- 100" if the ID cannot be found.   When this function is executed, the controller, unit, and point is looked up within the Analog I/O table and these values are then passed to the controller.  If these values are entered improperly in the Analog I/O screen, then the following errors may be returned: " - 1" is returned if the controller is not available, "- 2" is returned if the controller does not support analog I/O, "- 3" is returned if the unit is out of range, "- 4" is returned if the point is out of range.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function is similar to the ph_getotheranalog function except that the point MUST be defined within the Analog I/O screen.  Note that this function returns the CALCULATED value whereas the ph_getotheranalog function returns the RAW value.
+
+</div>
+</body>
+</html>

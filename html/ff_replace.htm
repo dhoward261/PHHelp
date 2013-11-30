@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>replace</title>
+</head>
+<body>
+<div class=ph1>
+
+replace PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Replaces a portion of one string with another.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+replace ( string1, start, n, string2 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+string1
+
+</td>
+<td class=ph9>
+
+The string in which you want to replace characters with string2
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+start
+
+</td>
+<td class=ph9>
+
+A long whose value is the number of the first character you want replaced. (The first character in the string is number 1)
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+A long whose value is the number of characters you want to replace
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+string2
+
+</td>
+<td class=ph9>
+
+The string that will replace characters in string1. The number of characters in string2 can be greater than, equal to, or fewer than the number of characters you are replacing
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String. Returns the string with the characters replaced if it succeeds and the empty string ("") if it fails.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+If the start position is beyond the end of the string, Replace appends string2 to string1. If there are fewer characters after the start position than specified in n, Replace replaces all the characters to the right of character start.
+<br><br>
+If n is zero, then in effect Replace inserts string2 into string1.
+
+</div>
+</body>
+</html>
+

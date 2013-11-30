@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_picmd</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_picmd PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends a command to a Generic PowerHome Plugin Control using the standard plugin interface function of phpi_command.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_picmd ( timeout, id, cmd, data1, data2, data3, data4 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+timeout
+
+</td>
+<td class=ph9>
+
+The length of time in seconds to wait for the plugin to return a value.  Use a value of 0 to wait indefinately.  Use a negative number to not wait for a return value (post the function call).
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the PowerHome Plugin.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+cmd
+
+</td>
+<td class=ph9>
+
+A long representing the command number.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data1
+
+</td>
+<td class=ph9>
+
+A long representing the Data 1 value.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data2
+
+</td>
+<td class=ph9>
+
+A long representing the Data 2 value.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data3
+
+</td>
+<td class=ph9>
+
+A string representing the Data 3 value.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data4
+
+</td>
+<td class=ph9>
+
+A string representing the Data 4 value.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the value returned from the Plugin's phpi_command function.  Returns empty string if the plugin is not valid or you passed a negative number for the timeout.  Returns "*ERROR - PLUGIN TIMEOUT" if the plugin did not return a value before your timeout expired.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function for general communication with a Generic PowerHome Plugin.  This function is a direct passthru to the phpi_command function required by the PowerHome Generic Plugin Interface.  Implementation of the cmd and data1 thru data4 parameters is dependent upon the indivdual plugin.
+
+</div>
+</body>
+</html>

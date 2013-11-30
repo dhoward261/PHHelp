@@ -1,0 +1,226 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_comopen</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_comopen PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Opens the specified COM control.  PowerHome provides the user with 5 COM controls that can be opened and characters received and written to.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_comopen ( comnum, comport, bps, parity, databits, stopbits, rthreshold, sthreshold, handshaking, inputmode, nulldiscard, rtsenable, dtrenable, parityreplace, id )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+comnum
+
+</td>
+<td class=ph9>
+
+The number of the COM control you are referencing. Valid values are 1 thru 5.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+comport
+
+</td>
+<td class=ph9>
+
+The COM port you wish to open.  Typically a number from 1 to 8 but can be higher.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+bps
+
+</td>
+<td class=ph9>
+
+The speed at which the port should be opened.  A typically value would be 9600.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parity
+
+</td>
+<td class=ph9>
+
+The parity the port should be opened.  Valid values are "E", "O", and "N".
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+databits
+
+</td>
+<td class=ph9>
+
+The number of bits within a byte that represent data.  Typical values would be 7 with even or odd parity and 8 with no parity.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+stopbits
+
+</td>
+<td class=ph9>
+
+The number of stop bits.  Typically 1.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+rthreshold
+
+</td>
+<td class=ph9>
+
+The number of bytes to receive in the incoming buffer before the receive macro is fired.  A value of 1 will cause the receive macro to execute every time a character is received (Assuming the characters are read as soon as they are received).
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+sthreshold
+
+</td>
+<td class=ph9>
+
+The number of bytes to store in the outgoing buffer before actually being sent out the COM port.  A value of 0 will force bytes to be sent immediately.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+handshaking
+
+</td>
+<td class=ph9>
+
+The value to use for handshaking.  Use 0 for no handshaking, 1 for XON/OFF handshaking, 2 for RTS/CTS handshaking, and 3 for both XON/OFF and RTS/CTS handshaking.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+inputmode
+
+</td>
+<td class=ph9>
+
+The manner in which to receive data.  Use 0 for text data, 1 for binary data.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+nulldiscard
+
+</td>
+<td class=ph9>
+
+Use a 0 to include null characters (ASCII 0) in the incoming buffer.  Any other value will cause null characters to be discarded.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+rtsenable
+
+</td>
+<td class=ph9>
+
+Use a 0 to disable the RTS line.  Any other value will enable the RTS line.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+dtrenable
+
+</td>
+<td class=ph9>
+
+Use a 0 to disable the DTR line.  Any other value will enable the DTR line.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parityreplace
+
+</td>
+<td class=ph9>
+
+The character to be used to replace an invalid character when a parity error occurs.  Typically this would be set to "?".
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of a macro to be called when characters are received.  
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns 0 if successful. Returns 1 if a comnum < 1 or > 5 is specified. Returns 2 if the specified COM is already open.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Allows the user to easily implement serial communications from within PowerHome.  The COM control has an internal incoming buffer of 2048 characters.  There are also two internal variables that track status of the incoming buffer.  The buffercount variable keeps track of how many total characters are in the incoming buffer.  The bufferptr variable points to the position of the last read character.  Both these values start at zero.  As characters arrive at the buffer, the buffercount variable is increased.  If this value was zero and the ID parameter is not blank, the macro represented by the ID will be placed in the execution queue.  As you read characters from the incoming buffer, the bufferptr variable is increased.  When the bufferptr is equal to the buffercount (all characters have been read) both variables are reset to 0.  If more characters are received, the macro will again be fired.
+
+</div>
+</body>
+</html>

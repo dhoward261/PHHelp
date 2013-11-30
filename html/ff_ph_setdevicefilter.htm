@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setdevicefilter</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_setdevicefilter PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the filter for the Device Status Screen.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_setdevicefilter ( filter )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+filter
+
+</td>
+<td class=ph9>
+
+Filter expression to apply to the Device Status Screen
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 1 if the filter succeeds.  - 1 is returned if the filter fails.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use the ph_setdevicefilter formula to programatically limit the amount of rows displayed on the Device Status Screen.
+<br><br>
+The filter expression consists of columns, relational operators, and values against which column values are compared. Boolean expressions can be connected with logical operators AND and OR. You can also use NOT, the negation operator. Use parentheses to control the order of evaluation.
+<br><br>
+Sample Filters:<br>
+location = 'LIVING ROOM'<br>
+type = 0 and id like 'E%'
+
+</div>
+</body>
+</html>

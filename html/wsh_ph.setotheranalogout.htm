@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.setotheranalogout</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.setotheranalogout Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the value of an Analog Output
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.setotheranalogout ( controller, unit, point, value )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+controller
+
+</td>
+<td class=ph9>
+
+The ID of the controller.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+unit
+
+</td>
+<td class=ph9>
+
+The address of the unit.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+point
+
+</td>
+<td class=ph9>
+
+The analog output point you wish to set the value of.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+The value you wish to write to the analog output.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns a 0 if successful. - 1 is returned if the controller is not available, - 2 is returned if the  controller does not support analog outputs, - 3 is returned if the unit is out of range, - 4 is returned if the point is out of range.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Currently only supported by the Velleman K8000 controller.  To use this function with the Velleman K8000, specify the controller ID whose type is K8000. To set the output of the 6 bit analog outputs, specify a "unit" value of 0.  The valid "point" values for the 6 bit AO's will be from 1 to 32.  To set the Velleman precision analog outputs (8 bit AO), use a "unit" value of 1.  The valid "point" values for the precision AO's will be from 1 to 4.
+
+</div>
+</body>
+</html>

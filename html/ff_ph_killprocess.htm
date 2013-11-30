@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_killprocess</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_killprocess PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Kills the specified running Windows process.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_killprocess ( process )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+process
+
+</td>
+<td class=ph9>
+
+Long.  The process you wish to kill.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns nonzero if the function succeeds and 0 if the function fails.  Use ph_listprocesses or ph_locateprocess to determine the process you wish to kill.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Terminating a process can cause problems and should only be used if other methods fail.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ccimage</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ccimage Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Saves a Control Center tab to the clipboard or a graphic file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ccimage ( id, type, copykeys, filename )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the tab to convert to a graphic.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+Integer.  The type of graphic to save as.  Use 0 for the Clipboard, 1 for BMP, 2 for GIF, 3 for JPEG, and 4 for PNG.  You may also use the enumerated values clipboard, bmp, gif, jpeg, png.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+copykeys
+
+</td>
+<td class=ph9>
+
+Integer.  Use a value of 1 for the keys to be saved in the graphic.  Use a value of 0 to not have the keys saved in the graphic.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+filename
+
+</td>
+<td class=ph9>
+
+String.  The path and filename to save to.  Use empty string for the clipboard.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to save a snapshot image of a Control Center tab to either the clipboard or a graphic file.  Uses a bitblt function to accomplish the graphic creation.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.webds</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.webds Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns a dynamic HTML table containing the PowerHome Device Status screen.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.webds ( type, nexturl )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+Integer.  The type of web based Device Status screen to return.  Use 0 for the new version with Control buttons on the left.  Use 1 for the legacy version with Control buttons on the right.  Use 2 for an alternative version with the Control buttons on the left.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+nexturl
+
+</td>
+<td class=ph9>
+
+String.  A string representing the URL of the next page to open after processing a device status control button.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns a complete HTML table source code for the PowerHome Device Status screen at that moment.  Use this function to quickly incorporate the Device Status screen directly into your own PSP code creations with virtually no coding.  Using this function, you can create your own menus and mix or match individual PowerHome web elements.
+
+</div>
+</body>
+</html>

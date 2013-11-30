@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>lastpos</title>
+</head>
+<body>
+<div class=ph1>
+
+lastpos PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Finds the last position of a target string in a source string.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+lastpos ( string1, string2 {, searchlength } )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+string1
+
+</td>
+<td class=ph9>
+
+The string in which you want to find string2
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+string2
+
+</td>
+<td class=ph9>
+
+The string you want to find in string1
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+searchlength
+
+</td>
+<td class=ph9>
+
+(optional) A long that limits the search to the leftmost searchlength characters of the source string string1. The default is the entire string
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long. Returns a long whose value is the starting position of the last occurrence of string2 in string1 within the characters specified in searchlength. If string2 is not found in string1 or if searchlength is 0, LastPos returns 0. If any argument's value is NULL, LastPos returns NULL.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The LastPos function is case sensitive. The entire target string must be found in the source string.
+
+</div>
+</body>
+</html>
+

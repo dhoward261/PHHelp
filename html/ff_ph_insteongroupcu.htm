@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_insteongroupcu</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_insteongroupcu PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends group cleanup commands to a device within an Insteon PLC group.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_insteongroupcu ( id, deviceid, cmd1 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the PLC Insteon Group.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+deviceid
+
+</td>
+<td class=ph9>
+
+String.  The ID of the device within the PLC group you are controlling.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+cmd1
+
+</td>
+<td class=ph9>
+
+Integer.  The command 1 to send to the group.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns a 0 if successful. -1 is returned if the controller is not available, -2 is returned if the controller does not support Insteon, -100 is returned if the group ID cannot be found, -101 if the device ID cannot be found.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this funciton to send Insteon group cleanup commands to a device within a PLC group. This function differs from the ph_insteongroup command by sending group cleanup commands (direct commands to a specific device) rather than group broadcast commands (commands to all members of a group) like the ph_insteongroup function.  Using this function, you can achieve a very fine degree of control over your Insteon devices by creating a groups with specific on levels and ramprates amongst all your devices and never intending to send a group command (so that all devices respond together) and then just send group cleanup commands to individual devices to achieve a variable ramprate.<br><br>Valid commands are 17 for on, 18 for fast on, 19 for off, 20 for fast off, 21 to brighten, and 22 to dim. You can also use the enumerated values: ion, ifaston, ioff, ifastoff, ibright, idim. Set cmd2 to 0 for all cmd1 values. Using a cmd1 value of 17 will cause the group to turn on to their individual group values using their individual ramprates. An 18 command (ifaston) causes all devices in the group to go full on ignoring the ramprate. 
+
+</div>
+</body>
+</html>

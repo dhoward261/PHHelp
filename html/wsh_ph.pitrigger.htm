@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.pitrigger</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.pitrigger Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Calls the Generic Plugin Trigger (Trigger type 27).
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.pitrigger ( id, number, value, dim, command, data, formula, auxvalue )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The trigger ID to call.  Within the Generic Plugin Trigger, this is the ID of the plugin.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+number
+
+</td>
+<td class=ph9>
+
+The trigger number to call.  This will be a value from 1 to 256.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+The trigger value to call.  This will be a value from 1 to 256.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+dim
+
+</td>
+<td class=ph9>
+
+A double representing the dim value.  This value will simply be passed to the trigger in the [TEMP2] variable.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+command
+
+</td>
+<td class=ph9>
+
+An unsigned long representing the command.  This value will be passed to the [TEMP3] variable.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+A long representing the data.  This value will be passed to the [TEMP4] variable.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+formula
+
+</td>
+<td class=ph9>
+
+A string representing the formula.  This value will be passed to the [TEMP5] variable.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+auxvalue
+
+</td>
+<td class=ph9>
+
+A string representing the auxillary value.  This value will be passed to the [TEMP10] variable.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  The return value is the binary addition of the four individual trigger calls.  This sum consists of 1 if the first check returns no rows, 2 if the second check returns no rows, 4 if the third check returns no rows, and 8 if the fourth check returns no rows.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function is very similar to the ph.checktrigger function except that it only calls trigger types of 27 (Generic Plugin Trigger).  It is provided as a simple interface for generic plugins to fire the generic plugin trigger.  Using a single function call, 4 individual trigger checks will be made.  The first will be made for [Any], [Any], the second for [Any], Specific Value, the third for Specific Number, [Any], and the fourth for Specific Number, Specific Value.<br><br>While a plugin can fire ANY trigger using the ph.checktrigger function, for plugin specific triggers not handled by the other existing trigger types, the Generic Plugin Trigger should be used along with this function call.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,4312 @@
+<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="SiteType" value="index">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Formula functions">
+    <param name="Name" value="Formula functions">
+    <param name="Local" value="html\formula_functions.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="abs">
+      <param name="Name" value="abs">
+      <param name="Local" value="html\ff_abs.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="acos">
+      <param name="Name" value="acos">
+      <param name="Local" value="html\ff_acos.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="asc">
+      <param name="Name" value="asc">
+      <param name="Local" value="html\ff_asc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="asin">
+      <param name="Name" value="asin">
+      <param name="Local" value="html\ff_asin.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="atan">
+      <param name="Name" value="atan">
+      <param name="Local" value="html\ff_atan.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="case">
+      <param name="Name" value="case">
+      <param name="Local" value="html\ff_case.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ceiling">
+      <param name="Name" value="ceiling">
+      <param name="Local" value="html\ff_ceiling.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="char">
+      <param name="Name" value="char">
+      <param name="Local" value="html\ff_char.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="clipboard">
+      <param name="Name" value="clipboard">
+      <param name="Local" value="html\ff_clipboard.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="cos">
+      <param name="Name" value="cos">
+      <param name="Local" value="html\ff_cos.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="date">
+      <param name="Name" value="date">
+      <param name="Local" value="html\ff_date.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="datetime">
+      <param name="Name" value="datetime">
+      <param name="Local" value="html\ff_datetime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="day">
+      <param name="Name" value="day">
+      <param name="Local" value="html\ff_day.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="dayname">
+      <param name="Name" value="dayname">
+      <param name="Local" value="html\ff_dayname.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="daynumber">
+      <param name="Name" value="daynumber">
+      <param name="Local" value="html\ff_daynumber.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="daysafter">
+      <param name="Name" value="daysafter">
+      <param name="Local" value="html\ff_daysafter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="dec">
+      <param name="Name" value="dec">
+      <param name="Local" value="html\ff_dec.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="double">
+      <param name="Name" value="double">
+      <param name="Local" value="html\ff_double.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="exp">
+      <param name="Name" value="exp">
+      <param name="Local" value="html\ff_exp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="fact">
+      <param name="Name" value="fact">
+      <param name="Local" value="html\ff_fact.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="fill">
+      <param name="Name" value="fill">
+      <param name="Local" value="html\ff_fill.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="hour">
+      <param name="Name" value="hour">
+      <param name="Local" value="html\ff_hour.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="if">
+      <param name="Name" value="if">
+      <param name="Local" value="html\ff_if.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="int">
+      <param name="Name" value="int">
+      <param name="Local" value="html\ff_int.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="integer">
+      <param name="Name" value="integer">
+      <param name="Local" value="html\ff_integer.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="isdate">
+      <param name="Name" value="isdate">
+      <param name="Local" value="html\ff_isdate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="isnull">
+      <param name="Name" value="isnull">
+      <param name="Local" value="html\ff_isnull.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="isnumber">
+      <param name="Name" value="isnumber">
+      <param name="Local" value="html\ff_isnumber.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="istime">
+      <param name="Name" value="istime">
+      <param name="Local" value="html\ff_istime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="lastpos">
+      <param name="Name" value="lastpos">
+      <param name="Local" value="html\ff_lastpos.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="left">
+      <param name="Name" value="left">
+      <param name="Local" value="html\ff_left.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="lefttrim">
+      <param name="Name" value="lefttrim">
+      <param name="Local" value="html\ff_lefttrim.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="len">
+      <param name="Name" value="len">
+      <param name="Local" value="html\ff_len.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="log">
+      <param name="Name" value="log">
+      <param name="Local" value="html\ff_log.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="logten">
+      <param name="Name" value="logten">
+      <param name="Local" value="html\ff_logten.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="long">
+      <param name="Name" value="long">
+      <param name="Local" value="html\ff_long.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="lower">
+      <param name="Name" value="lower">
+      <param name="Local" value="html\ff_lower.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="match">
+      <param name="Name" value="match">
+      <param name="Local" value="html\ff_match.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="mid">
+      <param name="Name" value="mid">
+      <param name="Local" value="html\ff_mid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="minute">
+      <param name="Name" value="minute">
+      <param name="Local" value="html\ff_minute.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="mod">
+      <param name="Name" value="mod">
+      <param name="Local" value="html\ff_mod.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="month">
+      <param name="Name" value="month">
+      <param name="Local" value="html\ff_month.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="now">
+      <param name="Name" value="now">
+      <param name="Local" value="html\ff_now.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="number">
+      <param name="Name" value="number">
+      <param name="Local" value="html\ff_number.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_addtoglobal">
+      <param name="Name" value="ph_addtoglobal">
+      <param name="Local" value="html\ff_ph_addtoglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_addtovar">
+      <param name="Name" value="ph_addtovar">
+      <param name="Local" value="html\ff_ph_addtovar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_and">
+      <param name="Name" value="ph_and">
+      <param name="Local" value="html\ff_ph_and.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_backupdb">
+      <param name="Name" value="ph_backupdb">
+      <param name="Local" value="html\ff_ph_backupdb.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_base64decode">
+      <param name="Name" value="ph_base64decode">
+      <param name="Local" value="html\ff_ph_base64decode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_base64encode">
+      <param name="Name" value="ph_base64encode">
+      <param name="Local" value="html\ff_ph_base64encode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccaction">
+      <param name="Name" value="ph_ccaction">
+      <param name="Local" value="html\ff_ph_ccaction.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccclearchgs">
+      <param name="Name" value="ph_ccclearchgs">
+      <param name="Local" value="html\ff_ph_ccclearchgs.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccdescribe">
+      <param name="Name" value="ph_ccdescribe">
+      <param name="Local" value="html\ff_ph_ccdescribe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccdescribeid">
+      <param name="Name" value="ph_ccdescribeid">
+      <param name="Local" value="html\ff_ph_ccdescribeid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccimage">
+      <param name="Name" value="ph_ccimage">
+      <param name="Local" value="html\ff_ph_ccimage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccmapinfo">
+      <param name="Name" value="ph_ccmapinfo">
+      <param name="Local" value="html\ff_ph_ccmapinfo.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccmodify">
+      <param name="Name" value="ph_ccmodify">
+      <param name="Local" value="html\ff_ph_ccmodify.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ccmodifyid">
+      <param name="Name" value="ph_ccmodifyid">
+      <param name="Local" value="html\ff_ph_ccmodifyid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_checktrigger">
+      <param name="Name" value="ph_checktrigger">
+      <param name="Local" value="html\ff_ph_checktrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_chggrammar">
+      <param name="Name" value="ph_chggrammar">
+      <param name="Local" value="html\ff_ph_chggrammar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_chgspeaker">
+      <param name="Name" value="ph_chgspeaker">
+      <param name="Local" value="html\ff_ph_chgspeaker.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_clearexequeue">
+      <param name="Name" value="ph_clearexequeue">
+      <param name="Local" value="html\ff_ph_clearexequeue.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_clearvars">
+      <param name="Name" value="ph_clearvars">
+      <param name="Local" value="html\ff_ph_clearvars.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_clearx10hist">
+      <param name="Name" value="ph_clearx10hist">
+      <param name="Local" value="html\ff_ph_clearx10hist.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_closewindow">
+      <param name="Name" value="ph_closewindow">
+      <param name="Local" value="html\ff_ph_closewindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_combuffercount">
+      <param name="Name" value="ph_combuffercount">
+      <param name="Local" value="html\ff_ph_combuffercount.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_combufferptr">
+      <param name="Name" value="ph_combufferptr">
+      <param name="Local" value="html\ff_ph_combufferptr.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_combufferreset">
+      <param name="Name" value="ph_combufferreset">
+      <param name="Local" value="html\ff_ph_combufferreset.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comclose">
+      <param name="Name" value="ph_comclose">
+      <param name="Local" value="html\ff_ph_comclose.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comdtr">
+      <param name="Name" value="ph_comdtr">
+      <param name="Local" value="html\ff_ph_comdtr.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comopen">
+      <param name="Name" value="ph_comopen">
+      <param name="Local" value="html\ff_ph_comopen.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comopensimple">
+      <param name="Name" value="ph_comopensimple">
+      <param name="Local" value="html\ff_ph_comopensimple.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comrecvchar">
+      <param name="Name" value="ph_comrecvchar">
+      <param name="Local" value="html\ff_ph_comrecvchar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comrecvstring">
+      <param name="Name" value="ph_comrecvstring">
+      <param name="Local" value="html\ff_ph_comrecvstring.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comrts">
+      <param name="Name" value="ph_comrts">
+      <param name="Local" value="html\ff_ph_comrts.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comsendchar">
+      <param name="Name" value="ph_comsendchar">
+      <param name="Local" value="html\ff_ph_comsendchar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_comsendstring">
+      <param name="Name" value="ph_comsendstring">
+      <param name="Local" value="html\ff_ph_comsendstring.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_concatglobal">
+      <param name="Name" value="ph_concatglobal">
+      <param name="Local" value="html\ff_ph_concatglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_concatvar">
+      <param name="Name" value="ph_concatvar">
+      <param name="Local" value="html\ff_ph_concatvar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_connect">
+      <param name="Name" value="ph_connect">
+      <param name="Local" value="html\ff_ph_connect.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_convertimage">
+      <param name="Name" value="ph_convertimage">
+      <param name="Local" value="html\ff_ph_convertimage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_copyfile">
+      <param name="Name" value="ph_copyfile">
+      <param name="Local" value="html\ff_ph_copyfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_createdirectory">
+      <param name="Name" value="ph_createdirectory">
+      <param name="Local" value="html\ff_ph_createdirectory.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_createglobal">
+      <param name="Name" value="ph_createglobal">
+      <param name="Local" value="html\ff_ph_createglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_createpluginpt">
+      <param name="Name" value="ph_createpluginpt">
+      <param name="Local" value="html\ff_ph_createpluginpt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_createtimedevent">
+      <param name="Name" value="ph_createtimedevent">
+      <param name="Local" value="html\ff_ph_createtimedevent.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_createtimedevent1">
+      <param name="Name" value="ph_createtimedevent1">
+      <param name="Local" value="html\ff_ph_createtimedevent1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ctlrcmd">
+      <param name="Name" value="ph_ctlrcmd">
+      <param name="Local" value="html\ff_ph_ctlrcmd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ctlrcmd1">
+      <param name="Name" value="ph_ctlrcmd1">
+      <param name="Local" value="html\ff_ph_ctlrcmd1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ctlrsq">
+      <param name="Name" value="ph_ctlrsq">
+      <param name="Local" value="html\ff_ph_ctlrsq.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ctof">
+      <param name="Name" value="ph_ctof">
+      <param name="Local" value="html\ff_ph_ctof.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_delay">
+      <param name="Name" value="ph_delay">
+      <param name="Local" value="html\ff_ph_delay.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_deletefile">
+      <param name="Name" value="ph_deletefile">
+      <param name="Local" value="html\ff_ph_deletefile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_deleteglobal">
+      <param name="Name" value="ph_deleteglobal">
+      <param name="Local" value="html\ff_ph_deleteglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_devicebtn">
+      <param name="Name" value="ph_devicebtn">
+      <param name="Local" value="html\ff_ph_devicebtn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_devicecontrol">
+      <param name="Name" value="ph_devicecontrol">
+      <param name="Local" value="html\ff_ph_devicecontrol.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_devicerefreshstat">
+      <param name="Name" value="ph_devicerefreshstat">
+      <param name="Local" value="html\ff_ph_devicerefreshstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_directsql">
+      <param name="Name" value="ph_directsql">
+      <param name="Local" value="html\ff_ph_directsql.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_disabletrigger">
+      <param name="Name" value="ph_disabletrigger">
+      <param name="Local" value="html\ff_ph_disabletrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_disconnect">
+      <param name="Name" value="ph_disconnect">
+      <param name="Local" value="html\ff_ph_disconnect.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_doloop">
+      <param name="Name" value="ph_doloop">
+      <param name="Local" value="html\ff_ph_doloop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_enabletrigger">
+      <param name="Name" value="ph_enabletrigger">
+      <param name="Local" value="html\ff_ph_enabletrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_evalscript">
+      <param name="Name" value="ph_evalscript">
+      <param name="Local" value="html\ff_ph_evalscript.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_executescript">
+      <param name="Name" value="ph_executescript">
+      <param name="Local" value="html\ff_ph_executescript.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_exporteventlog">
+      <param name="Name" value="ph_exporteventlog">
+      <param name="Local" value="html\ff_ph_exporteventlog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_extendmacrowait">
+      <param name="Name" value="ph_extendmacrowait">
+      <param name="Local" value="html\ff_ph_extendmacrowait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_fileexists">
+      <param name="Name" value="ph_fileexists">
+      <param name="Local" value="html\ff_ph_fileexists.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_filelength">
+      <param name="Name" value="ph_filelength">
+      <param name="Local" value="html\ff_ph_filelength.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_filelist">
+      <param name="Name" value="ph_filelist">
+      <param name="Local" value="html\ff_ph_filelist.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_finddata">
+      <param name="Name" value="ph_finddata">
+      <param name="Local" value="html\ff_ph_finddata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_findwindow">
+      <param name="Name" value="ph_findwindow">
+      <param name="Local" value="html\ff_ph_findwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_findwindowex">
+      <param name="Name" value="ph_findwindowex">
+      <param name="Local" value="html\ff_ph_findwindowex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_fixhtmlquotes">
+      <param name="Name" value="ph_fixhtmlquotes">
+      <param name="Local" value="html\ff_ph_fixhtmlquotes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_fixjsquotes">
+      <param name="Name" value="ph_fixjsquotes">
+      <param name="Local" value="html\ff_ph_fixjsquotes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_forloop">
+      <param name="Name" value="ph_forloop">
+      <param name="Local" value="html\ff_ph_forloop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_forloopwinc">
+      <param name="Name" value="ph_forloopwinc">
+      <param name="Local" value="html\ff_ph_forloopwinc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_formula">
+      <param name="Name" value="ph_formula">
+      <param name="Local" value="html\ff_ph_formula.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_formulabtn">
+      <param name="Name" value="ph_formulabtn">
+      <param name="Local" value="html\ff_ph_formulabtn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_formulabtn_d">
+      <param name="Name" value="ph_formulabtn_d">
+      <param name="Local" value="html\ff_ph_formulabtn_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_formulabtn_dt">
+      <param name="Name" value="ph_formulabtn_dt">
+      <param name="Local" value="html\ff_ph_formulabtn_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_formulabtn_n">
+      <param name="Name" value="ph_formulabtn_n">
+      <param name="Local" value="html\ff_ph_formulabtn_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_formulabtn_s">
+      <param name="Name" value="ph_formulabtn_s">
+      <param name="Local" value="html\ff_ph_formulabtn_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_formulabtn_t">
+      <param name="Name" value="ph_formulabtn_t">
+      <param name="Local" value="html\ff_ph_formulabtn_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ftoc">
+      <param name="Name" value="ph_ftoc">
+      <param name="Local" value="html\ff_ph_ftoc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_genctlrtrigger">
+      <param name="Name" value="ph_genctlrtrigger">
+      <param name="Local" value="html\ff_ph_genctlrtrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getanalog">
+      <param name="Name" value="ph_getanalog">
+      <param name="Local" value="html\ff_ph_getanalog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getanalogcalcstat">
+      <param name="Name" value="ph_getanalogcalcstat">
+      <param name="Local" value="html\ff_ph_getanalogcalcstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getanalogstat">
+      <param name="Name" value="ph_getanalogstat">
+      <param name="Local" value="html\ff_ph_getanalogstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getcclastobj">
+      <param name="Name" value="ph_getcclastobj">
+      <param name="Local" value="html\ff_ph_getcclastobj.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getcclasttab">
+      <param name="Name" value="ph_getcclasttab">
+      <param name="Local" value="html\ff_ph_getcclasttab.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjbcolor">
+      <param name="Name" value="ph_getccobjbcolor">
+      <param name="Local" value="html\ff_ph_getccobjbcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjborder">
+      <param name="Name" value="ph_getccobjborder">
+      <param name="Local" value="html\ff_ph_getccobjborder.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjfcolor">
+      <param name="Name" value="ph_getccobjfcolor">
+      <param name="Local" value="html\ff_ph_getccobjfcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjgraphic">
+      <param name="Name" value="ph_getccobjgraphic">
+      <param name="Local" value="html\ff_ph_getccobjgraphic.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjheight">
+      <param name="Name" value="ph_getccobjheight">
+      <param name="Local" value="html\ff_ph_getccobjheight.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjtext">
+      <param name="Name" value="ph_getccobjtext">
+      <param name="Local" value="html\ff_ph_getccobjtext.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjwidth">
+      <param name="Name" value="ph_getccobjwidth">
+      <param name="Local" value="html\ff_ph_getccobjwidth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjx">
+      <param name="Name" value="ph_getccobjx">
+      <param name="Local" value="html\ff_ph_getccobjx.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getccobjy">
+      <param name="Name" value="ph_getccobjy">
+      <param name="Local" value="html\ff_ph_getccobjy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getcctab">
+      <param name="Name" value="ph_getcctab">
+      <param name="Local" value="html\ff_ph_getcctab.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getcctabid">
+      <param name="Name" value="ph_getcctabid">
+      <param name="Local" value="html\ff_ph_getcctabid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getclassname">
+      <param name="Name" value="ph_getclassname">
+      <param name="Local" value="html\ff_ph_getclassname.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getcolcount">
+      <param name="Name" value="ph_getcolcount">
+      <param name="Local" value="html\ff_ph_getcolcount.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getcolname">
+      <param name="Name" value="ph_getcolname">
+      <param name="Local" value="html\ff_ph_getcolname.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getcoltype">
+      <param name="Name" value="ph_getcoltype">
+      <param name="Local" value="html\ff_ph_getcoltype.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getdata">
+      <param name="Name" value="ph_getdata">
+      <param name="Local" value="html\ff_ph_getdata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getdata_cn">
+      <param name="Name" value="ph_getdata_cn">
+      <param name="Local" value="html\ff_ph_getdata_cn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getdatawithmask">
+      <param name="Name" value="ph_getdatawithmask">
+      <param name="Local" value="html\ff_ph_getdatawithmask.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getdevicefilter">
+      <param name="Name" value="ph_getdevicefilter">
+      <param name="Local" value="html\ff_ph_getdevicefilter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getdevicesort">
+      <param name="Name" value="ph_getdevicesort">
+      <param name="Local" value="html\ff_ph_getdevicesort.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getdigital">
+      <param name="Name" value="ph_getdigital">
+      <param name="Local" value="html\ff_ph_getdigital.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getdigitalstat">
+      <param name="Name" value="ph_getdigitalstat">
+      <param name="Local" value="html\ff_ph_getdigitalstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getexefromhandle">
+      <param name="Name" value="ph_getexefromhandle">
+      <param name="Local" value="html\ff_ph_getexefromhandle.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getforegroundwindow">
+      <param name="Name" value="ph_getforegroundwindow">
+      <param name="Local" value="html\ff_ph_getforegroundwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getglobal_d">
+      <param name="Name" value="ph_getglobal_d">
+      <param name="Local" value="html\ff_ph_getglobal_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getglobal_dt">
+      <param name="Name" value="ph_getglobal_dt">
+      <param name="Local" value="html\ff_ph_getglobal_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getglobal_n">
+      <param name="Name" value="ph_getglobal_n">
+      <param name="Local" value="html\ff_ph_getglobal_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getglobal_s">
+      <param name="Name" value="ph_getglobal_s">
+      <param name="Local" value="html\ff_ph_getglobal_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getglobal_t">
+      <param name="Name" value="ph_getglobal_t">
+      <param name="Local" value="html\ff_ph_getglobal_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_gethandle">
+      <param name="Name" value="ph_gethandle">
+      <param name="Local" value="html\ff_ph_gethandle.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_gethtmldata">
+      <param name="Name" value="ph_gethtmldata">
+      <param name="Local" value="html\ff_ph_gethtmldata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getinputret">
+      <param name="Name" value="ph_getinputret">
+      <param name="Local" value="html\ff_ph_getinputret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getinsteonctrl">
+      <param name="Name" value="ph_getinsteonctrl">
+      <param name="Local" value="html\ff_ph_getinsteonctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getinsteondt">
+      <param name="Name" value="ph_getinsteondt">
+      <param name="Local" value="html\ff_ph_getinsteondt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getinsteonlevel">
+      <param name="Name" value="ph_getinsteonlevel">
+      <param name="Local" value="html\ff_ph_getinsteonlevel.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getinsteonlevelrt">
+      <param name="Name" value="ph_getinsteonlevelrt">
+      <param name="Local" value="html\ff_ph_getinsteonlevelrt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getinsteonseconds">
+      <param name="Name" value="ph_getinsteonseconds">
+      <param name="Local" value="html\ff_ph_getinsteonseconds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getinsteonstat">
+      <param name="Name" value="ph_getinsteonstat">
+      <param name="Local" value="html\ff_ph_getinsteonstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getipfromhostname">
+      <param name="Name" value="ph_getipfromhostname">
+      <param name="Local" value="html\ff_ph_getipfromhostname.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getitcurl">
+      <param name="Name" value="ph_getitcurl">
+      <param name="Local" value="html\ff_ph_getitcurl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getlasterror">
+      <param name="Name" value="ph_getlasterror">
+      <param name="Local" value="html\ff_ph_getlasterror.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getline">
+      <param name="Name" value="ph_getline">
+      <param name="Local" value="html\ff_ph_getline.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getmbret">
+      <param name="Name" value="ph_getmbret">
+      <param name="Local" value="html\ff_ph_getmbret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getmode">
+      <param name="Name" value="ph_getmode">
+      <param name="Local" value="html\ff_ph_getmode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getmultistate">
+      <param name="Name" value="ph_getmultistate">
+      <param name="Local" value="html\ff_ph_getmultistate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getotheranalog">
+      <param name="Name" value="ph_getotheranalog">
+      <param name="Local" value="html\ff_ph_getotheranalog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getotherdigital">
+      <param name="Name" value="ph_getotherdigital">
+      <param name="Local" value="html\ff_ph_getotherdigital.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getothermultistate">
+      <param name="Name" value="ph_getothermultistate">
+      <param name="Local" value="html\ff_ph_getothermultistate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getothertimer">
+      <param name="Name" value="ph_getothertimer">
+      <param name="Local" value="html\ff_ph_getothertimer.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getothervar">
+      <param name="Name" value="ph_getothervar">
+      <param name="Local" value="html\ff_ph_getothervar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getparent">
+      <param name="Name" value="ph_getparent">
+      <param name="Local" value="html\ff_ph_getparent.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getphdir">
+      <param name="Name" value="ph_getphdir">
+      <param name="Local" value="html\ff_ph_getphdir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getphwebdir">
+      <param name="Name" value="ph_getphwebdir">
+      <param name="Local" value="html\ff_ph_getphwebdir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getsqlrows">
+      <param name="Name" value="ph_getsqlrows">
+      <param name="Local" value="html\ff_ph_getsqlrows.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getsuntime">
+      <param name="Name" value="ph_getsuntime">
+      <param name="Local" value="html\ff_ph_getsuntime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getsystemvar">
+      <param name="Name" value="ph_getsystemvar">
+      <param name="Local" value="html\ff_ph_getsystemvar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getsysvol">
+      <param name="Name" value="ph_getsysvol">
+      <param name="Local" value="html\ff_ph_getsysvol.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getsysvolmax">
+      <param name="Name" value="ph_getsysvolmax">
+      <param name="Local" value="html\ff_ph_getsysvolmax.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getsysvolmin">
+      <param name="Name" value="ph_getsysvolmin">
+      <param name="Local" value="html\ff_ph_getsysvolmin.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getteactive">
+      <param name="Name" value="ph_getteactive">
+      <param name="Local" value="html\ff_ph_getteactive.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_gettetime">
+      <param name="Name" value="ph_gettetime">
+      <param name="Local" value="html\ff_ph_gettetime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_gettickcount">
+      <param name="Name" value="ph_gettickcount">
+      <param name="Local" value="html\ff_ph_gettickcount.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_gettimeout">
+      <param name="Name" value="ph_gettimeout">
+      <param name="Local" value="html\ff_ph_gettimeout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getupbdt">
+      <param name="Name" value="ph_getupbdt">
+      <param name="Local" value="html\ff_ph_getupbdt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getupblevel">
+      <param name="Name" value="ph_getupblevel">
+      <param name="Local" value="html\ff_ph_getupblevel.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getupblevelrt">
+      <param name="Name" value="ph_getupblevelrt">
+      <param name="Local" value="html\ff_ph_getupblevelrt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getupbseconds">
+      <param name="Name" value="ph_getupbseconds">
+      <param name="Local" value="html\ff_ph_getupbseconds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getupbstat">
+      <param name="Name" value="ph_getupbstat">
+      <param name="Local" value="html\ff_ph_getupbstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_geturl">
+      <param name="Name" value="ph_geturl">
+      <param name="Local" value="html\ff_ph_geturl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_geturlviaproxy">
+      <param name="Name" value="ph_geturlviaproxy">
+      <param name="Local" value="html\ff_ph_geturlviaproxy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getvar_d">
+      <param name="Name" value="ph_getvar_d">
+      <param name="Local" value="html\ff_ph_getvar_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getvar_dt">
+      <param name="Name" value="ph_getvar_dt">
+      <param name="Local" value="html\ff_ph_getvar_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getvar_n">
+      <param name="Name" value="ph_getvar_n">
+      <param name="Local" value="html\ff_ph_getvar_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getvar_s">
+      <param name="Name" value="ph_getvar_s">
+      <param name="Local" value="html\ff_ph_getvar_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getvar_t">
+      <param name="Name" value="ph_getvar_t">
+      <param name="Local" value="html\ff_ph_getvar_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getversion">
+      <param name="Name" value="ph_getversion">
+      <param name="Local" value="html\ff_ph_getversion.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwburl">
+      <param name="Name" value="ph_getwburl">
+      <param name="Local" value="html\ff_ph_getwburl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebauth">
+      <param name="Name" value="ph_getwebauth">
+      <param name="Local" value="html\ff_ph_getwebauth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebbase64auth">
+      <param name="Name" value="ph_getwebbase64auth">
+      <param name="Local" value="html\ff_ph_getwebbase64auth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebcookie">
+      <param name="Name" value="ph_getwebcookie">
+      <param name="Local" value="html\ff_ph_getwebcookie.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebheader">
+      <param name="Name" value="ph_getwebheader">
+      <param name="Local" value="html\ff_ph_getwebheader.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebheaderparm">
+      <param name="Name" value="ph_getwebheaderparm">
+      <param name="Local" value="html\ff_ph_getwebheaderparm.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebmethod">
+      <param name="Name" value="ph_getwebmethod">
+      <param name="Local" value="html\ff_ph_getwebmethod.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebparm">
+      <param name="Name" value="ph_getwebparm">
+      <param name="Local" value="html\ff_ph_getwebparm.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwebremoteip">
+      <param name="Name" value="ph_getwebremoteip">
+      <param name="Local" value="html\ff_ph_getwebremoteip.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getweburl">
+      <param name="Name" value="ph_getweburl">
+      <param name="Local" value="html\ff_ph_getweburl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwindow">
+      <param name="Name" value="ph_getwindow">
+      <param name="Local" value="html\ff_ph_getwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwindowsdir">
+      <param name="Name" value="ph_getwindowsdir">
+      <param name="Local" value="html\ff_ph_getwindowsdir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwindowstate">
+      <param name="Name" value="ph_getwindowstate">
+      <param name="Local" value="html\ff_ph_getwindowstate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getwindowtext">
+      <param name="Name" value="ph_getwindowtext">
+      <param name="Local" value="html\ff_ph_getwindowtext.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getx10dt">
+      <param name="Name" value="ph_getx10dt">
+      <param name="Local" value="html\ff_ph_getx10dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getx10level">
+      <param name="Name" value="ph_getx10level">
+      <param name="Local" value="html\ff_ph_getx10level.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getx10seconds">
+      <param name="Name" value="ph_getx10seconds">
+      <param name="Local" value="html\ff_ph_getx10seconds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_getx10stat">
+      <param name="Name" value="ph_getx10stat">
+      <param name="Local" value="html\ff_ph_getx10stat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_guid">
+      <param name="Name" value="ph_guid">
+      <param name="Local" value="html\ff_ph_guid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_handle">
+      <param name="Name" value="ph_handle">
+      <param name="Local" value="html\ff_ph_handle.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_handle1">
+      <param name="Name" value="ph_handle1">
+      <param name="Local" value="html\ff_ph_handle1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_hextonum">
+      <param name="Name" value="ph_hextonum">
+      <param name="Local" value="html\ff_ph_hextonum.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_htmlcolor">
+      <param name="Name" value="ph_htmlcolor">
+      <param name="Local" value="html\ff_ph_htmlcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_htmlescape">
+      <param name="Name" value="ph_htmlescape">
+      <param name="Local" value="html\ff_ph_htmlescape.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_htmlunescape">
+      <param name="Name" value="ph_htmlunescape">
+      <param name="Local" value="html\ff_ph_htmlunescape.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteon">
+      <param name="Name" value="ph_insteon">
+      <param name="Local" value="html\ff_ph_insteon.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteonclearfailed">
+      <param name="Name" value="ph_insteonclearfailed">
+      <param name="Local" value="html\ff_ph_insteonclearfailed.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteonctrl">
+      <param name="Name" value="ph_insteonctrl">
+      <param name="Local" value="html\ff_ph_insteonctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteongroup">
+      <param name="Name" value="ph_insteongroup">
+      <param name="Local" value="html\ff_ph_insteongroup.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteongroupcu">
+      <param name="Name" value="ph_insteongroupcu">
+      <param name="Local" value="html\ff_ph_insteongroupcu.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteonraw">
+      <param name="Name" value="ph_insteonraw">
+      <param name="Local" value="html\ff_ph_insteonraw.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteonrawbcast">
+      <param name="Name" value="ph_insteonrawbcast">
+      <param name="Local" value="html\ff_ph_insteonrawbcast.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteonrawgroup">
+      <param name="Name" value="ph_insteonrawgroup">
+      <param name="Local" value="html\ff_ph_insteonrawgroup.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteonrawgroupcu">
+      <param name="Name" value="ph_insteonrawgroupcu">
+      <param name="Local" value="html\ff_ph_insteonrawgroupcu.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_insteonwithret">
+      <param name="Name" value="ph_insteonwithret">
+      <param name="Local" value="html\ff_ph_insteonwithret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ir">
+      <param name="Name" value="ph_ir">
+      <param name="Local" value="html\ff_ph_ir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_irchain">
+      <param name="Name" value="ph_irchain">
+      <param name="Local" value="html\ff_ph_irchain.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_irdesc">
+      <param name="Name" value="ph_irdesc">
+      <param name="Local" value="html\ff_ph_irdesc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_irnumseq">
+      <param name="Name" value="ph_irnumseq">
+      <param name="Local" value="html\ff_ph_irnumseq.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_isdaylightsavings">
+      <param name="Name" value="ph_isdaylightsavings">
+      <param name="Local" value="html\ff_ph_isdaylightsavings.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_iseven">
+      <param name="Name" value="ph_iseven">
+      <param name="Local" value="html\ff_ph_iseven.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ismacrowaiting">
+      <param name="Name" value="ph_ismacrowaiting">
+      <param name="Local" value="html\ff_ph_ismacrowaiting.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_isodd">
+      <param name="Name" value="ph_isodd">
+      <param name="Local" value="html\ff_ph_isodd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itccancel">
+      <param name="Name" value="ph_itccancel">
+      <param name="Local" value="html\ff_ph_itccancel.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itccreate">
+      <param name="Name" value="ph_itccreate">
+      <param name="Local" value="html\ff_ph_itccreate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcdestroy">
+      <param name="Name" value="ph_itcdestroy">
+      <param name="Local" value="html\ff_ph_itcdestroy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcexecuteftp">
+      <param name="Name" value="ph_itcexecuteftp">
+      <param name="Local" value="html\ff_ph_itcexecuteftp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcexecutehttp">
+      <param name="Name" value="ph_itcexecutehttp">
+      <param name="Local" value="html\ff_ph_itcexecutehttp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcgetdata">
+      <param name="Name" value="ph_itcgetdata">
+      <param name="Local" value="html\ff_ph_itcgetdata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcisbusy">
+      <param name="Name" value="ph_itcisbusy">
+      <param name="Local" value="html\ff_ph_itcisbusy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcisvalid">
+      <param name="Name" value="ph_itcisvalid">
+      <param name="Local" value="html\ff_ph_itcisvalid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcsavedata">
+      <param name="Name" value="ph_itcsavedata">
+      <param name="Local" value="html\ff_ph_itcsavedata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcseturl">
+      <param name="Name" value="ph_itcseturl">
+      <param name="Local" value="html\ff_ph_itcseturl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_itcsetuserpass">
+      <param name="Name" value="ph_itcsetuserpass">
+      <param name="Local" value="html\ff_ph_itcsetuserpass.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_keybd_event">
+      <param name="Name" value="ph_keybd_event">
+      <param name="Local" value="html\ff_ph_keybd_event.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_killallmacrowait">
+      <param name="Name" value="ph_killallmacrowait">
+      <param name="Local" value="html\ff_ph_killallmacrowait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_killmacrowait">
+      <param name="Name" value="ph_killmacrowait">
+      <param name="Local" value="html\ff_ph_killmacrowait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_killprocess">
+      <param name="Name" value="ph_killprocess">
+      <param name="Local" value="html\ff_ph_killprocess.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_listprocesses">
+      <param name="Name" value="ph_listprocesses">
+      <param name="Local" value="html\ff_ph_listprocesses.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_locatehandle">
+      <param name="Name" value="ph_locatehandle">
+      <param name="Local" value="html\ff_ph_locatehandle.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_locateprocess">
+      <param name="Name" value="ph_locateprocess">
+      <param name="Local" value="html\ff_ph_locateprocess.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_macro">
+      <param name="Name" value="ph_macro">
+      <param name="Local" value="html\ff_ph_macro.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_macroparm">
+      <param name="Name" value="ph_macroparm">
+      <param name="Local" value="html\ff_ph_macroparm.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_macroparmret">
+      <param name="Name" value="ph_macroparmret">
+      <param name="Local" value="html\ff_ph_macroparmret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_minutesafter">
+      <param name="Name" value="ph_minutesafter">
+      <param name="Local" value="html\ff_ph_minutesafter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_modifytimedevent">
+      <param name="Name" value="ph_modifytimedevent">
+      <param name="Local" value="html\ff_ph_modifytimedevent.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_movefile">
+      <param name="Name" value="ph_movefile">
+      <param name="Local" value="html\ff_ph_movefile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_msgbox">
+      <param name="Name" value="ph_msgbox">
+      <param name="Local" value="html\ff_ph_msgbox.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_multix">
+      <param name="Name" value="ph_multix">
+      <param name="Local" value="html\ff_ph_multix.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_multixtime">
+      <param name="Name" value="ph_multixtime">
+      <param name="Local" value="html\ff_ph_multixtime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_numtohex">
+      <param name="Name" value="ph_numtohex">
+      <param name="Local" value="html\ff_ph_numtohex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_numtohex1">
+      <param name="Name" value="ph_numtohex1">
+      <param name="Local" value="html\ff_ph_numtohex1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_openframe">
+      <param name="Name" value="ph_openframe">
+      <param name="Local" value="html\ff_ph_openframe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_openiewindow">
+      <param name="Name" value="ph_openiewindow">
+      <param name="Local" value="html\ff_ph_openiewindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_openphwin">
+      <param name="Name" value="ph_openphwin">
+      <param name="Local" value="html\ff_ph_openphwin.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_or">
+      <param name="Name" value="ph_or">
+      <param name="Local" value="html\ff_ph_or.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_parseline">
+      <param name="Name" value="ph_parseline">
+      <param name="Local" value="html\ff_ph_parseline.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_picmd">
+      <param name="Name" value="ph_picmd">
+      <param name="Local" value="html\ff_ph_picmd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_pictrl">
+      <param name="Name" value="ph_pictrl">
+      <param name="Local" value="html\ff_ph_pictrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ping">
+      <param name="Name" value="ph_ping">
+      <param name="Local" value="html\ff_ph_ping.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_pitrigger">
+      <param name="Name" value="ph_pitrigger">
+      <param name="Local" value="html\ff_ph_pitrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_playlist">
+      <param name="Name" value="ph_playlist">
+      <param name="Local" value="html\ff_ph_playlist.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_playsound">
+      <param name="Name" value="ph_playsound">
+      <param name="Local" value="html\ff_ph_playsound.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_playwinmsg">
+      <param name="Name" value="ph_playwinmsg">
+      <param name="Local" value="html\ff_ph_playwinmsg.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_pos">
+      <param name="Name" value="ph_pos">
+      <param name="Local" value="html\ff_ph_pos.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_postcopydata">
+      <param name="Name" value="ph_postcopydata">
+      <param name="Local" value="html\ff_ph_postcopydata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_postformula">
+      <param name="Name" value="ph_postformula">
+      <param name="Local" value="html\ff_ph_postformula.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_postmsg">
+      <param name="Name" value="ph_postmsg">
+      <param name="Local" value="html\ff_ph_postmsg.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_postmsg_s">
+      <param name="Name" value="ph_postmsg_s">
+      <param name="Local" value="html\ff_ph_postmsg_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_powerhomeuptime">
+      <param name="Name" value="ph_powerhomeuptime">
+      <param name="Local" value="html\ff_ph_powerhomeuptime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_powerhomeuptime_s">
+      <param name="Name" value="ph_powerhomeuptime_s">
+      <param name="Local" value="html\ff_ph_powerhomeuptime_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_processemail">
+      <param name="Name" value="ph_processemail">
+      <param name="Local" value="html\ff_ph_processemail.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_processemailthread">
+      <param name="Name" value="ph_processemailthread">
+      <param name="Local" value="html\ff_ph_processemailthread.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_prontotogc">
+      <param name="Name" value="ph_prontotogc">
+      <param name="Local" value="html\ff_ph_prontotogc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_prontotorr2">
+      <param name="Name" value="ph_prontotorr2">
+      <param name="Local" value="html\ff_ph_prontotorr2.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_readfile">
+      <param name="Name" value="ph_readfile">
+      <param name="Local" value="html\ff_ph_readfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_regactivex">
+      <param name="Name" value="ph_regactivex">
+      <param name="Local" value="html\ff_ph_regactivex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_regex">
+      <param name="Name" value="ph_regex">
+      <param name="Local" value="html\ff_ph_regex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_regexdiff">
+      <param name="Name" value="ph_regexdiff">
+      <param name="Local" value="html\ff_ph_regexdiff.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_regexdiff1">
+      <param name="Name" value="ph_regexdiff1">
+      <param name="Local" value="html\ff_ph_regexdiff1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_regexsnap">
+      <param name="Name" value="ph_regexsnap">
+      <param name="Local" value="html\ff_ph_regexsnap.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_regexsnap1">
+      <param name="Name" value="ph_regexsnap1">
+      <param name="Local" value="html\ff_ph_regexsnap1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_reinitialize">
+      <param name="Name" value="ph_reinitialize">
+      <param name="Local" value="html\ff_ph_reinitialize.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_relativedatetime">
+      <param name="Name" value="ph_relativedatetime">
+      <param name="Local" value="html\ff_ph_relativedatetime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_relativedtprecise">
+      <param name="Name" value="ph_relativedtprecise">
+      <param name="Local" value="html\ff_ph_relativedtprecise.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_relativetime">
+      <param name="Name" value="ph_relativetime">
+      <param name="Local" value="html\ff_ph_relativetime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_removedirectory">
+      <param name="Name" value="ph_removedirectory">
+      <param name="Local" value="html\ff_ph_removedirectory.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_replaceall">
+      <param name="Name" value="ph_replaceall">
+      <param name="Local" value="html\ff_ph_replaceall.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_replaceallmulti">
+      <param name="Name" value="ph_replaceallmulti">
+      <param name="Local" value="html\ff_ph_replaceallmulti.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_replaceallregex">
+      <param name="Name" value="ph_replaceallregex">
+      <param name="Local" value="html\ff_ph_replaceallregex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_replaceregex">
+      <param name="Name" value="ph_replaceregex">
+      <param name="Local" value="html\ff_ph_replaceregex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_rr2topronto">
+      <param name="Name" value="ph_rr2topronto">
+      <param name="Local" value="html\ff_ph_rr2topronto.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_rtne">
+      <param name="Name" value="ph_rtne">
+      <param name="Local" value="html\ff_ph_rtne.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_rtnes">
+      <param name="Name" value="ph_rtnes">
+      <param name="Local" value="html\ff_ph_rtnes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_run">
+      <param name="Name" value="ph_run">
+      <param name="Local" value="html\ff_ph_run.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_runscript_0">
+      <param name="Name" value="ph_runscript_0">
+      <param name="Local" value="html\ff_ph_runscript_0.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_runscript_1">
+      <param name="Name" value="ph_runscript_1">
+      <param name="Local" value="html\ff_ph_runscript_1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_runscript_2">
+      <param name="Name" value="ph_runscript_2">
+      <param name="Local" value="html\ff_ph_runscript_2.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_runscript_3">
+      <param name="Name" value="ph_runscript_3">
+      <param name="Local" value="html\ff_ph_runscript_3.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_runscript_4">
+      <param name="Name" value="ph_runscript_4">
+      <param name="Local" value="html\ff_ph_runscript_4.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_runscript_5">
+      <param name="Name" value="ph_runscript_5">
+      <param name="Local" value="html\ff_ph_runscript_5.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_runsync">
+      <param name="Name" value="ph_runsync">
+      <param name="Local" value="html\ff_ph_runsync.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_savedesktopimage">
+      <param name="Name" value="ph_savedesktopimage">
+      <param name="Local" value="html\ff_ph_savedesktopimage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_saveframe">
+      <param name="Name" value="ph_saveframe">
+      <param name="Local" value="html\ff_ph_saveframe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_saveitcurl">
+      <param name="Name" value="ph_saveitcurl">
+      <param name="Local" value="html\ff_ph_saveitcurl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_saveurl">
+      <param name="Name" value="ph_saveurl">
+      <param name="Local" value="html\ff_ph_saveurl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_saveurlviaproxy">
+      <param name="Name" value="ph_saveurlviaproxy">
+      <param name="Local" value="html\ff_ph_saveurlviaproxy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_scrapetext">
+      <param name="Name" value="ph_scrapetext">
+      <param name="Local" value="html\ff_ph_scrapetext.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_seconds">
+      <param name="Name" value="ph_seconds">
+      <param name="Local" value="html\ff_ph_seconds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_secondsafter">
+      <param name="Name" value="ph_secondsafter">
+      <param name="Local" value="html\ff_ph_secondsafter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_secondsdiff">
+      <param name="Name" value="ph_secondsdiff">
+      <param name="Local" value="html\ff_ph_secondsdiff.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_secondsdiffsec">
+      <param name="Name" value="ph_secondsdiffsec">
+      <param name="Local" value="html\ff_ph_secondsdiffsec.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendcopydata">
+      <param name="Name" value="ph_sendcopydata">
+      <param name="Local" value="html\ff_ph_sendcopydata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendemail">
+      <param name="Name" value="ph_sendemail">
+      <param name="Local" value="html\ff_ph_sendemail.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendemailfile">
+      <param name="Name" value="ph_sendemailfile">
+      <param name="Local" value="html\ff_ph_sendemailfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendkeys">
+      <param name="Name" value="ph_sendkeys">
+      <param name="Local" value="html\ff_ph_sendkeys.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendkeysbtn">
+      <param name="Name" value="ph_sendkeysbtn">
+      <param name="Local" value="html\ff_ph_sendkeysbtn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendkeysmq">
+      <param name="Name" value="ph_sendkeysmq">
+      <param name="Local" value="html\ff_ph_sendkeysmq.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendmsg">
+      <param name="Name" value="ph_sendmsg">
+      <param name="Local" value="html\ff_ph_sendmsg.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendmsg_s">
+      <param name="Name" value="ph_sendmsg_s">
+      <param name="Local" value="html\ff_ph_sendmsg_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendsmtpemail">
+      <param name="Name" value="ph_sendsmtpemail">
+      <param name="Local" value="html\ff_ph_sendsmtpemail.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendsmtpemailfile">
+      <param name="Name" value="ph_sendsmtpemailfile">
+      <param name="Local" value="html\ff_ph_sendsmtpemailfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendsocketdata">
+      <param name="Name" value="ph_sendsocketdata">
+      <param name="Local" value="html\ff_ph_sendsocketdata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendsocketdata1">
+      <param name="Name" value="ph_sendsocketdata1">
+      <param name="Local" value="html\ff_ph_sendsocketdata1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sendudp">
+      <param name="Name" value="ph_sendudp">
+      <param name="Local" value="html\ff_ph_sendudp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setanalogdisplay">
+      <param name="Name" value="ph_setanalogdisplay">
+      <param name="Local" value="html\ff_ph_setanalogdisplay.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setanalogout">
+      <param name="Name" value="ph_setanalogout">
+      <param name="Local" value="html\ff_ph_setanalogout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setanalogvalue">
+      <param name="Name" value="ph_setanalogvalue">
+      <param name="Local" value="html\ff_ph_setanalogvalue.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobj">
+      <param name="Name" value="ph_setccobj">
+      <param name="Local" value="html\ff_ph_setccobj.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjbcolor">
+      <param name="Name" value="ph_setccobjbcolor">
+      <param name="Local" value="html\ff_ph_setccobjbcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjborder">
+      <param name="Name" value="ph_setccobjborder">
+      <param name="Local" value="html\ff_ph_setccobjborder.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjfcolor">
+      <param name="Name" value="ph_setccobjfcolor">
+      <param name="Local" value="html\ff_ph_setccobjfcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjgraphic">
+      <param name="Name" value="ph_setccobjgraphic">
+      <param name="Local" value="html\ff_ph_setccobjgraphic.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjheight">
+      <param name="Name" value="ph_setccobjheight">
+      <param name="Local" value="html\ff_ph_setccobjheight.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjtext">
+      <param name="Name" value="ph_setccobjtext">
+      <param name="Local" value="html\ff_ph_setccobjtext.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjwidth">
+      <param name="Name" value="ph_setccobjwidth">
+      <param name="Local" value="html\ff_ph_setccobjwidth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjx">
+      <param name="Name" value="ph_setccobjx">
+      <param name="Local" value="html\ff_ph_setccobjx.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setccobjy">
+      <param name="Name" value="ph_setccobjy">
+      <param name="Local" value="html\ff_ph_setccobjy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setcctab">
+      <param name="Name" value="ph_setcctab">
+      <param name="Local" value="html\ff_ph_setcctab.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setcctabid">
+      <param name="Name" value="ph_setcctabid">
+      <param name="Local" value="html\ff_ph_setcctabid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setdevicefilter">
+      <param name="Name" value="ph_setdevicefilter">
+      <param name="Local" value="html\ff_ph_setdevicefilter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setdevicesort">
+      <param name="Name" value="ph_setdevicesort">
+      <param name="Local" value="html\ff_ph_setdevicesort.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setdigitalout">
+      <param name="Name" value="ph_setdigitalout">
+      <param name="Local" value="html\ff_ph_setdigitalout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setfileattrib">
+      <param name="Name" value="ph_setfileattrib">
+      <param name="Local" value="html\ff_ph_setfileattrib.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setforegroundwindow">
+      <param name="Name" value="ph_setforegroundwindow">
+      <param name="Local" value="html\ff_ph_setforegroundwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setforegroundwindow1">
+      <param name="Name" value="ph_setforegroundwindow1">
+      <param name="Local" value="html\ff_ph_setforegroundwindow1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setglobal_a">
+      <param name="Name" value="ph_setglobal_a">
+      <param name="Local" value="html\ff_ph_setglobal_a.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setglobal_s">
+      <param name="Name" value="ph_setglobal_s">
+      <param name="Local" value="html\ff_ph_setglobal_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setinputret">
+      <param name="Name" value="ph_setinputret">
+      <param name="Local" value="html\ff_ph_setinputret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setlocals">
+      <param name="Name" value="ph_setlocals">
+      <param name="Local" value="html\ff_ph_setlocals.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setmode">
+      <param name="Name" value="ph_setmode">
+      <param name="Local" value="html\ff_ph_setmode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setotheranalogout">
+      <param name="Name" value="ph_setotheranalogout">
+      <param name="Local" value="html\ff_ph_setotheranalogout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setotherdigitalout">
+      <param name="Name" value="ph_setotherdigitalout">
+      <param name="Local" value="html\ff_ph_setotherdigitalout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setothertimer">
+      <param name="Name" value="ph_setothertimer">
+      <param name="Local" value="html\ff_ph_setothertimer.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setothervar">
+      <param name="Name" value="ph_setothervar">
+      <param name="Local" value="html\ff_ph_setothervar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setsystemvar">
+      <param name="Name" value="ph_setsystemvar">
+      <param name="Local" value="html\ff_ph_setsystemvar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setsysvol">
+      <param name="Name" value="ph_setsysvol">
+      <param name="Local" value="html\ff_ph_setsysvol.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_settimeout">
+      <param name="Name" value="ph_settimeout">
+      <param name="Local" value="html\ff_ph_settimeout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setvar_a">
+      <param name="Name" value="ph_setvar_a">
+      <param name="Local" value="html\ff_ph_setvar_a.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setvar_s">
+      <param name="Name" value="ph_setvar_s">
+      <param name="Local" value="html\ff_ph_setvar_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setwebcontenttype">
+      <param name="Name" value="ph_setwebcontenttype">
+      <param name="Local" value="html\ff_ph_setwebcontenttype.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setwebcookie">
+      <param name="Name" value="ph_setwebcookie">
+      <param name="Local" value="html\ff_ph_setwebcookie.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setwebnexturl">
+      <param name="Name" value="ph_setwebnexturl">
+      <param name="Local" value="html\ff_ph_setwebnexturl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_setwebreturn">
+      <param name="Name" value="ph_setwebreturn">
+      <param name="Local" value="html\ff_ph_setwebreturn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_show">
+      <param name="Name" value="ph_show">
+      <param name="Local" value="html\ff_ph_show.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sql">
+      <param name="Name" value="ph_sql">
+      <param name="Local" value="html\ff_ph_sql.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sql_d">
+      <param name="Name" value="ph_sql_d">
+      <param name="Local" value="html\ff_ph_sql_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sql_dt">
+      <param name="Name" value="ph_sql_dt">
+      <param name="Local" value="html\ff_ph_sql_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sql_n">
+      <param name="Name" value="ph_sql_n">
+      <param name="Local" value="html\ff_ph_sql_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sql_s">
+      <param name="Name" value="ph_sql_s">
+      <param name="Local" value="html\ff_ph_sql_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sql_t">
+      <param name="Name" value="ph_sql_t">
+      <param name="Local" value="html\ff_ph_sql_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sqldestroy">
+      <param name="Name" value="ph_sqldestroy">
+      <param name="Local" value="html\ff_ph_sqldestroy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sqlselect">
+      <param name="Name" value="ph_sqlselect">
+      <param name="Local" value="html\ff_ph_sqlselect.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_sqlselectinto">
+      <param name="Name" value="ph_sqlselectinto">
+      <param name="Local" value="html\ff_ph_sqlselectinto.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ssrequest">
+      <param name="Name" value="ph_ssrequest">
+      <param name="Local" value="html\ff_ph_ssrequest.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_switchto">
+      <param name="Name" value="ph_switchto">
+      <param name="Local" value="html\ff_ph_switchto.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_timedeventsctrl">
+      <param name="Name" value="ph_timedeventsctrl">
+      <param name="Local" value="html\ff_ph_timedeventsctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_trimeventlog">
+      <param name="Name" value="ph_trimeventlog">
+      <param name="Local" value="html\ff_ph_trimeventlog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_tts">
+      <param name="Name" value="ph_tts">
+      <param name="Local" value="html\ff_ph_tts.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ttsctrl">
+      <param name="Name" value="ph_ttsctrl">
+      <param name="Local" value="html\ff_ph_ttsctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ttsgetstatus">
+      <param name="Name" value="ph_ttsgetstatus">
+      <param name="Local" value="html\ff_ph_ttsgetstatus.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ttspause">
+      <param name="Name" value="ph_ttspause">
+      <param name="Local" value="html\ff_ph_ttspause.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ttsresume">
+      <param name="Name" value="ph_ttsresume">
+      <param name="Local" value="html\ff_ph_ttsresume.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ttssetvoice">
+      <param name="Name" value="ph_ttssetvoice">
+      <param name="Local" value="html\ff_ph_ttssetvoice.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ttssync">
+      <param name="Name" value="ph_ttssync">
+      <param name="Local" value="html\ff_ph_ttssync.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_ttswait">
+      <param name="Name" value="ph_ttswait">
+      <param name="Local" value="html\ff_ph_ttswait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_upb">
+      <param name="Name" value="ph_upb">
+      <param name="Local" value="html\ff_ph_upb.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_upblink">
+      <param name="Name" value="ph_upblink">
+      <param name="Local" value="html\ff_ph_upblink.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_upbraw">
+      <param name="Name" value="ph_upbraw">
+      <param name="Local" value="html\ff_ph_upbraw.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_upbrawlink">
+      <param name="Name" value="ph_upbrawlink">
+      <param name="Local" value="html\ff_ph_upbrawlink.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_usermessage">
+      <param name="Name" value="ph_usermessage">
+      <param name="Local" value="html\ff_ph_usermessage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_vrdisable">
+      <param name="Name" value="ph_vrdisable">
+      <param name="Local" value="html\ff_ph_vrdisable.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcclose">
+      <param name="Name" value="ph_wcclose">
+      <param name="Local" value="html\ff_ph_wcclose.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcgethome">
+      <param name="Name" value="ph_wcgethome">
+      <param name="Local" value="html\ff_ph_wcgethome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcgethtml">
+      <param name="Name" value="ph_wcgethtml">
+      <param name="Local" value="html\ff_ph_wcgethtml.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcgoback">
+      <param name="Name" value="ph_wcgoback">
+      <param name="Local" value="html\ff_ph_wcgoback.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcgoforward">
+      <param name="Name" value="ph_wcgoforward">
+      <param name="Local" value="html\ff_ph_wcgoforward.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcgohome">
+      <param name="Name" value="ph_wcgohome">
+      <param name="Local" value="html\ff_ph_wcgohome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcgourl">
+      <param name="Name" value="ph_wcgourl">
+      <param name="Local" value="html\ff_ph_wcgourl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcisbusy">
+      <param name="Name" value="ph_wcisbusy">
+      <param name="Local" value="html\ff_ph_wcisbusy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcopen">
+      <param name="Name" value="ph_wcopen">
+      <param name="Local" value="html\ff_ph_wcopen.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcrefresh">
+      <param name="Name" value="ph_wcrefresh">
+      <param name="Local" value="html\ff_ph_wcrefresh.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcsethome">
+      <param name="Name" value="ph_wcsethome">
+      <param name="Local" value="html\ff_ph_wcsethome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcsethtml">
+      <param name="Name" value="ph_wcsethtml">
+      <param name="Local" value="html\ff_ph_wcsethtml.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcshow">
+      <param name="Name" value="ph_wcshow">
+      <param name="Local" value="html\ff_ph_wcshow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_wcstop">
+      <param name="Name" value="ph_wcstop">
+      <param name="Local" value="html\ff_ph_wcstop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_webaddblob">
+      <param name="Name" value="ph_webaddblob">
+      <param name="Local" value="html\ff_ph_webaddblob.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_webclearblob">
+      <param name="Name" value="ph_webclearblob">
+      <param name="Local" value="html\ff_ph_webclearblob.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_webds">
+      <param name="Name" value="ph_webds">
+      <param name="Local" value="html\ff_ph_webds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_webml">
+      <param name="Name" value="ph_webml">
+      <param name="Local" value="html\ff_ph_webml.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_webmu">
+      <param name="Name" value="ph_webmu">
+      <param name="Local" value="html\ff_ph_webmu.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_websl">
+      <param name="Name" value="ph_websl">
+      <param name="Local" value="html\ff_ph_websl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_whileloop">
+      <param name="Name" value="ph_whileloop">
+      <param name="Local" value="html\ff_ph_whileloop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_winampctrl">
+      <param name="Name" value="ph_winampctrl">
+      <param name="Local" value="html\ff_ph_winampctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_winampinfo">
+      <param name="Name" value="ph_winampinfo">
+      <param name="Local" value="html\ff_ph_winampinfo.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_windowstate">
+      <param name="Name" value="ph_windowstate">
+      <param name="Local" value="html\ff_ph_windowstate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_windowsuptime_s">
+      <param name="Name" value="ph_windowsuptime_s">
+      <param name="Local" value="html\ff_ph_windowsuptime_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_writefile">
+      <param name="Name" value="ph_writefile">
+      <param name="Local" value="html\ff_ph_writefile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_x10">
+      <param name="Name" value="ph_x10">
+      <param name="Local" value="html\ff_ph_x10.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_x10btn">
+      <param name="Name" value="ph_x10btn">
+      <param name="Local" value="html\ff_ph_x10btn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_x10lookup">
+      <param name="Name" value="ph_x10lookup">
+      <param name="Local" value="html\ff_ph_x10lookup.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_x10refreshstat">
+      <param name="Name" value="ph_x10refreshstat">
+      <param name="Local" value="html\ff_ph_x10refreshstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_x10setstat">
+      <param name="Name" value="ph_x10setstat">
+      <param name="Local" value="html\ff_ph_x10setstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_xor">
+      <param name="Name" value="ph_xor">
+      <param name="Local" value="html\ff_ph_xor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_xp2u">
+      <param name="Name" value="ph_xp2u">
+      <param name="Local" value="html\ff_ph_xp2u.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_xu2p">
+      <param name="Name" value="ph_xu2p">
+      <param name="Local" value="html\ff_ph_xu2p.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_yp2u">
+      <param name="Name" value="ph_yp2u">
+      <param name="Local" value="html\ff_ph_yp2u.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_yu2p">
+      <param name="Name" value="ph_yu2p">
+      <param name="Local" value="html\ff_ph_yu2p.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph_zero">
+      <param name="Name" value="ph_zero">
+      <param name="Local" value="html\ff_ph_zero.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="pi">
+      <param name="Name" value="pi">
+      <param name="Local" value="html\ff_pi.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="pos">
+      <param name="Name" value="pos">
+      <param name="Local" value="html\ff_pos.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="posw">
+      <param name="Name" value="posw">
+      <param name="Local" value="html\ff_posw.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="profileint">
+      <param name="Name" value="profileint">
+      <param name="Local" value="html\ff_profileint.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="profilestring">
+      <param name="Name" value="profilestring">
+      <param name="Local" value="html\ff_profilestring.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="rand">
+      <param name="Name" value="rand">
+      <param name="Local" value="html\ff_rand.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="real">
+      <param name="Name" value="real">
+      <param name="Local" value="html\ff_real.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="relativedate">
+      <param name="Name" value="relativedate">
+      <param name="Local" value="html\ff_relativedate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="relativetime">
+      <param name="Name" value="relativetime">
+      <param name="Local" value="html\ff_relativetime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="replace">
+      <param name="Name" value="replace">
+      <param name="Local" value="html\ff_replace.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="rgb">
+      <param name="Name" value="rgb">
+      <param name="Local" value="html\ff_rgb.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="right">
+      <param name="Name" value="right">
+      <param name="Local" value="html\ff_right.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="righttrim">
+      <param name="Name" value="righttrim">
+      <param name="Local" value="html\ff_righttrim.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="round">
+      <param name="Name" value="round">
+      <param name="Local" value="html\ff_round.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="second">
+      <param name="Name" value="second">
+      <param name="Local" value="html\ff_second.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="secondsafter">
+      <param name="Name" value="secondsafter">
+      <param name="Local" value="html\ff_secondsafter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="setprofilestring">
+      <param name="Name" value="setprofilestring">
+      <param name="Local" value="html\ff_setprofilestring.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="sign">
+      <param name="Name" value="sign">
+      <param name="Local" value="html\ff_sign.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="sin">
+      <param name="Name" value="sin">
+      <param name="Local" value="html\ff_sin.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="space">
+      <param name="Name" value="space">
+      <param name="Local" value="html\ff_space.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="sqrt">
+      <param name="Name" value="sqrt">
+      <param name="Local" value="html\ff_sqrt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="string">
+      <param name="Name" value="string">
+      <param name="Local" value="html\ff_string.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="tan">
+      <param name="Name" value="tan">
+      <param name="Local" value="html\ff_tan.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="time">
+      <param name="Name" value="time">
+      <param name="Local" value="html\ff_time.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="today">
+      <param name="Name" value="today">
+      <param name="Local" value="html\ff_today.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="trim">
+      <param name="Name" value="trim">
+      <param name="Local" value="html\ff_trim.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="truncate">
+      <param name="Name" value="truncate">
+      <param name="Local" value="html\ff_truncate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="upper">
+      <param name="Name" value="upper">
+      <param name="Local" value="html\ff_upper.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="wordcap">
+      <param name="Name" value="wordcap">
+      <param name="Local" value="html\ff_wordcap.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="year">
+      <param name="Name" value="year">
+      <param name="Local" value="html\ff_year.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Windows Script Host functions">
+    <param name="Name" value="Windows Script Host functions">
+    <param name="Local" value="html\wsh_functions.htm">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.addtoglobal">
+      <param name="Name" value="ph.addtoglobal">
+      <param name="Local" value="html\wsh_ph.addtoglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.addtovar">
+      <param name="Name" value="ph.addtovar">
+      <param name="Local" value="html\wsh_ph.addtovar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.backupdb">
+      <param name="Name" value="ph.backupdb">
+      <param name="Local" value="html\wsh_ph.backupdb.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.base64decode">
+      <param name="Name" value="ph.base64decode">
+      <param name="Local" value="html\wsh_ph.base64decode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.base64encode">
+      <param name="Name" value="ph.base64encode">
+      <param name="Local" value="html\wsh_ph.base64encode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.bitand">
+      <param name="Name" value="ph.bitand">
+      <param name="Local" value="html\wsh_ph.bitand.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.bitor">
+      <param name="Name" value="ph.bitor">
+      <param name="Local" value="html\wsh_ph.bitor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.bitxor">
+      <param name="Name" value="ph.bitxor">
+      <param name="Local" value="html\wsh_ph.bitxor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccaction">
+      <param name="Name" value="ph.ccaction">
+      <param name="Local" value="html\wsh_ph.ccaction.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccclearchgs">
+      <param name="Name" value="ph.ccclearchgs">
+      <param name="Local" value="html\wsh_ph.ccclearchgs.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccdescribe">
+      <param name="Name" value="ph.ccdescribe">
+      <param name="Local" value="html\wsh_ph.ccdescribe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccdescribeid">
+      <param name="Name" value="ph.ccdescribeid">
+      <param name="Local" value="html\wsh_ph.ccdescribeid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccimage">
+      <param name="Name" value="ph.ccimage">
+      <param name="Local" value="html\wsh_ph.ccimage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccmapinfo">
+      <param name="Name" value="ph.ccmapinfo">
+      <param name="Local" value="html\wsh_ph.ccmapinfo.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccmodify">
+      <param name="Name" value="ph.ccmodify">
+      <param name="Local" value="html\wsh_ph.ccmodify.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ccmodifyid">
+      <param name="Name" value="ph.ccmodifyid">
+      <param name="Local" value="html\wsh_ph.ccmodifyid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.checktrigger">
+      <param name="Name" value="ph.checktrigger">
+      <param name="Local" value="html\wsh_ph.checktrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.chggrammar">
+      <param name="Name" value="ph.chggrammar">
+      <param name="Local" value="html\wsh_ph.chggrammar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.chgspeaker">
+      <param name="Name" value="ph.chgspeaker">
+      <param name="Local" value="html\wsh_ph.chgspeaker.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.clearexequeue">
+      <param name="Name" value="ph.clearexequeue">
+      <param name="Local" value="html\wsh_ph.clearexequeue.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.clearvars">
+      <param name="Name" value="ph.clearvars">
+      <param name="Local" value="html\wsh_ph.clearvars.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.clearx10hist">
+      <param name="Name" value="ph.clearx10hist">
+      <param name="Local" value="html\wsh_ph.clearx10hist.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.closewindow">
+      <param name="Name" value="ph.closewindow">
+      <param name="Local" value="html\wsh_ph.closewindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.combuffercount">
+      <param name="Name" value="ph.combuffercount">
+      <param name="Local" value="html\wsh_ph.combuffercount.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.combufferptr">
+      <param name="Name" value="ph.combufferptr">
+      <param name="Local" value="html\wsh_ph.combufferptr.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.combufferreset">
+      <param name="Name" value="ph.combufferreset">
+      <param name="Local" value="html\wsh_ph.combufferreset.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comclose">
+      <param name="Name" value="ph.comclose">
+      <param name="Local" value="html\wsh_ph.comclose.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comdtr">
+      <param name="Name" value="ph.comdtr">
+      <param name="Local" value="html\wsh_ph.comdtr.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comopen">
+      <param name="Name" value="ph.comopen">
+      <param name="Local" value="html\wsh_ph.comopen.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comopensimple">
+      <param name="Name" value="ph.comopensimple">
+      <param name="Local" value="html\wsh_ph.comopensimple.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comrecvchar">
+      <param name="Name" value="ph.comrecvchar">
+      <param name="Local" value="html\wsh_ph.comrecvchar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comrecvstring">
+      <param name="Name" value="ph.comrecvstring">
+      <param name="Local" value="html\wsh_ph.comrecvstring.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comrts">
+      <param name="Name" value="ph.comrts">
+      <param name="Local" value="html\wsh_ph.comrts.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comsendchar">
+      <param name="Name" value="ph.comsendchar">
+      <param name="Local" value="html\wsh_ph.comsendchar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.comsendstring">
+      <param name="Name" value="ph.comsendstring">
+      <param name="Local" value="html\wsh_ph.comsendstring.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.concatglobal">
+      <param name="Name" value="ph.concatglobal">
+      <param name="Local" value="html\wsh_ph.concatglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.concatvar">
+      <param name="Name" value="ph.concatvar">
+      <param name="Local" value="html\wsh_ph.concatvar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.convertimage">
+      <param name="Name" value="ph.convertimage">
+      <param name="Local" value="html\wsh_ph.convertimage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.copyfile">
+      <param name="Name" value="ph.copyfile">
+      <param name="Local" value="html\wsh_ph.copyfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.createdirectory">
+      <param name="Name" value="ph.createdirectory">
+      <param name="Local" value="html\wsh_ph.createdirectory.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.createglobal">
+      <param name="Name" value="ph.createglobal">
+      <param name="Local" value="html\wsh_ph.createglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.createpluginpt">
+      <param name="Name" value="ph.createpluginpt">
+      <param name="Local" value="html\wsh_ph.createpluginpt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.createtimedevent">
+      <param name="Name" value="ph.createtimedevent">
+      <param name="Local" value="html\wsh_ph.createtimedevent.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ctlrcmd">
+      <param name="Name" value="ph.ctlrcmd">
+      <param name="Local" value="html\wsh_ph.ctlrcmd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ctlrcmd1">
+      <param name="Name" value="ph.ctlrcmd1">
+      <param name="Local" value="html\wsh_ph.ctlrcmd1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ctlrconnect">
+      <param name="Name" value="ph.ctlrconnect">
+      <param name="Local" value="html\wsh_ph.ctlrconnect.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ctlrdisconnect">
+      <param name="Name" value="ph.ctlrdisconnect">
+      <param name="Local" value="html\wsh_ph.ctlrdisconnect.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ctlrsq">
+      <param name="Name" value="ph.ctlrsq">
+      <param name="Local" value="html\wsh_ph.ctlrsq.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ctof">
+      <param name="Name" value="ph.ctof">
+      <param name="Local" value="html\wsh_ph.ctof.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.delay">
+      <param name="Name" value="ph.delay">
+      <param name="Local" value="html\wsh_ph.delay.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.deletefile">
+      <param name="Name" value="ph.deletefile">
+      <param name="Local" value="html\wsh_ph.deletefile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.deleteglobal">
+      <param name="Name" value="ph.deleteglobal">
+      <param name="Local" value="html\wsh_ph.deleteglobal.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.devicebtn">
+      <param name="Name" value="ph.devicebtn">
+      <param name="Local" value="html\wsh_ph.devicebtn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.devicecontrol">
+      <param name="Name" value="ph.devicecontrol">
+      <param name="Local" value="html\wsh_ph.devicecontrol.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.devicerefreshstat">
+      <param name="Name" value="ph.devicerefreshstat">
+      <param name="Local" value="html\wsh_ph.devicerefreshstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.directsql">
+      <param name="Name" value="ph.directsql">
+      <param name="Local" value="html\wsh_ph.directsql.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.disabletrigger">
+      <param name="Name" value="ph.disabletrigger">
+      <param name="Local" value="html\wsh_ph.disabletrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.doloop">
+      <param name="Name" value="ph.doloop">
+      <param name="Local" value="html\wsh_ph.doloop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.enabletrigger">
+      <param name="Name" value="ph.enabletrigger">
+      <param name="Local" value="html\wsh_ph.enabletrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.exporteventlog">
+      <param name="Name" value="ph.exporteventlog">
+      <param name="Local" value="html\wsh_ph.exporteventlog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.extendmacrowait">
+      <param name="Name" value="ph.extendmacrowait">
+      <param name="Local" value="html\wsh_ph.extendmacrowait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.fileexists">
+      <param name="Name" value="ph.fileexists">
+      <param name="Local" value="html\wsh_ph.fileexists.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.filelength">
+      <param name="Name" value="ph.filelength">
+      <param name="Local" value="html\wsh_ph.filelength.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.finddata">
+      <param name="Name" value="ph.finddata">
+      <param name="Local" value="html\wsh_ph.finddata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.findwindow">
+      <param name="Name" value="ph.findwindow">
+      <param name="Local" value="html\wsh_ph.findwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.findwindowex">
+      <param name="Name" value="ph.findwindowex">
+      <param name="Local" value="html\wsh_ph.findwindowex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.fixhtmlquotes">
+      <param name="Name" value="ph.fixhtmlquotes">
+      <param name="Local" value="html\wsh_ph.fixhtmlquotes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.fixjsquotes">
+      <param name="Name" value="ph.fixjsquotes">
+      <param name="Local" value="html\wsh_ph.fixjsquotes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.forloop">
+      <param name="Name" value="ph.forloop">
+      <param name="Local" value="html\wsh_ph.forloop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.forloopwinc">
+      <param name="Name" value="ph.forloopwinc">
+      <param name="Local" value="html\wsh_ph.forloopwinc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.formula">
+      <param name="Name" value="ph.formula">
+      <param name="Local" value="html\wsh_ph.formula.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.formulabtn">
+      <param name="Name" value="ph.formulabtn">
+      <param name="Local" value="html\wsh_ph.formulabtn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ftoc">
+      <param name="Name" value="ph.ftoc">
+      <param name="Local" value="html\wsh_ph.ftoc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.genctlrtrigger">
+      <param name="Name" value="ph.genctlrtrigger">
+      <param name="Local" value="html\wsh_ph.genctlrtrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getanalog">
+      <param name="Name" value="ph.getanalog">
+      <param name="Local" value="html\wsh_ph.getanalog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getanalogcalcstat">
+      <param name="Name" value="ph.getanalogcalcstat">
+      <param name="Local" value="html\wsh_ph.getanalogcalcstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getanalogstat">
+      <param name="Name" value="ph.getanalogstat">
+      <param name="Local" value="html\wsh_ph.getanalogstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getcclastobj">
+      <param name="Name" value="ph.getcclastobj">
+      <param name="Local" value="html\wsh_ph.getcclastobj.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getcclasttab">
+      <param name="Name" value="ph.getcclasttab">
+      <param name="Local" value="html\wsh_ph.getcclasttab.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjbcolor">
+      <param name="Name" value="ph.getccobjbcolor">
+      <param name="Local" value="html\wsh_ph.getccobjbcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjborder">
+      <param name="Name" value="ph.getccobjborder">
+      <param name="Local" value="html\wsh_ph.getccobjborder.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjfcolor">
+      <param name="Name" value="ph.getccobjfcolor">
+      <param name="Local" value="html\wsh_ph.getccobjfcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjgraphic">
+      <param name="Name" value="ph.getccobjgraphic">
+      <param name="Local" value="html\wsh_ph.getccobjgraphic.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjheight">
+      <param name="Name" value="ph.getccobjheight">
+      <param name="Local" value="html\wsh_ph.getccobjheight.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjtext">
+      <param name="Name" value="ph.getccobjtext">
+      <param name="Local" value="html\wsh_ph.getccobjtext.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjwidth">
+      <param name="Name" value="ph.getccobjwidth">
+      <param name="Local" value="html\wsh_ph.getccobjwidth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjx">
+      <param name="Name" value="ph.getccobjx">
+      <param name="Local" value="html\wsh_ph.getccobjx.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getccobjy">
+      <param name="Name" value="ph.getccobjy">
+      <param name="Local" value="html\wsh_ph.getccobjy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getcctab">
+      <param name="Name" value="ph.getcctab">
+      <param name="Local" value="html\wsh_ph.getcctab.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getcctabid">
+      <param name="Name" value="ph.getcctabid">
+      <param name="Local" value="html\wsh_ph.getcctabid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getclassname">
+      <param name="Name" value="ph.getclassname">
+      <param name="Local" value="html\wsh_ph.getclassname.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getcolcount">
+      <param name="Name" value="ph.getcolcount">
+      <param name="Local" value="html\wsh_ph.getcolcount.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getcolname">
+      <param name="Name" value="ph.getcolname">
+      <param name="Local" value="html\wsh_ph.getcolname.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getcoltype">
+      <param name="Name" value="ph.getcoltype">
+      <param name="Local" value="html\wsh_ph.getcoltype.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getdata">
+      <param name="Name" value="ph.getdata">
+      <param name="Local" value="html\wsh_ph.getdata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getdata_cn">
+      <param name="Name" value="ph.getdata_cn">
+      <param name="Local" value="html\wsh_ph.getdata_cn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getdatawithmask">
+      <param name="Name" value="ph.getdatawithmask">
+      <param name="Local" value="html\wsh_ph.getdatawithmask.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getdevicefilter">
+      <param name="Name" value="ph.getdevicefilter">
+      <param name="Local" value="html\wsh_ph.getdevicefilter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getdevicesort">
+      <param name="Name" value="ph.getdevicesort">
+      <param name="Local" value="html\wsh_ph.getdevicesort.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getdigital">
+      <param name="Name" value="ph.getdigital">
+      <param name="Local" value="html\wsh_ph.getdigital.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getdigitalstat">
+      <param name="Name" value="ph.getdigitalstat">
+      <param name="Local" value="html\wsh_ph.getdigitalstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getforegroundwindow">
+      <param name="Name" value="ph.getforegroundwindow">
+      <param name="Local" value="html\wsh_ph.getforegroundwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getglobal_d">
+      <param name="Name" value="ph.getglobal_d">
+      <param name="Local" value="html\wsh_ph.getglobal_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getglobal_dt">
+      <param name="Name" value="ph.getglobal_dt">
+      <param name="Local" value="html\wsh_ph.getglobal_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getglobal_n">
+      <param name="Name" value="ph.getglobal_n">
+      <param name="Local" value="html\wsh_ph.getglobal_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getglobal_s">
+      <param name="Name" value="ph.getglobal_s">
+      <param name="Local" value="html\wsh_ph.getglobal_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getglobal_t">
+      <param name="Name" value="ph.getglobal_t">
+      <param name="Local" value="html\wsh_ph.getglobal_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.gethandle">
+      <param name="Name" value="ph.gethandle">
+      <param name="Local" value="html\wsh_ph.gethandle.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.gethtmldata">
+      <param name="Name" value="ph.gethtmldata">
+      <param name="Local" value="html\wsh_ph.gethtmldata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getinputret">
+      <param name="Name" value="ph.getinputret">
+      <param name="Local" value="html\wsh_ph.getinputret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getinsteonctrl">
+      <param name="Name" value="ph.getinsteonctrl">
+      <param name="Local" value="html\wsh_ph.getinsteonctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getinsteondt">
+      <param name="Name" value="ph.getinsteondt">
+      <param name="Local" value="html\wsh_ph.getinsteondt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getinsteonlevel">
+      <param name="Name" value="ph.getinsteonlevel">
+      <param name="Local" value="html\wsh_ph.getinsteonlevel.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getinsteonlevelrt">
+      <param name="Name" value="ph.getinsteonlevelrt">
+      <param name="Local" value="html\wsh_ph.getinsteonlevelrt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getinsteonseconds">
+      <param name="Name" value="ph.getinsteonseconds">
+      <param name="Local" value="html\wsh_ph.getinsteonseconds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getinsteonstat">
+      <param name="Name" value="ph.getinsteonstat">
+      <param name="Local" value="html\wsh_ph.getinsteonstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getipfromhostname">
+      <param name="Name" value="ph.getipfromhostname">
+      <param name="Local" value="html\wsh_ph.getipfromhostname.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getitcurl">
+      <param name="Name" value="ph.getitcurl">
+      <param name="Local" value="html\wsh_ph.getitcurl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getmbret">
+      <param name="Name" value="ph.getmbret">
+      <param name="Local" value="html\wsh_ph.getmbret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getmode">
+      <param name="Name" value="ph.getmode">
+      <param name="Local" value="html\wsh_ph.getmode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getmultistate">
+      <param name="Name" value="ph.getmultistate">
+      <param name="Local" value="html\wsh_ph.getmultistate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getotheranalog">
+      <param name="Name" value="ph.getotheranalog">
+      <param name="Local" value="html\wsh_ph.getotheranalog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getotherdigital">
+      <param name="Name" value="ph.getotherdigital">
+      <param name="Local" value="html\wsh_ph.getotherdigital.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getothermultistate">
+      <param name="Name" value="ph.getothermultistate">
+      <param name="Local" value="html\wsh_ph.getothermultistate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getothertimer">
+      <param name="Name" value="ph.getothertimer">
+      <param name="Local" value="html\wsh_ph.getothertimer.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getothervar">
+      <param name="Name" value="ph.getothervar">
+      <param name="Local" value="html\wsh_ph.getothervar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getparent">
+      <param name="Name" value="ph.getparent">
+      <param name="Local" value="html\wsh_ph.getparent.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getphdir">
+      <param name="Name" value="ph.getphdir">
+      <param name="Local" value="html\wsh_ph.getphdir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getphwebdir">
+      <param name="Name" value="ph.getphwebdir">
+      <param name="Local" value="html\wsh_ph.getphwebdir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getsqlrows">
+      <param name="Name" value="ph.getsqlrows">
+      <param name="Local" value="html\wsh_ph.getsqlrows.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getsuntime">
+      <param name="Name" value="ph.getsuntime">
+      <param name="Local" value="html\wsh_ph.getsuntime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getsystemvar">
+      <param name="Name" value="ph.getsystemvar">
+      <param name="Local" value="html\wsh_ph.getsystemvar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getsysvol">
+      <param name="Name" value="ph.getsysvol">
+      <param name="Local" value="html\wsh_ph.getsysvol.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getsysvolmax">
+      <param name="Name" value="ph.getsysvolmax">
+      <param name="Local" value="html\wsh_ph.getsysvolmax.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getsysvolmin">
+      <param name="Name" value="ph.getsysvolmin">
+      <param name="Local" value="html\wsh_ph.getsysvolmin.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.gettickcount">
+      <param name="Name" value="ph.gettickcount">
+      <param name="Local" value="html\wsh_ph.gettickcount.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.gettimeout">
+      <param name="Name" value="ph.gettimeout">
+      <param name="Local" value="html\wsh_ph.gettimeout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.geturl">
+      <param name="Name" value="ph.geturl">
+      <param name="Local" value="html\wsh_ph.geturl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.geturlviaproxy">
+      <param name="Name" value="ph.geturlviaproxy">
+      <param name="Local" value="html\wsh_ph.geturlviaproxy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getvar_d">
+      <param name="Name" value="ph.getvar_d">
+      <param name="Local" value="html\wsh_ph.getvar_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getvar_dt">
+      <param name="Name" value="ph.getvar_dt">
+      <param name="Local" value="html\wsh_ph.getvar_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getvar_n">
+      <param name="Name" value="ph.getvar_n">
+      <param name="Local" value="html\wsh_ph.getvar_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getvar_s">
+      <param name="Name" value="ph.getvar_s">
+      <param name="Local" value="html\wsh_ph.getvar_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getvar_t">
+      <param name="Name" value="ph.getvar_t">
+      <param name="Local" value="html\wsh_ph.getvar_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getversion">
+      <param name="Name" value="ph.getversion">
+      <param name="Local" value="html\wsh_ph.getversion.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwburl">
+      <param name="Name" value="ph.getwburl">
+      <param name="Local" value="html\wsh_ph.getwburl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwebauth">
+      <param name="Name" value="ph.getwebauth">
+      <param name="Local" value="html\wsh_ph.getwebauth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwebbase64auth">
+      <param name="Name" value="ph.getwebbase64auth">
+      <param name="Local" value="html\wsh_ph.getwebbase64auth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwebheader">
+      <param name="Name" value="ph.getwebheader">
+      <param name="Local" value="html\wsh_ph.getwebheader.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwebheaderparm">
+      <param name="Name" value="ph.getwebheaderparm">
+      <param name="Local" value="html\wsh_ph.getwebheaderparm.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwebmethod">
+      <param name="Name" value="ph.getwebmethod">
+      <param name="Local" value="html\wsh_ph.getwebmethod.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwebparm">
+      <param name="Name" value="ph.getwebparm">
+      <param name="Local" value="html\wsh_ph.getwebparm.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwebremoteip">
+      <param name="Name" value="ph.getwebremoteip">
+      <param name="Local" value="html\wsh_ph.getwebremoteip.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getweburl">
+      <param name="Name" value="ph.getweburl">
+      <param name="Local" value="html\wsh_ph.getweburl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwindow">
+      <param name="Name" value="ph.getwindow">
+      <param name="Local" value="html\wsh_ph.getwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwindowsdir">
+      <param name="Name" value="ph.getwindowsdir">
+      <param name="Local" value="html\wsh_ph.getwindowsdir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwindowstate">
+      <param name="Name" value="ph.getwindowstate">
+      <param name="Local" value="html\wsh_ph.getwindowstate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getwindowtext">
+      <param name="Name" value="ph.getwindowtext">
+      <param name="Local" value="html\wsh_ph.getwindowtext.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getx10dt">
+      <param name="Name" value="ph.getx10dt">
+      <param name="Local" value="html\wsh_ph.getx10dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getx10level">
+      <param name="Name" value="ph.getx10level">
+      <param name="Local" value="html\wsh_ph.getx10level.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getx10seconds">
+      <param name="Name" value="ph.getx10seconds">
+      <param name="Local" value="html\wsh_ph.getx10seconds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.getx10stat">
+      <param name="Name" value="ph.getx10stat">
+      <param name="Local" value="html\wsh_ph.getx10stat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.handle">
+      <param name="Name" value="ph.handle">
+      <param name="Local" value="html\wsh_ph.handle.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.hextonum">
+      <param name="Name" value="ph.hextonum">
+      <param name="Local" value="html\wsh_ph.hextonum.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.htmlcolor">
+      <param name="Name" value="ph.htmlcolor">
+      <param name="Local" value="html\wsh_ph.htmlcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.htmlescape">
+      <param name="Name" value="ph.htmlescape">
+      <param name="Local" value="html\wsh_ph.htmlescape.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.htmlunescape">
+      <param name="Name" value="ph.htmlunescape">
+      <param name="Local" value="html\wsh_ph.htmlunescape.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteon">
+      <param name="Name" value="ph.insteon">
+      <param name="Local" value="html\wsh_ph.insteon.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteonclearfailed">
+      <param name="Name" value="ph.insteonclearfailed">
+      <param name="Local" value="html\wsh_ph.insteonclearfailed.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteonctrl">
+      <param name="Name" value="ph.insteonctrl">
+      <param name="Local" value="html\wsh_ph.insteonctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteongroup">
+      <param name="Name" value="ph.insteongroup">
+      <param name="Local" value="html\wsh_ph.insteongroup.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteongroupcu">
+      <param name="Name" value="ph.insteongroupcu">
+      <param name="Local" value="html\wsh_ph.insteongroupcu.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteonraw">
+      <param name="Name" value="ph.insteonraw">
+      <param name="Local" value="html\wsh_ph.insteonraw.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteonrawbcast">
+      <param name="Name" value="ph.insteonrawbcast">
+      <param name="Local" value="html\wsh_ph.insteonrawbcast.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteonrawgroup">
+      <param name="Name" value="ph.insteonrawgroup">
+      <param name="Local" value="html\wsh_ph.insteonrawgroup.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteonrawgroupcu">
+      <param name="Name" value="ph.insteonrawgroupcu">
+      <param name="Local" value="html\wsh_ph.insteonrawgroupcu.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.insteonwithret">
+      <param name="Name" value="ph.insteonwithret">
+      <param name="Local" value="html\wsh_ph.insteonwithret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ir">
+      <param name="Name" value="ph.ir">
+      <param name="Local" value="html\wsh_ph.ir.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.irchain">
+      <param name="Name" value="ph.irchain">
+      <param name="Local" value="html\wsh_ph.irchain.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.irdesc">
+      <param name="Name" value="ph.irdesc">
+      <param name="Local" value="html\wsh_ph.irdesc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.irnumseq">
+      <param name="Name" value="ph.irnumseq">
+      <param name="Local" value="html\wsh_ph.irnumseq.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.isdaylightsavings">
+      <param name="Name" value="ph.isdaylightsavings">
+      <param name="Local" value="html\wsh_ph.isdaylightsavings.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.iseven">
+      <param name="Name" value="ph.iseven">
+      <param name="Local" value="html\wsh_ph.iseven.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ismacrowaiting">
+      <param name="Name" value="ph.ismacrowaiting">
+      <param name="Local" value="html\wsh_ph.ismacrowaiting.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.isodd">
+      <param name="Name" value="ph.isodd">
+      <param name="Local" value="html\wsh_ph.isodd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itccancel">
+      <param name="Name" value="ph.itccancel">
+      <param name="Local" value="html\wsh_ph.itccancel.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itccreate">
+      <param name="Name" value="ph.itccreate">
+      <param name="Local" value="html\wsh_ph.itccreate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcdestroy">
+      <param name="Name" value="ph.itcdestroy">
+      <param name="Local" value="html\wsh_ph.itcdestroy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcexecuteftp">
+      <param name="Name" value="ph.itcexecuteftp">
+      <param name="Local" value="html\wsh_ph.itcexecuteftp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcexecutehttp">
+      <param name="Name" value="ph.itcexecutehttp">
+      <param name="Local" value="html\wsh_ph.itcexecutehttp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcgetdata">
+      <param name="Name" value="ph.itcgetdata">
+      <param name="Local" value="html\wsh_ph.itcgetdata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcisbusy">
+      <param name="Name" value="ph.itcisbusy">
+      <param name="Local" value="html\wsh_ph.itcisbusy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcisvalid">
+      <param name="Name" value="ph.itcisvalid">
+      <param name="Local" value="html\wsh_ph.itcisvalid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcsavedata">
+      <param name="Name" value="ph.itcsavedata">
+      <param name="Local" value="html\wsh_ph.itcsavedata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcseturl">
+      <param name="Name" value="ph.itcseturl">
+      <param name="Local" value="html\wsh_ph.itcseturl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.itcsetuserpass">
+      <param name="Name" value="ph.itcsetuserpass">
+      <param name="Local" value="html\wsh_ph.itcsetuserpass.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.keybd_event">
+      <param name="Name" value="ph.keybd_event">
+      <param name="Local" value="html\wsh_ph.keybd_event.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.killallmacrowait">
+      <param name="Name" value="ph.killallmacrowait">
+      <param name="Local" value="html\wsh_ph.killallmacrowait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.killmacrowait">
+      <param name="Name" value="ph.killmacrowait">
+      <param name="Local" value="html\wsh_ph.killmacrowait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.macro">
+      <param name="Name" value="ph.macro">
+      <param name="Local" value="html\wsh_ph.macro.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.macroparm">
+      <param name="Name" value="ph.macroparm">
+      <param name="Local" value="html\wsh_ph.macroparm.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.macroparmret">
+      <param name="Name" value="ph.macroparmret">
+      <param name="Local" value="html\wsh_ph.macroparmret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.minutesafter">
+      <param name="Name" value="ph.minutesafter">
+      <param name="Local" value="html\wsh_ph.minutesafter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.movefile">
+      <param name="Name" value="ph.movefile">
+      <param name="Local" value="html\wsh_ph.movefile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.msgbox">
+      <param name="Name" value="ph.msgbox">
+      <param name="Local" value="html\wsh_ph.msgbox.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.multix">
+      <param name="Name" value="ph.multix">
+      <param name="Local" value="html\wsh_ph.multix.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.multixtime">
+      <param name="Name" value="ph.multixtime">
+      <param name="Local" value="html\wsh_ph.multixtime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.numtohex">
+      <param name="Name" value="ph.numtohex">
+      <param name="Local" value="html\wsh_ph.numtohex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.numtohex1">
+      <param name="Name" value="ph.numtohex1">
+      <param name="Local" value="html\wsh_ph.numtohex1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.openframe">
+      <param name="Name" value="ph.openframe">
+      <param name="Local" value="html\wsh_ph.openframe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.openiewindow">
+      <param name="Name" value="ph.openiewindow">
+      <param name="Local" value="html\wsh_ph.openiewindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.picmd">
+      <param name="Name" value="ph.picmd">
+      <param name="Local" value="html\wsh_ph.picmd.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.pictrl">
+      <param name="Name" value="ph.pictrl">
+      <param name="Local" value="html\wsh_ph.pictrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ping">
+      <param name="Name" value="ph.ping">
+      <param name="Local" value="html\wsh_ph.ping.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.pitrigger">
+      <param name="Name" value="ph.pitrigger">
+      <param name="Local" value="html\wsh_ph.pitrigger.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.playlist">
+      <param name="Name" value="ph.playlist">
+      <param name="Local" value="html\wsh_ph.playlist.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.playsound">
+      <param name="Name" value="ph.playsound">
+      <param name="Local" value="html\wsh_ph.playsound.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.pos">
+      <param name="Name" value="ph.pos">
+      <param name="Local" value="html\wsh_ph.pos.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.postcopydata">
+      <param name="Name" value="ph.postcopydata">
+      <param name="Local" value="html\wsh_ph.postcopydata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.postformula">
+      <param name="Name" value="ph.postformula">
+      <param name="Local" value="html\wsh_ph.postformula.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.postmsg">
+      <param name="Name" value="ph.postmsg">
+      <param name="Local" value="html\wsh_ph.postmsg.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.postmsg_s">
+      <param name="Name" value="ph.postmsg_s">
+      <param name="Local" value="html\wsh_ph.postmsg_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.powerhomeuptime">
+      <param name="Name" value="ph.powerhomeuptime">
+      <param name="Local" value="html\wsh_ph.powerhomeuptime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.powerhomeuptime_s">
+      <param name="Name" value="ph.powerhomeuptime_s">
+      <param name="Local" value="html\wsh_ph.powerhomeuptime_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.processemail">
+      <param name="Name" value="ph.processemail">
+      <param name="Local" value="html\wsh_ph.processemail.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.processemailthread">
+      <param name="Name" value="ph.processemailthread">
+      <param name="Local" value="html\wsh_ph.processemailthread.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.prontotogc">
+      <param name="Name" value="ph.prontotogc">
+      <param name="Local" value="html\wsh_ph.prontotogc.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.prontotorr2">
+      <param name="Name" value="ph.prontotorr2">
+      <param name="Local" value="html\wsh_ph.prontotorr2.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.readfile">
+      <param name="Name" value="ph.readfile">
+      <param name="Local" value="html\wsh_ph.readfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.regactivex">
+      <param name="Name" value="ph.regactivex">
+      <param name="Local" value="html\wsh_ph.regactivex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.regex">
+      <param name="Name" value="ph.regex">
+      <param name="Local" value="html\wsh_ph.regex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.regexdiff">
+      <param name="Name" value="ph.regexdiff">
+      <param name="Local" value="html\wsh_ph.regexdiff.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.regexdiff1">
+      <param name="Name" value="ph.regexdiff1">
+      <param name="Local" value="html\wsh_ph.regexdiff1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.regexsnap">
+      <param name="Name" value="ph.regexsnap">
+      <param name="Local" value="html\wsh_ph.regexsnap.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.reinitialize">
+      <param name="Name" value="ph.reinitialize">
+      <param name="Local" value="html\wsh_ph.reinitialize.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.relativedatetime">
+      <param name="Name" value="ph.relativedatetime">
+      <param name="Local" value="html\wsh_ph.relativedatetime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.relativedtprecise">
+      <param name="Name" value="ph.relativedtprecise">
+      <param name="Local" value="html\wsh_ph.relativedtprecise.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.relativetime">
+      <param name="Name" value="ph.relativetime">
+      <param name="Local" value="html\wsh_ph.relativetime.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.removedirectory">
+      <param name="Name" value="ph.removedirectory">
+      <param name="Local" value="html\wsh_ph.removedirectory.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.replaceall">
+      <param name="Name" value="ph.replaceall">
+      <param name="Local" value="html\wsh_ph.replaceall.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.replaceallmulti">
+      <param name="Name" value="ph.replaceallmulti">
+      <param name="Local" value="html\wsh_ph.replaceallmulti.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.replaceallregex">
+      <param name="Name" value="ph.replaceallregex">
+      <param name="Local" value="html\wsh_ph.replaceallregex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.replaceregex">
+      <param name="Name" value="ph.replaceregex">
+      <param name="Local" value="html\wsh_ph.replaceregex.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.rr2topronto">
+      <param name="Name" value="ph.rr2topronto">
+      <param name="Local" value="html\wsh_ph.rr2topronto.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.rtne">
+      <param name="Name" value="ph.rtne">
+      <param name="Local" value="html\wsh_ph.rtne.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.rtnes">
+      <param name="Name" value="ph.rtnes">
+      <param name="Local" value="html\wsh_ph.rtnes.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.run">
+      <param name="Name" value="ph.run">
+      <param name="Local" value="html\wsh_ph.run.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.runscript_0">
+      <param name="Name" value="ph.runscript_0">
+      <param name="Local" value="html\wsh_ph.runscript_0.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.runscript_1">
+      <param name="Name" value="ph.runscript_1">
+      <param name="Local" value="html\wsh_ph.runscript_1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.runscript_2">
+      <param name="Name" value="ph.runscript_2">
+      <param name="Local" value="html\wsh_ph.runscript_2.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.runscript_3">
+      <param name="Name" value="ph.runscript_3">
+      <param name="Local" value="html\wsh_ph.runscript_3.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.runscript_4">
+      <param name="Name" value="ph.runscript_4">
+      <param name="Local" value="html\wsh_ph.runscript_4.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.runscript_5">
+      <param name="Name" value="ph.runscript_5">
+      <param name="Local" value="html\wsh_ph.runscript_5.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.runsync">
+      <param name="Name" value="ph.runsync">
+      <param name="Local" value="html\wsh_ph.runsync.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.savedesktopimage">
+      <param name="Name" value="ph.savedesktopimage">
+      <param name="Local" value="html\wsh_ph.savedesktopimage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.saveframe">
+      <param name="Name" value="ph.saveframe">
+      <param name="Local" value="html\wsh_ph.saveframe.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.saveitcurl">
+      <param name="Name" value="ph.saveitcurl">
+      <param name="Local" value="html\wsh_ph.saveitcurl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.saveurl">
+      <param name="Name" value="ph.saveurl">
+      <param name="Local" value="html\wsh_ph.saveurl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.saveurlviaproxy">
+      <param name="Name" value="ph.saveurlviaproxy">
+      <param name="Local" value="html\wsh_ph.saveurlviaproxy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.seconds">
+      <param name="Name" value="ph.seconds">
+      <param name="Local" value="html\wsh_ph.seconds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.secondsafter">
+      <param name="Name" value="ph.secondsafter">
+      <param name="Local" value="html\wsh_ph.secondsafter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.secondsdiff">
+      <param name="Name" value="ph.secondsdiff">
+      <param name="Local" value="html\wsh_ph.secondsdiff.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.secondsdiffsec">
+      <param name="Name" value="ph.secondsdiffsec">
+      <param name="Local" value="html\wsh_ph.secondsdiffsec.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendcopydata">
+      <param name="Name" value="ph.sendcopydata">
+      <param name="Local" value="html\wsh_ph.sendcopydata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendemail">
+      <param name="Name" value="ph.sendemail">
+      <param name="Local" value="html\wsh_ph.sendemail.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendemailfile">
+      <param name="Name" value="ph.sendemailfile">
+      <param name="Local" value="html\wsh_ph.sendemailfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendkeys">
+      <param name="Name" value="ph.sendkeys">
+      <param name="Local" value="html\wsh_ph.sendkeys.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendkeysbtn">
+      <param name="Name" value="ph.sendkeysbtn">
+      <param name="Local" value="html\wsh_ph.sendkeysbtn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendkeysmq">
+      <param name="Name" value="ph.sendkeysmq">
+      <param name="Local" value="html\wsh_ph.sendkeysmq.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendmsg">
+      <param name="Name" value="ph.sendmsg">
+      <param name="Local" value="html\wsh_ph.sendmsg.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendmsg_s">
+      <param name="Name" value="ph.sendmsg_s">
+      <param name="Local" value="html\wsh_ph.sendmsg_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendsmtpemail">
+      <param name="Name" value="ph.sendsmtpemail">
+      <param name="Local" value="html\wsh_ph.sendsmtpemail.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendsmtpemailfile">
+      <param name="Name" value="ph.sendsmtpemailfile">
+      <param name="Local" value="html\wsh_ph.sendsmtpemailfile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendsocketdata">
+      <param name="Name" value="ph.sendsocketdata">
+      <param name="Local" value="html\wsh_ph.sendsocketdata.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendsocketdata1">
+      <param name="Name" value="ph.sendsocketdata1">
+      <param name="Local" value="html\wsh_ph.sendsocketdata1.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sendudp">
+      <param name="Name" value="ph.sendudp">
+      <param name="Local" value="html\wsh_ph.sendudp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setanalogdisplay">
+      <param name="Name" value="ph.setanalogdisplay">
+      <param name="Local" value="html\wsh_ph.setanalogdisplay.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setanalogout">
+      <param name="Name" value="ph.setanalogout">
+      <param name="Local" value="html\wsh_ph.setanalogout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setanalogvalue">
+      <param name="Name" value="ph.setanalogvalue">
+      <param name="Local" value="html\wsh_ph.setanalogvalue.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobj">
+      <param name="Name" value="ph.setccobj">
+      <param name="Local" value="html\wsh_ph.setccobj.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjbcolor">
+      <param name="Name" value="ph.setccobjbcolor">
+      <param name="Local" value="html\wsh_ph.setccobjbcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjborder">
+      <param name="Name" value="ph.setccobjborder">
+      <param name="Local" value="html\wsh_ph.setccobjborder.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjfcolor">
+      <param name="Name" value="ph.setccobjfcolor">
+      <param name="Local" value="html\wsh_ph.setccobjfcolor.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjgraphic">
+      <param name="Name" value="ph.setccobjgraphic">
+      <param name="Local" value="html\wsh_ph.setccobjgraphic.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjheight">
+      <param name="Name" value="ph.setccobjheight">
+      <param name="Local" value="html\wsh_ph.setccobjheight.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjtext">
+      <param name="Name" value="ph.setccobjtext">
+      <param name="Local" value="html\wsh_ph.setccobjtext.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjwidth">
+      <param name="Name" value="ph.setccobjwidth">
+      <param name="Local" value="html\wsh_ph.setccobjwidth.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjx">
+      <param name="Name" value="ph.setccobjx">
+      <param name="Local" value="html\wsh_ph.setccobjx.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setccobjy">
+      <param name="Name" value="ph.setccobjy">
+      <param name="Local" value="html\wsh_ph.setccobjy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setcctab">
+      <param name="Name" value="ph.setcctab">
+      <param name="Local" value="html\wsh_ph.setcctab.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setcctabid">
+      <param name="Name" value="ph.setcctabid">
+      <param name="Local" value="html\wsh_ph.setcctabid.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setdevicefilter">
+      <param name="Name" value="ph.setdevicefilter">
+      <param name="Local" value="html\wsh_ph.setdevicefilter.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setdevicesort">
+      <param name="Name" value="ph.setdevicesort">
+      <param name="Local" value="html\wsh_ph.setdevicesort.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setdigitalout">
+      <param name="Name" value="ph.setdigitalout">
+      <param name="Local" value="html\wsh_ph.setdigitalout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setfileattrib">
+      <param name="Name" value="ph.setfileattrib">
+      <param name="Local" value="html\wsh_ph.setfileattrib.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setforegroundwindow">
+      <param name="Name" value="ph.setforegroundwindow">
+      <param name="Local" value="html\wsh_ph.setforegroundwindow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setglobal_a">
+      <param name="Name" value="ph.setglobal_a">
+      <param name="Local" value="html\wsh_ph.setglobal_a.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setglobal_d">
+      <param name="Name" value="ph.setglobal_d">
+      <param name="Local" value="html\wsh_ph.setglobal_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setglobal_dt">
+      <param name="Name" value="ph.setglobal_dt">
+      <param name="Local" value="html\wsh_ph.setglobal_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setglobal_n">
+      <param name="Name" value="ph.setglobal_n">
+      <param name="Local" value="html\wsh_ph.setglobal_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setglobal_s">
+      <param name="Name" value="ph.setglobal_s">
+      <param name="Local" value="html\wsh_ph.setglobal_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setglobal_t">
+      <param name="Name" value="ph.setglobal_t">
+      <param name="Local" value="html\wsh_ph.setglobal_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setinputret">
+      <param name="Name" value="ph.setinputret">
+      <param name="Local" value="html\wsh_ph.setinputret.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setmode">
+      <param name="Name" value="ph.setmode">
+      <param name="Local" value="html\wsh_ph.setmode.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setotheranalogout">
+      <param name="Name" value="ph.setotheranalogout">
+      <param name="Local" value="html\wsh_ph.setotheranalogout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setotherdigitalout">
+      <param name="Name" value="ph.setotherdigitalout">
+      <param name="Local" value="html\wsh_ph.setotherdigitalout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setothertimer">
+      <param name="Name" value="ph.setothertimer">
+      <param name="Local" value="html\wsh_ph.setothertimer.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setothervar">
+      <param name="Name" value="ph.setothervar">
+      <param name="Local" value="html\wsh_ph.setothervar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setsystemvar">
+      <param name="Name" value="ph.setsystemvar">
+      <param name="Local" value="html\wsh_ph.setsystemvar.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setsysvol">
+      <param name="Name" value="ph.setsysvol">
+      <param name="Local" value="html\wsh_ph.setsysvol.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.settimeout">
+      <param name="Name" value="ph.settimeout">
+      <param name="Local" value="html\wsh_ph.settimeout.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setvar_a">
+      <param name="Name" value="ph.setvar_a">
+      <param name="Local" value="html\wsh_ph.setvar_a.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setvar_d">
+      <param name="Name" value="ph.setvar_d">
+      <param name="Local" value="html\wsh_ph.setvar_d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setvar_dt">
+      <param name="Name" value="ph.setvar_dt">
+      <param name="Local" value="html\wsh_ph.setvar_dt.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setvar_n">
+      <param name="Name" value="ph.setvar_n">
+      <param name="Local" value="html\wsh_ph.setvar_n.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setvar_s">
+      <param name="Name" value="ph.setvar_s">
+      <param name="Local" value="html\wsh_ph.setvar_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setvar_t">
+      <param name="Name" value="ph.setvar_t">
+      <param name="Local" value="html\wsh_ph.setvar_t.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setwebcontenttype">
+      <param name="Name" value="ph.setwebcontenttype">
+      <param name="Local" value="html\wsh_ph.setwebcontenttype.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setwebnexturl">
+      <param name="Name" value="ph.setwebnexturl">
+      <param name="Local" value="html\wsh_ph.setwebnexturl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.setwebreturn">
+      <param name="Name" value="ph.setwebreturn">
+      <param name="Local" value="html\wsh_ph.setwebreturn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sqldestroy">
+      <param name="Name" value="ph.sqldestroy">
+      <param name="Local" value="html\wsh_ph.sqldestroy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sqlselect">
+      <param name="Name" value="ph.sqlselect">
+      <param name="Local" value="html\wsh_ph.sqlselect.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.sqlselectinto">
+      <param name="Name" value="ph.sqlselectinto">
+      <param name="Local" value="html\wsh_ph.sqlselectinto.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ssrequest">
+      <param name="Name" value="ph.ssrequest">
+      <param name="Local" value="html\wsh_ph.ssrequest.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.switchto">
+      <param name="Name" value="ph.switchto">
+      <param name="Local" value="html\wsh_ph.switchto.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.timedeventsctrl">
+      <param name="Name" value="ph.timedeventsctrl">
+      <param name="Local" value="html\wsh_ph.timedeventsctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.trimeventlog">
+      <param name="Name" value="ph.trimeventlog">
+      <param name="Local" value="html\wsh_ph.trimeventlog.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.tts">
+      <param name="Name" value="ph.tts">
+      <param name="Local" value="html\wsh_ph.tts.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ttsctrl">
+      <param name="Name" value="ph.ttsctrl">
+      <param name="Local" value="html\wsh_ph.ttsctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ttsgetstatus">
+      <param name="Name" value="ph.ttsgetstatus">
+      <param name="Local" value="html\wsh_ph.ttsgetstatus.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ttspause">
+      <param name="Name" value="ph.ttspause">
+      <param name="Local" value="html\wsh_ph.ttspause.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ttsresume">
+      <param name="Name" value="ph.ttsresume">
+      <param name="Local" value="html\wsh_ph.ttsresume.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ttssetvoice">
+      <param name="Name" value="ph.ttssetvoice">
+      <param name="Local" value="html\wsh_ph.ttssetvoice.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ttssync">
+      <param name="Name" value="ph.ttssync">
+      <param name="Local" value="html\wsh_ph.ttssync.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.ttswait">
+      <param name="Name" value="ph.ttswait">
+      <param name="Local" value="html\wsh_ph.ttswait.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.usermessage">
+      <param name="Name" value="ph.usermessage">
+      <param name="Local" value="html\wsh_ph.usermessage.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.vrdisable">
+      <param name="Name" value="ph.vrdisable">
+      <param name="Local" value="html\wsh_ph.vrdisable.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcclose">
+      <param name="Name" value="ph.wcclose">
+      <param name="Local" value="html\wsh_ph.wcclose.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcgethome">
+      <param name="Name" value="ph.wcgethome">
+      <param name="Local" value="html\wsh_ph.wcgethome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcgethtml">
+      <param name="Name" value="ph.wcgethtml">
+      <param name="Local" value="html\wsh_ph.wcgethtml.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcgoback">
+      <param name="Name" value="ph.wcgoback">
+      <param name="Local" value="html\wsh_ph.wcgoback.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcgoforward">
+      <param name="Name" value="ph.wcgoforward">
+      <param name="Local" value="html\wsh_ph.wcgoforward.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcgohome">
+      <param name="Name" value="ph.wcgohome">
+      <param name="Local" value="html\wsh_ph.wcgohome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcgourl">
+      <param name="Name" value="ph.wcgourl">
+      <param name="Local" value="html\wsh_ph.wcgourl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcisbusy">
+      <param name="Name" value="ph.wcisbusy">
+      <param name="Local" value="html\wsh_ph.wcisbusy.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcopen">
+      <param name="Name" value="ph.wcopen">
+      <param name="Local" value="html\wsh_ph.wcopen.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcrefresh">
+      <param name="Name" value="ph.wcrefresh">
+      <param name="Local" value="html\wsh_ph.wcrefresh.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcsethome">
+      <param name="Name" value="ph.wcsethome">
+      <param name="Local" value="html\wsh_ph.wcsethome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcsethtml">
+      <param name="Name" value="ph.wcsethtml">
+      <param name="Local" value="html\wsh_ph.wcsethtml.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcshow">
+      <param name="Name" value="ph.wcshow">
+      <param name="Local" value="html\wsh_ph.wcshow.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.wcstop">
+      <param name="Name" value="ph.wcstop">
+      <param name="Local" value="html\wsh_ph.wcstop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.webaddblob">
+      <param name="Name" value="ph.webaddblob">
+      <param name="Local" value="html\wsh_ph.webaddblob.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.webclearblob">
+      <param name="Name" value="ph.webclearblob">
+      <param name="Local" value="html\wsh_ph.webclearblob.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.webds">
+      <param name="Name" value="ph.webds">
+      <param name="Local" value="html\wsh_ph.webds.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.webml">
+      <param name="Name" value="ph.webml">
+      <param name="Local" value="html\wsh_ph.webml.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.webmu">
+      <param name="Name" value="ph.webmu">
+      <param name="Local" value="html\wsh_ph.webmu.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.websl">
+      <param name="Name" value="ph.websl">
+      <param name="Local" value="html\wsh_ph.websl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.whileloop">
+      <param name="Name" value="ph.whileloop">
+      <param name="Local" value="html\wsh_ph.whileloop.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.winampctrl">
+      <param name="Name" value="ph.winampctrl">
+      <param name="Local" value="html\wsh_ph.winampctrl.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.winampinfo">
+      <param name="Name" value="ph.winampinfo">
+      <param name="Local" value="html\wsh_ph.winampinfo.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.windowstate">
+      <param name="Name" value="ph.windowstate">
+      <param name="Local" value="html\wsh_ph.windowstate.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.windowsuptime_s">
+      <param name="Name" value="ph.windowsuptime_s">
+      <param name="Local" value="html\wsh_ph.windowsuptime_s.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.writefile">
+      <param name="Name" value="ph.writefile">
+      <param name="Local" value="html\wsh_ph.writefile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.x10">
+      <param name="Name" value="ph.x10">
+      <param name="Local" value="html\wsh_ph.x10.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.x10btn">
+      <param name="Name" value="ph.x10btn">
+      <param name="Local" value="html\wsh_ph.x10btn.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.x10lookup">
+      <param name="Name" value="ph.x10lookup">
+      <param name="Local" value="html\wsh_ph.x10lookup.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.x10refreshstat">
+      <param name="Name" value="ph.x10refreshstat">
+      <param name="Local" value="html\wsh_ph.x10refreshstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.x10setstat">
+      <param name="Name" value="ph.x10setstat">
+      <param name="Local" value="html\wsh_ph.x10setstat.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.xp2u">
+      <param name="Name" value="ph.xp2u">
+      <param name="Local" value="html\wsh_ph.xp2u.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.xu2p">
+      <param name="Name" value="ph.xu2p">
+      <param name="Local" value="html\wsh_ph.xu2p.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.yp2u">
+      <param name="Name" value="ph.yp2u">
+      <param name="Local" value="html\wsh_ph.yp2u.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.yu2p">
+      <param name="Name" value="ph.yu2p">
+      <param name="Local" value="html\wsh_ph.yu2p.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="ph.zero">
+      <param name="Name" value="ph.zero">
+      <param name="Local" value="html\wsh_ph.zero.htm">
+    </object>
+    </ul>
+</ul>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.winampctrl</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.winampctrl Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Controls a Winamp instance running on the PowerHome machine.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.winampctrl ( command, ldata, sdata )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+command
+
+</td>
+<td class=ph9>
+
+String.  A string representation of the control command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+ldata
+
+</td>
+<td class=ph9>
+
+Long.  Numeric data for the command.  Use 0 when the command does not require numeric data.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+sdata
+
+</td>
+<td class=ph9>
+
+String.  String data for the command.  Use "" (empty string) when the command does not require string data.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if the command is successful.  Returns 1 if an error occurs.  Returns 2 if Winamp is not running.  Returns 3 if the command is not recognized.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function for complete control of Winamp on the PowerHome computer.  This function relies upon the data in the [Winamp] section of the pwrhome.ini file.  The path parameter should be set to the location path and filename of the Winamp executable.  Set the class parameter if you wish to launch Winamp using a unique class name differing from the default.  Leave blank to use the default Winamp class name.<br><br>
+<table>
+<tr>
+<td><span class=ph6>Command</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>launch</td>
+<td class=ph9>Used to launch Winamp if it is not running.</td>
+</tr>
+<tr>
+<td class=ph8>addlist</td>
+<td class=ph9>Adds individual songs to the current playlist or entire playlists to the current playlist.  Place the path the song or playlist in the sdata parameter.</td>
+</tr>
+<tr>
+<td class=ph8>playfile</td>
+<td class=ph9>Plays an individual song or a playlist.  Place the path and filename of the song or playlist in the sdata parameter.  This command will replace the current playlist with the new song or playlist.</td>
+</tr>
+<tr>
+<td class=ph8>prev</td>
+<td class=ph9>Moves to the previous song in the list.</td>
+</tr>
+<tr>
+<td class=ph8>play</td>
+<td class=ph9>Plays the currently selected song.</td>
+</tr>
+<tr>
+<td class=ph8>pause</td>
+<td class=ph9>Pauses the currently selected song.</td>
+</tr>
+<tr>
+<td class=ph8>stop</td>
+<td class=ph9>Stops the currently selected song.</td>
+</tr>
+<tr>
+<td class=ph8>next</td>
+<td class=ph9>Moves to the next song in the list.</td>
+</tr>
+<tr>
+<td class=ph8>fadeout</td>
+<td class=ph9>Stops the currently playing song by slowly fading away.</td>
+</tr>
+<tr>
+<td class=ph8>stoptrack</td>
+<td class=ph9>Stops play after the currently playing track completes.</td>
+</tr>
+<tr>
+<td class=ph8>fwd5sec</td>
+<td class=ph9>Skips the currently playing song forward 5 seconds.</td>
+</tr>
+<tr>
+<td class=ph8>rew5sec</td>
+<td class=ph9>Rewinds the currently playing song by 5 seconds.</td>
+</tr>
+<tr>
+<td class=ph8>startlist</td>
+<td class=ph9>Moves the current position within the playlist to the first song.</td>
+</tr>
+<tr>
+<td class=ph8>endlist</td>
+<td class=ph9>Moves the current position within the playlist to the last song.</td>
+</tr>
+<tr>
+<td class=ph8>volumeup</td>
+<td class=ph9>Raises the Winamp volume slightly.</td>
+</tr>
+<tr>
+<td class=ph8>volumedown</td>
+<td class=ph9>Lowers the Winamp volume slightly.</td>
+</tr>
+<tr>
+<td class=ph8>togglerepeat</td>
+<td class=ph9>Toggles the repeat button on and off.</td>
+</tr>
+<tr>
+<td class=ph8>toggleshuffle</td>
+<td class=ph9>Toggles the shuffle button on and off.</td>
+</tr>
+<tr>
+<td class=ph8>close</td>
+<td class=ph9>Closes Winamp</td>
+</tr>
+<tr>
+<td class=ph8>clearlist</td>
+<td class=ph9>Clears the current playlist.</td>
+</tr>
+<tr>
+<td class=ph8>seek</td>
+<td class=ph9>Seeks to a specific section in milliseconds of currently playing song.  Place the seek milliseconds in the ldata parameter.</td>
+</tr>
+<tr>
+<td class=ph8>writelist</td>
+<td class=ph9>Writes the current playlist to <<winampdir>>\winamp.m3u</td>
+</tr>
+<tr>
+<td class=ph8>seeklist</td>
+<td class=ph9>Seek to a specific position within the current playlist.  Place the seek position in the ldata parameter.</td>
+</tr>
+<tr>
+<td class=ph8>setvolume</td>
+<td class=ph9>Sets the Winamp volume.  Place the volume setting (0 - 255) in the ldata parameter.</td>
+</tr>
+<tr>
+<td class=ph8>setpanning</td>
+<td class=ph9>Sets the Winamp panning.  Place the panning value (0 left to 255 right) in the ldata parameter</td>
+</tr>
+<tr>
+<td class=ph8>restart</td>
+<td class=ph9>Restarts Winamp</td>
+</tr>
+<tr>
+<td class=ph8>seekpercent</td>
+<td class=ph9>Seeks to a specific position within the currently playing song using a percent value rather than milliseconds.  Place the seek percent (0 - 100) in the ldata parameter.</td>
+</tr>
+<tr>
+<td class=ph8>shuffleset</td>
+<td class=ph9>Turns the Winamp shuffle on.</td>
+</tr>
+<tr>
+<td class=ph8>shuffleclear</td>
+<td class=ph9>Turns the Winamp shuffle off.</td>
+</tr>
+<tr>
+<td class=ph8>repeatset</td>
+<td class=ph9>Turns the Winamp repeat on.</td>
+</tr>
+<tr>
+<td class=ph8>repeatclear</td>
+<td class=ph9>Turns the Winamp repeat off.</td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>

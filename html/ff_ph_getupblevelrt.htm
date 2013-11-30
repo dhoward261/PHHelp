@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getupblevelrt</title>
+</head>
+<BODY>
+<DIV class=ph1>ph_getupblevelrt PowerHome formula function </DIV>
+<DIV class=ph2>Description</DIV>
+<DIV class=ph3>Returns the level for the specified UPB device in realtime. 
+</DIV>
+<DIV class=ph4>Syntax</DIV>
+<DIV class=ph5>ph_getupblevelrt ( id ) </DIV>
+<DIV>
+<TABLE width="100%">
+  <TBODY>
+  <TR>
+    <TD><SPAN class=ph6>Argument</SPAN></TD>
+    <TD><SPAN class=ph7>Description</SPAN></TD></TR>
+  <TR>
+    <TD class=ph8>id </TD>
+    <TD class=ph9>String. The ID of the UPB device whose level you wish 
+      returned. </TD></TR></TBODY></TABLE></DIV>
+<DIV class=ph10>Return value</DIV>
+<DIV class=ph11>Integer. The level of the specified UPB device (0 thru 100) if 
+successful.&nbsp; Otherwise, these error values are returned:</DIV>
+<DIV class=ph11>&nbsp;</DIV>
+<DIV class=ph11>
+<TABLE style="WIDTH: 305px; BORDER-COLLAPSE: collapse; HEIGHT: 110px" 
+borderColor=#000000 cellSpacing=0 cellPadding=2 width=305 border=0>
+  <TBODY>
+  <TR>
+    <TD><FONT size=2>&nbsp;- 100</FONT></TD>
+    <TD>&nbsp;<FONT size=2>Could not find ID in database</FONT></TD></TR>
+  <TR>
+    <TD>&nbsp;<FONT size=2>- 1</FONT></TD>
+    <TD><FONT size=2>&nbsp;Controller not found</FONT></TD></TR>
+  <TR>
+    <TD><FONT size=2>&nbsp;- 2</FONT></TD>
+    <TD><FONT size=2>&nbsp;Internal error</FONT></TD></TR>
+  <TR>
+    <TD><FONT size=2>&nbsp;- 3</FONT></TD>
+    <TD><FONT size=2>&nbsp;Controller not connected</FONT></TD></TR>
+  <TR>
+    <TD><FONT size=2>&nbsp;- 4</FONT></TD>
+    <TD><FONT size=2>&nbsp;Could not communicate with 
+  device</FONT></TD></TR></TBODY></TABLE></DIV>
+<DIV class=ph11>&nbsp;</DIV>
+<DIV class=ph11>This function will actually query the specified UPB device in 
+realtime waiting for the device to return its level. </DIV>
+<DIV class=ph11>&nbsp;</DIV>
+</BODY>
+</html>

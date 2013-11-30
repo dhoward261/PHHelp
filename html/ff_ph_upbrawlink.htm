@@ -1,0 +1,122 @@
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+
+<html>
+
+<!--(==============================================================)-->
+<!--(Document created with RoboEditor. )============================-->
+<!--(==============================================================)-->
+
+<head>
+
+<title>ph_upbrawlink</title>
+
+<!--(Meta)==========================================================-->
+
+<meta http-equiv=content-type content="text/html; charset=windows-1252">
+<meta name=generator content="RoboHELP by eHelp Corporation - www.ehelp.com">
+<meta name=generator-major-version content=0.1>
+<meta name=generator-minor-version content=1>
+<meta name=filetype content=kadov>
+<meta name=filetype-version content=1>
+<meta name=page-count content=1>
+<meta name=layout-height content=856>
+<meta name=layout-width content=975>
+
+
+<!--(Links)=========================================================-->
+
+<link rel=stylesheet type="text/css" href=ph-help.css>
+
+
+
+</head>
+
+<!--(Body)==========================================================-->
+
+
+<body>
+
+<div class=ph1>
+ph_upbrawlink PowerHome formula function 
+</div>
+
+<div class=ph2>
+Description
+</div>
+
+<div class=ph3>
+Send raw UPB commands to a group of linked UPB devices. 
+</div>
+
+<div class=ph4>
+Syntax
+</div>
+
+<div class=ph5>
+ph_upbrawlink ( ctlr, nid, lid, cmd, arg1, arg2 ) 
+</div>
+
+<div>
+<!--(Table)=========================================================-->
+<table x-use-null-cells
+		style="width: 100%;"
+		width=100%>
+
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td></tr>
+
+<tr>
+<td class=ph8>ctlr </td>
+<td class=ph9>String. The ID of the UPB controller to use. </td></tr>
+
+<tr>
+<td class=ph8>nid </td>
+<td class=ph9>Integer. The Network ID to send to. </td></tr>
+
+<tr>
+<td class=ph8>lid </td>
+<td class=ph9>Integer. The Link ID to send to. </td></tr>
+
+<tr>
+<td class=ph8>cmd </td>
+<td class=ph9>Integer. The command to send. </td></tr>
+
+<tr>
+<td class=ph8>arg1 </td>
+<td class=ph9>Integer. Argument 1 for the command. </td></tr>
+
+<tr>
+<td class=ph8>arg2 </td>
+<td class=ph9>Integer. Argument 2 for the command. </td></tr>
+</table>
+</div>
+
+<div class=ph10>
+Return value
+</div>
+
+<div class=ph11>
+Integer. Returns a 0 if successful, -1 is returned if the controller is 
+ not available, -2 is returned if the controller does not support UPB. 
+ 
+</div>
+
+<div class=ph12>
+Usage
+</div>
+
+<div class=ph13>
+Use this funciton to send raw UPB commands to group of linked UPB devices. 
+ Valid commands are 32 for Activate Link (arg1 and arg2 are ignored), 33 
+ for Deactivate Link (arg1 and arg2 are ignored), 34 for Goto (arg1 is 
+ level, arg2 is ramp), 35 for Fade Start (arg1 is level, arg2 is ramp), 
+ 36 for Fade Stop (arg1 and arg2 ignored), 37 for Blink (arg2 is blink 
+ rate), 38 for Indicate (arg1 is level, arg2 is ramp). <!--kadov_tag{{<spaces>}}-->&nbsp;&nbsp;<!--kadov_tag{{</spaces>}}-->You 
+ can also use the enumerated values uactlink, udeactlink, ugoto, ufadestart, 
+ ufadestop, ublink, and uindicate.
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Windows Script Host</title>
+</head>
+<body>
+<div class=ph1>
+
+Windows Script Host
+
+</div>
+
+<p>PowerHome includes the ability to execute Windows Scripts in any language for which you’ve installed the appropriate engine using the Windows Script Host components.  WSH is not part of the PowerHome installation and will have to be downloaded directly from Microsoft and installed separately if your system does not already have them and you desire this capability.  WSH is included with Microsoft Windows 2000 but will have to be installed on Windows 95, 98, and NT.  WSH will default install the engines for both VBScript and JScript.  Additional engines are available on the web.  In addition to having the full capabilities of the Script language at your disposal, PowerHome also extends this functionality with an OLE component containing functions that directly control and retrieve information from the PowerHome program.  With this facility, you will no longer be confined to the functionality contained within the internal PowerHome macro and formula scripting.</p>
+
+<p>WSH scripts are stored in normal text files on the PowerHome machine and are not a part of the PowerHome database.  You can execute a script by calling one of the six formula functions ph_runscript_0 through ph_runscript_5.  A script must consist of functions and/or  subroutines.  You can have multiple functions and/or subroutines in a single script file.  Each of these functions or subroutines can call other functions or subroutines in the same script file.  When you call one of the six runscript formula functions, you can begin execution at any function or procedure contained within the script file and pass parameters to the formula or procedure in the case of the ph_runscript_1 through ph_runscript_5 functions.  See the appropriate section under <a href="formula_functions.htm">formula functions</a> for a detailed description on the runscript functions.  <a href="wsh_functions.htm">Windows Script Host functions</a> contains a list of the OLE functions available to WSH scripts for directly interfacing with PowerHome.  They are almost exact duplicates of the ph_ formula functions used within PowerHome.</p>
+
+<p>PowerHome also includes a limited script editor.  You can access this editor from the Maintenance menu.  You can open, edit, and save scripts.  You can also perform a syntax check and execute scripts from within this screen to check for runtime errors.  More powerful editors are available and you can use any editing environment you are comfortable with.</p>
+
+<p>For more information on WSH and scripting in general, please visit the Microsoft website.</p>
+
+</body>
+</html>
+

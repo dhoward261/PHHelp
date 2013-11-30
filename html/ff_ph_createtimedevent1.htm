@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_createtimedevent1</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_createtimedevent1 PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Create a timed event.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_createtimedevent1 ( id, active, timing, freq, offset, offsetamt, reftime, type, action, boolean )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID you want to use for the Timed Event.  Use a blank value to have PowerHome automatically create an ID.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+active
+
+</td>
+<td class=ph9>
+
+Use 0 for the Timed Event to be set inactive.  Use 1 for the Timed Event to be active.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+timing
+
+</td>
+<td class=ph9>
+
+Integer.  The Timing value for the Timed Event.  Use 0 for Exact, 1 for Sunrise, 2 for Sunset, 3 for Dawn, 4 for Dusk.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+freq
+
+</td>
+<td class=ph9>
+
+Long.  The frequency the Timed Event will occur in minutes.  Use 0 for a One Shot.  1440 is the equivalent to Daily.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+offset
+
+</td>
+<td class=ph9>
+
+Integer.  The type off offset to apply to the reftime.  Use 0 for None, 1 for Absolute +, 2 for Absolute -, 3 for Random +, 4 for Random -, 5 for Random +/-
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+offsetamt
+
+</td>
+<td class=ph9>
+
+Integer.  The offset amount in minutes to apply to the reftime depending upon the offset type.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+reftime
+
+</td>
+<td class=ph9>
+
+A datetime value for when the timed event will execute.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+An integer representing the action type of the timed event.  A 0 will create a macro timed event.  A 1 will create a Send Keys timed event.  A 2 will create a Formula timed event.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+action
+
+</td>
+<td class=ph9>
+
+A string denoting the action associated with the timed event.  If a macro type of timed event, use the macro id.  If a Send Keys type of timed event, then a formula evaluating to a valid Send Keys string.  If a Formula type of timed event, then any valid formula.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+boolean
+
+</td>
+<td class=ph9>
+
+A string representing the Boolean formula for the Timed Event.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the ID of the Timed Event that was created.  Otherwise a string representing the error is returned.
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>string</title>
+</head>
+<body>
+<div class=ph1>
+
+string PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Formats data as a string according to a specified display format mask. You can convert and format date, DateTime, numeric, and time data. You can also apply a display format to a string.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+string ( data {, format } )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+The data you want returned as a string with the specified formatting. Data can have a date, DateTime, numeric, time, or string data type
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+format (optional)
+
+</td>
+<td class=ph9>
+
+A string of the display masks you want to use to format the data. The masks consist of formatting information specific to the data type of data. If data is type string, format is requiredThe format string can consist of more than one mask, depending on the data type of data. Each mask is separated by a semicolon. See Usage for details on each data type
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String. Returns data in the specified format if it succeeds and the empty string ("") if the data type of data does not match the type of display mask specified or format is not a valid mask.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+For date, DateTime, numeric, and time data, the system's default format is used for the returned string if you don't specify a format. For numeric data, the default format is the [General] format.
+<br><br>
+For string data, a display format mask is required. (Otherwise, the function would have nothing to do.)
+
+<br><br>
+The format can consist of one or more masks:?
+
+<br><br>
+Formats for date, DateTime, string, and time data can include one or two masks. The first mask is the format for the data; the second mask is the format for a null value.
+
+<br><br>
+Formats for numeric data can have up to four masks. A format with a single mask handles both positive and negative data. If there are additional masks, the first mask is for positive values, and the additional masks are for negative, zero, and NULL values.
+
+<br><br>
+Unpredictable results will occur if the mask does not match the data type.
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.x10btn</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.x10btn Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends a full X-10 standard command including addressing.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.x10btn ( s, n, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing the ID of the X-10 unit you wish to control.  
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The command you would like sent to the specified X-10 ID.  Valid values are 2 for on, 3 for off, 4 for dim, 5 for brighten, and 100 for absolute level.  You may also use the enumerated types: xon, xoff, xdim, xbright, adim
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The level you would like to use for commands 4, 5, and 100.  Use a 0 for commands 2 and 3.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful and 1 if an error occurred while retrieving information for the specified ID.  This function requires that you have already defined an X-10 device ID in the X-10 Devices screen.  In that screen, you will associate a controller with a particular housecode/unitcode.  If you want to send raw X-10 commands regardless of whether you’ve defined them in the X-10 Device screen, use the ph.x10 function.  This function is also handy when you want to set a light to a specific level.  By setting the command to 100, PowerHome will attempt to set the lamp to the specified level.  It will do this by using 1 of 3 available methods in the following order based upon the flag settings of the X-10 device type.  If the lamp supports extended commands, then a direct to level extended command will be generated.  If the lamp supports preset dim, then the corresponding preset dim command will be sent.  If extended and preset dim is not supported, then PowerHome will lookup the level it currently has stored and calculate the appropriate dimming or brightening necessary to set the light at the requested level.
+
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getccobjgraphic</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getccobjgraphic PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the current graphic file in use by a Control Center graphic object.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getccobjgraphic ( tabid, id, type )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+tabid
+
+</td>
+<td class=ph9>
+
+String.  The tab ID containing the graphic object.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the Control Center graphic object.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+Integer.  The type of graphic file to be returned.  Use 0 for the "up" graphic file, 1 for the "down" graphic file.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the full path and filename of the specified graphic object.  Returns "- 1" if the tabid / id cannot be found.
+
+</div>
+</body>
+</html>

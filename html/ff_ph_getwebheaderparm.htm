@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getwebheaderparm</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getwebheaderparm PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns the value associated with a specific parameter in the http header used to access a web page.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getwebheaderparm ( s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing the parameter whose value you wish to have parsed from the http header.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the value associated with the specified parameter from an http header that was used to access the web page.  Only useful within a formula from within a PSP page.  Any other usage will result in an empty string being returned.  Sample parameters are "user-agent", "accept", and "content-type".
+
+</div>
+</body>
+</html>
+

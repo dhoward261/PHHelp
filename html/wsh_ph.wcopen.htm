@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.wcopen</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.wcopen Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Opens the Web Center window and optionally navigates to a specified URL.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.wcopen ( type, URL )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+An integer representing the type of Web Center window to open.  A value of 0 will open the Web Center as a window.  A value of 1 will open the Web Center as a background.  If PowerHome is currently in Kiosk mode, the Web Center will open as a background regardless of this value.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+URL
+
+</td>
+<td class=ph9>
+
+A string representing the URL to navigate to when the Web Center is open.  Pass an empty string if you wish the Web Center to just open its home page.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+If the Web Center is already open, this function will just cause the Web Center to navigate to the specified URL if it is not blank.
+
+</div>
+</body>
+</html>

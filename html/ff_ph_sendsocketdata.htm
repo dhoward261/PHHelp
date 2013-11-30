@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sendsocketdata</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sendsocketdata PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends and retrieves data using a socket to a remote IP/ Port.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sendsocketdata ( url, port, data )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+url
+
+</td>
+<td class=ph9>
+
+String.  The IP or hostname of the remote device to communicate with.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+port
+
+</td>
+<td class=ph9>
+
+Long.  The Port of the remote device to communicate with.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+String.  The data to send via a socket to the remote device.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns data from the remote device.  If an error occurs, it will be in the form: "*ERROR* - XXX"
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this funciton to send and receive raw data using sockets.
+
+</div>
+</body>
+</html>

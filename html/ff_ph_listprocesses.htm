@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_listprocesses</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_listprocesses PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Returns a list of currently running processes
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_listprocesses ( type )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+Integer.  The type of list to return.  0 returns only the EXE name.  1 returns the full path and EXE name.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the list in a string of lines with 1 line per process.  Lines are separated by cr/lf pairs.  Each line contains two values separated by a tab character.  The first value is either the EXE filename or the path and EXE filename.  The second parameter is the actual process number.  Use ph_getline/ph_parseline or the ph_regex functions to extract individual values.
+
+</div>
+</body>
+</html>

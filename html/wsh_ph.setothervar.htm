@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.setothervar</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.setothervar Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the value of an internal variable on the specified controller.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.setothervar ( controller, var, value )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+controller
+
+</td>
+<td class=ph9>
+
+The ID of the controller.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+var
+
+</td>
+<td class=ph9>
+
+The number of the internal variable whose value you wish to set.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+The value you wish to set the internal variable to.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful.  - 1 is returned if the controller is not available, - 2 is returned if the controller does not support internal variables, - 3 is returned if the variable is out of range, - 4 is returned if the value is out of range.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Currently only supported by the CPU-XA/Ocelot controller.  To use this function with the CPU-XA/Ocelot, specify the ID of the controller whose type is CPU-XA/Ocelot.  The "var" must be a number from 0 to 127 corresponding to the internal variable of the CPU-XA/Ocelot you wish to set.  The "value" must be in the range of 0 to 65535 for the CPU-XA/Ocelot.
+
+</div>
+</body>
+</html>

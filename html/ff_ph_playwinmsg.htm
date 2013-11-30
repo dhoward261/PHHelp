@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_playwinmsg</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_playwinmsg PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Plays back Windows messages to multiple located handles.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_playwinmsg ( parentexe, parentclass, parenttitle, parentinstance, parentflags, childinfo, messages )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentexe
+
+</td>
+<td class=ph9>
+
+String. A string representing the filename of the parent processes executable. 
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentclass
+
+</td>
+<td class=ph9>
+
+String. The class of the process that is the parent of the process to be located.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parenttitle
+
+</td>
+<td class=ph9>
+
+String. The title of the window that is the parent of the process to be located.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentinstance
+
+</td>
+<td class=ph9>
+
+Integer. The instance of the parent whose child process you're locating. The first instance is 0.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parentflags
+
+</td>
+<td class=ph9>
+
+Integer. Flags representing which of the previous parameters to use for locating the parent. Individual values should be added. 1 - Use parentexe, 2 - Use parentclass, 4 - Use parenttitle exact, 8 - Use parenttitle partial.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+childinfo
+
+</td>
+<td class=ph9>
+
+String.  A string identifying the multiple child processes whose handles to have messages played to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+messages
+
+</td>
+<td class=ph9>
+
+String.  The string of Windows messages to be played.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 0 if successful.  1 if the parent cannot be found, 2 if a child cannot be found, 3 if an index referenced in the message does not exist, 4 if childinfo is malformed on childtitle, 5 if childinfo is malformed on childinstance, 6 if childinfo is malformed on childflags, 7 if messages is malformed on msg, 8 if messages is malformed on wparam, 9 if messages is malformed on lparam
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to playback complicated sequences of Windows messages to multiple dynamic Windows processes and handles.  Use the PowerHome Object Spy window to assist in creating functions of this type.<br><br>The childinfo parameter contains 0 or more child process "indexes", each index entry containing class, title, instance, and flags all separated by tabs.  The parent is considered index 1 with the first child entry considered index 2.  See ph_locatehandle for an explanation of the childinfo entries.  A typical childinfo entry containing two indexes may look like this: "Notepad~tUntitled - Notepad~t0~t7~tEdit~t~t0~t3~t".<br><br>The messages parameter consists of 1 or more messages to be sent to an index.  Each individual message consists of 4 parameters separated by commas.  These parameters are: index, msgnum, wparam, and lparam.
+
+</div>
+</body>
+</html>

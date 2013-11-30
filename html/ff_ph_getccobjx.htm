@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getccobjx</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getccobjx PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the x for the specified Control Center object. This is the horizontal position of the objects upper left hand corner.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getccobjx ( tabid, id )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+tabid
+
+</td>
+<td class=ph9>
+
+The ID of the Control Center tab containing the object.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the object.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long. Returns the x value of the specified object. Returns - 1 if the object is not found.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use the functions ph_getcclastobj and ph_getcclasttab to retrieve the tab ID and object ID of the last action object pressed in the Control Center.  It is not necessary for the Control Center to be open in order to retrieve or make changes to objects.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.sqlselectinto</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.sqlselectinto Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Executes a SQL query and returns the values of the first row into the appropriate LOCAL? system variables.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.sqlselectinto ( n, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The number of the starting LOCAL system variable to retrieve data into.  This value must be between 1 and 10 inclusive.  The first column of the SQL statement will be retrieved into the LOCAL system variable identified by n.  Subsequent columns will be retrieved into subsequent LOCAL varaibles.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing a valid SQL statement.  Multiple rows are allowed to be returned by the SQL select but only the first row as determined by the SQL order by will be returned.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful.  Returns 1 if n is outside of the range 1 to 10.  Returns 2 if queries are against the REGINFO table.  Returns 3 if the SQL is invalid.  Returns 4 if an error occurs while creating the query.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to quickly retrieve data from the PowerHome database when you only need a single row of data.  If you need to step thru multiple rows, use the ph.sqlselect function instead.  If you declare a query that returns 3 columns and specify a value of 6 for n, then column 1 will go into LOCAL6, column 2 will go into LOCAL7, and column 3 will go into LOCAL8.  If your query returns columns greater than what will fit into the LOCAL variables (LOCAL10 maximum), the extra columns will be discarded.
+
+</div>
+</body>
+</html>
+
+

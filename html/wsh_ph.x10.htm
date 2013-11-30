@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.x10</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.x10 Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sends an X-10 command to the specified controller.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.x10 ( s, s, n, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The ID of the controller you wish to send the X-10 command to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing the housecode portion of the X-10 command.  If you are sending a preset dim command, set this string to “PRESET DIM”
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+An integer representing the unitcode portion of the X-10 command.  If you are addressing a specific unitcode, use the unitcode number.  If this is a standard command, add 100 to the command.  An on command is normally 2 so you would encode it as 102.  If this is an extended command, then add 200 to the unitcode.  If you were sending an extended command to unit 5, then encode it as 205.  If this is a preset dim command, then add 300 to the preset dim level.  If you were sending a preset dim command as level 26 then encode it as 326.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The dim/bright or extended command data.  If this is an addressing command or a standard command, use a value of 0.  If this is a standard dim/bright command (unitcode value of 104 or 105) place a value between 0 and 100 inclusive here as the dim/bright percentage.  A value of 30 would cause the level to be changed by 30% from its current level.  If this is an extended command (200 added to the unitcode), place the extended data in this field.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</body>
+</html>
+

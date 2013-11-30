@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.itcexecutehttp</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.itcexecutehttp Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Executes an HTTP request in the specified Internet Transfer Control.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.itcexecutehttp ( n, s, s, s, s, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+A number from 1 to 10 representing the ITC you wish to execute an HTTP request.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing the HTTP operation.  See Usage below.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string that specifies the DATA to be used for operations (POST and PUT).  Use empty string ("") for GET and HEAD operations.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing additional HEADERS to be returned from the server.  For most operations, use the empty string ("").
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The ID of a macro to be executed when the operation completes.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The request timout in seconds.  Use 0 for infinity.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful.  If the specified ITC has not been created, then 1 is returned.  2 is returned if the specified ITC is outside of the range of 1 to 10.  3 is returned if the ITC is currently busy.  4 is returned if a runtime error occurs.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function call is asynchronous.  When an HTTP request is made, this function returns immediately and the request is processed in the background.  When the operation is complete, the specified Macro will then be executed.  When the macro is executed, it will have a complete copy of LOCAL and TEMP variables that were assigned when the function was executed.  However, the [TEMP1] variable will contain the response code.  A value of 10 means that the control has disconnected.  A value of 11 means that an error occurred.  A value of 12 means that the request completed successfully.  If an error occurs (response code 11 in [TEMP1]), then the error code will be in the [TEMP2] variable and the error info will be in the [TEMP3] variable.
+
+The HTTP operation is contained within a single string.  Below is a list of valid parameters:<br><br>
+<table border=1 cellspacing=0 cellpadding=2>
+ <tr>
+  <td class=ph15><b>Operation</b></td>
+  <td class=ph15><b>Description</b></td>
+ </tr>
+ <tr>
+  <td class=ph15><b>GET</b></td>
+  <td class=ph15>Retrieve data from the URL specified.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>HEAD</b></td>
+  <td class=ph15>Sends the Request headers.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>POST</b></td>
+  <td class=ph15>Posts data to the server. The data is located in the DATA argument. This is an alternate method to GET, for which additional instructions are specified in the DATA argument.</td>
+ </tr>
+ <tr>
+  <td class=ph15><b>PUT</b></td>
+  <td class=ph15>Put operation. The name of the page to be replaced is located in the DATA argument.</td>
+ </tr>
+</table>
+</div>
+</body>
+</html>

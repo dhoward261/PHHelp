@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.getinsteonlevelrt</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.getinsteonlevelrt Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the current status (level) of an Insteon device is realtime.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.getinsteonlevelrt ( id )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the Insteon device whose status/level you wish to retrieve.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Double.  Returns the current level of the specified Insteon device.  0 means that the Insteon device is off.  1 to 255 means that the device is on and indicates the current Insteon level.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to query the Insteon device and retrieve the actual current status.  This function may have a slight delay while the device is queried.
+
+</div>
+</body>
+</html>

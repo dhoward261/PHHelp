@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ctlrsq</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ctlrsq Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Adds an item to a PowerHome controllers internal send queue using the internal communication routines.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ctlrsq ( id, command, parm1, parm2, parm3 )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the controller to add queued command to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+command
+
+</td>
+<td class=ph9>
+
+Integer.  The type of command to queue.  Common queued commands are 10 for IR play, 20 for X10 send, 30 for send Insteon direct, 31 for send Insteon group, 32 for send Insteon group cleanup, 51 for Set digital, 61 for Set analog out.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm1
+
+</td>
+<td class=ph9>
+
+String.  Parameter 1 as a string.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm2
+
+</td>
+<td class=ph9>
+
+Integer.  Parameter 2 as an integer.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+parm3
+
+</td>
+<td class=ph9>
+
+Long.  Parameter 3 as an integer.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Returns 0 if the function succeeds.  Returns - 1 if the controller does not exist.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function exposes the very base level of PowerHome controller communications and is provided to achieve the maximum level of control.  Most actions can be achieved using the higher level PowerHome functions such as ph.x10, ph.ir, and ph.insteon.<br><br>An example of how this function may be used to send an X10 "On" command to housecode C would be:  ph.ctlrsq("X10CTLRID",20,"C",102,0)
+
+</div>
+</body>
+</html>

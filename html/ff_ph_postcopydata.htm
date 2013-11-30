@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_postcopydata</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_postcopydata PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Posts a Windows WM_COPYDATA message.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_postcopydata ( handle, wparam, longdata, stringdata )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+handle
+
+</td>
+<td class=ph9>
+
+The handle to which you want to send the message.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+wparam
+
+</td>
+<td class=ph9>
+
+   	The wparam data.  This would typically be the handle of the calling program.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+longdata
+
+</td>
+<td class=ph9>
+
+An unsigned long representing the dwdata parameter of a COPYDATASTRUCT.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+stringdata
+
+</td>
+<td class=ph9>
+
+A string of data that will be placed in the lpdata parameter of a COPYDATASTRUCT.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns a 0.  This formula will populate a COPYDATASTRUCT and send a WM_COPYDATA message (message number 74) to the window pointed to by handle.  The wparam argument can be any long value but is typically the handle of the calling program.  The longdata argument will be copied into the dwdata parameter of the COPYDATASTRUCT.  The stringdata will be pointed to by the lpdata parameter of a COPYDATASTRUCT.
+
+</body>
+</html>
+

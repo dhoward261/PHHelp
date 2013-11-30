@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getline</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getline PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Parses a string containing lines of data separated by cr/lf characters.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getline ( data, local )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+String.  The string containing the data to parse.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+local
+
+</td>
+<td class=ph9>
+
+Integer.  A value from 1 to 10 representing a LOCAL variable.  This value contains the start position to start searching for the line.  This local will also be updated with the new start position.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns a single line of data parsed from a string containing multiple lines of data delimited by cr/lf pairs.  The local variable specified in the second parameter (a value of 3 specifies [LOCAL3]) should contain the starting position of the line to parse.  This initial value contained within the local variable should be initially set to 1.  Subsequent calls will update the local variable with the new start positions.
+
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ccdescribeid</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ccdescribeid Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Reports the values of properties of a Control Center tab and controls within the tab.  Each object in the Control Center tab has a set of properties.  You specify one or more properties as a string and ph.ccdescribeid returns the value of the properties.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ccdescribeid ( id, propertylist )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The ID of the Control Center tab you are describing.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+propertylist
+
+</td>
+<td class=ph9>
+
+A string whose value is a blank-separated list of properties.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String. Returns a string that includes a value for each property. A newline character (~n) separates the value of each item in propertylist. If propertylist contains an invalid item, ph.ccdescribeid returns an exclamation point (!) for that item and ignores the rest of propertylist. ph.ccdescribeid returns a question mark (?) if there is no value for a property. 
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+A good starting point for this function is to use a propertylist value of "datawindow.syntax".  This will give the complete raw syntax of the tab control including all of its objects.  From this listing can be seen the proper syntax for creating new objects as well as modifying existing objects.
+
+</div>
+</body>
+</html>

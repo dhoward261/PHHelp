@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.setmode</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.setmode Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the operating mode of PowerHome.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.setmode ( n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The mode to set PowerHome to.  use 0 for "Normal" mode, 1 thru 3 for "Kiosk" mode.  A value of 1 places PowerHome in Kiosk mode with the main window being the Control Center.  A value of 2 is Kiosk mode with the main window being the X-10 Status screen.  A value of 3 is Kiosk mode with the main screen being the Web Center.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+While in "Kiosk" mode, PowerHome is maximized and can't be closed or minimized.  The menu is also restricted to just macros and PowerHome cannot be used for any database maintenance, etc.  You will be able to programmatically affect aspects of PowerHome such as using ph.windowstate to minimize PowerHome while in Kiosk mode however.  Once placing PowerHome in Kiosk mode, be sure you have a way to get back to "Normal" mode either through a trigger, macro, or similar.
+
+</div>
+</body>
+</html>
+

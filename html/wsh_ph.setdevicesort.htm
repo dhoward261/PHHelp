@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.setdevicesort</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.setdevicesort Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Sets the sort criteria for the Device Status Screen.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.setdevicesort ( sort )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+sort
+
+</td>
+<td class=ph9>
+
+Sort expression to apply to the Device Status Screen
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns 1 if the filter succeeds.  - 1 is returned if the sort fails.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use the ph.setdevicesort formula to programatically sort the rows displayed on the Device Status Screen.
+<br><br>
+The sort criteria for a column has one of the forms shown in the following table, depending on whether you specify the column by name or number. Order is a, asc, or ascending for ascending order or d, desc, or descending for descending order. Order is case insensitive. If you omit order or specify an unrecognised string, the sort is performed in ascending order.
+<br><br>
+You can specify secondary sorting by specifying criteria for additional columns in the format string. Separate each column specification with a comma.
+<br><br>
+<table>
+<tr>
+<td><span class=ph16>Syntax for sort order</span></td>
+<td><span class=ph16>Examples</span></td>
+</tr>
+<tr>
+<td class=ph17>columnname order</td>
+<td class=ph17>"location a,key_desc a"</td>
+</tr>
+<tr>
+<td></td>
+<td class=ph17>"type"</td>
+</tr>
+<tr>
+<td class=ph17>#columnnumber order</td>
+<td class=ph17>"#6 D,#7 A"</td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.saveurl</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.saveurl Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves the specified URL and saves the returned body to a file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.saveurl ( s, s, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing URL you wish to retrieve.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing the full path and filename you wish to save the URL's data to.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+Integer representing whether to overwrite the file if it exists or append to it.  A 0 will cause the data to be appended to the existing file.  Any other value will cause the file to be replaced.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the http header of the requested URL if the function succeeds.  Otherwise, a message indicating the error is returned.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to retrieve and save HTML, text, graphic, or binary data from a URL to a file.
+
+</div>
+</body>
+</html>
+
+

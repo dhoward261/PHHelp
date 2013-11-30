@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.ping</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.ping Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Pings a machine on the network.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.ping ( host, ttl )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+host
+
+</td>
+<td class=ph9>
+
+String.  The IP of hostname of the machine to ping.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+ttl
+
+</td>
+<td class=ph9>
+
+Integer.  The Time to Live value for the Ping command in milliseconds.  Use values from 1 to 255.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns the Round Trip Time in milliseconds or a negative number if an error occurs.  Returns -1 if the host is an invalid IP or hostname.  Returns -2 if a system error occurs.  Returns -3 if the ping fails.  Values less than or equal to -11000 are errors returned from the Ping command itself.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use the ph.ping command to check for the availability of a machine on the network.
+
+</div>
+</body>
+</html>

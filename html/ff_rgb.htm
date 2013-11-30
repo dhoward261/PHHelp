@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>rgb</title>
+</head>
+<body>
+<div class=ph1>
+
+rgb PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Calculates the long value that represents the color specified by numeric values for the red, green, and blue components of the color.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+rgb ( red, green, blue )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+red
+
+</td>
+<td class=ph9>
+
+The integer value of the red component of the color
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+green
+
+</td>
+<td class=ph9>
+
+The integer value of the green component of the color
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+blue
+
+</td>
+<td class=ph9>
+
+The integer value of the blue component of the color
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long. Returns the long that represents the color created by combining the values specified in red, green, and blue. If an error occurs, RGB returns NULL.
+<br><br>
+Usage 
+<br><br>
+The formula for combining the colors is:?
+
+<br><br>
+Red + (256 * Green) + (65536 * Blue)
+
+<br><br>
+The value of a component color is an integer between 0 and 255 that represents the amount of the component that is required to create the color you want. The lower the value, the darker the color; the higher the value, the lighter the color.
+
+</body>
+</html>
+

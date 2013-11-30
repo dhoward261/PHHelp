@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_playsound</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_playsound PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Plays a WAV file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_playsound ( wav, flags )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+wav
+
+</td>
+<td class=ph9>
+
+A string defining the path and wav file to be played.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+flags
+
+</td>
+<td class=ph9>
+
+An unsignedinteger which represents how the wav file is to be played.  Valid values which can be added (OR’ed) together are:  0 – Function returns after wav is played.  1 – Function returns immediately after wav starts playing.  2 – If file not found, play nothing.  4 – Play wav from memory instead of disk.  8 – Loop until function is called again with flags set to null.  Should be combined with 1.  16 – If sound system is busy, don’t stop the currently playing sound and return without playing.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if a wav capable device is present in the system, otherwise a 1 is returned.
+
+</body>
+</html>
+

@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setccobjgraphic</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_setccobjgraphic PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Allows for the setting of both up and down graphic files associated with a Control Center graphic object.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_setccobjgraphic ( tabid, id, upfile, downfile, flags )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+tabid
+
+</td>
+<td class=ph9>
+
+String.  The tab ID containing the graphic object.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+String.  The ID of the Control Center graphic object.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+upfile
+
+</td>
+<td class=ph9>
+
+String.  The full path and filename of the "up" graphic object.  Used by all graphic objects.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+downfile
+
+</td>
+<td class=ph9>
+
+String.  The full path and filename of the "down" graphic object.  Used ONLY by graphic button objects.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+flags
+
+</td>
+<td class=ph9>
+
+Integer.  The flags for controlling which values are used and how the function performs.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer. Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to dynamically change the graphic files associated with Control Center graphic objects.  Also sends the changes to Remote CC clients using the UDP broadcast server.<br><br>Use a single space character as the graphic file to leave the existing graphic file unchanged.  Useful when you wish to change ONLY the up or down graphic file and not the other.
+
+</div>
+</body>
+</html>

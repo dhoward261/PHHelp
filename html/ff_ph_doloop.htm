@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_doloop</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_doloop PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Evaluates a PowerHome formula repetitively.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_doloop ( formula, check )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+formula
+
+</td>
+<td class=ph9>
+
+A string containing the formula that you wish to have evaluated repetitively.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+check
+
+</td>
+<td class=ph9>
+
+A string containing a formula that determines when the loop should exit.  If this formula evaluates to a number other than 0 then the loop will exit.  The loop will also exit if it evaluates to a boolean false.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Use this function to perform formula evaluations repetitively.  Note that the formula will always be executed at least 1 time.  See also the ph_forloop and ph_whileloop functions.
+
+</div>
+</body>
+</html>
+

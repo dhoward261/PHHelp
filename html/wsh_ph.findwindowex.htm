@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.findwindowex</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.findwindowex Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Finds a child window of a currently running parent window.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.findwindowex ( n, n, n, s, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The handle of the parent window.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The handle at which to start searching for child windows.  Normally, set this value to 0.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The instance of the desired child window.  A parent window may have multiple matching child windows for the specified criteria.  This parameter determines which instance is returned.  Use 0 for the first matching child window, 1 for the second matching child window, etc.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+The title or classname of the child window you wish to retrieve the handle of.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+An integer representing the type of find window to be performed. Use a 0 if you wish to search using the classname of the child window. Use a 1 if you wish to search using the title of the child window. 
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long. Returns the handle of the child window if found. 
+
+</div>
+</body>
+</html>

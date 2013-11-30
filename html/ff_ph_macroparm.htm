@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_macroparm</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_macroparm PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Plays a PowerHome macro and passes 5 optional parameters.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_macroparm ( s, a, a, a, a, a )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string identifying the ID of the macro you wish to play.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+a
+
+</td>
+<td class=ph9>
+
+Any data type that will be passed to LOCAL1.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+a
+
+</td>
+<td class=ph9>
+
+Any data type that will be passed to LOCAL2.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+a
+
+</td>
+<td class=ph9>
+
+Any data type that will be passed to LOCAL3.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+a
+
+</td>
+<td class=ph9>
+
+Any data type that will be passed to LOCAL4.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+a
+
+</td>
+<td class=ph9>
+
+Any data type that will be passed to LOCAL5.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if the macro is successfully played.  A 1 signifies that no rows exist in the macrodetail table.  A 2 is returned if you try to play the special macros ‘PLAYSLOTTRACK’ or ‘PLAYPLAYLIST’.  A 3 is returned if an infinite loop condition is detected.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The passed parameters are copied into the system variables LOCAL1 thru LOCAL5.  Any valid data type can be passed in these values.  All data types are first converted to type string before being stored in the system variables.  You must specifiy a valid data type for each parameter.  If you do not wish to pass data for a particular parameter then just pass either "" or 0.
+
+</div>
+</body>
+</html>
+

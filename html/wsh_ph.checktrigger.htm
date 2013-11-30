@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph.checktrigger</title>
+</head>
+<body>
+<div class=ph1>
+
+ph.checktrigger Windows Script Host function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Forces the checking of a trigger.  Useful for external applications interfacing with PowerHome via Windows messaging or Socket Server interface.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph.checktrigger ( type, id, number, value, dim, command, data, formula, auxvalue )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+The type of trigger to check.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+id
+
+</td>
+<td class=ph9>
+
+The Trigger ID
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+number
+
+</td>
+<td class=ph9>
+
+The Trigger Number
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+value
+
+</td>
+<td class=ph9>
+
+The Trigger Value.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+dim
+
+</td>
+<td class=ph9>
+
+A double representing the dim value.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+command
+
+</td>
+<td class=ph9>
+
+An unsigned long representing the command.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+data
+
+</td>
+<td class=ph9>
+
+A long representing the data.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+formula
+
+</td>
+<td class=ph9>
+
+A string representing the formula.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+auxvalue
+
+</td>
+<td class=ph9>
+
+A string representing the auxillary value.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 1 if no matching triggers are found.  Returns a 0 otherwise.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+This function can be used to force a an internal PowerHome trigger check.
+
+</div>
+</body>
+</html>

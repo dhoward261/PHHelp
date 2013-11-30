@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getotheranalog</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_getotheranalog PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Retrieves an Analog Input value.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_getotheranalog ( controller, type, unit, point )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+controller
+
+</td>
+<td class=ph9>
+
+The ID of the controller.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+type
+
+</td>
+<td class=ph9>
+
+The type of Analog point.  Use 0 for inputs, 1 for outputs, 2 for Multi-State, 3 for Temperature, 4 for Arm Status, and 5 for Alarm State.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+unit
+
+</td>
+<td class=ph9>
+
+The unit number.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+point
+
+</td>
+<td class=ph9>
+
+The point you wish to get the analog value of.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long.  Returns the value of the analog input point you requested.  –1 is returned if the controller is not available, -2 is returned if analog input is not supported by the controller, -3 is returned if the unit is out of range, -4 is returned if the point is out of range.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+Currently only supported by the CPU-XA/Ocelot controller with either a SECU-16 or SECU-16I interface, the Velleman K8000 controller, and the Elk M1 Gold.
+<br><br>
+To use this function with the CPU-XA/Ocelot, specify the ID of the controller whose type is CPU-XA/Ocelot.  The "unit" must be a number from 1 to 128 corresponding with the address of the SECU-16 or SECU-16I whose analog input you wish to retrieve.  The "point" must be a number from 0 to 15 and corresponds to the specific point on the addressed SECU-16 or SECU-16I.
+<br><br>
+To use this function with the Velleman K8000, specify the ID of the controller whose type is K8000.  To access the 6 bit analog outputs set the "unit" to 0 and use "point" values from 1 to 32.  To access the 8 bit analog outputs set the "unit" to 1 and use "point" values from 1 to 4.  To access the analog inputs set the "unit" to 2 and use "point" values from 1 to 64.
+<br><br>
+For use with the Elk M1 Gold, specify the ID of the Elk M1 controller.  For the "Unit" and "Point" properties, the Elk M1 Gold supports two different numbering schemes.  You can set the "unit" value to 0 and then set the "Point" value to the Elk logical point value.  You can also set the "Unit" to the address of any external modules (use 0 for the on-board points) and the "Point" to the actual point value on the external board.
+
+</div>
+</body>
+</html>

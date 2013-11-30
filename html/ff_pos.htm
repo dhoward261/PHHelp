@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>pos</title>
+</head>
+<body>
+<div class=ph1>
+
+pos PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Finds one string within another string.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+pos ( string1, string2 {, start } )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+string1
+
+</td>
+<td class=ph9>
+
+The string in which you want to find string2
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+string2
+
+</td>
+<td class=ph9>
+
+The string you want to find in string1
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+start  (optional)
+
+</td>
+<td class=ph9>
+
+A long indicating where the search will begin in string. The default is 1
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Long. Returns a long whose value is the starting position of the first occurrence of string2 in string1 after the position specified in start. If string2 is not found in string1 or if start is not within string1, Pos returns 0.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+
+The Pos function is case sensitive.<br><br>
+NOTE: This function has a problem searching strings greater than approximately 32000 characters in length.  The returned values will be unpredictable.  Use the posw or ph_pos functions instead if the string you're searching contains greater than 32000 characters.
+
+</div>
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sqlselect</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_sqlselect PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Selects data from the PowerHome database into a data retrieval area.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_sqlselect ( n, s )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+The number of the data retrieval area you would like to create and select into.  Valid values are 1 thru 10.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+A string representing a valid SQL select statement.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if successful.  A 1 will be returned if an invalid data retrieval area is specified.  A 2 will be returned if selects against the REGINFO table are performed.  A 3 is returned if the SQL code is not valid.  A 4 is returned if an error occurs while trying to create the query.  If the function is successful, the system variable SQLROWS# will be updated with the number of rows the select returned.  You can then use the other PowerHome functions such as ph_getdata to access the data in the data retrieval area.  Be sure and destroy a data retrieval area when you are done using it so that the memory will be released.
+
+</body>
+</html>
+

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_copyfile</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_copyfile PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+
+Makes a copy of the specified file.
+
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_copyfile ( s, s, n )
+
+</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing the full path and filename of the source file.
+
+</td>
+</tr>
+<tr>
+<td class=ph8>
+
+s
+
+</td>
+<td class=ph9>
+
+String representing the full path and filename of the target file.
+
+</td>
+</tr>
+
+<tr>
+<td class=ph8>
+
+n
+
+</td>
+<td class=ph9>
+
+Integer representing whether to overwrite the file if it already exists.  Use 0 to keep an existing file, any other value to overwrite.
+
+</td>
+</tr>
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+Integer.  Returns a 0 if the source file was successfully copied.  Returns -1 if an error occurred opening the source file.  Returns -2 if an error occurred opening the target file.
+
+</div>
+</body>
+</html>
+
