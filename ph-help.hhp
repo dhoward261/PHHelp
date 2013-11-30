@@ -896,18 +896,3 @@ html\wsh_ph.webml.htm
 html\wsh_ph.webmu.htm
 html\wsh_ph.websl.htm
 html\wsh_ph.x10lookup.htm
-eHelp.xml
-RoboHHRE.lng
-
-ph-help.glo
-ph-help.brs
-[ALIAS]
-#include ph-help.ali
-
-[MAP]
-#include BSSCDefault.h
-
-[TEXT POPUPS]
-BSSCDefault.h
-
-
