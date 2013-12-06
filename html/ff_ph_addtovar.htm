@@ -31,45 +31,43 @@ ph_addtovar ( type, id, value )
 <tr>
 <td class=ph8>
 
-type
-
-</td>
+type</td>
 <td class=ph9>
 
-The type of the system variable.  1 denotes a local variable, 2 denotes a temp variable, and 3 denotes a global variable.
-
-</td>
+<span class="ph-datype">String</span>. The type of the system variable.  1 denotes a local variable, 2 denotes a temp variable, and 3 denotes a global variable.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-id
-
-</td>
+id</td>
 <td class=ph9>
 
-The number of the system variable.  1 thru 10 are valid for local and temp variables.  1 thru 20 are valid for global variables.
-
-</td>
+<span class="ph-datype">Integer</span>. The number of the system variable.  1 thru 10 are valid for local and temp variables.  1 thru 20 are valid for global variables.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-value
-
-</td>
+value</td>
 <td class=ph9>
 
-A positive or negative double value that you want the system variable adjusted by.
-
-</td>
+<span class="ph-datype">Long</span>. A positive or negative double value that you want the system variable adjusted by.</td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
+Double.  Returns the value of the system variable after it has been adjusted by value. <br>
+NOTE: This function should ONLY be used when it is known that the system variable contains numeric data. 
+</div>
 
-Double.  Returns the value of the system variable after it has been adjusted by value.  This function should only be used when it is known that the system variable contains numeric data.
+<div class=ph10>Examples</div>
+<div class=ph11>The following examples demonstrate typical syntax/usage  for this function.<br>
+</div>
+<div class=ph20>
+  &bull; To Add "15" to LOCAL3 &nbsp;>>>&nbsp; ph_addtovar(1,3,15) <br>
+  &bull; To Add "65" to TEMP5 &nbsp;>>>&nbsp; ph_addtovar(2,5,65) <br>
+  &bull; To Add "210" to GLOBAL2 &nbsp;>>>&nbsp; ph_addtovar(3,2,210)
+</div>
 
 </body>
 </html>

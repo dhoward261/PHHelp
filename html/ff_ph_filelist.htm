@@ -30,71 +30,55 @@ ph_filelist ( filespec, include, exclude, sorted, outputtype )
 </tr>
 <tr>
 <td class=ph8>
-
-filespec
-
-</td>
+filespec</td>
 <td class=ph9>
-
-String.  The file search specification for the returned filelist.  Wildcards are allowed.  Ex: "c:\program files\powerhome\*.pbd"
-
-</td>
+<span class="ph-datype">String</span>.  The file search specification for the returned filelist.  Wildcards are allowed.  Ex: "c:\program files\powerhome\*.pbd"</td>
 </tr>
 <tr>
 <td class=ph8>
-
-include
-
-</td>
+include</td>
 <td class=ph9>
 
-Long.  Only include files with the specified attributes.  Use 0 to include all files.  Individual attributes should be added together.  Typical values are: 1 - ReadOnly, 2 - Hidden, 4 - System, 16 - Directory, 32 - Archive, 2048 - Compressed, 16384 - Encrypted.
-
-</td>
+<span class="ph-datype">Long</span>.  Only include files with the specified attributes.  Use 0 to include all files.  Individual attributes should be added together.  Typical values are: 1 - ReadOnly, 2 - Hidden, 4 - System, 16 - Directory, 32 - Archive, 2048 - Compressed, 16384 - Encrypted.</td>
 </tr>
 <tr>
 <td class=ph8>
-
-exclude
-
-</td>
+exclude</td>
 <td class=ph9>
-
-Long.  Exclude files with these attributes.  Use 0 to not exclude files.  Individual attributes should be added together.  Typical values are: 1 - ReadOnly, 2 - Hidden, 4 - System, 16 - Directory, 32 - Archive, 2048 - Compressed, 16384 - Encrypted.
-
-</td>
+<span class="ph-datype">Long</span>.  Exclude files with these attributes.  Use 0 to not exclude files.  Individual attributes should be added together.  Typical values are: 1 - ReadOnly, 2 - Hidden, 4 - System, 16 - Directory, 32 - Archive, 2048 - Compressed, 16384 - Encrypted.</td>
 </tr>
 <tr>
 <td class=ph8>
-
-sorted
-
-</td>
+sorted</td>
 <td class=ph9>
 
-Integer.  Use 0 to return an unsorted list.  Any other value to sort.
-
-</td>
+<span class="ph-datype">Integer</span>.  Use 0 to return an unsorted list.  Any other value to sort.</td>
 </tr>
 <tr>
 <td class=ph8>
-
-outputtype
-
-</td>
+outputtype</td>
 <td class=ph9>
 
-Integer.  How the output should be returned.  Use 0 to return the list as values separted by cr/lf, 1 to return as comma separated values, 2 to return as XML, and 3 to return as an HTML Table.
-
-</td>
+<span class="ph-datype">Integer</span>.  How the output should be returned.  Use 0 to return the list as values separted by cr/lf, 1 to return as comma separated values, 2 to return as XML, and 3 to return as an HTML Table.</td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-String.  Returns the list of files/directories in the format specified by the outputtype.
-
+String.  Returns the list of files/directories in the format specified by the output type.
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+
+<div class=ph20>
+&bull; ph_filelist("c:\findMyPhone.txt",0,0,0,0)  &nbsp;&nbsp;{Finds specific file}<br>
+&bull; ph_filelist("c:\*.txt",0,0,0,0)  &nbsp;&nbsp;{Finds all "jpg" files in powerhome directory and lists them unsorted}<br>
+&bull; ph_filelist("c:\*.txt",0,5,1,1)  &nbsp;&nbsp;{Finds all "jpg" files in powerhome directory that are everything,not Read Only/System, sorts them, and returns them as comma separated values}<br>
+</div>
+
 </body>
 </html>

@@ -19,7 +19,7 @@ Checks whether the specified file exists or not.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_fileexists ( s )
+ph_fileexists ( filespec )
 
 </div>
 <div>
@@ -31,23 +31,27 @@ ph_fileexists ( s )
 <tr>
 <td class=ph8>
 
-s
-
-</td>
+filespec</td>
 <td class=ph9>
 
-String representing the full path and filename of the file to check.
-
-</td>
+<span class="ph-datype">String</span> representing the full path and filename of the file to check.</td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-Integer.  Returns a 1 if the file exists.  Returns 0 if the file is not found.
-
+Integer.  Returns a 1 if the file exists.  Returns 0 if the file is not found.<br>
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+<div class=ph20>
+&bull; ph_fileexists("C:/powerhome/myalerts.txt")    <br>
+</div>
+
 </body>
 </html>
 

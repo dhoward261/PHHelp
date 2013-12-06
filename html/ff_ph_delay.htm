@@ -6,23 +6,20 @@
 </head>
 <body>
 <div class=ph1>
-
 ph_delay PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Delays execution for the specified number of milliseconds
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
-ph_delay ( n )
-
+ph_delay ( timedelay )
 </div>
 <div>
+
 <table width=100%>
 <tr>
 <td><span class=ph6>Argument</span></td>
@@ -30,24 +27,32 @@ ph_delay ( n )
 </tr>
 <tr>
 <td class=ph8>
-
-n
-
-</td>
+timedelay</td>
 <td class=ph9>
 
-The number of milliseconds to delay.  There are 1000 milliseconds in 1 second.
-
-</td>
+  <p><span class="ph-datype">Integer</span>. The delay time in milliseconds.  There are 1000 milliseconds in 1 second.<br>
+  NOTE: Use with caution. This function delays ALL PowerHome processing for the specified time amount, preventing any other macro, trigger, or timed events from happening. Use only with short delays and sparingly as this function delays macro execution for the specified time amount, preventing any other macro, trigger, or timed events from happening.  </p>
+  </td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
+<div class=ph10>Return value
+</div>
 <div class=ph11>
-
 Integer.  Returns a 0. 
-<br><br>
- 
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_delay(500)&nbsp;&nbsp;&nbsp;{Creates a 0.5 second delay.} 
+</div>
+
+
 </body>
 </html>
 

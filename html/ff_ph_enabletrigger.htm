@@ -5,22 +5,19 @@
 <title>ph_enabletrigger</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_enabletrigger PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Enables a disabled PowerHome trigger.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
-ph_enabletrigger ( s )
-
+ph_enabletrigger ( trigID )
 </div>
 <div>
 <table width=100%>
@@ -28,25 +25,32 @@ ph_enabletrigger ( s )
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-s
-
-</td>
+trigID</td>
 <td class=ph9>
-
-The ID of the trigger you wish to enable.
-
-</td>
+<span class="ph-datype">String</span>. The ID of the trigger you wish to enable.</td>
 </tr>
+
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
 
 Integer.  Returns a 0.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+
+<div class=ph20>
+ &bull; ph_enabletrigger ( "LIVROOM_OFF" )<br>
+ &bull; ph_enabletrigger ( "[TEMP2]" ) --> where TEMP2 contains a DEVICE NAME
+</div>
+
+
 </body>
 </html>

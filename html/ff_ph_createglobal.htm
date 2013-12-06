@@ -6,59 +6,56 @@
 </head>
 <body>
 <div class=ph1>
-
 ph_createglobal PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Creates and initializes a PowerHome global variable on the fly.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 ph_createglobal ( id, value )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-id
-
-</td>
+id</td>
 <td class=ph9>
-
-The ID of the global variable to create
-
-</td>
+<span class="ph-datype">String</span>. The ID of the global variable to create. </td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-value
-
-</td>
-<td class=ph9>
-
-A string representing the initial value to assign to the global variable
-
-</td>
+value</td>
+<td class=ph9><span class="ph-datype">String</span> representing the initial value to assign to the global variable</td>
 </tr>
+
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
 
 Integer.  Returns 0 if successful.  Returns a 1 if an error occurred such as the ID already existing.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+
+<div class=ph20>
+&bull; ph_createglobal(&quot;MOTIONCOUNT&quot;,&quot;0&quot;)    <br>
+&bull; ph_createglobal(&quot;MOTIONCOUNT&quot;, &quot;[LOCAL1]&quot;)  <br>
+&bull; ph_createglobal(&quot;CAMERA_NAME&quot;,&quot;DrvCam&quot;)</div>
+
 </body>
 </html>

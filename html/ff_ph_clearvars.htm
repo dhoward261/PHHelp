@@ -28,42 +28,31 @@ ph_clearvars ( local, temp, global )
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 local
-
 </td>
 <td class=ph9>
-
-A number representing the starting point of [LOCAL?] variables to be cleared.  Use 0 to not clear any [LOCAL?] variables.
-
-</td>
+<span class="ph-datype">Number</span> representing the starting point of [LOCAL?] variables to be cleared.  Use 0 to not clear any [LOCAL?] variables.</td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 temp
-
 </td>
 <td class=ph9>
-
-A number representing the starting point of [TEMP?] variables to be cleared.  Use 0 to not clear any [TEMP?] variables.
-
-</td>
+<span class="ph-datype">Number</span> representing the starting point of [TEMP?] variables to be cleared.  Use 0 to not clear any [TEMP?] variables.</td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 global
-
 </td>
 <td class=ph9>
-
-A number representing the starting point of [GLOBAL?] variables to be cleared.  Use 0 to not clear any [GLOBAL?] variables.
-
-</td>
+<span class="ph-datype">Number</span> representing the starting point of [GLOBAL?] variables to be cleared.  Use 0 to not clear any [GLOBAL?] variables.</td>
 </tr>
+
 </table>
 </div>
 <div class=ph10>Return value</div>
@@ -80,7 +69,19 @@ For each of the three parameters, use a positive number to clear from this varia
 Use a negative number to clear from the minimum variable to the specified number.  For example: placing a - 3 in the local parameter will clear[LOCAL1] thru [LOCAL3].
 
 The example ph_clearvars(7, - 4, 0) would clear [LOCAL7] thru [LOCAL10], clear [TEMP1] thru [TEMP4], and would not change [GLOBAL1] thru [GLOBAL20].
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+&bull; ph_clearvars(0,3,-5)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Causes the LOCAL vars to be untouched,  TEMP 3-10 to be cleared, GLOBAL 1-5 cleared <br>
+&bull; ph_clearvars(-1, [LOCAL1],0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Causes LOCALS to be unchanged, TEMPS cleared according to contents of LOCAL1, Globals unchanged. </div>
+
+
 </body>
 </html>

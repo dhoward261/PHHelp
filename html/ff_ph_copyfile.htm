@@ -19,7 +19,7 @@ Makes a copy of the specified file.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_copyfile ( s, s, n )
+ph_copyfile ( sourcefilespec, targetfilespec, writemode )
 
 </div>
 <div>
@@ -31,39 +31,27 @@ ph_copyfile ( s, s, n )
 <tr>
 <td class=ph8>
 
-s
-
-</td>
+sourcefilespec</td>
 <td class=ph9>
 
-String representing the full path and filename of the source file.
-
-</td>
+<span class="ph-datype">String</span> representing the full path and filename of the source file.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-s
-
-</td>
+targetfilespec</td>
 <td class=ph9>
 
-String representing the full path and filename of the target file.
-
-</td>
+<span class="ph-datype">String</span> representing the full path and filename of the target file.</td>
 </tr>
 
 <tr>
 <td class=ph8>
 
-n
-
-</td>
+writemode</td>
 <td class=ph9>
 
-Integer representing whether to overwrite the file if it already exists.  Use 0 to keep an existing file, any other value to overwrite.
-
-</td>
+<span class="ph-datype">Integer</span> representing whether to overwrite the file if it already exists.  Use 0 to keep an existing file, any other value to overwrite.</td>
 </tr>
 </table>
 </div>
@@ -71,8 +59,18 @@ Integer representing whether to overwrite the file if it already exists.  Use 0 
 <div class=ph11>
 
 Integer.  Returns a 0 if the source file was successfully copied.  Returns -1 if an error occurred opening the source file.  Returns -2 if an error occurred opening the target file.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+&bull; ph_copyfile("C:/powerhome/powerhome.db&quot;,&quot;C:/Documents/BakUps/powerhome.db&quot;,1)    <br>
+</div>
+
+
 </body>
 </html>
 

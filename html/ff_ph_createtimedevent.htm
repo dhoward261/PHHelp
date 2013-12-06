@@ -7,15 +7,15 @@
 <body>
 <div class=ph1>
 
-ph_createtimedevent PowerHome formula function
+ph_createtimedevent1 PowerHome formula function
 
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Create a timed event.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
@@ -31,38 +31,26 @@ ph_createtimedevent ( type, action, datetime )
 <tr>
 <td class=ph8>
 
-type
-
-</td>
+type</td>
 <td class=ph9>
 
-An integer representing the action type of the timed event.  A 0 will create a macro timed event.  A 1 will create a Send Keys timed event.  A 2 will create a Formula timed event.
-
-</td>
+<span class="ph-datype">Integer</span> representing the action type of the timed event.  A 0 will create a macro timed event.  A 1 will create a Send Keys timed event.  A 2 will create a Formula timed event.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-action
-
-</td>
+action</td>
 <td class=ph9>
 
-A string denoting the action associated with the timed event.  If a macro type of timed event, use the macro id.  If a Send Keys type of timed event, then a formula evaluating to a valid Send Keys string.  If a Formula type of timed event, then any valid formula.
-
-</td>
+<span class="ph-datype">String</span> denoting the action associated with the timed event.  If a macro type of timed event, use the macro id.  If a Send Keys type of timed event, then a formula evaluating to a valid Send Keys string.  If a Formula type of timed event, then any valid formula.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-datetime
-
-</td>
+datetime</td>
 <td class=ph9>
 
-A datetime value for when the timed event will execute.
-
-</td>
+<span class="ph-datype">Datetime</span> value for when the timed event will execute.</td>
 </tr>
 </table>
 </div>
@@ -70,8 +58,17 @@ A datetime value for when the timed event will execute.
 <div class=ph11>
 
 Integer.  Returns a 0 if the timed event was successfully created.  Otherwise a value equivalent to the SQL error when attempting to insert into the timed event table.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. NOTE: the TimedEvent created will have a generic system id. If a labeled ID is desired see also "ph_createtimedevent()" <br>
+</div>
+
+<div class=ph20>
+&bull; ph_createtimedevent(2,&quot;ph_insteon('DWN ROOM',ifastoff,0)&quot;,ph_relativedatetime(today(),30)) &nbsp;&nbsp;&nbsp;{Create Event in 30 minutes} <br>
+&bull; ph_createtimedevent(0,&quot;XMAS_LITES&quot;,2013-12-25 07:30:00))&nbsp;&nbsp;&nbsp;{Turn on Christmas lighting at 7:30AM Christmas Day} </div>
+
 </body>
 </html>
 

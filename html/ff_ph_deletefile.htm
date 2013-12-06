@@ -19,7 +19,7 @@ Deletes the specified file.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_deletefile ( s )
+ph_deletefile ( targetfilespec )
 
 </div>
 <div>
@@ -31,23 +31,26 @@ ph_deletefile ( s )
 <tr>
 <td class=ph8>
 
-s
-
-</td>
+targetfilespec</td>
 <td class=ph9>
 
-String representing the full path and filename of the file to delete.
-
-</td>
+<span class="ph-datype">String</span> representing the full path and filename of the file to delete.</td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Integer.  Returns a 0 if the file was successfully deleted.  Returns 1 if an error occurred.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+&bull; ph_deletefile(&quot;C:/powerhome/Bak/powerhome.db&quot;)</div>
+
 </body>
 </html>
 

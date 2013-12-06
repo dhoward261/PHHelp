@@ -31,34 +31,37 @@ ph_addtoglobal ( id, value )
 <tr>
 <td class=ph8>
 
-id
-
-</td>
+id</td>
 <td class=ph9>
 
-A string representing the ID of the global variable.
-
-</td>
+<span class="ph-datype">String</span><em>.</em> representing the ID of the global variable.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-value
-
-</td>
+value</td>
 <td class=ph9>
 
-The double value to add to the global variable.
-
-</td>
+<span class="ph-datype">Long</span>. The double value to add to the global variable.</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Double.  Returns the new value of the global variable.  Returns 0 if an error occurs.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+  &bull; ph_addglobal("MOTIONCOUNT",1) <br>
+  &bull; ph_addglobal("LOOPCNT", [LOCAL1])&nbsp;&nbsp;&nbsp;{NOTE: the LOCAL variable MUST contain a numeric value or a syntax error will occur. See next line for better syntax.} <br>
+  &bull; ph_addglobal("LOOPCNT", ph_getvar_n(1,1))&nbsp;&nbsp;&nbsp;{ph_getvar converts the contents of LOCAL1 value into a numeric value}
+</div>
+
 </body>
 </html>

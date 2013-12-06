@@ -7,9 +7,7 @@
 <body>
 <div class=ph1>
 
-ph_getglobal_d PowerHome formula function
-
-</div>
+ph_getglobal_d &nbsp;&nbsp;PowerHome formula function</div>
 <div class=ph2>Description</div>
 <div class=ph3>
 
@@ -19,7 +17,7 @@ Retrieves a global variable and returns the data as a date.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_getglobal_d ( s )
+ph_getglobal_d ( id )
 
 </div>
 <div>
@@ -31,21 +29,26 @@ ph_getglobal_d ( s )
 <tr>
 <td class=ph8>
 
-s
-
-</td>
+id</td>
 <td class=ph9>
 
-A string identifying the global variable you wish to retrieve.
-
-</td>
+<span class="ph-datype">String</span> identifying the global variable you wish to retrieve. NOTE: Should be all uppercase. </td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Date.  The data stored within the global variable will be returned as a date.  You should only use this function if you know that the data stored within the global variable can be properly converted to a date.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+<div class=ph20>
+  &bull; ph_getglobal_d("LAST_MOTION") <br>
+  &bull; ph_getglobal_d("[TEMP4]") --> where TEMP4 contains a Global variable name.
+</div>
 
 </body>
 </html>

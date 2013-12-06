@@ -2,8 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>case</title>
-</head>
+<title>case</title></head>
 <body>
 <div class=ph1>
 
@@ -30,22 +29,14 @@ case ( expression WHEN value1 THEN result1 { WHEN value2 THEN result2  { ... } }
 </tr>
 <tr>
 <td class=ph8>
-
-expression
-
-</td>
+expression</td>
 <td class=ph9>
 
-The expression whose values you want to test  Expression is compared to each valuen.
-
-</td>
+<span class="ph-datype">Expression</span><span class="ph-italic">. A Variable</span> whose numeric values you want to test.  Expression is compared to each valuen in turn until success or ELSE.</td>
 </tr>
 <tr>
 <td class=ph8>
-
-WHEN (optional)
-
-</td>
+WHEN (optional)</td>
 <td class=ph9>
 
 Introduces a value-result pair. At least one WHEN is required.
@@ -54,25 +45,17 @@ Introduces a value-result pair. At least one WHEN is required.
 </tr>
 <tr>
 <td class=ph8>
-
-valuen
-
-</td>
+valuen</td>
 <td class=ph9>
 
-One or more values that you want to compare to values of expression. A value can be:
-<div class=ph14>A single value</div>
-<div class=ph14>A list of values separated by commas (for example, 2, 4, 6, 8)	A TO clause (for example, 1 TO 20) IS followed by a relational operator and comparison value (for example, IS>5)</div>
-<div class=ph14>Any combination of the above with an implied OR between expressions (for example, 1,3,5,7,9,27 TO 33, IS>42)</div>
-
-</td>
+<span class="ph-datype">Numeric</span>. One or more <span class="ph-italic">numeric</span> values that you want to compare to values of expression. A value can be:
+  <div class=ph14>A single value</div>
+<div class=ph14>A list of <span class="ph-italic">numeric</span> values separated by commas (for example, 2, 4, 6, 8)	A TO clause (for example, 1 TO 20) IS followed by a relational operator and comparison value (for example, IS>5)</div>
+<div class=ph14>Any combination of the above with an implied OR between expressions (for example, 1,3,5,7,9,27 TO 33, IS>42)</div></td>
 </tr>
 <tr>
 <td class=ph8>
-
-THEN
-
-</td>
+THEN</td>
 <td class=ph9>
 
 Introduces the result to be returned when column matches the corresponding valuen
@@ -81,22 +64,14 @@ Introduces the result to be returned when column matches the corresponding value
 </tr>
 <tr>
 <td class=ph8>
-
-resultn
-
-</td>
+resultn</td>
 <td class=ph9>
 
-An expression whose value is returned by Case for the corresponding valuen. All resultn values must have the same data type.
-
-</td>
+<span class="ph-datype">Expression</span>. An <span class="ph-italic">expression</span> whose value is returned by Case for the corresponding valuen. All resultn values must have the same data type.</td>
 </tr>
 <tr>
 <td class=ph8>
-
-ELSE (optional)
-
-</td>
+ELSE (optional)</td>
 <td class=ph9>
 
 Specifies that for any values of column that don't match the values of valuen already specified, Case returns resultelse.
@@ -105,29 +80,51 @@ Specifies that for any values of column that don't match the values of valuen al
 </tr>
 <tr>
 <td class=ph8>
-
-resultelse
-
-</td>
+resultelse</td>
 <td class=ph9>
 
-An expression whose value is returned by Case when the value of column doesn't match any WHEN valuen expression.
-
-</td>
+<span class="ph-datype">Expression</span>. An <span class="ph-italic">expression</span> whose value is returned by Case when the value of column doesn't match any WHEN valuen expression.</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 The data type of resultn. Returns the result you specify in resultn.
-
 </div>
+
 <div class=ph12>Usage</div>
 <div class=ph13>
-
 If more than one WHEN clause matches column, Case returns the result of the first matching one.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+&bull; case([TEMP2]
+when 17 TO 20 then 4
+Else 1)  <br>
+
+&bull; case([LOCAL1]
+when 1 then "DriveCam"
+when 2 then "HouseCam"
+when 3 then "PorchCam"
+when 4 then "TheaterCam"
+Else "Unknown Cam #[LOCAL1]")  <br>
+
+&bull; case({CURTEMP} 
+WHEN is> 50 THEN "1"
+WHEN is> 30 THEN "3" 
+ELSE "999")  <br>
+
+&bull; case(ph_getinsteonstat("[LOCAL2]")
+when 1 then "ifastoff"
+when 2 then "ifaston"
+else "?")
+</div>
+
 </body>
 </html>

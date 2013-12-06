@@ -19,7 +19,7 @@ Creates the specified directory.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_createdirectory ( path )
+ph_createdirectory ( filespec )
 
 </div>
 <div>
@@ -31,14 +31,10 @@ ph_createdirectory ( path )
 <tr>
 <td class=ph8>
 
-path
-
-</td>
+filespec</td>
 <td class=ph9>
 
-A string representing the directory you wish to have created.  This function will only create a single directory at a time.
-
-</td>
+<span class="ph-datype">String</span> representing the directory path/name you wish to have created.  This function will only create a single directory at a time.</td>
 </tr>
 </table>
 </div>
@@ -46,7 +42,16 @@ A string representing the directory you wish to have created.  This function wil
 <div class=ph11>
 
 Integer.  Returns a 0 if successful and 1 if an error occurs.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+&bull; ph_createdirectory("C:/SprinklerTimes")    <br>
+</div>
+
 </body>
 </html>

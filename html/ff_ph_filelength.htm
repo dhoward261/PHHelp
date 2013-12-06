@@ -19,7 +19,7 @@ Returns the length of the specified file in bytes.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_filelength ( s )
+ph_filelength ( sourcefilespec )
 
 </div>
 <div>
@@ -29,16 +29,10 @@ ph_filelength ( s )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
-
-s
-
-</td>
+<td class=ph8>sourcefilespec</td>
 <td class=ph9>
 
-String representing the full path and filename of the source file.
-
-</td>
+<span class="ph-datype">String</span> representing the full path and filename of the source file.</td>
 </tr>
 </table>
 </div>
@@ -46,8 +40,16 @@ String representing the full path and filename of the source file.
 <div class=ph11>
 
 Long.  Returns the length of the specified file in bytes.
+</div><br>
 
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
+
+<div class=ph20>
+&bull; ph_filelength(&quot;C:/powerhome/MotionDetection.txt&quot;)</div>
+
 </body>
 </html>
 
