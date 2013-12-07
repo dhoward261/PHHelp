@@ -4307,11 +4307,6 @@
       <param name="Name" value="ph.zero">
       <param name="Local" value="html\wsh_ph.zero.htm">
     </object>
-    <li><object type="text/sitemap">
-      <param name="Name" value="ph.zero">
-      <param name="Name" value="ph.zero">
-      <param name="Local" value="html\wsh_ph.zero.htm">
-    </object>
     </ul>
 </ul>
 </html>
