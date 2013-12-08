@@ -29,40 +29,28 @@ ph_msgbox ( title, message, timeout )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-title
-
-</td>
+title</strong></td>
 <td class=ph9>
 
-String.  The title to display within the title bar of the window.
-
-</td>
+<span class="ph-datype">String</span>.  The title to display within the title bar of the window.</td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-message
-
-</td>
+message</strong></td>
 <td class=ph9>
 
-String.  The text to display within the body of the window.
-
-</td>
+<span class="ph-datype">String</span>.  The text to display within the body of the window.</td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-timeout
-
-</td>
+timeout</strong></td>
 <td class=ph9>
 
-Integer.  The number of seconds for the window to display before automatically closing itself.  Use 0 for the window to not close itself automatically.
-
-</td>
+<span class="ph-datype">Integer</span>.  The number of seconds for the window to display before automatically closing itself.  Use 0 for the window to not close itself automatically.</td>
 </tr>
 </table>
 </div>
@@ -76,7 +64,20 @@ Integer.  Returns a 0.
 <div class=ph13>
 
 Use this function to quickly display a message to the user.  It is important to note that this function DOES not wait for the user to press a button or the window to timeout.  PowerHome execution WILL NOT be halted and will continue as normal.  There is NO way to detect if the user has closed the window or if the window has timed out short of programatically looping and checking for the existance of the window.  This function is intended ONLY for the display of informational text.  If you wish to display messages and continue processing after the user has closed the message box, use the macro command "Message Box".
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+<div class=ph20>
+&bull;ph_msgbox("SYNC-GRAPHIC1","DVC ID=[LOCAL1];  CC BUT ID=[LOCAL2]~r~n  Intensity=[LOCAL3]",10)<br>
+&bull;ph_msgbox("","LOCAL5=[LOCAL5]",10) <br>
+&bull;ph_msgbox("INITIALIZE","Initialization Finished",3)<br>
+&bull;ph_msgbox("SYNC-GRAPHIC4","[LOCAL1] ON and CC item made yellow",5)<br>
 
 </div>
+
+
 </body>
 </html>

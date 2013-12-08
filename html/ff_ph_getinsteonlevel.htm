@@ -19,7 +19,7 @@ Retrieves the current level (dim / bright) value of the specifed Insteon ID.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_getinsteonlevel ( s )
+ph_getinsteonlevel ( id )
 
 </div>
 <div>
@@ -29,16 +29,12 @@ ph_getinsteonlevel ( s )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-s
-
-</td>
+id</strong></td>
 <td class=ph9>
 
-A string representing the ID of the Insteon Device from which you wish to retrieve the level.
-
-</td>
+<span class="ph-datype">String</span> representing the ID of the Insteon Device from which you wish to retrieve the level.</td>
 </tr>
 </table>
 </div>
@@ -46,6 +42,19 @@ A string representing the ID of the Insteon Device from which you wish to retrie
 <div class=ph11>
 
 Double.  Returns the level associated with the specified Insteon Device ID that PowerHome currently has stored.  This value will be from 0 to 255 corresponding with actual Insteon levels.  To convert to a 0 to 100% range, use the following formula: X * 100 / 255 where X is the current level from 0 to 255.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+&bull;ph_getinsteonlevel (&quot;SOFA LITE &quot;)<br>
+&bull;ph_getinsteonlevel (&quot;[TEMP1]&quot;)<br>
+&bull;ph_getinsteonlevel("[LOCAL1]")/255*100,0)
+  
+</div>
 
 </body>
 </html>

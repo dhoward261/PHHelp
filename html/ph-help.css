@@ -87,11 +87,12 @@ padding-top: 10px;
 
 .ph8
 {
-font-family: Arial, Verdana, sans-serif;
-font-size: 10pt;
-padding-left: 30px;
-width: 110px;
-vertical-align: top;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 10pt;
+	padding-left: 30px;
+	width: 110px;
+	vertical-align: top;
+	font-weight: bold;
 }
 
 .ph9,.ph17
@@ -171,7 +172,7 @@ padding-top: 10px;
 	padding-right: 5px;
 	padding-bottom: 5px;
 }
-.ph-italic {
+.ph-datype {
 	font-style: italic;
 }
 .ph-bold {

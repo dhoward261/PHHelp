@@ -12,16 +12,14 @@ ph_getinsteonlevelrt PowerHome formula function
 </div>
 <div class=ph2>Description</div>
 <div class=ph3>
-
-Retrieves the current status (level) of an Insteon device is realtime.
-
+Retrieves the current status (level) of an Insteon device and retrieve the actual current status.  This function may have a slight delay while the device is queried.</span>
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 ph_getinsteonlevelrt ( id )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
@@ -29,16 +27,12 @@ ph_getinsteonlevelrt ( id )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-id
-
-</td>
+id</strong></td>
 <td class=ph9>
 
-The ID of the Insteon device whose status/level you wish to retrieve.
-
-</td>
+<span class="ph-datype">String</span>. The ID of the Insteon device whose status/level you wish to retrieve.</td>
 </tr>
 </table>
 </div>
@@ -46,13 +40,18 @@ The ID of the Insteon device whose status/level you wish to retrieve.
 <div class=ph11>
 
 Double.  Returns the current level of the specified Insteon device.  0 means that the Insteon device is off.  1 to 255 means that the device is on and indicates the current Insteon level.
-
 </div>
-<div class=ph12>Usage</div>
-<div class=ph13>
 
-Use this function to query the Insteon device and retrieve the actual current status.  This function may have a slight delay while the device is queried.
 
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
 </div>
+<div class=ph20>
+&bull;ph_getinsteonlevelrt (&quot;UP BED HEAT&quot;)<br>
+&bull;ph_getinsteonlevelrt (&quot;[TEMP1]&quot;) &nbsp;&nbsp;&nbsp;{Where TEMP1 contains the Device ID.} <br>
+</div>
+
+
 </body>
 </html>

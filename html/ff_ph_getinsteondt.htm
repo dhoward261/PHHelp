@@ -19,7 +19,7 @@ Retrieves the datetime of the last status change for the specifed Insteon Device
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_getinsteondt ( s )
+ph_getinsteondt ( id )
 
 </div>
 <div>
@@ -29,25 +29,32 @@ ph_getinsteondt ( s )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-s
-
-</td>
+id</strong></td>
 <td class=ph9>
 
-A string containing the ID of the Insteon Device from which you wish to retrieve the datetime of the last status change.
-
-</td>
+<span class="ph-datype">String</span> containing the ID of the Insteon Device from which you wish to retrieve the datetime of the last status change.</td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-Datetime.  Returns the datetime value of the last status change associated with the specified Insteon Device ID that PowerHome currently has stored.
-
+Datetime.  Returns the datetime value (eg, "11/21/2013 13:07:32") of the last status change associated with the specified Insteon Device ID that PowerHome currently has stored. <br>
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>
+&bull;ph_getinsteondt (&quot;SOFA LITE&quot;)<br>
+&bull;ph_getinsteondt (&quot;[TEMP1]&quot;)<br>
+  
+</div>
+
 </body>
 </html>
 

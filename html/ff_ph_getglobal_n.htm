@@ -19,7 +19,7 @@ Retrieves a global variable and returns the data as a number.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_getglobal_n ( s )
+ph_getglobal_n ( id )
 
 </div>
 <div>
@@ -29,16 +29,12 @@ ph_getglobal_n ( s )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-s
-
-</td>
+id</strong></td>
 <td class=ph9>
 
-A string identifying the global variable you wish to retrieve.
-
-</td>
+<span class="ph-datype">String</span> identifying the global variable you wish to retrieve. NOTE: Should be all uppercase. </td>
 </tr>
 </table>
 </div>
@@ -46,6 +42,16 @@ A string identifying the global variable you wish to retrieve.
 <div class=ph11>
 
 Double.  The data stored within the global variable will be returned as a double.  You should only use this function if you know that the data stored within the global variable can be properly converted to a double.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+<div class=ph20>
+  &bull; ph_getglobal_n ("MOTION_COUNT") <br>
+</div>
+
 
 </body>
 </html>

@@ -5,71 +5,72 @@
 <title>if</title>
 </head>
 <body>
+
 <div class=ph1>
-
 if PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Evaluates a condition and returns a value based on that condition.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 if ( boolean, truevalue, falsevalue )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 boolean
-
 </td>
 <td class=ph9>
-
-A boolean expression that evaluates to TRUE or FALSE
-
-</td>
+A <span class="ph-datype">boolean</span> expression that evaluates to TRUE or FALSE</td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 truevalue
-
 </td>
 <td class=ph9>
-
-A string containing the value you want returned if the boolean expression is TRUE
-
-</td>
+A <span class="ph-datype">string</span> containing the value you want returned if the boolean expression is TRUE</td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 falsevalue
-
 </td>
 <td class=ph9>
-
-A string containing the value you want returned if the boolean expression is FALSE
-
-</td>
+A <span class="ph-datype">string</span> containing the value you want returned if the boolean expression is FALSE</td>
 </tr>
+
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 The data type of truevalue or falsevalue. Returns truevalue if boolean is TRUE and falsevalue if it is FALSE. Returns NULL if an error occurs.
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;if({CURWINDCHILL}&gt;50,&quot;1&quot;,&quot;5&quot;) --&gt; Used in a macro JUMP command would cause a skip down 1 line if CURWINDCHILL was &gt;50. <br>
+&bull;&nbsp;if(Now()&lt;08:00:00,&quot;1&quot;,&quot;4&quot;) --&gt; Used in a macro JUMP command would cause a skip down 1 line if the time was earlier than 8AM. <br>
+&bull;&nbsp; if({SMS}=1 and {OVRTMP}=1,"ph_sendsmtpemail("smtp.mail.yahoo.com",465,"toname@yahoo.com,loginname,pwtext", "2225551212@txt.att.net","Temp Alert","Freezer Temp out of range at {TEMP-FREEZER_V} degrees.") --&gt; If SMS and OvrTemp flags are  set then send text message to phone to give alert.
+</div>
+</div>
+
 
 </body>
 </html>

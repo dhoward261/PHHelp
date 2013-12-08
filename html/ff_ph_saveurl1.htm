@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_saveurl</title>
+</head>
+<body>
+<div class=ph1>
+
+ph_saveurl1 PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>
+  Retrieves the specified URL and saves the returned body to a file.  <br>
+  The first three parameters are the same as the 'ph_saveurl' but uses different controls and methods to achieve the same result but with more user control.
+</div>
+<div class=ph4>Syntax</div>
+<div class=ph5>
+
+ph_saveurl1(url,filespec,writemode,type,timeout)</div>
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+<td class=ph8><strong>
+url</strong></td>
+<td class=ph9>
+<span class="ph-datype">String</span> representing URL you wish to retrieve.</td>
+</tr>
+
+<tr>
+<td class=ph8><strong>
+filespec</strong></td>
+<td class=ph9>
+<span class="ph-datype">String</span> representing the full path and filename you wish to save the URL's data to.</td>
+</tr>
+
+<tr>
+<td class=ph8><strong>
+writemode</strong></td>
+<td class=ph9>
+<span class="ph-datype">Integer</span> representing whether to overwrite the file if it exists or append to it.  A 0 will cause the data to be appended to the existing file.  Any other value will cause the file to be replaced.</td>
+</tr>
+
+<tr>
+<td class=ph8><strong>
+type</strong></td>
+<td class=ph9>
+<span class="ph-datype">Integer</span> representing different methods of achieving result.  Type=0 matches ph-saveurl function bit types 1 and 2 use different approaches to attempt to better match user/machine combination.  Try all, if needed, to get success.</td>
+</tr>
+
+<tr>
+<td class=ph8><strong>
+timeout</strong></td>
+<td class=ph9>
+<span class="ph-datype">Integer</span> representing timeout in seconds before failure is triggered.  The ph_saveurl is hardcoded to 40 seconds.  If the server is on a local network a much lower timeout can be used.</td>
+</tr>
+
+</table>
+</div>
+<div class=ph10>Return value</div>
+<div class=ph11>
+
+String.  Returns the http header of the requested URL if the function succeeds.  Otherwise, a message indicating the error is returned.
+
+</div>
+<div class=ph12>Usage</div>
+<div class=ph13>
+Use this function to retrieve and save HTML, text, graphic, or binary data from a URL to a file.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/ usage for this function. <br>
+</div>
+<div class=ph20>
+  &bull;ph_saveurl1("http://192.168.1.90:1002/image/DrvCam","C:\powerhome\web\CAM1.jpg",1,0,10)
+</div>
+
+</body>
+</html>
+
+

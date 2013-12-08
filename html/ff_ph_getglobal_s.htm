@@ -13,13 +13,13 @@ ph_getglobal_s PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Retrieves a global variable and returns the data as a date.
+Retrieves a global variable and returns the data as a string.
 
 </div>
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_getglobal_s ( s )
+ph_getglobal_s ( globalname )
 
 </div>
 <div>
@@ -29,16 +29,12 @@ ph_getglobal_s ( s )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-s
-
-</td>
+globalname</strong></td>
 <td class=ph9>
 
-A string identifying the global variable you wish to retrieve.
-
-</td>
+<span class="ph-datype">String</span> identifying the global variable you wish to retrieve.</td>
 </tr>
 </table>
 </div>
@@ -46,6 +42,18 @@ A string identifying the global variable you wish to retrieve.
 <div class=ph11>
 
 String.  The data stored within the global variable will be returned as a string.  Data within global variables is always stored in a string format so this function is safe to use with all data within a global variable.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+  &bull; ph_getglobal_s("CAMERA_NAME") <br>
+  <br>
+  § In Use > if(ph_getglobal_s(&quot;ALERT_MAIL1&quot;)=&quot;1&quot;,1,0)<br>
+</div>
+
 
 </body>
 </html>

@@ -29,64 +29,44 @@ ph_setccobjgraphic ( tabid, id, upfile, downfile, flags )
 <td><span class=ph7>Description</span></td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-tabid
-
-</td>
+tabid</strong></td>
 <td class=ph9>
 
-String.  The tab ID containing the graphic object.
-
-</td>
+<span class="ph-datype">String</span>.  The tab ID containing the graphic object.</td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-id
-
-</td>
+id</strong></td>
 <td class=ph9>
 
-String.  The ID of the Control Center graphic object.
-
-</td>
+<span class="ph-datype">String</span>.  The ID of the Control Center graphic object.</td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-upfile
-
-</td>
+upfile</strong></td>
 <td class=ph9>
 
-String.  The full path and filename of the "up" graphic object.  Used by all graphic objects.
-
-</td>
+<span class="ph-datype">String</span>.  The full path and filename of the "up" graphic object.  Used by all graphic objects.</td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-downfile
-
-</td>
+downfile</strong></td>
 <td class=ph9>
 
-String.  The full path and filename of the "down" graphic object.  Used ONLY by graphic button objects.
-
-</td>
+<span class="ph-datype">String</span>.  The full path and filename of the "down" graphic object.  Used ONLY by graphic button objects.</td>
 </tr>
 <tr>
-<td class=ph8>
+<td class=ph8><strong>
 
-flags
-
-</td>
+flags</strong></td>
 <td class=ph9>
 
-Integer.  The flags for controlling which values are used and how the function performs.
-
-</td>
+<span class="ph-datype">Integer</span>.  The flags for controlling which values are used and how the function performs.</td>
 </tr>
 </table>
 </div>
@@ -100,7 +80,16 @@ Integer. Returns a 0.
 <div class=ph13>
 
 Use this function to dynamically change the graphic files associated with Control Center graphic objects.  Also sends the changes to Remote CC clients using the UDP broadcast server.<br><br>Use a single space character as the graphic file to leave the existing graphic file unchanged.  Useful when you wish to change ONLY the up or down graphic file and not the other.
-
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical /syntax usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;ph_setccobjgraphic("STATUS","[LOCAL2]","C:\powerhome\web\graphics\buttons\b1gray-d_50.gif","")    <br>
+</div>
+
+
 </body>
 </html>
