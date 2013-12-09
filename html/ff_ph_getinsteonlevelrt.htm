@@ -5,11 +5,11 @@
 <title>ph_getinsteonlevelrt</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_getinsteonlevelrt PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
 Retrieves the current status (level) of an Insteon device and retrieve the actual current status.  This function may have a slight delay while the device is queried.</span>
@@ -26,32 +26,30 @@ ph_getinsteonlevelrt ( id )
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
-<td class=ph8><strong>
-
-id</strong></td>
-<td class=ph9>
-
-<span class="ph-datype">String</span>. The ID of the Insteon device whose status/level you wish to retrieve.</td>
+<td class=ph8><strong>id</strong></td>
+<td class=ph9><span class="ph-datype">String</span>. The ID of the Insteon device whose status/level you wish to retrieve.</td>
 </tr>
+
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Double.  Returns the current level of the specified Insteon device.  0 means that the Insteon device is off.  1 to 255 means that the device is on and indicates the current Insteon level.
 </div>
-
 
 <div class=ph10>Examples</div>
 <div class=ph11>
 The following examples demonstrate typical syntax/usage  for this function. <br>
 </div>
 <div class=ph20>
-&bull;ph_getinsteonlevelrt (&quot;UP BED HEAT&quot;)<br>
-&bull;ph_getinsteonlevelrt (&quot;[TEMP1]&quot;) &nbsp;&nbsp;&nbsp;{Where TEMP1 contains the Device ID.} <br>
+  &bull; ph_getinsteonlevelrt (&quot;UP BED HEAT&quot;)<br>
+  &bull; ph_getinsteonlevelrt (&quot;[TEMP1]&quot;) &nbsp;&nbsp;&nbsp;{Where TEMP1 contains the Device ID.} <br>
+  &bull; if(ph_getinsteonlevelrt ("UP BED HEAT")>0,"OUT","nextLINE") { In the Formula Field of a Goto Label Command sets the next executions line to be &quot;OUT&quot; if bed heat &gt;0, else the &quot;nextLine&quot;}<br>
+&nbsp;&nbsp;&nbsp;HINT: if a label is not defined then the Goto Label command just goes to the next line, so a fake undefined lable of "nextLine" is both descriptive and functional.
 </div>
-
 
 </body>
 </html>

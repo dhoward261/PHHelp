@@ -5,55 +5,40 @@
 <title>ph_setanalogout</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_setanalogout PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Sets the value of an analog output defined in the Analog I/O screen.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 ph_setanalogout ( id, value )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-id
-
-</td>
-<td class=ph9>
-
-The ID of the analog output as defined within the Analog I/O screen.
-
-</td>
+<td class=ph8>id</td> 
+<td class=ph9> <span class="ph-datype">String</span>. The ID of the analog output as defined within the Analog I/O screen.</td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-value
-
-</td>
-<td class=ph9>
-
-The value to set the analog output to.  This value MUSt be a string and in the format of a CALCULATED value as defined within the Analog I/O screen.  This value will be converted to the appropriate RAW value using the formula defined in the Analog I/O screen.  This RAW value will then be sent to the controller.
-
-</td>
+<td class=ph8>value</td> 
+<td class=ph9><span class="ph-datype">String</span>. The value to set the analog output to.  This value MUST be a string and in the format of a CALCULATED value as defined within the Analog I/O screen.  This value will be converted to the appropriate RAW value using the formula defined in the Analog I/O screen.  This RAW value will then be sent to the controller.</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
 
@@ -64,7 +49,17 @@ Integer. Returns a 0 if successful. Returns - 100 if the ID cannot be found.   W
 <div class=ph13>
 
 This function is similar to the ph_setotheranalogout function except that the output MUST be defined within the Analog I/O screen.  Also, this function requires the CALCULATED value while the ph_setotheranalogout function only works with RAW values.
-
 </div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_setanalogout("HOME MOTION","{HOME-MOTION}")<br>
+</div>
+
 </body>
 </html>

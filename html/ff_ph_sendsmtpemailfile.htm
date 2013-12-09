@@ -31,86 +31,70 @@ ph_sendsmtpemailfile ( s, n, s, s, s, s, s )
 <tr>
 <td class=ph8>
 
-s
+Server
 
 </td>
 <td class=ph9>
 
-The IP or DSN of the SMTP server.
-
-</td>
+<span class="ph-datype">String</span>. The IP or DSN of the SMTP server.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-n
+Port
 
 </td>
 <td class=ph9>
 
-The port of the SMTP server.  This is typically port 25.
-
-</td>
+<span class="ph-datype">Number</span>. The port of the SMTP server.  This is typically port 25.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-s
+fromAddr
 
 </td>
 <td class=ph9>
 
-The email address you are sending the email from.  Most SMTP servers require you to enter a valid email address registered on the SMTP server.  You may optionally enter a userid and password if your SMTP server requires authentication.
-
-</td>
+<span class="ph-datype">String</span>. The email address you are sending the email from.  Most SMTP servers require you to enter a valid email address registered on the SMTP server.  You may optionally enter a userid and password if your SMTP server requires authentication.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-s
-
-</td>
+toAddr</td>
 <td class=ph9>
 
-The email addresses you wish to send a message to.  Separate multiple email addresses with commas.
-
-</td>
+<span class="ph-datype">String</span>. The email addresses you wish to send a message to.  Separate multiple email addresses with commas.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-s
+Subject
 
 </td>
 <td class=ph9>
 
-The subject of the email.
-
-</td>
+<span class="ph-datype">String</span>. The subject of the email.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-s
+text
 
 </td>
 <td class=ph9>
 
-The text of the email message.
-
-</td>
+<span class="ph-datype">String</span>. The text of the email message.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-s
+filespec
 
 </td>
 <td class=ph9>
 
-The full path and filename of the file to attach to the email.  Separate multiple files with the | (vertical bar) character.
-
-</td>
+<span class="ph-datype">String</span>. The full path and filename of the file to attach to the email.  Separate multiple files with the | (vertical bar) character.</td>
 </tr>
 </table>
 </div>
@@ -128,6 +112,17 @@ Use this function to send email with file attachments using raw SMTP rather than
 If your SMTP server requires authentication, then supply the userid and password in the third parameter after the "From" email address.  Separate the "from" email address, userid, and password with commas (do not add spaces).
 
 </div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_sendsmtpemailfile("smtp.mail.yahoo.com",465,"yourname@yahoo.com,login,password", "8885551212@txt.att.net","Motion Alert","Driveway Motion on CAM1 detected.","C:\powerhome\web\CAM1.jpg") 
+</div>
+
 </body>
 </html>
 
