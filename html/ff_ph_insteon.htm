@@ -26,15 +26,17 @@ ph_insteon ( id, cmd1, cmd2 )
 </tr>
 
 <tr>
-<td class=ph8>id</td> <td class=ph9>String.  The ID of the Insteon device to send commands to.</td>
+<td class=ph8>id</td> <td class=ph9><span class="ph-datype">String</span>.  The ID of the Insteon device to send commands to.</td>
 </tr>
 
 <tr>
-<td class=ph8>cmd1</td> <td class=ph9>Integer.  The command 1 value.</td>
+<td class=ph8>cmd1</td> 
+<td class=ph9><span class="ph-datype">Integer</span>.  The command 1 value. { decimal 17-20 or &quot;i&quot; value tags (see Usage below) can be used} </td>
 </tr>
 
 <tr>
-<td class=ph8>cmd2</td> <td class=ph9>Integer. The command 2 value.</td>
+<td class=ph8>cmd2</td> 
+<td class=ph9><span class="ph-datype">Integer</span>. The command 2 value. {0=off; 255=max brightness} </td>
 </tr>
 </table>
 </div>
@@ -57,8 +59,9 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
 &bull;&nbsp;ph_insteon("MID CHANDELIER",ifaston,0) --> NOTE: With 'ifaston' the cmd2 value can be anything.<br>
-&bull;&nbsp;ph_insteon("MID CHANDELIER",17,200)<br>
+&bull;&nbsp;ph_insteon("MID CHANDELIER",17,0.25*255) --> NOTE: Math can be used in the cmd2 field. Thus 0.25*255 equals 25% brightness.<br>
 &bull;&nbsp;ph_insteon("[LOCAL4]",ifastoff,0)<br>
+&bull;&nbsp;ph_insteon("{LAST-LITE}",ion,[LOCAL1]*2.55)
 </div>
 
 </body>

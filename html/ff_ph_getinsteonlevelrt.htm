@@ -47,7 +47,8 @@ The following examples demonstrate typical syntax/usage  for this function. <br>
 <div class=ph20>
   &bull; ph_getinsteonlevelrt (&quot;UP BED HEAT&quot;)<br>
   &bull; ph_getinsteonlevelrt (&quot;[TEMP1]&quot;) &nbsp;&nbsp;&nbsp;{Where TEMP1 contains the Device ID.} <br>
-  &bull; if(ph_getinsteonlevelrt ("UP BED HEAT")>0,"OUT","nextLINE") { In the Formula Field of a Goto Label Command sets the next executions line to be &quot;OUT&quot; if bed heat &gt;0, else the &quot;nextLine&quot;}<br>
+  &bull; if(ph_getinsteonlevelrt ("UP BED HEAT")>0,"OUT","nextLINE") <br>
+&nbsp;&nbsp;&nbsp;{The above example used in the Formula Field of a Goto Label Command sets the next execution line to be &quot;OUT&quot; if bed heat &gt;0, else the &quot;nextLine&quot;}<br>
 &nbsp;&nbsp;&nbsp;HINT: if a label is not defined then the Goto Label command just goes to the next line, so a fake undefined lable of "nextLine" is both descriptive and functional.
 </div>
 
