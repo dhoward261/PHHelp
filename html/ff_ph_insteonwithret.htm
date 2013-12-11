@@ -70,18 +70,20 @@ ph_insteonwithret ( id, cmd1, cmd2 )
 
 <tr>
 <td class=ph8>id </td>
-<td class=ph9>String. The ID of the Insteon device to send commands to. 
- </td></tr>
+<td class=ph9><span class="ph-datype">String</span>. The ID of the Insteon device to send commands to. </td>
+</tr>
 
 <tr>
 <td class=ph8>cmd1 </td>
-<td class=ph9>Integer. The command 1 value. <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->Use 
+<td class=ph9><span class="ph-datype">Integer</span>. The command 1 value. <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->Use 
  standard 0 to 255 for Insteon Direct commands. <!--kadov_tag{{<spaces>}}-->&nbsp;<!--kadov_tag{{</spaces>}}-->Add 
- 1000 to the cmd1 value to send Group Cleanup commands.</td></tr>
+ 1000 to the cmd1 value to send Group Cleanup commands.</td>
+</tr>
 
 <tr>
 <td class=ph8>cmd2 </td>
-<td class=ph9>Integer. The command 2 value. </td></tr>
+<td class=ph9><span class="ph-datype">Integer</span>. The command 2 value. </td>
+</tr>
 </table>
 </div>
 
@@ -106,6 +108,20 @@ Use this funciton to send Insteon commands directly to a single device
  and retrieve the answering response. This is useful for working with non-lighting 
  devices such as the EZIO8. 
 </div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_insteonwithret ("MID CHANDELIER",16,0) <br>
+&bull;&nbsp;ph_insteonwithret ("OUT GDR EZIO2X4", 73, 0 ) <br>
+&bull;&nbsp;ph_insteonwithret("DWN-STAT",107,4)
+
+</div>
+
 
 </body>
 

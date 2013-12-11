@@ -5,76 +5,79 @@
 <title>ph_insteonctrl</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_insteonctrl PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Sets the operating parameters for the Insteon SDM controller.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
-ph_insteonctrl ( id, parm, data )
-
+ph_insteonctrl ( pollinterval, statusscan, lrxscan, lrxwrite, linkscan, maxfailures,  plcgroupcu, ackupdate, linkspider)
 </div>
+
 <div>
 <table width=100%>
+<tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
+
 <tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
+  <td class=ph8>pollinterval</td> 
+  <td class=ph9><span class="ph-datype">integer</span>.  Poll Interval in seconds. </td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-id
-
-</td>
-<td class=ph9>
-
-String.  The ID of the Insteon SDM controller.
-
-</td>
+  <td class=ph8>statusscan</td> 
+  <td class=ph9><span class="ph-datype">integer</span>. Status scan disable/enable. </td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-parm
-
-</td>
-<td class=ph9>
-
-String.  The parameter you wish to set.
-
-</td>
+  <td class=ph8>lrxscan</td> 
+  <td class=ph9><span class="ph-datype">integer</span>.  Level/RampRate/X10 scan disable/enable.</td>
 </tr>
+
 <tr>
-<td class=ph8>
+  <td class=ph8>lrxwrite</td> 
+  <td class=ph9><span class="ph-datype">integer</span>.  Level/RampRate/X10 write disable/enable.</td>
+</tr>
 
-data
+<tr>
+  <td class=ph8>linkscan</td> 
+  <td class=ph9><span class="ph-datype">integer</span>.  Link can disable/enable.</td>
+</tr>
 
-</td>
-<td class=ph9>
+<tr>
+  <td class=ph8>maxfailures</td> 
+  <td class=ph9><span class="ph-datype">integer</span>. Max number of COMM failures before device flagged as failed. </td>
+</tr>
 
-Double.  The data used to set the specified parameter.
+<tr>
+  <td class=ph8>plcgroupcu</td> 
+  <td class=ph9><span class="ph-datype">integer</span>.  PLC Group Cleanup Message disable/enable.</td>
+</tr>
 
-</td>
+<tr>
+  <td class=ph8>ackupdate</td> 
+  <td class=ph9><span class="ph-datype">integer</span>.  Update on ACK's disable/enable.</td>
+</tr>
+
+<tr>
+  <td class=ph8>linkspider</td> 
+  <td class=ph9><span class="ph-datype">integer</span>.  Link Spidering  disable/enable.</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Integer. Returns 0 if successful.  Returns - 1 if the controller ID cannot be found, returns - 100 if the parameter is not valid.
-
 </div>
+
 <div class=ph12>Usage</div>
 <div class=ph13>
-
 Use this function to on-the-fly programmatically change the operating parameters of the specified Insteon SDM controller.  Parameters must  be a string (enclosed by single or double quotes).  Valid parameters are:<br><br>
 <b>pollinterval</b> - Poll Interval.  Data should contain the poll interval in seconds.<br>
 <b>statusscan</b> - Status Scan.  Data should be 0 to disable status scan and 1 to enable.<br>
@@ -85,7 +88,17 @@ Use this function to on-the-fly programmatically change the operating parameters
 <b>plcgroupcu</b> - PLC Group Cleanup messages.  Data should be 0 to disable and 1 to enable.<br>
 <b>ackupdate</b> - Update on ACK's.  Data should be 0 to disable and 1 to enable.<br>
 <b>linkspider</b> - Allow Link Spidering.  Data should be 0 to disable and 1 to enable.<br>
-
 </div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_insteonctrl(10, 1, 1, 1, 0, 5,  0, 0, 0)
+</div>
+
 </body>
 </html>

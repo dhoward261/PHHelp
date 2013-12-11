@@ -7,8 +7,7 @@
 <body>
 
 <div class=ph1>
-if PowerHome formula function
-</div>
+if PowerHome formula function</div>
 
 <div class=ph2>Description</div>
 <div class=ph3>
@@ -17,8 +16,7 @@ Evaluates a condition and returns a value based on that condition.
 
 <div class=ph4>Syntax</div>
 <div class=ph5>
-if ( boolean, truevalue, falsevalue )
-</div>
+if ( boolean, truevalue, falsevalue )</div>
 
 <div>
 <table width=100%>
@@ -58,6 +56,18 @@ A <span class="ph-datype">string</span> containing the value you want returned i
 The data type of truevalue or falsevalue. Returns truevalue if boolean is TRUE and falsevalue if it is FALSE. Returns NULL if an error occurs.
 </div>
 
+<div class=ph12>Usage</div>
+<div class=ph13>
+  <p>The IF function is one of the basic building blocks of PowerHome macros, allowing modification in program flow,   parameter testing to determine if they fail, meet, or exceed expectations, and appropriate message display.</p>
+  <p>Program Flow:<br>
+Used in a JUMP Command line of a macro, the IF function allows branching to different program lines depending on the IF test results.  The following  tests the time of day in Seq line 10 and if after 7:30AM jumps to the next line to turn the studio lights. Otherwise it jumps down three lines and reschedules an event to call itself again in 15 minutes to test again. Alternatively, the 2nd image shows how a GOTO (rather than a JUMP) could be used for better program code clarity (plus avoiding errors later if the macro is changed and the jumps become inaccurate.)   
+  <p>Program Note: The Goto Command jumps to the named target Label, but if there is no matching Label then the jump is to the Next Line. Thus the faux Label &quot;nextLINE&quot; does go the next code line and provides an easy and clear indication of the program flow. <br>
+    <img src="images/IF-JUMP.png" alt="IF Jump" width="946" height="188"> <br>
+    <img src="images/IF-GOTO.png" alt="IF Goto" width="937" height="205"> <br>
+  <p>Used in conjunction with Message Commands/Functions, the IF produces messages that match appropriate conditions... <br>
+<img src="images/IF-MSG.png" alt="If Messages" width="935" height="37">
+</div>
+
 <div class=ph10>
 Examples
 </div>
@@ -65,6 +75,7 @@ Examples
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
+&bull;&nbsp;if([LOCAL4]>100,100,[LOCAL4]) --> Trim LOCAL4 value to max of 100.<br>
 &bull;&nbsp;if({CURWINDCHILL}&gt;50,&quot;1&quot;,&quot;5&quot;) --&gt; Used in a macro JUMP command would cause a skip down 1 line if CURWINDCHILL was &gt;50. <br>
 &bull;&nbsp;if(Now()&lt;08:00:00,&quot;1&quot;,&quot;4&quot;) --&gt; Used in a macro JUMP command would cause a skip down 1 line if the time was earlier than 8AM. <br>
 &bull;&nbsp; if({SMS}=1 and {OVRTMP}=1,"ph_sendsmtpemail("smtp.mail.yahoo.com",465,"toname@yahoo.com,loginname,pwtext", "2225551212@txt.att.net","Temp Alert","Freezer Temp out of range at {TEMP-FREEZER_V} degrees.") --&gt; If SMS and OvrTemp flags are  set then send text message to phone to give alert.

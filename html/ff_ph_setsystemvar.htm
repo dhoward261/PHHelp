@@ -19,7 +19,7 @@ Sets the value of a system variable.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_setsystemvar ( s, s )
+ph_setsystemvar ( varid, value )
 
 </div>
 <div>
@@ -31,26 +31,22 @@ ph_setsystemvar ( s, s )
 <tr>
 <td class=ph8>
 
-s
+varid
 
 </td>
 <td class=ph9>
 
-A string identifying the system variable you would like to modify.
-
-</td>
+<span class="ph-datype">String</span> identifying the system variable you would like to modify.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-s
+value
 
 </td>
 <td class=ph9>
 
-A string which you would like assigned to the system variable.
-
-</td>
+<span class="ph-datype">String</span> which you would like assigned to the system variable.</td>
 </tr>
 </table>
 </div>
@@ -58,6 +54,20 @@ A string which you would like assigned to the system variable.
 <div class=ph11>
 
 Integer.  Returns a 0 if successful and a 1 if the system variable is undefined.  Not all system variables can be modified by the user.  Examples of non-modifiable system variables are the multi-x X10P0 thru X10P19 system variables as well as MBRET, DIALUPIP, etc.
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp; ph_setsystemvar("TEMP1","DWN ROOM")<br>
+&bull;&nbsp; ph_setsystemvar("TEMP2","19")<br>
+&bull;&nbsp; ph_setsystemvar("LOCAL1", ph_readfile("C:\powerhome\findMyPhone.txt")) <br>
+&nbsp;&nbsp;&nbsp;NOTE: Because the contents of the file is 'text' no parentheses’ are required.  Had they been used, then the value put into LOCAL1 would have been the file path/name itself. <br>
+</div>
 
 </body>
 </html>
