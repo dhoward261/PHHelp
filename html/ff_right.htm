@@ -60,6 +60,17 @@ A long whose value is the number of characters you want returned from the right 
 String. Returns the rightmost n characters in string if it succeeds and the empty string ("") if an error occurs.
 <br><br>
 If n is greater than or equal to the length of the string, Right returns the entire string. It does not add spaces to make the return value's length equal to n.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/ usage for this function. <br>
+</div>
+<div class=ph20>
+  &bull; right(&quot;[LOCAL1]&quot;,10) &nbsp;&nbsp;--&gt; get the last 10 characters from the string. <br>
+  &bull; if( right( "[LOCAL1]", 12 ) = "HTTP/1.1 404", "ERROR", "Nextline") &nbsp;&nbsp;--&gt; Return &quot;ERROR&quot; if the last 12 characters indicate an HTTP error. <br>
+</div>
+
 
 </body>
 </html>

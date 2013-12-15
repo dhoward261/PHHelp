@@ -5,16 +5,14 @@
 <title>ph_regexdiff1</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_regexdiff1 PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
-searches a string of data and returns the data between two regular expression searches.
-
+Searches a string of data and returns the data between two regular expression searches.
 </div>
 <div class=ph4>Syntax</div>
 <div class=ph5>
@@ -36,9 +34,7 @@ pat1
 </td>
 <td class=ph9>
 
-String.  The starting regular expression search pattern.
-
-</td>
+<span class="ph-datype">String</span>.  The starting regular expression search pattern.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -48,9 +44,7 @@ pat2
 </td>
 <td class=ph9>
 
-String.  The ending regular expression search pattern.
-
-</td>
+<span class="ph-datype">String</span>.  The ending regular expression search pattern.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -60,9 +54,7 @@ data
 </td>
 <td class=ph9>
 
-String.  The string in which to perform the search.
-
-</td>
+<span class="ph-datype">String</span>.  The string in which to perform the search.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -72,9 +64,7 @@ start
 </td>
 <td class=ph9>
 
-Long.  The position within the data in which to start the search.  Use 1 to start at the beginning.
-
-</td>
+<span class="ph-datype">Long</span>.  The position within the data in which to start the search.  Use 1 to start at the beginning.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -84,9 +74,7 @@ occ
 </td>
 <td class=ph9>
 
-Integer.  The matching occurrence number to be returned.  Use 1 to return the first matching occurrence.  A 3 will return the third matching occurrence, etc.
-
-</td>
+<span class="ph-datype">Integer</span>.  The matching occurrence number to be returned.  Use 1 to return the first matching occurrence.  A 3 will return the third matching occurrence, etc.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -96,9 +84,7 @@ flags
 </td>
 <td class=ph9>
 
-Integer.  Flags that control how the search is performed.  Add individual flag values together.  Add 1 to cause the search to match case.  Add 2 to cause the search to ignore cr/lf's within the data.
-
-</td>
+<span class="ph-datype">Integer</span>.  Flags that control how the search is performed.  Add individual flag values together.  Add 1 to cause the search to match case.  Add 2 to cause the search to ignore cr/lf's within the data.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -108,9 +94,7 @@ localstart
 </td>
 <td class=ph9>
 
-Integer.  The index of a local variable in which to have the start of the found data returned. Use 0 to not have the start returned. 
-
-</td>
+<span class="ph-datype">Integer</span>.  The index of a local variable in which to have the start (<strong>1st character</strong>) of  the found data returned. Use 0 to not have the start returned.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -120,9 +104,7 @@ locallength
 </td>
 <td class=ph9>
 
-Integer.  The index of a local variable in which to have the length of the found data returned. Use 0 to not have the length returned. 
-
-</td>
+<em>Integer</em>.  The index of a local variable in which to have the length of thefound data returned. Use 0 to not have the length returned.</td>
 </tr>
 </table>
 </div>
@@ -134,7 +116,6 @@ String.  Returns the data string between the pat1 regular expression and pat2 re
 </div>
 <div class=ph12>Usage</div>
 <div class=ph13>
-
 Use this function for powerful text search capabilities.  The regular expression special characters supported are:
 <br><br>
 <table>
@@ -180,12 +161,64 @@ Use this function for powerful text search capabilities.  The regular expression
 </tr>
 </table>
 <br>
-An important note on this function is that it is a "greedy" regular expression search.  When using the * and + special characters this function will not stop at the first match but will instead go to the last match.
-<br><br>
-This function will also not perform a regular expression search that spans multiple lines.  If the data to search contains carraige returns or line feeds, the entire matching search data for the regular expression must exist within a single line.  If your regular expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively.
-<br><br>
-Within each search pattern you may perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  If you do multiple searches, the last search is used as the starting position and ending position of the returned text.
-
+  An important note on this function is that it is a "greedy" regular expression search.  When using the * and + special characters this function will not stop at the first match but will instead go to the last match. <br>
+  <br>
+  This function will also not perform a regular expression search that spans multiple lines.  If the data to search contains carraige returns or line feeds, the entire matching search data for the regular expression must exist within a single line.  If your regular expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively.
+  <br>
+  <br>
+  Within each search pattern you may perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  If you do multiple searches, the last search is used as the starting position and ending position of the returned text.</p>
+<p>NOTE: Where search pattern srings might contain a quote (') character then you must use the single quote (') character to delineate your string variables.<br>
+  <br>
+  For example if you wanted to match the string (this is a &quot;quoted&quot; sentence) then you would use ('this is &quot;quoted&quot; sentence')<br>
+  <br>
+  <br>
+</p>
 </div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+Thus to extract the value of the current Refrig temp (39.20) 
+  from a file which has been read into [LOCAL1] with ph_readfile() and looks like...<br> 
+  <span class="ph3">"ROMId","Name","Value","Avg",</span><br>
+  <span class="ph3">"3F000001CD92C728","Refrig",39.20,37.46, </span><br>
+  <span class="ph3">"3F60000018C8BD128","Outside",23.90,19.81,</span> <br>
+  <span class="ph3">"3F000001CDB2BA28","House",70.65,70.13,</span> <br>
+  <span class="ph3">"3F000001CD9E6D28","Freezer",1.96,1.11, </span><br>
+<br>
+The following syntax would be used... <br>
+  <span class="ph3">&bull;&nbsp;ph_regexdiff1 ('Refrig",', ',', '[LOCAL1]', 1, 1,0,3,0 )</span><br>
+  <br>
+  This search says to extract the string that is in-between <span class="ph-txtfocus">&quot;Refrig&quot;,</span> and  the next comma <span class="ph-txtfocus">&quot;,&quot;</span> <br>
+  <span class="ph3">Starting at the beginning of the data in LOCAL1 </span><br>
+  <span class="ph3">Return the 1st matching occurance </span><br>
+  <span class="ph3">No special flags required </span><br>
+  <span class="ph3">  LOCAL3 will contain the Index# of the 1st match character, equal to <strong>60</strong></span> <br>
+  <span class="ph3"> Do not return Length <br>
+  <br>
+  </span>  This will find the string highlighted in blue... "3F000001CD92C728","Refrig",<span class="ph-txtfocus">39.20</span>,37.46,
+  <br>
+  ====<br>
+  Continuing with the same  source data, the following syntax could be used to get the Outside data value (23.90)...<br>
+  <span class="ph3">&bull;&nbsp;ph_regexdiff1('Outside&quot;,',&quot;,&quot;,&quot;[LOCAL1]&quot;,[LOCAL3],1,0,0,0) </span><br>
+  <br>
+  Which  says to extract the string that is in-between <span class="ph-txtfocus">Outside&quot;, </span> and  the next comma <span class="ph-txtfocus">&quot;,&quot;</span> ...
+  <br>
+  <span class="ph3">Starting at the position in the LOCAL1 data indicated by LOCAL3 (60) </span><br>
+  <span class="ph3">Return the 1st matching occurance </span><br>
+  <span class="ph3">No special flags required </span><br>
+  <span class="ph3"> LOCAL3 will contain the Index# of the 1st match character, equal to <strong>103</strong></span> <br>
+  <span class="ph3"> Do not return Length</span>
+  <p>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This will return a value of of &quot;<strong>23.90</strong>&quot;<br>
+  ==== <br>
+Noting that all the ROM IDs begin with "3F" each of the four temperature 'Value"s could be extracted in a loop that used the following syntax where LOCAL1 was initialized to 1 and then&quot;.,
+</div>
+
+
 </body>
 </html>

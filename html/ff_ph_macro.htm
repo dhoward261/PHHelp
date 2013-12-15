@@ -6,48 +6,46 @@
 </head>
 <body>
 <div class=ph1>
-
 ph_macro PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Plays a PowerHome macro.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
-ph_macro ( s )
-
+ph_macro ( id )
 </div>
+
 <div>
 <table width=100%>
+<tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
+
 <tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
-</tr>
-<tr>
-<td class=ph8>
-
-s
-
-</td>
-<td class=ph9>
-
-A string identifying the ID of the macro you wish to play.
-
-</td>
+  <td class=ph8>id</td> 
+  <td class=ph9><span class="ph-datype">String</span> identifying the ID of the macro you wish to play.</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Integer.  Returns a 0 if the macro is successfully played.  A 1 signifies that no rows exist in the macrodetail table.  A 2 is returned if you try to play the special macros ‘PLAYSLOTTRACK’ or ‘PLAYPLAYLIST’.  A 3 is returned if an infinite loop condition is detected.
-
 </div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_macro(&quot;GDR-S SENSE&quot;) <br>
+&bull;&nbsp;ph_macro("CAMTRIG")
+</div>
+
 </body>
 </html>
 

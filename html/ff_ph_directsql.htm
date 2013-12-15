@@ -5,47 +5,49 @@
 <title>ph_directsql</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_directsql PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Execute SQL directly against the PowerHome database.
-
 </div>
-<div class=ph4>Syntax</div>
+
+<div class=ph4>
+Syntax
+</div>
 <div class=ph5>
-
 ph_directsql ( sql )
-
 </div>
+
 <div>
 <table width=100%>
-<tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
-</tr>
-<tr>
-<td class=ph8>
+<tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
 
-sql
-
-</td>
-<td class=ph9>
-
-A string containing a valid SQL statement.  Inserts, Updates, and Deletes are all valid.  See ph_sqlselect to perform Selects against the database.
-
-</td>
+<tr><td class=ph8>sql</td> <td class=ph9>
+<span class="ph-datype">String</span> containing a valid SQL statement.  Inserts, Updates, and Deletes are all valid.  See <em><strong>ph_sqlselect</strong></em> to perform Selects against the database.</td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
-<div class=ph11>
 
+<div class=ph10>
+Return value
+</div>
+<div class=ph11>
 Integer.  Returns a 0 if the SQL was successfully executed.  Otherwise a value equivalent to the SQL error when attempting to execute the SQL is returned.
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_directsql("delete from timedevents where id = 'SHOPDOOR ALERT'")  <br>
+</div>
 
 </body>
 </html>

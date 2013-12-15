@@ -5,61 +5,50 @@
 <title>left</title>
 </head>
 <body>
+
 <div class=ph1>
-
 left PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
-Obtains a specified number of characters from the beginning of a string.
-
+Obtains a specified number of characters from the beginning (left side) of a string.
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 left ( string, n )
-
 </div>
 <div>
 <table width=100%>
-<tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
+<tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
+
+<tr><td class=ph8>string</td> 
+<td class=ph9><span class="ph-datype">String</span> containing the characters you want to search. </td>
 </tr>
-<tr>
-<td class=ph8>
 
-string
-
-</td>
-<td class=ph9>
-
-The string containing the characters you want
-
-</td>
-</tr>
-<tr>
-<td class=ph8>
-
-n
-
-</td>
-<td class=ph9>
-
-A long specifying the number of characters you want
-
-</td>
+<tr><td class=ph8>n</td> 
+<td class=ph9><span class="ph-datype">Integer</span>. A number specifying the number of characters you want to examine. </td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
 
 String. Returns the leftmost n characters in string if it succeeds and the empty string ("") if an error occurs.
 <br><br>
 If n is greater than or equal to the length of the string, Left returns the entire string. It does not add spaces to make the return value's length equal to n.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/ usage for this function. <br>
+</div>
+<div class=ph20>
+ &bull; left(&quot;[LOCAL1]&quot;,10) --&gt; get the first 10 characters from the string.<br>
+ &bull; if( left( "[LOCAL1]", 12 ) = "HTTP/1.1 404", "ERROR", "Nextline")
+ </div>
 
 </body>
 </html>

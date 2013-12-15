@@ -5,47 +5,46 @@
 <title>ph_readfile</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_readfile PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Reads the contents of a file into memory and returns it as a string.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
-ph_readfile ( s )
-
+ph_readfile ( filespec )
 </div>
+
 <div>
 <table width=100%>
-<tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
-</tr>
-<tr>
-<td class=ph8>
+<tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
 
-s
-
-</td>
-<td class=ph9>
-
-A string representing the path and filename of the file you wish to read.
-
-</td>
-</tr>
+<tr><td class=ph8>filespec</td> <td class=ph9><span class="ph-datype">String</span> representing the path and filename of the file you wish to read.</td></tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 String.  Returns the contents of the file as a string.
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_readfile ("C:\powerhome\web\logtemp\last.csv") 
+ <br>
+&bull;&nbsp;ph_readfile ("C:\powerhome\findMyPhone.txt")</div>
+</div>
+
 </body>
 </html>
 

@@ -19,7 +19,7 @@ Gets the resulting HTML code from a URL.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_geturl ( s )
+ph_geturl ( url )
 
 </div>
 <div>
@@ -31,21 +31,33 @@ ph_geturl ( s )
 <tr>
 <td class=ph8>
 
-s
+url
 
 </td>
 <td class=ph9>
 
-A string identifying the URL you wish to retrieve.
-
-</td>
+<span class="ph-datype">String</span> identifying the URL you wish to retrieve.</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 String.  The HTML text from the URL.  You can include the http:// but it is not necessary.  You may also embed any passed parameters to be used in a GET request.  This function will use the proxy server defined under Setup / Preferences if you have the appropriate check made in the Setup / Scripts section.
+</div>
+
+<div class=ph12>Usage</div>
+<div class=ph13>
+Use this function to retrieve and save HTML, text, graphic, or binary data from a URL to a file.
+</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/ usage for this function. <br>
+</div>
+<div class=ph20>
+  &bull; ph_geturl( "mobile.wunderground.com/cgi-bin/findweather/getForecast?brand=mobile&query=48118") <br>
+  &bull; ph_geturl( "www.adp.com/status&amp;myhomenum=5551212&quot; )</div>
 
 </body>
 </html>

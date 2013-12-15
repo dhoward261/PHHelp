@@ -5,59 +5,59 @@
 <title>ph_or</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_or PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Bitwise OR’s two numbers.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 ph_or ( val1, val2 )
-
 </div>
 <div>
 <table width=100%>
-<tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
+<tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
+
+<tr><td class=ph8>val1</td> 
+<td class=ph9><span class="ph-datype">Long</span>. Unsigned long value of the first operand.</td>
 </tr>
-<tr>
-<td class=ph8>
 
-val1
-
-</td>
-<td class=ph9>
-
-Unsigned long value of the first operand.
-
-</td>
-</tr>
-<tr>
-<td class=ph8>
-
-val2
-
-</td>
-<td class=ph9>
-
-Unsigned long value of the second operand.
-
-</td>
+<tr><td class=ph8>val2</td> 
+<td class=ph9><span class="ph-datype">Long</span>. Unsigned long value of the second operand.</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Unsigned long.  Returns the value of the two operands OR’ed together.
+</div>
+
+<div class=ph12>Usage</div>
+<div class=ph13>Used to compare boolean values to determine if either is true, or not. Can also be used to combine bits from a binary value. See examples below. <br>
+  <br>
+In addition to the ph_or() function, the stand-alone OR operator is also available for use in boolean testing, typically in IF functions.  Using the OR operator this way often makes code more 'readable' and has the added advantage that more than  two variables can be compared.
+</p>
+<br>
+<br>
+A typical use of the OR operator  in an IF function is...
+<br>
+    &bull; if(now()>09:00:00 or {DARK}=0 or {ON}=1,1,0)</div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+  &bull; ph_or({DARK},{HOME}) --> yields a "1" if either the DARK or HOME Globals are true (equal 1) <br>
+  &bull; ph_or(8,2) &nbsp;&nbsp;--> Yields "10"&nbsp;&nbsp;&nbsp;{0b1000 AND 0b10 &gt;&gt; 0b1010} <br>
+  &bull; ph_or(10,2) --> Yields "10"&nbsp;&nbsp;&nbsp;{0b1010 AND 0b10 &gt;&gt; 0b1010} <br>
+  &bull; ph_or(21, [LOCAL1] --> Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b11 &gt;&gt; 1}</div>
 
 </body>
 </html>

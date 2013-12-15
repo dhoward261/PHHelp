@@ -51,13 +51,25 @@ val2
 Unsigned long.  Returns the value of the two operands AND’ed together.
 </div>
 
+<div class=ph12>Usage</div>
+<div class=ph13>
+Used to compare boolean values to determine if both are true, or not. Can also be used to mask bits from a binary value. See examples below. <br>
+<br>
+In addition to the ph_and() function, the stand-alone AND operator is also available for use in boolean testing, typically in IF functions.  Using the AND operator this way often makes code more 'readable' and has the added advantage that more than only two variables can be compared.</p>
+<br>
+<br>
+A typical use of the AND operator  in an IF function is...<br>
+    &bull; if(now()>09:00:00 and {DARK}=0 and {HOME},1,0)  
+</div>
+
 <div class=ph10>Examples</div>
 <div class=ph11>
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-  &bull; ph_and(17,1)    &gt;&gt; Yields "1"&nbsp;&nbsp;&nbsp;{10001 AND 1 &gt;&gt; 1} <br>
-    &bull; ph_and(21, [LOCAL1] &gt;&gt;    Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{10101 AND 11 &gt;&gt; 1} 
+  &bull; ph_and({DARK},{HOME}) --> yields a "1" if both the DARK and HOME Globals are true (equal 1) <br>
+  &bull; ph_and(17,1) --> Yields "1"&nbsp;&nbsp;&nbsp;{0b10001 AND 0b1 &gt;&gt; 1} <br>
+  &bull; ph_and(21, [LOCAL1] --> Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b11 &gt;&gt; 1} 
 </div>
 
 </body>

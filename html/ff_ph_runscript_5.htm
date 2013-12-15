@@ -5,22 +5,18 @@
 <title>ph_runscript_5</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_runscript_5 PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
+Executes a WSH (Windows Script Host) file and passes five parameters.</div>
 
-Executes a WSH (Windows Script Host) file.
-
-</div>
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
-ph_runscript_5 ( n, s, s, a, a, a, a, a )
-
+ph_runscript_3 ( timeout, filespec, name, parameter1, parameter2, parameter3, parameter4, parameter5 )
 </div>
 <div>
 <table width=100%>
@@ -28,108 +24,91 @@ ph_runscript_5 ( n, s, s, a, a, a, a, a )
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-n
-
-</td>
+<td class=ph8>timeout</td>
 <td class=ph9>
-
-Timeout.  Specifies the time in milliseconds after which the user will be presented with an option to continue or discontinue execution of the script.  A value of –1 means the script will never timeout.  A value of 0 will fire the timeout event when it is detected that the script is hung.
-
+<span class="ph-datype">Integer</span>. Timeout.  Specifies the time in milliseconds after which the user will be presented with an option to continue or discontinue execution of the script.  A value of –1 means the script will never timeout.  A value of 0 will fire the timeout event when it is detected that the script is hung.
 </td>
 </tr>
-<tr>
-<td class=ph8>
 
-s
-
-</td>
+<tr><td class=ph8>filespec</td>
 <td class=ph9>
-
-The full path and filename of the WSH file you wish to execute.
-
+<span class="ph-datype">String</span>. The full path and filename of the WSH file you wish to execute.
 </td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-s
-
-</td>
+<td class=ph8>name</td>
 <td class=ph9>
-
-The function or subroutine which should be executed.
-
+<span class="ph-datype">String</span>. The function or subroutine which should be executed.
 </td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-a
-
+parameter1
 </td>
 <td class=ph9>
-
-The first parameter to be passed to the called function.  Can be any datatype.
-
+<span class="ph-datype">Value</span>. The first parameter to be passed to the called function.  Can be any datatype.
 </td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-a
-
+parameter2
 </td>
 <td class=ph9>
-
-The second parameter to be passed to the called function.  Can be any datatype.
-
+<span class="ph-datype">Value</span>. The second parameter to be passed to the called function.  Can be any datatype.
 </td>
-</tr>
+
 <tr>
 <td class=ph8>
-
-a
-
+parameter3
 </td>
 <td class=ph9>
-
-The third parameter to be passed to the called function.  Can be any datatype.
-
+<span class="ph-datype">Value</span>. The third parameter to be passed to the called function.  Can be any datatype.
 </td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-a
-
+parameter4
 </td>
 <td class=ph9>
-
-The fourth parameter to be passed to the called function.  Can be any datatype.
-
+<span class="ph-datype">Value</span>. The forth parameter to be passed to the called function.  Can be any datatype.
 </td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-a
-
+parameter5
 </td>
 <td class=ph9>
-
-The fifth parameter to be passed to the called function.  Can be any datatype.  If more than five parameters are required for a function, you must use either system or global variables to pass the additional data.
-
+<span class="ph-datype">Value</span>. The fifth parameter to be passed to the called function.  Can be any datatype.
 </td>
 </tr>
+
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
 
 String.  Returns the output of the called function or the text of an error.
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp; ph_runscript_1(10,"C:\powerhome\web\WthrImgs\weather.vbs","main",&quot;temperature&quot;,&quot;Match&quot;,&quot;Current&quot;, 72, &quot;STAT2&quot;) <br>
+&bull;&nbsp; ph_runscript_1(0,"C:\powerhome\Control\ContactSense.vbs","main",&quot;Input&quot;,2,&quot;write&quot;, 1, &quot;SAVE&quot;)</div>
+
+
 
 </body>
 </html>

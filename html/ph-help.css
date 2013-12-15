@@ -32,14 +32,15 @@ text-decoration: none;
 
 .ph1
 {
-font-size: 12pt;
-font-weight: bolder;
-border-bottom: solid;
-border-bottom-width: 1px;
-background-color: #ffffe7;
-height: 50px;
-padding-top: 15px;
-padding-left: 10px;
+	font-size: 12pt;
+	font-weight: bolder;
+	border-bottom: solid;
+	border-bottom-width: 1px;
+	background-color: #ffffe7;
+	height: 40px;
+	padding-left: 10px;
+	vertical-align: middle;
+	padding-top: 20px;
 }
 
 .ph2,.ph4,.ph10,.ph12
@@ -54,6 +55,7 @@ padding-left: 10px;
 {
 padding-left: 30px;
 }
+
 
 .ph5
 {
@@ -175,9 +177,20 @@ padding-top: 10px;
 .ph-datype {
 	font-style: italic;
 }
+
 .ph-bold {
 	font-weight: bold;
 }
+
 .ph-strong {
 	font-weight: bolder;
+}
+
+.ph-title {
+	color: #0033FF;
+	font-weight: bold;
+}
+.ph-txtfocus {
+	font-weight: bold;
+	color: #FF0000;
 }
