@@ -168,11 +168,6 @@ Use this function for powerful text search capabilities.  The regular expression
   <br>
   Within each search pattern you may perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  If you do multiple searches, the last search is used as the starting position and ending position of the returned text.</p>
 <p>NOTE: Where search pattern srings might contain a quote (') character then you must use the single quote (') character to delineate your string variables.<br>
-  <br>
-  For example if you wanted to match the string (this is a &quot;quoted&quot; sentence) then you would use ('this is &quot;quoted&quot; sentence')<br>
-  <br>
-  <br>
-</p>
 </div>
 
 <div class=ph10>
@@ -200,23 +195,22 @@ The following syntax would be used... <br>
   <span class="ph3">  LOCAL3 will contain the Index# of the 1st match character, equal to <strong>60</strong></span> <br>
   <span class="ph3"> Do not return Length <br>
   <br>
-  </span>  This will find the string highlighted in blue... "3F000001CD92C728","Refrig",<span class="ph-txtfocus">39.20</span>,37.46,
+  </span>  This will find the highlighted string  in... "3F000001CD92C728","Refrig",<span class="ph-txtfocus">39.20</span>,37.46,
   <br>
-  ====<br>
+  ====<br><br>
+
   Continuing with the same  source data, the following syntax could be used to get the Outside data value (23.90)...<br>
   <span class="ph3">&bull;&nbsp;ph_regexdiff1('Outside&quot;,',&quot;,&quot;,&quot;[LOCAL1]&quot;,[LOCAL3],1,0,0,0) </span><br>
   <br>
   Which  says to extract the string that is in-between <span class="ph-txtfocus">Outside&quot;, </span> and  the next comma <span class="ph-txtfocus">&quot;,&quot;</span> ...
   <br>
-  <span class="ph3">Starting at the position in the LOCAL1 data indicated by LOCAL3 (60) </span><br>
+  <span class="ph3">Starting at the position in the LOCAL1 data indicated by the starting location in LOCAL3 (60) </span><br>
   <span class="ph3">Return the 1st matching occurance </span><br>
   <span class="ph3">No special flags required </span><br>
-  <span class="ph3"> LOCAL3 will contain the Index# of the 1st match character, equal to <strong>103</strong></span> <br>
+  <span class="ph3"> LOCAL3 will now contain the Index# of the 1st match character, equal to <strong>103</strong></span> <br>
   <span class="ph3"> Do not return Length</span>
   <p>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This will return a value of of &quot;<strong>23.90</strong>&quot;<br>
-  ==== <br>
-Noting that all the ROM IDs begin with "3F" each of the four temperature 'Value"s could be extracted in a loop that used the following syntax where LOCAL1 was initialized to 1 and then&quot;.,
 </div>
 
 
