@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_clearvars</title>
+<style type="text/css">
+<!--
+.style1 {color: #666666}
+-->
+</style>
+</head>
+<body>
+<div class=ph1>
+FAQ: String Tips and Hints </div>
+
+<div class=ph2>Knowledge Notes </div>
+An important note about PowerHome (PH) string search functions is that they often use "greedy" regular expression searchs, depending on the &quot;special characters&quot; used in the parameter values.  When using the * and + special characters this function will not stop at the first match but will instead go to the last match. The Escape character (~255) does not exhibit this characteristic and is thus a better choice versus the (.+) or (*) when looking for the first match. <br>
+<br>
+The PH search functions <strong>will  not perform a regular expression search that spans multiple lines.</strong>  If the data to search contains carraige returns or line feeds, the entire matching search data for the regular expression must exist within a single line.  If the regular search expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively. <br>
+<br>
+Within each search pattern you may perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  If you do multiple searches, the last search is used as the starting position and ending position of the returned text.
+</p>
+<p>NOTE: Where search pattern srings might contain a quote (') character then you must use the single quote (') character to delineate your string variables.<br>
+  <br>
+The PowerHome regular expression engine (at least the Scintilla one that the string functions use) can only search a single line at a time.  If there are multiple lines, it will search them all, sequentially, until a match is found.  By adding a 2 to the flags parm in functions like <strong>ph_regexdiff()</strong>, PH first replaces all CRLF's with different characters and then submits, what is now been converted into a single line, to the regex string parsing engine.
+<br>
+<br>
+For example, given the following string (contained in LOCAL1) to be searched ...<br>
+<br>
+ROMId,Name, Value,Avg,<br>
+"3F000001<span class="ph-txt-grn">CD92C72</span>8","Refrig",39.20,37.46,<br>
+"3F0000017C8BD128","Outside",23.90,19.81,<br>
+"3F000001CDB2BA28","House",70.65,70.13,<br>
+"3F000001CD9E6D28","Freezer",1.96,1.11,'<br>
+
+<br>
+The expression (ph_regexdiff1 ("3F~2551", "8", "[LOCAL1]", 1, 4,0,3,0 ) will work the same to find <span class="ph-txt-grn">CD92C72</span> whether the flags parameter has a 0 or a 2.  <br>
+<br>
+The ~255 is a separator for two separate searches.  <br>
+<br>
+Stepping through the logic for each instance.  Lets start with the flags parm = 0 (CRLF is not replaced).<br>
+<br>
+1.  PH passes the first search to the regex engine.  In this case, "3F".  The regex engine knows nothing about ~255 or the 1 following it at this point.<br>
+
+2.  The first line is searched for 3F.  It is not found.<br>
+
+3.  The second line is searched for 3F and it is found.  The resulting location is returned to PowerHome.<br>
+
+4.  PH now takes the second search (from the first search string) that was separated by ~255 and submits a new version of the data to the regex engine starting with the characters immediately following the 3F that was found in step 3.  The data that is submitted to the search engine will look like this:<br>
+<br>
+<span class="style1">000001CD92C728","Refrig",39.20,37.46,<br>
+"3F0000018C8BD128","Outside",23.90,19.81,<br>
+"3F000001CDB2BA28","House",70.65,70.13,<br>
+"3F000001CD9E6D28","Freezer",1.96,1.11,<br>
+</span><br>
+The regex search expression that will be performed against this data is a "1" which followed the ~255 escape character in the search strring. <br>
+<br>
+5.  
+The search is performed, and it successful on the first line.  This location is returned back to PH
+<br>
+<br>
+6.  PowerHome then submits a new version of the data starting with the char immediately after where the "1" is found.  The data looks like this:
+
+CD92C728","Refrig",39.20,37.46,
+"3F0000018C8BD128","Outside",23.90,19.81,
+"3F000001CDB2BA28","House",70.65,70.13,
+"3F000001CD9E6D28","Freezer",1.96,1.11,
+
+PH will now submit the regex expression for the ending search "8" to be searched against this data. <br>
+<br>
+7.  The search is performed and the 8 is found on the first line.  This is returned back to PH and is deemed the 1st occurrence.  Since we want the 4th occurrence, we're not done yet.
+
+<br>
+<br>
+8.  PH creates a new version of the data starting with the char after the first occurrence.  It will look like this:
+
+","Refrig",39.20,37.46,
+"3F0000018C8BD128","Outside",23.90,19.81,
+"3F000001CDB2BA28","House",70.65,70.13,
+"3F000001CD9E6D28","Freezer",1.96,1.11, <br>
+<br>
+9.  The whole process is repeated.  PH starts with 3F and submits this to the regex engine.  3F is not found on the first line.
+
+<br>
+<br>
+10.  The regex engine then searches for 3F on the second line.  It's found, the data is returned to PH, and the process repeats starting at step 4.  When all is done, this is the second occurrence.  We repeat until we find and finally return the 4th occurrence.
+
+<br>
+<br>
+With the flags parm set to 2 (or 2 is added to the flags parm because a value of 3 will perform the same as 2 but with case not having to match), the CRLFs are replaced with ~128 and ~129 respectively.  Keep in mind that ~128 and ~129 are SINGLE characters with ASCII values of 128 and 129.  The ~128 is just PowerHome (PowerBuilder actually) nomenclature that evaluates to the single ascii characters.  Since the space character is decimal 32, you could make a space by using ~032 and it will internally be a single space character.
+
+<br>
+<br>
+====<br>
+<br>
+Now going
+through the process with flags = 2:
+
+<br>
+<br>
+0.  PH first replaces all CRLF's with ~128 and ~129.  The data that is passed to the regex engine will look like:
+
+ROMId,Name, Value,Avg,,~128~129"3F000001CD92C728", "Refrig",39.20,37.46,~128~129"3F0000018C8BD128","Outside",23.90,19.81,~128~129"3F000001CDB2BA28","House",70.65,70.13,~128~129"3F000001CD9E6D28","Freezer",1.96,1.11, <br>
+<br>
+Note there are no line breaks in the above and it is a single long continuous line.
+
+<br>
+<br>
+1.  PH passes the first search to the regex engine.  In this case, "3F".  The regex engine knows nothing about ~255 or the 1 following it at this point. <br>
+<br>
+2.  The long continuous line is searched for 3F.  Its found after the ~128~129.  This is passed back to PH.
+<br>
+<br>
+3.  PH now takes the second search (from the first search string) that was separated by ~255 and submits a new version of the data to the regex engine starting with the characters immediately following the 3F that was found in step 3.  The data that is submitted to the search engine will look like this:
+
+<br>
+<br>
+000001CD92C728","Refrig",39.20,37.46,~128~129"3F0000018C8BD128","Outside",23.90,19.81,~128~129"3F000001CDB2BA28","House",70.65,70.13,~128~129"3F000001CD9E6D28","Freezer",1.96,1.11, <br>
+<br>
+It is still a single continuous line.
+
+The regex search expression that will be performed against this data is "1". <br>
+<br>
+4.  The search is performed and its found.  This location is returned back to PH
+<br>
+<br>
+6.  PowerHome then submits a new version of the data starting with the char immediately after where the "1" is found.  The data looks like this: <br>
+CD92C728","Refrig",39.20,37.46,~128~129"3F0000018C8BD128","Outside",23.90,19.81,~128~129"3F000001CDB2BA28","House",70.65,70.13,~128~129"3F000001CD9E6D28","Freezer",1.96,1.11, <br>
+<br>
+It is still a single continuous line.
+
+<br>
+<br>
+PH will now submit the regex expression for the ending search "8" to be searched against this data. <br>
+<br>
+7.  The search is performed and the 8 is found as the 8th character of the continous line.  This is returned back to PH and is deemed the 1st occurrence.  Since we want the 4th occurrence, we're not done yet so this process is continued until 4 matches are found (or not) and the Result returned.<br> 
+
+</body>
+</html>
