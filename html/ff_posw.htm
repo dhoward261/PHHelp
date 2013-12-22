@@ -52,11 +52,19 @@ The Posw function is case sensitive.
 The following examples demonstrate typical syntax/ usage for this function. <br>
 </div>
 <div class=ph20>
-  &bull; posw("[LOCAL1]","<tr><td>Pressure</td>
-  ")  
-  &nbsp;&nbsp;{Where LOCAL1 contains the string to be searched.}
-  <tr><br>
-</div>
+  <p>&bull; posw("[LOCAL1]","Pressure ")&nbsp;&nbsp;{Where LOCAL1 contains the string to be searched.}<br>
+    <br>
+In a target string that contains...<br>
+<table>
+<tr><td width=30>&nbsp;</td>
+<td>
+    &lt;/td&gt;&lt;/tr&gt;<br>
+    &lt;tr&gt;&lt;td&gt;Temperature&lt;/td&gt;&lt;/tr&gt;<br>
+    <br>
+&bull; posw("[LOCAL1]","&lt;tr&gt;&lt;td&gt;WindChill") --&gt; will find the start of the Windchill data Which appears after the Wind data) in a web page so that the target string can be trimmed to that point to minimize a following search effort.
+</td>
+</table>
+  </div>
 
 </body>
 </html>
