@@ -22,19 +22,19 @@ Performs a regular expression search and snaps specific pieces of data out.
 <table width=100%>
 <tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
 
-<tr><td class=ph8>pattern</td> <td class=ph9>String.  A regular expression search pattern containing tagged regions of (up to 9) that you want snapped out and returned.</td>
+<tr><td class=ph8>pattern</td> <td class=ph9><span class="ph-datype">String</span>.  A regular expression search pattern containing tagged regions of (up to 9) that you want snapped out and returned.</td>
 </tr>
 
 <tr>
-<td class=ph8>data</td> <td class=ph9>String.  The string in which to perform the search and snap.</td>
+<td class=ph8>data</td> <td class=ph9><span class="ph-datype">String</span>.  The string in which to perform the search and snap.</td>
 </tr>
 
 <tr>
-<td class=ph8>start</td> <td class=ph9>Long.  The starting postion of the search.  Use 1 to start at the beginning.</td>
+<td class=ph8>start</td> <td class=ph9><span class="ph-datype">Long</span>.  The starting postion of the search.  Use 1 to start at the beginning.</td>
 </tr>
 
 <tr>
-<td class=ph8>flags</td> <td class=ph9>Integer.  Flags that control how the search is performed.  Add individual flag values together.  Add 1 to cause the search to match case.  Add 2 to cause the search to ignore cr/lf's within the data.</td>
+<td class=ph8>flags</td> <td class=ph9><span class="ph-datype">Integer</span>.  Flags that control how the search is performed.  Add individual flag values together.  Add 1 to cause the search to match case.  Add 2 to cause the search to ignore cr/lf's within the data.</td>
 </tr>
 </table>
 </div>
@@ -69,16 +69,18 @@ Performs a regular expression search and snaps specific pieces of data out.
 <tr><td class=ph8>+</td> <td class=ph9>This matches 1 or more times. For example, Sa+m matches Sam, Saam, Saaam and so on.</td></tr>
 </table>
 
-<br>
-An important note on this function is that it is a "greedy" regular expression search.  When using the * and + special characters this function will not stop at the first match but will instead go to the last match.
-<br><br>
-This function will also not perform a regular expression search that spans multiple lines.  If the data to search contains carraige returns or line feeds, the <strong>entire matching search data for the regular expression must exist within a single line</strong>.  If your regular expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively.
-NOTE however that replacing CR/LFs will slow down searches significantly as, before the search can even be started, the entire string must be examaned character-by-character and the replacments made as needed. It is thus preferable to use the escape (~255) character, rather than (.+) and CR/LF replacement, where possible. <br>
-<br>
-The ~255 approach allows you to perform multiple searchs within your search pattern (even across multiple lines).  Only the last search, of multiple, can be used for Returning "snapped" data.
-NOTE: the ~255 character is NOT a part of the regular expression syntax and is  strictly a PH special creation to separate regex searches.&nbsp; The \( and \) regex   characters are a pair that MUST go together, so  a   non-regex character expression should never be inserted between them.<br>
-<br>
-The <strong>regexsnap</strong> function is similar to the ph_regexdiff function in that it uses regular expressions to search and return data within the searched string.  Instead of returning data between two regular expressions (like ph_regexdiff), this function uses the \( and \) to mark tagged regions.  You may have up to 9 tagged regions in the last search pattern.  All matched text within the tagged regions will be "snapped out" and returned by this function.</div>
+<p><br>
+  An important note on the special characters is that they can conduct a "greedy" regular expression search.  When using the * and + special characters this function will not stop at the first match but will instead go to the last match. </p>
+<p>NOTE: If a string contains any quote characters (&quot;) then the string must be delimited with the single quote charcter ('). For example... <span class="ph-txt-red"><strong>'</strong></span><strong>he said, &quot;no&quot;<span class="ph-txt-red">'</span></strong><br>
+    <br>
+    This function will also not perform a regular expression search that spans multiple lines.  If the data to search contains carraige returns or line feeds, the <strong>entire matching search data for the regular expression must exist within a single line</strong>.  If your regular expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively.
+  NOTE however that replacing CR/LFs will slow down searches significantly as, before the search can even be started, the entire string must be examaned character-by-character and the replacments made as needed. It is thus preferable to use the escape (~255) character, rather than (.+) and CR/LF replacement, where possible. <br>
+  <br>
+  The ~255 approach allows you to perform multiple searchs within your search pattern (even across multiple lines).  Only the last search, of multiple, can be used for Returning "snapped" data.
+  NOTE: the ~255 character is NOT a part of the regular expression syntax and is  strictly a PH special creation to separate regex searches.&nbsp; The \( and \) regex   characters are a pair that MUST go together, so  a   non-regex character expression should never be inserted between them.<br>
+  <br>
+  The <strong>regexsnap</strong> function is similar to the ph_regexdiff function in that it uses regular expressions to search and return data within the searched string.  Instead of returning data between two regular expressions (like ph_regexdiff), this function uses the \( and \) to mark tagged regions.  You may have up to 9 tagged regions in the last search pattern.  All matched text within the tagged regions will be "snapped out" and returned by this function.</p>
+</div>
 
 <div class=ph10>
 Examples
@@ -97,20 +99,24 @@ The following examples assume that the following string (CR/LF line enders) is s
   <td>
 <strong>    ROMId,Name, Value,Avg,</span><br>
     "3F000001CD92C728","Refrig",39.20,37.46, <br>
-    "3F60000017C8BD128","Outside",23.90,19.81, <br>
-    "3F000001CDB2BA28","House",70.65,70.13, <br>
+    "3F6000017C8BD128","Outside",23.90,19.81, <br>
+    "3F000001CDB2BA27","House",70.65,70.13, <br>
     "3F000001CD9E6D28","Freezer",1.96,1.11, 
 </strong>  </td></tr>
   </table>
-  <p>The following command <strong><br>
-      <span class="ph3">ph_regexsnap('ROM~255,\(.+,\)', '[LOCAL1]', 1, 0 )</span></strong><span class="ph3"> --&gt; finds <strong>Name, Value,Avg,</strong> </span><br>
+  <p>The following command ...<strong><br>
+      <span class="ph3">ph_regexsnap('ROM~255,\(.+,\)', '[LOCAL1]', 1, 0 )</span></strong><span class="ph3"> --&gt; finds <strong class="ph-txt-red">Name, Value,Avg,</strong> </span><br>
   because the &quot;.+,&quot; search is greedy and doesn't quit until it finds the last &quot;<strong>,</strong>&quot;</p>
-  <p> While <strong><br>
-      <span class="ph3">ph_regexsnap('ROM~255,\(.+,\)', '[LOCAL1]', 1, 2 )</span></strong><span class="ph3"> --> finds everything from <strong>Name</strong> to .... <strong>6D28&quot;,&quot;Freezer&quot;,1.96,1.11,</strong> <br>
-      </span>  because the ignore CR/LF Flag is set so the extraction keeps going across multiple lines until it finds the last comma. </p>
-  <p>To find Name only would require <strong>ph_regexsnap('ROM~255,\(....\)', '[LOCAL1]', 1, 0 ) </strong>where the &quot;....&quot; accepts any 4 characters after the comma. Because of greediness, regsnap is thus not easily used in some situations and the regexdiff family is more useful. However, when you are assured of finding unique strings to bound the search, then regexsnap can be very powerful, while easy to use.</p>
+  <p> While ... <strong><br>
+      <span class="ph3">ph_regexsnap('ROM~255,\(.+,\)', '[LOCAL1]', 1, 2 )</span></strong><span class="ph3"> --> finds everything from <strong class="ph-txt-red">Name</strong> to</span><span class="ph-txt-red"> .... <strong>6D28&quot;,&quot;Freezer&quot;,1.96,1.11,</strong></span><span class="ph3"> <br>
+      </span>  because the ignore CR/LF Flag is set so the extraction keeps going across multiple lines until it finds the last comma. <br>
+      <br>
+      Because of this &quot;greediness,&quot; regsnap is thus not easily used in some situations and the regexdiff family is more useful. However, when you are assured of finding unique strings to bound the search, then regexsnap can be very powerful, while easy to use.</p>
+  <p>This ...<br>
+<strong><span class="ph3">ph_regexsnap('ROM~255,\(....\)', '[LOCAL1]', 1, 0 ) </span></strong> --> finds <strong class="ph-txt-red">Name</strong> <br>
+since  the &quot;....&quot; accepts any 4 characters after the comma. </p>
   <p>A good example to explain the use of ~255 is extracting weather data.</p>
-  <p>Consider the following data which may have been returned by a ph_geturl function (the data is simplified of course):</p>
+  <p>Consider the following data which may have been returned by a ph_geturl() function (the data is simplified of course):</p>
   
   <table width=218>
   <tr>
@@ -134,11 +140,7 @@ The following examples assume that the following string (CR/LF line enders) is s
   <p>The statement above will always return the value between the first &lt;b&gt;&lt;/b&gt; tags following the word Humidity.  Of course, we have to remember the regex is greedy so we need to be careful with the &quot;.+&quot;.  If there are multiple &lt;b&gt;&lt;/b&gt; tags on the same line, we would get more than we expected.  Since we know the humidity value will only be numbers and a decimal, we could error proof the above a little more with this:</p>
  <p><span class="ph3"><strong>ph_regexsnap(&quot;Humidity~255&lt;b&gt;\([0-9\.]*\)&lt;/b&gt;&quot;,'[LOCAL1]',1,0)</strong></span><br>
     <br>
-    The following command extracts &quot;<strong>92C</strong>&quot; <br>
-    <br>
 
-    <span class="ph3"><strong>ph_regexdiff1 (&quot;3F~255D&quot;, &quot;7&quot;, &quot;[LOCAL1&quot;', 1, 1,0,3,0 )</strong></span> <br>
-  </p>
 </div>
 
 </body>

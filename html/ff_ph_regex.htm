@@ -5,76 +5,28 @@
 <title>ph_regex</title>
 </head>
 <body>
-<div class=ph1>
 
-ph_regex PowerHome formula function
+<div class=ph1>ph_regex PowerHome formula function</div>
 
-</div>
 <div class=ph2>Description</div>
-<div class=ph3>
-
-Performs a regular expression search on a string of data.
-
+<div class=ph3>Performs a regular expression search on a string of data.
 </div>
+
 <div class=ph4>Syntax</div>
-<div class=ph5>
-
-ph_regex ( pattern, data, start, flags, localstart, locallength )
-
-</div>
+<div class=ph5>ph_regex ( pattern, data, start, flags, localstart, locallength )</div>
 <div>
+
 <table width=100%>
-<tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
-</tr>
-<tr>
-<td class=ph8>
+<tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
 
-pattern
+<tr><td class=ph8>pattern</td> <td class=ph9><span class="ph-datype">String</span>.  A regular expression search pattern.</td></tr>
 
-</td>
-<td class=ph9>
+<tr><td class=ph8>data</td> <td class=ph9><span class="ph-datype">String</span>.  The string in which to perform the search.</td></tr>
 
-String.  A regular expression search pattern.
+<tr><td class=ph8>start</td> <td class=ph9><span class="ph-datype">Long</span>.  The position within the data in which to start the search.  Use 1 to start at the beginning.</td></tr>
 
-</td>
-</tr>
-<tr>
-<td class=ph8>
-
-data
-
-</td>
-<td class=ph9>
-
-String.  The string in which to perform the search.
-
-</td>
-</tr>
-<tr>
-<td class=ph8>
-
-start
-
-</td>
-<td class=ph9>
-
-Long.  The position within the data in which to start the search.  Use 1 to start at the beginning.
-
-</td>
-</tr>
-<tr>
-<td class=ph8>
-
-flags
-
-</td>
-<td class=ph9>
-
-Integer.  Flags that control how the search is performed.  Add individual flag values together.  Add 1 to cause the search to match case.  Add 2 to cause the search to ignore cr/lf's within the data.
-
-</td>
+<tr><td class=ph8>flags</td> <td class=ph9>
+<span class="ph-datype">Integer</span>.  Flags that control how the search is performed.  Add individual flag values together.  Add 1 to cause the search to match case.  Add 2 to cause the search to ignore cr/lf's within the data.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -84,9 +36,7 @@ localstart
 </td>
 <td class=ph9>
 
-Integer.  The index of a local variable in which to have the start of the found data returned.  Use 0 to not have the start returned.
-
-</td>
+<span class="ph-datype">Integer</span>.  The index of a local variable in which to have the start of the found data returned.  Use 0 to not have the start returned.</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -96,9 +46,7 @@ locallength
 </td>
 <td class=ph9>
 
-Ingeger.  The index of a local variable in which to have the length of the found data returned.  Use 0 to not have the length returned.
-
-</td>
+<span class="ph-datype">Ingeger</span>.  The index of a local variable in which to have the length of the found data returned.  Use 0 to not have the length returned.</td>
 </tr>
 </table>
 </div>
@@ -110,9 +58,8 @@ String.  Returns the data that matches the regular expression search criteria.
 </div>
 <div class=ph12>Usage</div>
 <div class=ph13>
+Use this function for powerful text searching capabilities.  The regular expression special characters supported are: </div><br><br>
 
-Use this function for powerful text searching capabilities.  The regular expression special characters supported are:
-<br><br>
 <table>
 <tr>
 <td class=ph8>.</td>
@@ -120,11 +67,11 @@ Use this function for powerful text searching capabilities.  The regular express
 </tr>
 <tr>
 <td class=ph8>\<</td>
-<td class=ph9>This matches the start of a word.</td>
+<td class=ph9>This matches the start of a word, where a word is defined in the traditional sense, that is, letters, or number. Spaces, punctuation, CR/LF, etc. would not be included as part of a word, and thus create a break.</td>
 </tr>
 <tr>
 <td class=ph8>\></td>
-<td class=ph9>This matches the end of a word.</td>
+<td class=ph9>This matches the end of a word. See also  word definition above.</td>
 </tr>
 <tr>
 <td class=ph8>\x</td>
@@ -155,13 +102,48 @@ Use this function for powerful text searching capabilities.  The regular express
 <td class=ph9>This matches 1 or more times. For example, Sa+m matches Sam, Saam, Saaam and so on.</td>
 </tr>
 </table>
-<br>
-An important note on this function is that it is a "greedy" regular expression search.  When using the * and + special characters this function will not stop at the first match but will instead go to the last match.
-<br><br>
-This function will also not perform a regular expression search that spans multiple lines.  If the data to search contains carraige returns or line feeds, the entire matching search data for the regular expression must exist within a single line.  If your regular expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively.
-<br><br>
-You may also perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  When using multiple searches, only the last matching search data is returned.  An example multiple search would be: "degrees$~255[0-9]+ humidity".  What this search does is first search for the first occurence where the word "degrees" appears at the end of a line.  The function will then do a regex search using "[0-9]+ humidity" starting from the end of the last regex search (the start of the line following the one on which "degrees" was found).
 
+<br>
+  An important note on the special characters is that they can conduct a "greedy" regular expression search.  When using the * and + special characters this function will not stop at the first match but will instead go to the last match. </p>
+  <p>NOTE: If a string contains any quote characters (&quot;) then the string must be delimited with the single quote charcter ('). For example... <span class="ph-txt-red"><strong>'</strong></span><strong>he said, &quot;no&quot;<span class="ph-txt-red">'</span></strong><br>
+  <br>
+Also this function will  <strong>not perform a regular expression search that spans multiple lines</strong>.  If the data to search contains carraige returns or line feeds, the entire matching search data for the regular expression must exist within a single line.  If your regular expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively. 
+<p>NOTE: Where search pattern srings might contain a quote (') character then you must use the single quote (') character to delineate your string variables. For example:<br>
+<strong class="ph3">ph_regex (<span class="ph-txt-red">'</span>he said, &quot;no&quot; <span class="ph-txt-red">'</span>, &quot;[LOCAL1&quot;', 1, 0,1,2 )</strong></p>
+You may also perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  When using multiple searches, only the last matching search data is returned.  An example multiple search would be: "degrees$~255[0-9]+ humidity".  What this search does is first search for the first occurence where the word "degrees" appears at the end of a line.  The function will then do a regex search using "[0-9]+ humidity" starting from the end of the last regex search (the start of the line following the one on which "degrees" was found).
+<div class=ph10>
+Examples
 </div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+See also the .FAQs-String Tips-Hints Help file.
+<br>
+<br>
+The following examples assume that the following string (with CR/LF line enders) is stored in [LOCAL1]... <br> 
+ <table width="356">
+  <tr>
+  <td width=30>&nbsp;</td>
+  <td>
+<strong>    ROMId,Name, Value,Avg,</span><br>
+    "3F000001CD92C728","Refrig",39.20,37.46, <br>
+    "3F6000017C8BD128","Outside",23.90,19.81, <br>
+    "3F000001CDB2BA27","House",70.65,70.13, <br>
+    "3F000001CD9E6D28","Freezer",1.96,1.11,</strong>  </td></tr>
+  </table>
+  <br>
+
+  The following command extractsthe 9 ending digits of the first ROM ID. Note there is no need to set the CR/LF flag since the Start Pointer (35) positioned the search to start and end in a single line.<br>
+    <span class="ph3"><strong>ph_regex ('.........',"[LOCAL1]", 36, 0,2,3 )</strong></span>  </p>
+    --&gt; &quot;<span class="ph-txt-red">1CD92C728</span>&quot;
+  <p>This captures the initial portion of the first ROM ID  --&gt; &quot;<span class="ph-txt-red">3F000001</span>&quot;<br> 
+      <strong class="ph3">ph_regex ("3F[0-9]+","[LOCAL1]", 1, 0,2,3 )</strong> <br>
+      <br>
+      Because of &quot;greediness&quot; the following will search from &quot;3F&quot; to the beginning of the last word it can find on the line (not the first  word). <br>
+      <span class="ph3"><strong>ph_regex (&quot;3F.+\&lt;&quot;,&quot;[LOCAL1]&quot;, 1, 0,2,3 )</strong> --&gt; returns &quot;</span><span class="ph-txt-red">3F000001CD92C728&quot;,&quot;Refrig&quot;,39.20,37.</span><span class="ph3">&quot;</span></p>
+    <p>Note that if the CR/LF flag had been set to 2 (ignore line endings) the search would have captured everything from the first &quot;3F&quot; all the way to the &quot;...6D28&quot;,&quot;Freezer&quot;,1.96,1.&quot; characters at the end.  </p>
+</div>
+
 </body>
 </html>
