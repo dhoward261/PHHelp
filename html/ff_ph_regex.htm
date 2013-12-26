@@ -58,7 +58,7 @@ String.  Returns the data that matches the regular expression search criteria.
 </div>
 <div class=ph12>Usage</div>
 <div class=ph13>
-Use this function for powerful text searching capabilities.  The regular expression special characters supported are: </div><br><br>
+Use this function for powerful text searching capabilities.  The regular expression special characters supported are: </div>
 
 <table>
 <tr>
@@ -110,7 +110,9 @@ Use this function for powerful text searching capabilities.  The regular express
 Also this function will  <strong>not perform a regular expression search that spans multiple lines</strong>.  If the data to search contains carraige returns or line feeds, the entire matching search data for the regular expression must exist within a single line.  If your regular expression must span across a line, then add 2 to the flags to have CR's and LF's temporarily converted.  CR will be converted to ASCII 128 and LF will be converted to ASCII 129.  If you convert CF/LF then you can include them in your search with PowerHome escape characters ~128 and ~129 respectively. 
 <p>NOTE: Where search pattern srings might contain a quote (') character then you must use the single quote (') character to delineate your string variables. For example:<br>
 <strong class="ph3">ph_regex (<span class="ph-txt-red">'</span>he said, &quot;no&quot; <span class="ph-txt-red">'</span>, &quot;[LOCAL1&quot;', 1, 0,1,2 )</strong></p>
-You may also perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  When using multiple searches, only the last matching search data is returned.  An example multiple search would be: "degrees$~255[0-9]+ humidity".  What this search does is first search for the first occurence where the word "degrees" appears at the end of a line.  The function will then do a regex search using "[0-9]+ humidity" starting from the end of the last regex search (the start of the line following the one on which "degrees" was found).
+<p>You may also perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data.  When using multiple searches, only the last matching search data is returned.  An example multiple search would be: "degrees$~255[0-9]+ humidity".  What this search does is first search for the first occurence where the word "degrees" appears at the end of a line.  The function will then do a regex search using "[0-9]+ humidity" starting from the end of the last regex search (the start of the line following the one on which "degrees" was found). </p>
+<p>This function is often used with other PH string functions to trim a larger string, or to locate a string position within another string. See also pos(), posw(), ph_pos(), left(), mid(), right(). </p>
+  <p>See also the .FAQs-String Tips-Hints Help file.
 <div class=ph10>
 Examples
 </div>
@@ -118,9 +120,6 @@ Examples
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-See also the .FAQs-String Tips-Hints Help file.
-<br>
-<br>
 The following examples assume that the following string (with CR/LF line enders) is stored in [LOCAL1]... <br> 
  <table width="356">
   <tr>

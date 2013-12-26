@@ -79,7 +79,6 @@ String.  Returns the data string between the pat1 regular expression and pat2 re
 <div class=ph12>Usage</div>
 <div class=ph13>
 Use this function for powerful text search capabilities.  The regular expression special characters supported are: </div>
-<br><br>
 
 <table>
 <tr>
@@ -138,6 +137,8 @@ This function will also not perform a regular expression search that spans multi
 <br><br>
 Within each search pattern you may perform multiple searches by separating your search pattern using the PowerHome escape character ~255.  This is most useful when CF/LF IS NOT replaced and trying to match a particular piece of data that spans multiple lines.  If you do multiple searches, the last search is used as the starting position and ending position of the returned text.
 
+<p>This function is often used with other PH string functions to trim a larger string, or to locate a string position within another string. See also pos(), posw(), ph_pos(), left(), mid(), right(). </p>
+  <p>See also the .FAQs-String Tips-Hints Help file.
 <div class=ph10>
 Examples
 </div>
@@ -145,9 +146,6 @@ Examples
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-See also the .FAQs-String Tips-Hints Help file.
-<br>
-<br>
 The following examples assume that the following string (with CR/LF line enders) is stored in [LOCAL1]... <br> 
  <table width="356">
   <tr>
