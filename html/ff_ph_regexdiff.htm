@@ -129,67 +129,33 @@ The following examples assume that the following string (with CR/LF line enders)
     "3F000001CD9E6D28","Freezer",1.96,1.11,</strong>  </td></tr>
   </table>
     <br>
-    The following command extracts &quot;Name&quot; <br>
-     <span class="ph3"><strong>ph_regexdiff (&quot;ROMId,&quot;, &quot;, Val&quot;, &quot;[LOCAL1]&quot;, 1, 0 )</strong></span> --&gt; CR/LF Flag of &quot;0&quot; stops at line endings <br>
+    The following command uses a CR/LF Flag of &quot;0&quot; to search only lines ...<br>
+  <span class="ph3"><strong>ph_regexdiff (&quot;ROMId,&quot;, &quot;, Val&quot;, &quot;[LOCAL1]&quot;, 1, 0 )</strong></span> --&gt; Finds <span class="ph-txt-red">Name</span><br>
      <br>
-     While ...<br> 
-       <span class="ph3"><strong>ph_regexdiff (&quot;ROMId,&quot;, &quot;, Val&quot;, &quot;[LOCAL1]&quot;, 1, 2 )</strong></span> --&gt; Finds everything from &quot;<span class="ph-txt-red">Name</span>&quot; to the <span class="ph-txt-red">ending comma</span> after 1.11 (Name ... 1.11,) because the CR/LFs are ignored. <br> 
+     While this expression with the CR/LF Flag set to search thru everything (2) ...<br> 
+       <span class="ph3"><strong>ph_regexdiff (&quot;ROMId,&quot;, &quot;, Val&quot;, &quot;[LOCAL1]&quot;, 1, 2 )</strong></span> --&gt; Finds all characters from &quot;<span class="ph-txt-red">Name</span>&quot; to the <span class="ph-txt-red">ending comma</span> after 1.11 (ie, Name ... 1.11,)<br> 
   <br>
 
-  But ...<br> 
-    <strong class="ph3">ph_regexdiff1 ('3F.+&quot;,', ',', '[LOCAL1]', 1, 1,2,3,0 )</strong> <br>
-    fails because the ignore Return character Flag is turned on and the &quot;.+&quot; skips over all characters and will keep skipping thru lines until it finds the <strong>last</strong> &quot;D&quot; in the text. This occurs in the last (Freezer) line of the string, but there is then no &quot;7&quot; following after the &quot;D&quot; so the search fails. While in the   first example, the escape (~255) and looks for the next &quot;D&quot; it can find (which it matches in the first line so the Return code flag has no impact). </p>
-  <p>Note that<br> 
-        <strong class="ph3">ph_regexdiff1 ('3F.+&quot;,', ',', '[LOCAL1]', 1, 1,<span class="ph-txt-red">0</span>,3,0 )</strong> <br>
-    does work as the search is now contained to the first line where a match is found, since the Return flag is now &quot;0&quot;. </p>
-  <p>====<br>
-    <br>
-    Continuing with the same  source data, the following syntax could be used to get the Outside data value (23.90) ...<br>
-     <span class="ph3"><strong>ph_regexdiff1('Outside&quot;,',&quot;,&quot;,&quot;[LOCAL1]&quot;,[LOCAL3],1,0,0,0) </strong></span><br>
-    <br>
-    Which  says to extract the string that is in-between <span class="ph-txt-red">Outside&quot;, </span> and  the next comma <span class="ph-txt-red">&quot;,&quot;</span> ... <br>
-     Starting at the position in the LOCAL1 data indicated by the starting location in LOCAL3 (60) </span><br>
-     Return the 1st matching occurance </span><br>
-     No special flags required </span><br>
-      LOCAL3 will now contain the Index# of the 1st match character, equal to <strong>103</strong></span> <br>
-      Do not return Length</span> <br><br>
- 
- This will return a value of of &quot;<strong>23.90</strong>&quot;  <br><br>
-
- ==== <br><br>
-
-  A more general way to extract the data that also allows a simple macro loop to get successive values is ...<br>
-  <span class="ph3"> <strong>ph_regexdiff1 ('3F~255&quot;,&quot;~255&quot;,', &quot;,&quot;, &quot;[LOCAL1]&quot;, 1, [LOCAL2], 2, 3, 0 )</strong> --&gt; {where LOCAL2 is incremented for loop control] <br>
-  </span>    <br>
-    Which  says to look thru all lines (CRLF Flag=2) to find the string bounded on the left by <span class="ph-txt-red">3F...&quot;,&quot;...&quot;, </span> and  on the right by <span class="ph-txt-red">,</span> (where <span class="ph-txt-red">...</span> stands for the Escape character ) .. <br>
-    <span class="ph3"> ( These bounding strings are highlighted in this sample line ... "<span class="ph-txt-red">3F</span><span class="ph-txt-grn">000001CD92C728</span><span class="ph-txt-red">","</span><span class="ph-txt-grn">Refrig</span><span class="ph-txt-red">",</span>39.20,37.46, )</span> {red=match; grn=escape over}<br>
-    <span class="ph3">    Using the &quot;occurrence&quot; parameter (LOCAL2 above) in a loop to set which match occurrence we want, will can select each of the four values in turn.</span> 
-	
+  This ...<br> 
+    <strong class="ph3">ph_regexdiff ('3F.+&quot;,', ',', '[LOCAL1]', 1,0 ) --&gt; Finds <span class="ph-txt-red">39.20</span> </strong> <br>
 <br>
-<br> ==== <br><br>
+While ...<br>
 
-More Examples: &nbsp;&nbsp;&nbsp;(LOCAL1 contains the text to be searched) <br>
+<span class="ph3"><strong>ph_regexdiff ('3F.+",', ',', '[LOCAL1]', 1,2 )</strong> --> finds  </span><span class="ph-txt-red">1.96</span> <br>
+<br>
 
-<span class="ph3"> <strong>ph_regexdiff1 ("3F~255D", "7", "[LOCAL1]", 1, 1,2,3,0 )</strong> --&gt; finds &quot;92C&quot;</span><br>
-<table width=100%
- cellpadding="0" cellspacing="0"><!--DWLayoutTable-->
+==== 
+<br><br>
+
+More Examples: {Searching in LOCAL1}
+<table>
 <tr>
-<td width=30>&nbsp;</td>
-<td width="800">NOTE: The regular expression engine will only search for a match on its regex search string within the confines of a single line.<br>
-  If the data contains multiple lines, the search is performed on EACH line until a match is found. <br>     
-  <br>
-  If the sought string is all on one line then CRLFs make no practical difference, but if the sought string covers multiple lines then either the ~255 escape character must be used to span line endings or the replace CRLF flag must set set on in order to find a match. <br>
-
-  <strong>ph_regexdiff1 ("3F~255D", "7", "[LOCAL1]", 1, 1,0,3,0 )</strong> --&gt; finds  <strong class="ph-txt-red">92C</strong>  <br>
-  <strong>ph_regexdiff1 ("3F.+D", "7", "[LOCAL1]", 1, 1,0,3,0 )</strong> --&gt; finds  <strong class="ph-txt-red">92C</strong>  <br>
-  <strong>ph_regexdiff1 ("3F~255D", "7", "[LOCAL1]", 75, 1,0,3,0 )</strong> finds <span class="ph-txt-red">B2BA2</span>  <br>
-  <strong>ph_regexdiff1 ('3F.+",', ',', '[LOCAL1]', 1, 1,2,3,0 )</strong> --&gt; finds <strong class="ph-txt-red">1.96</strong> by greed  <br>
-  <strong>ph_regexdiff1 ('Outside&quot;,',&quot;,&quot;, "[LOCAL1]", 1, 1,0,3,0 )</strong> --&gt; finds <strong class="ph-txt-red">23.90</strong>  --&gt; NOTE that the first parameter (Outside) contained a &quot; thus a single quote(') had to be used to delineate the parameter. <br>
-  <strong>ph_regexdiff1 ('3F.+&quot;,', ',', '[LOCAL1]', 1, 1,2,3,0 )</strong> --&gt; finds <strong class="ph-txt-red">&quot;,23</strong>  <br>
-  <strong>ph_regexdiff1 ('3F.+&quot;,', ',', '[LOCAL1]', 1, 1,0,3,0 )</strong> --&gt; fails because &quot;the ignore CRLF is   not set&quot; and the .+ search will not work across multiple lines. <br>
-  <strong>ph_regexdiff1 ('3F~255&quot;,', ',', '[LOCAL1]', 1, 1,0,3,0 )</strong> --&gt;finds <strong class="ph-txt-red">&quot;,23</strong> as the escape (~255) ignores CRLF line breaks.   <br>
-  <strong>ph_regexdiff1 (&quot;ROMId,&quot;, &quot;, Val&quot;, &quot;[LOCAL1]&quot;, 1, 1,0,3,0 )</strong> --&gt; finds <strong class="ph-txt-red">Name</strong>   <br>
-  <strong>ph_regexdiff1 ("ROMId,", "\>", "[LOCAL1]", 1, 1,0,3,0 )</strong> --&gt; finds <strong class="ph-txt-red">Name</strong>   <br></td>
+<td width=25>&nbsp;</td>
+<td><strong>ph_regexdiff ('2C728', '\&lt;', '[LOCAL1]', 1,0 )</strong> --&gt; finds  <strong class="ph-txt-red">&quot;,&quot;</strong>   (Between ..C728 and Refrig..) <br>
+  <strong>ph_regexdiff ('2C728', '\&gt;', '[LOCAL1]', 1,0 )</strong> --&gt; finds  <strong class="ph-txt-red">&quot;,&quot;Refrig</strong>  <br>
+  <strong>ph_regexdiff ('BA27...', &quot;7&quot;, '[LOCAL1]', 1,0 )</strong> --&gt;  finds <span class="ph-txt-red">House&quot;,</span>  <br>
+  <strong>ph_regexdiff ('Refrig', &quot;$&quot;, '[LOCAL1]', 1,0 )</strong>  --&gt; finds <strong class="ph-txt-red">&quot;,39.20,37.46,</strong><br>
+  <strong>ph_regexdiff (&quot;3F[0-9]+&quot;,&quot;R&quot;, &quot;[LOCAL1]&quot;, 1,0 )</strong> --&gt; finds <strong class="ph-txt-red">CD92C728&quot;,&quot;</strong><br>
 </tr>
 </table>
 </div>
