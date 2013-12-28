@@ -44,29 +44,19 @@ FAQ: DateTime data </div>
 <tr class=ph21>  <td>ph_secondsafter(06:30:00, 06:32:00)</td> <td>120</td>  </tr>
 <tr class=ph22>  <td>[SUNRISE]</td> <td>22869</td>  </tr>
 <tr class=ph21>  <td>ph_relativetime(00:00:00,[SUNRISE])</td> <td>06:25:26</td>  </tr>
-<tr class=ph22>  <td>ph_relativetime(02:00:00,90)</td> <td>02:01:30</td>  
-</tr>
-<tr class=ph21>  <td>Now()</td> <td>14:57:22:463</td>  
-</tr>
-<tr class=ph22>  <td>ph_relativetime(now(),30)</td> <td>14:57:52</td>  
-</tr>
-<tr class=ph21>  <td>Today()</td> <td>12/01/2013 14:57:22</td>  
-</tr>
-<tr class=ph22>  <td>ph_relativedatetime(today(),30)</td> <td>12/01/2013 14:57:52</td>  
-</tr>
-<tr class=ph21>  <td>ph_relativedatetime(datetime(&quot;09/23/13 12:00:00&quot;),30)</td> <td>09/23/2013 12:30:00</td>  
-</tr>
-<tr class=ph22>  <td>ph_relativedatetime(2013-09-23 12:00:00,30) </td> 
-  <td>09/23/2013 12:30:00</td>  
-</tr>
-<tr class=ph21>  <td>datetime(&quot;09-23-13 08:15:00&quot;)</td> 
-<td>09/23/2013 08:15:00</td>  
-</tr>
-<tr class=ph22>  <td>time(&quot;06:30:00&quot;)</td> <td>06:30:00 </td>  
-</tr>
-<tr class=ph21>  <td>Now()&gt;07:00:00</td> 
-<td>True if after 7AM</td>  </tr>
-</tr>
+<tr class=ph22>  <td>ph_relativetime(00:00:00,[SUNRISE]-60)</td> <td>06:24:26</td>  </tr>
+<tr class=ph21>  <td>ph_relativetime(00:01:00,[SUNRISE])</td> <td>106:26:26</td>  </tr>
+<tr class=ph22>  <td>ph_relativetime(02:00:00,90)</td> <td>02:01:30</td>  </tr>
+<tr class=ph21>  <td>Now()</td> <td>14:57:22:463</td>  </tr>
+<tr class=ph22>  <td>ph_relativetime(now(),30)</td> <td>14:57:52</td>  </tr>
+<tr class=ph21>  <td>Today()</td> <td>12/01/2013 14:57:22</td></tr>
+<tr class=ph22>  <td>ph_relativedatetime(today(),30)</td> <td>12/01/2013 14:57:52</td></tr>
+<tr class=ph21>  <td>ph_relativedatetime(datetime(&quot;09/23/13 12:00:00&quot;),30)</td> <td>09/23/2013 12:30:00</td></tr>
+<tr class=ph22>  <td>ph_relativedatetime(2013-09-23 12:00:00,30) </td> <td>09/23/2013 12:30:00</td></tr>
+<tr class=ph21>  <td>datetime(&quot;09-23-13 08:15:00&quot;)</td> <td>09/23/2013 08:15:00</td></tr>
+<tr class=ph22>  <td>time(&quot;06:30:00&quot;)</td> <td>06:30:00 </td></tr>
+<tr class=ph21>  <td>Now()&gt;07:00:00</td> <td>True if after 7AM</td> </tr>
+<tr class=ph22><td>datetime(today(),08:00:00)</td> <td>12/01/2013 08:00:00  </td></tr>
 </table>
 <br>
 <br>

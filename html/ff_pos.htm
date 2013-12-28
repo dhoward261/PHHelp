@@ -5,80 +5,94 @@
 <title>pos</title>
 </head>
 <body>
+
 <div class=ph1>
-
 pos PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Finds one string within another string.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 pos ( string1, string2 {, start } )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-string1
-
-</td>
-<td class=ph9>
-
-The string in which you want to find string2
-
-</td>
+<td class=ph8>string1</td>
+<td class=ph9><span class="ph-datype">String</span>. The string in which you want to find string2</td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-string2
-
-</td>
-<td class=ph9>
-
-The string you want to find in string1
-
-</td>
+<td class=ph8>string2</td>
+<td class=ph9><span class="ph-datype">String</span>. The string you want to find in string1</td>
 </tr>
+
 <tr>
-<td class=ph8>
-
-start  (optional)
-
-</td>
-<td class=ph9>
-
-A long indicating where the search will begin in string. The default is 1
-
-</td>
+<td class=ph8>start  (optional)</td>
+<td class=ph9><span class="ph-datype">Integer</span>. A long indicating where the search will begin in string. The default is 1</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
-
 Long. Returns a long whose value is the starting position of the first occurrence of string2 in string1 after the position specified in start. If string2 is not found in string1 or if start is not within string1, Pos returns 0.
-
 </div>
+
 <div class=ph12>Usage</div>
 <div class=ph13>
-
-The Pos function is case sensitive.<br><br>
-NOTE: This function has a problem searching strings greater than approximately 32000 characters in length.  The returned values will be unpredictable.  Use the posw or ph_pos functions instead if the string you're searching contains greater than 32000 characters.
-
+  The Pos function is <strong>case sensitive</strong>.<br>
+    <br>
+NOTE: This function has a problem searching strings greater than approximately 32000 characters in length.  The returned values will be unpredictable.  </p>
+  <p>Use the <strong>posw()</strong> or <strong>ph_pos()</strong> functions instead if the string you're searching contains greater than 32000 characters.</p>
 </div>
+
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/ usage for this function. <br>
+</div>
+<div class=ph20>
+ 
+Consider the following data which may have been returned by a ph_geturl() function (the data is simplified of course) and stored in LOCAL1 ...
+  
+  <table width=218>
+  <tr>
+  <td width=30>&nbsp;</td>
+  <td>
+    <p>&lt;html&gt;<br>
+  &lt;body&gt;<br>
+   &nbsp;&nbsp;&nbsp;<br>
+&lt;h4&gt;Temperature&lt;/h4&gt;<br>
+&lt;b&gt;78.5&lt;/b&gt;<br>
+&lt;h4&gt;Humidity&lt;/h4&gt;<br>
+&lt;b&gt;55.7&lt;/b&gt;<br>
+&lt;h4&gt;Wind Speed&lt;/h4&gt;<br>
+&lt;b&gt;7.5&lt;/b&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+   
+    </td>
+	</tr>
+  </table>
+  <p>This function is often used in conjunction with other string extraction functions to locate the &quot;sweet spot&quot; where an extraction should take place. For instance ... <br>
+
+    <strong class="ph3">pos("[LOCAL1]","Humidity")</strong><br>
+    will find the location of the &quot;H&quot; in the word Humidity in the string, allowing, for instance,
+    </table>
+  a follow-on ph_regexsnap() to extract the data between the next &lt;b&gt; and &lt;/b&gt; tags starting at that pos() located starting position. </p>
+  <p>This function is also very useful in conjunction with the <strong>left()</strong> function to trim data off the end of a large string so that only the content of interest is being used to avoid &quot;greedy&quot; searches from finding unexpected data. </p>
+</div>
+
 </body>
 </html>
 

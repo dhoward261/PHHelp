@@ -32,7 +32,7 @@ posw ( string1, string2 {, start } )
 </tr>
 
 <tr><td class=ph8>start (optional)</td> 
-<td class=ph9><span class="ph-datype">Number</span>. A long indicating where the search will begin in string. The default is 1</td>
+<td class=ph9><span class="ph-datype">Integer</span>. A long indicating where the search will begin in string. The default is 1</td>
 </tr>
 </table>
 </div>
@@ -44,8 +44,7 @@ Long. Returns a long whose value is the starting position of the first occurrenc
 
 <div class=ph12>Usage</div>
 <div class=ph13>
-The Posw function is case sensitive.
-</div>
+The Posw function is <strong>case sensitive</strong>.</div>
 
 <div class=ph10>Examples</div>
 <div class=ph11>
@@ -70,16 +69,17 @@ Consider the following data which may have been returned by a ph_geturl() functi
 &lt;b&gt;7.5&lt;/b&gt;<br>
 &lt;/body&gt;<br>
 &lt;/html&gt;
-   
     </td>
 	</tr>
   </table>
+  
   <p>This function is often used in conjunction with other string extraction functions to locate the &quot;sweet spot&quot; where an extraction should take place. For instance ... <br>
 
     <strong class="ph3">posw("[LOCAL1]","Humidity")</strong><br>
     will find the location of the &quot;H&quot; in the word Humidity in the string, allowing, for instance,
     </table>
   a follow-on ph_regexsnap() to extract the data between the next &lt;b&gt; and &lt;/b&gt; tags starting at that posw() located starting position. </p>
+    <p>This function is also very useful in conjunction with the <strong>left()</strong> function to trim data off the end of a large string so that only the content of interest is being used to avoid &quot;greedy&quot; searches from finding unexpected data. </p>
 </div>
 
 </body>
