@@ -11,8 +11,8 @@ FAQ: TRIGGERING FROM INSTEON DEVICE CHANGES </div>
 <div class=ph2>Knowledge Notes </div>
 
 <div class=ph3>
-  <p>When an Insteon Device changes its state by means of its associated switch, or when commanded to change by a linked Controlling Device,  Insteon commands are broadcast so that Linked Responders can be kept aware of what is happening.</p>
-  <p>This broadcast information is monitored by PH, and recorded in the Event Log. It can be used to Trigger actions by setting up trigger events in the PowerHome Explorer&gt;Triggers tab.</p>
+  <p>When an Insteon Device changes its state by means of its associated switch, or when commanded to change by a linked Controlling Device,  Insteon commands are broadcast so that Linked Responders can be kept aware of what is happening. The actual trigger type In/Out is whether PH sends it (Out) or another device sends it (In)</p>
+  <p>Insteon communications traffic is monitored by PH, and recorded in the Event Log. It can be used to Trigger actions by setting up trigger events in the PowerHome Explorer&gt;Triggers tab.</p>
   
   <p>The triggers pretty much match the available Insteon command types.  Insteon has group broadcast commands, direct commands, group cleanups (a type of Direct command), and standard broadcast commands.  The In and Out refers to the whether the command is coming (In) or going (Out) as "seen" by the PLC/PLM controller on the computer running PowerHome. <br>
     <br>
@@ -32,8 +32,9 @@ FAQ: TRIGGERING FROM INSTEON DEVICE CHANGES </div>
   <p>If PH sends a group broadcast command, that is an &quot;Insteon Group Out&quot; (it's outgoing from PH).  </p>
   <p>If the remote device sends the group cleanup command, then that will be an &quot;Insteon Direct In&quot; trigger (with a &quot;Grp Cleanup-From Any&quot; selection used for the Trigger ID Number).  </p>
   <p>If PH sends a group cleanup, then that is an Insteon Direct Out with a &quot;Grp Cleanup-To Any&quot; selection used for the Trigger ID Number). Only a PLM will send Direct (non cleanup) commands.  If PowerHome sends it, it's an Insteon &quot;Direct Out&quot; with &quot;Direct-To Any&quot; in the Trigger ID Number field.  If another PLM sends a direct command and PH hears it, it's a &quot;Direct In&quot; with &quot;Direct-From Any&quot; in the Trigger ID Number.</p>
-  
-  <p> Not many devices send a Broadcast type command some EZIO devices which use this command type to notify when the zone is changing.  It's not commonly seen. </p>
+  <p>Take for example a group cleanup command being sent from a remote device to the PLM itself.  This will always be an Insteon Direct In trigger since PowerHome didn't send it.  Typically, you will probably choose for a trigger ID, the device that is actually sending the group cleanup.  If you do this, then the Trigger Number should be Grp Cleanup - To Any.  This means that PH will trigger on all group cleanup commands for the device chosen as the Trigger ID.  So if the cleanup is sent to the PLM (or any other device), a Trigger will occur.</p>
+  <p>Now if  instead  the Trigger ID is set to be the PLM, you need to set the Trigger Number to Grp Cleanup - From Any.  The trigger type will stay the same as Insteon Direct In.  In this version of the trigger, PowerHome will fire on a group cleanup from ANY device sending a group cleanup direct to the PLM.</p>
+  <p> A Broadcast type command is not commonly seen, as not many devices send it, although some EZIO devices  use this command type to notify when a zone is changing.   </p>
   
   <p>When a device is controlled by other sources (ie, via linking and groups or PH controlling it via the PLC/PLM) then rather than attempt to trigger off specific senders or trigger types, it is often easiest to use the &quot;Insteon Device Change&quot; Trigger Type, which will watch all activities affecting a targeted device. </p>
   
