@@ -5,59 +5,58 @@
 <title>ph_getvar_t</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_getvar_t PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
 Retrieves the specified system variable as a time.
-
 </div>
+
 <div class=ph4>Syntax</div>
 <div class=ph5>
-
 ph_getvar_t ( type, num )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 type
-
 </td>
 <td class=ph9>
-
-The type of system variable you wish to retrieve.  Valid values are 1, 2, and 3.  A 1 specifies that you wish to retrieve LOCAL variables (the same as system variables LOCAL1 thru LOCAL10), a 2 specifies that you wish to retrieve TEMP variables (the same as system variables TEMP1 thru TEMP10), and a 3 specifies that you wish to retrieve GLOBAL variables (the same as system variables GLOBAL1 thru GLOBAL20).
-
-</td>
+<span class="ph-datype">Integer</span>. The type of system variable you wish to retrieve.  Valid values are 1, 2, and 3.  A 1 specifies that you wish to retrieve LOCAL variables (the same as system variables LOCAL1 thru LOCAL10), a 2 specifies that you wish to retrieve TEMP variables (the same as system variables TEMP1 thru TEMP10), and a 3 specifies that you wish to retrieve GLOBAL variables (the same as system variables GLOBAL1 thru GLOBAL20).</td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 num
-
 </td>
 <td class=ph9>
-
-The number of the specified system variable type you wish to retrieve.  To retrieve system variable TEMP7 use ph_getvar_t(2,7).
-
-</td>
+<span class="ph-datype">Integer</span>. The number of the specified system variable type you wish to retrieve.  To retrieve system variable TEMP7 use ph_getvar_t(2,7).</td>
 </tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
 <div class=ph11>
+Time.  The data stored within the specified system variable returned as a time.  You should be certain that the system variable contains data that can be properly converted to a time value.</div>
 
-Time.  The data stored within the specified system variable returned as a time.  You should be certain that the system variable contains data that can be properly converted to a time value.
+<div class=ph10>Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/ usage for this function. <br>
+</div>
+<div class=ph20>
+  &bull; ph_getvar_t (1,2)  &nbsp;&nbsp;--&gt; get the time value from LOCAL2. The result is returned in a time format, eg --&gt; 16:49:04:25 <br>
+  &bull; ph_getvar_t (2,4)  &nbsp;&nbsp;--&gt; get the  time value from TEMP4.<br>
+</div>
 
 </body>
 </html>

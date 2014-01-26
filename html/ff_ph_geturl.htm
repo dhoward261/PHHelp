@@ -57,8 +57,20 @@ The following examples demonstrate typical syntax/ usage for this function. <br>
 </div>
 <div class=ph20>
   &bull; ph_geturl( "mobile.wunderground.com/cgi-bin/findweather/getForecast?brand=mobile&query=48118") <br>
-  &bull; ph_geturl( "www.adp.com/status&amp;myhomenum=5551212&quot; )</div>
+  &bull; ph_geturl( "www.adp.com/status&amp;myhomenum=5551212&quot; )<br>
+<br>
+NOTE: This function makes the access call using a Microsoft Internet Explorer activeX control.  The user agent that this control and function makes will depend upon your OS and version of IE installed.
 
+Depending on your system user agent parameters, the geturl function  may not get the source code exactly matching the page, as it is only exposed the interface that passes the URL and can only retrieve what it says is the returned data. <br>
+<br>
+After fetching a web page, if you encounter unexplained issues trying to do string matches, that seem to fail when they shouldn't, consider using the ph_writefile() function to grab the page's HTML code for detailed examination. You may be surprised to find that there can be some significant differences from what you expect, such as capitalization changes or dropped quotation (&quot;) marks. <br>
+<br>
+You can capture a web page to a file for more detailed analysis using something like the following example, where &quot;save.txt&quot; is a file to save to, and the getvar function extracts the contents of LOCAL1, which contains the data fetched by the the guturl function. <br>
+<br> 
+&nbsp;&nbsp;&nbsp;<em><strong>ph_writefile("C:\save.txt",1,ph_getvar_s(1,1)) function </strong></em> <br>
+<br>
+<br>
+</div>
 </body>
 </html>
 
