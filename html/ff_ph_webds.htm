@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_webds</title>
 </head>
@@ -19,11 +20,13 @@ Returns a dynamic HTML table containing the PowerHome Device Status screen.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_webds ( type, nexturl )
+ph_webds ( dstype, 
+
+location, filter, sort, nexturl )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -31,15 +34,27 @@ ph_webds ( type, nexturl )
 <tr>
 <td class=ph8>
 
-type
+dstype
 
 </td>
 <td class=ph9>
 
-Integer.  The type of web based Device Status screen to return.  Use 0 for the new version with Control buttons on the left.  Use 1 for the legacy version with Control buttons on the right.  Use 2 for an alternative version with the Control buttons on the left.
+                                Integer. The type of web based  Device Status screen to return. Currently only a value of 0 is supported.
 
 </td>
 </tr>
+  <TR>
+    <TD class=ph8>location</TD>
+    <TD class=ph9>String. Filter the device status list by location. Use empty 
+      string "" to return all.</TD></TR>
+  <TR>
+    <TD class=ph8>filter</TD>
+    <TD class=ph9>String. Filter the device status list with a user defined 
+      filter. Use empty string "" to not filter.</TD></TR>
+  <TR>
+    <TD class=ph8>sort</TD>
+    <TD class=ph9>String. Sort the device status list using a user defined 
+      sort. Use empty string "" to retain the default sort.</TD></TR>
 <tr>
 <td class=ph8>
 

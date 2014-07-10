@@ -1,0 +1,105 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_storevars</title></head>
+<body>
+<div class=ph1>
+
+ph_storevars PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Store a copy of the current variable set in 
+the PowerHome 
+
+database.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_storevars ( id 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+
+<td class=ph8>
+
+id
+
+</td>
+
+<td class=ph9>
+
+Long. A number representing the stored 
+      variable set that will be later retrieved with ph_retrievevars.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. Returns the ID that the variable set 
+was stored under. Returns - 1 if the first step of the store operation fails. 
+Returns - 2 if the second step of the store 
+
+operation fails.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to take a snapshot of the 
+current variable set and save them in the PowerHome database. Use the 
+ph_retrievevars function to retrieve and/or delete a stored variable set. Care 
+should be taken to not store too many copies or copies that contain large 
+amounts of data as this can make your database grow to unwieldly 
+proportions.<BR><BR>Use 0 for the id parameter to have the function 
+automatically assign the ID for the stored variable set. The dynamically 
+assigned ID will be returned from the function and should be stored for 
+
+later retrieval.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_storevars(322)<BR>The above example 
+takes a snapshot of the current variable set and stores it as ID 322. Use 
+ph_retrievevars(322, 0) to retrieve the stored variables into the current 
+variable set and delete the stored copy from the 
+
+database.
+
+</div>
+
+</body>
+</html>

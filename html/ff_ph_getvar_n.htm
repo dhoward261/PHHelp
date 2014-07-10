@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_getvar_n</title>
 </head>
@@ -21,7 +22,7 @@ ph_getvar_n ( type, num )
 </div>
 
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -32,7 +33,12 @@ ph_getvar_n ( type, num )
 type
 </td>
 <td class=ph9>
-<span class="ph-datype">Integer</span>. The type of system variable you wish to retrieve.  Valid values are 1, 2, and 3.  A 1 specifies that you wish to retrieve LOCAL variables (the same as system variables LOCAL1 thru LOCAL10), a 2 specifies that you wish to retrieve TEMP variables (the same as system variables TEMP1 thru TEMP10), and a 3 specifies that you wish to retrieve GLOBAL variables (the same as system variables GLOBAL1 thru GLOBAL20).</td>
+<span class="ph-datype">Integer</span>. The type of system variable you wish 
+      to retrieve. Valid values are 1, 2, 3, and 4. A 1 specifies that you wish 
+      to retrieve LOCAL variables (the same as system variables LOCAL1 thru 
+      LOCAL10), a 2 specifies that you wish to retrieve TEMP variables (the same 
+      as system variables TEMP1 thru TEMP10), and a 3 specifies that you wish to 
+      retrieve GLOBAL variables (the same as system variables GLOBAL1 thru GLOBAL20). A value of 4 is a special  case and represents data that is only  available during the execution of Analog I/O formulas (the Calculated to Raw and Raw to Calculated formulas). Use a num value of 1 to return raw value as a number. Use a num value of 2 to return the calc value of the Analog device as a number. This would look like ph_getvar_n(4,1) and ph_getvar_n(4,2).</td>
 </tr>
 
 <tr>
@@ -57,8 +63,8 @@ Double.  The data stored within the specified system variable returned as a doub
 The following examples demonstrate typical syntax/ usage for this function. <br>
 </div>
 <div class=ph20>
-  &bull; ph_getvar_n (1,2)  &nbsp;&nbsp;--&gt; get the value in LOCAL2. The result is returned as a number, eg --&gt; If LOCAL2 contained the string &quot;42.65&quot; the value returned would be the number 42.65. <br>
-  &bull; ph_getvar_n (2,4)  &nbsp;&nbsp;--&gt; get the value in TEMP4.<br>
+  • ph_getvar_n (1,2)  &nbsp;&nbsp;--&gt; get the value in LOCAL2. The result is returned as a number, eg --&gt; If LOCAL2 contained the string "42.65" the value returned would be the number 42.65. <br>
+  • ph_getvar_n (2,4)  &nbsp;&nbsp;--&gt; get the value in TEMP4.<br>
 </div>
 
 </body>

@@ -1,0 +1,175 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_postexequeue</title></head>
+<body>
+<div class=ph1>
+
+ph_postexequeue PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Use this function to place either a macro, 
+send keys, raw formula, or device control string into the execution 
+
+queue.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_postexequeue ( priority, type, formula 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>priority</TD>
+    <TD class=ph9>Integer. Determines where in the queue the formula is to be 
+      placed. See usage below.</TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. The type of formula to place in the execution 
+      queue. Use 0 for macros, 1 for sendkeys, 2 for raw formulas, and 3 for 
+      Device control strings. Any other value will cause the function to return 
+      a value of 2.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+formula&nbsp;
+
+</td>
+
+<td class=ph9>
+
+String. Contains either a macro ID, 
+      sendkeys string, raw formula, or a device control string (determined by 
+      the 
+
+type parameter).
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. Returns 1 if the priority parameter 
+is out of range, 2 if the type parameter is out of range. Returns 
+
+0 otherwise.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to enqueue processes into 
+the PowerHome execution queue. For most purposes, the execution queue is a first 
+in, first out queue.&nbsp;However, by changing the priority parameter, you can 
+either insert items to the very top of the queue or to a priority section of the 
+queue.<BR><BR>The allowed values for type are in the table below:
+
+<div>
+<table width="100%">
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9>A type parameter of 0 will insert the 
+      process into the queue using standard priority. This is a first in, first out queue and is the normal mechanism for putting 
+      items in the queue.</TD></TR>
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>          
+                     
+         A type parameter of 1 will insert the process 
+      into the priority queue.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+2
+
+</td>
+
+<td class=ph9>
+
+    A type 
+      parameter of 2 will insert the process at the very top 
+      of 
+
+the queue.
+
+</td>
+
+</tr>
+</table>
+</div>The 
+execution queue is a single queue with 3 logical sections. Enqueued processes 
+are executed starting at the top of the queue. The priority parameter determines 
+where in the queue the process is inserted. A Top priority will always go to the 
+top of the queue. This ensures that the process will execute before any priority 
+or normal queue items. However, if a top queue item has not yet executed and 
+another Top priority process is enqueued, the previous Top queue process will 
+now be second after the most recent Top queue process. Inserting as a Top 
+priority ALWAYS inserts the process at the top of the queue. A priority queue 
+item (type parameter = 1) will be inserted after any Top processes and after any 
+existing priority processes. It will be inserted before any normal priority 
+processes. A normal process will always go to the end of the queue.<BR><BR>This 
+function is useful to insert priority execution items ahead of any normally 
+queued items. Typically, you would execute this function in the Boolean formula 
+field of a trigger. This formula is executed as a trigger is checked and is not 
+a part of the execution queue. Normal processing would then take the Action 
+formula and add it to the execution queue as a normal priority. By enqueueing 
+your desired action using the ph_postexequeue function in the Boolean field, you 
+have the opportunity to have your action execute before any other enqueued 
+processes. Some people will wonder why not just execute the desired action 
+directly in the Boolean field since this formula is not enqueued. The problem is 
+that alot of times this will cause a system crash depending upon the action 
+formula. A typical example where this crash will occur is in an Insteon trigger 
+and the action is to send an Insteon command. The Insteon controller is not 
+expecting to execute a send operation whilst in the middle of a receive 
+operation. You can use this function to achieve the same effect but in safe 
+manner that will not crash the system.
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_postexequeue(2,0,"KITCHEN MACRO")<BR>The 
+above example will enqueu the KITCHEN MACRO macro to the very top of the 
+execution 
+
+queue.
+
+</div>
+
+</body>
+</html>

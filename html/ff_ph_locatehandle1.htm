@@ -1,0 +1,151 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_locatehandle1</title></head>
+<body>
+<div class=ph1>
+
+ph_locatehandle1 PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Locates and returns the handle of a process 
+identifed by the specified 
+
+parameters.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+   ph_locatehandle1 
+( handle, exe, class, title, instance, 
+flags 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>handle</TD>
+    <TD class=ph9>Long. The handle from where to begin the search. If 0, then 
+      the search begins with top windows processes. If other than 0, then the 
+      search will begin with children of the specified handle.</TD></TR>
+  <TR>
+    <TD class=ph8>exe</TD>
+    <TD class=ph9>String. The executable name of the process to match. 
+      Controlled by the flags parameter.</TD></TR>
+  <TR>
+    <TD class=ph8>class</TD>
+    <TD class=ph9>String. The class name of the process to match. Controlled 
+      by the flags parameter.</TD></TR>
+  <TR>
+    <TD class=ph8>title</TD>
+    <TD class=ph9>String. The title of the process to match. Can be an exact 
+      match or a partial match and is controlled by the flags parameter.</TD></TR>
+  <TR>
+    <TD class=ph8>instance</TD>
+    <TD class=ph9>Integer. The matching instance to return the handle of. For 
+      a specific set of parameters, multiple matches may be returned as 
+      determined by the Z-order. If instance = 0, then the handle of the first 
+      match will be found. If 1, then the second match handle will be returned, 
+      etc.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+flags
+
+</td>
+
+<td class=ph9>
+
+Integer. Controls which of the 3 
+      parameters above (exe, class, title) to use in the search. See 
+
+usage below.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. Returns the handle of the specified 
+
+matching process.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to retrieve the handle of 
+specified processes.<BR><BR>The flags parameter is detailed in the table below:
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Add 1 to the flags parameter to match on the specified 
+    exe.</TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>Add 2 to the flags parameter to match on the specified class 
+      name.</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Add 4 to the flags parameter to exactly match on the 
+      specified title.</TD></TR>
+  <TR>
+    <TD class=ph8>8</TD>
+    <TD class=ph9>Add 8 to the flags parameter to partially match on the 
+      specified title. The way this match works is if the title you specifiy is 
+      10 characters long, it must match the first 10 characters of the searched 
+      title in order to be a match.</TD></TR>
+</table>
+</div>To match on exe and 
+the exact title, you would add 1 and 4 together to arrive at 5 for the flags 
+parameter. Values 4 and 8 should be considered mutually exclusive of one another 
+(you would never add both 4 and 8 to the 
+
+flags parameter).
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_locatehandle1(0,"Explorer.EXE","","logs",0,5)<BR>The 
+above example will search for the first instance of Windows Explorer whose title 
+is "logs" and returns the handle if 
+
+found.
+
+</div>
+
+</body>
+</html>

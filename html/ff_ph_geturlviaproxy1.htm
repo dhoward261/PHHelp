@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_geturlviaproxy1</title></head>
+<body>
+<div class=ph1>ph_geturlviaproxy1 PowerHome formula function 
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>Gets the resulting HTML code from a URL using 
+the specified proxy server values. </div>
+<div class=ph4>Syntax</div>
+<div class=ph5>ph_geturlviaproxy ( url, proxy, port, auth, type, timeout&nbsp;) </div>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+    >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <tr>
+    <td class=ph8>url </td>
+    <td class=ph9>String. The URL whose HTML you wish to 
+      retrieve. </td></tr>
+  <tr>
+    <td class=ph8>proxy </td>
+    <td class=ph9> String. The proxy server the 
+      request will made through. </td></tr>
+<tr>
+<td class=ph8>
+port</td>
+<td class=ph9 >
+    Unsigned Integer. The proxy 
+      server port</td>
+</tr>
+  <TR>
+    <TD class=ph8>auth</TD>
+    <TD class=ph9>String. The userid and password for the 
+      proxy server. Separate the userid from the password using a colon 
+      character. Example: userid:password. </TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. A number representing the 
+      method of HTML retrieval from the URL. See usage below for an explanation 
+      of the valid types. </TD></TR>
+<tr>
+<td class=ph8>
+timeouot 
+
+</td>
+<td class=ph9>
+
+ 
+
+     Integer. 
+      The max length of time in seconds to wait for the HTML 
+      before the function times out.
+
+</td></tr></table></div>
+<div class=ph10>Return value</div>
+<div class=ph11>String. The raw HTML returned from the 
+requested URL. </div>
+<div class=ph12>Usage</div>
+<div class=ph13>This function is an upgraded and expanded 
+version of the original ph_geturlviaproxy function.<BR><BR>The following table 
+details the valid values for the type parameter: 
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9>A type of 0 will cause the HTML to be 
+      retrieved via a raw socket (this is the same as the ph_geturl 
+      function).&nbsp;The HTTP request is constructed internally and then sent 
+      via a raw socket.</TD></TR>
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>A type of&nbsp;1 will retrieve the HTML 
+      using a Catalyst HTTP control.</TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>A type of 2 will also retrieve the HTML 
+      using a Catalyst HTTP control but does so using slightly different methods 
+      than type 1 in case one or the other has compatibility problems.</TD></TR>
+  <tr>
+    <td class=ph8>Any other value </td>
+    <td class=ph9>Any other value will cause the function 
+      to retrieve HTML using a Catalyst HTTP control using yet another method 
+      different from type 1 or type 2. Each of the types have various levels of 
+      compatibility and each type should be attempted to retrieve the most 
+      satisfactory results for a particular website. </td></tr></table> 
+</div>       
+      </div>
+<div class=ph18>Examples</div>
+<div class=ph19>     
+     The following examples demonstrate typical syntax/usage 
+for this function.</div>
+<div class=ph20>ph_geturlviaproxy1("http://www.weatherunderground.com","192.168.0.150",80,"userid:password",1,5)<BR>The above example will retrieve the raw HTML for the 
+weatherundergound.com website using an HTTP Catalyst control.&nbsp;The function 
+will timeout in 5 seconds if the result hasnt been returned by then. 
+</div>
+
+</body>
+</html>

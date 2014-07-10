@@ -1,0 +1,184 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_urlescape</title></head>
+<body>
+<div class=ph1>
+
+ph_urlescape PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Escapes a URL or string based upon the flags 
+
+parameter.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_urlescape ( input, flags 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>input</TD>
+    <TD class=ph9>String. The URL or string to escape</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+flags
+
+</td>
+
+<td class=ph9>
+
+Integer. Controls what characters are 
+      escaped. See 
+
+usage below.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the escaped URL 
+
+or string.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to escape a URL or string 
+for proper transmission.<BR><BR>The flags parameter is detailed below. Add 
+individual values together to achieve the desired flags parameter.
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Add 1 to flags parm to escape these characters: # &lt; &gt; 
+      @ ;. The characters will be escaped as %xx where&nbsp;xx is the 
+      hexadecimal value for the character.</TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>Add 2 to flags parm to escape these characters: { } | \ ^ ~ 
+      [ ] ` $. The characters will be escaped as %xx where&nbsp;xx is the 
+      hexadecimal value for the character.</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Add 4 to flags parm to escape the % character. The % 
+      character will be escaped with %25.</TD></TR>
+  <TR>
+    <TD class=ph8>8</TD>
+    <TD class=ph9>Add 8 to flags parm to escape the / character. The / 
+      character will be escaped with %2f.</TD></TR>
+  <TR>
+    <TD class=ph8>16</TD>
+    <TD class=ph9>Add 16 to flags parm to escape the ? character. The ? 
+      character will be escaped with %3f.</TD></TR>
+  <TR>
+    <TD class=ph8>32</TD>
+    <TD class=ph9>Add&nbsp;32 to flags parm to escape the&nbsp;&amp; 
+      character. The&nbsp;&amp; character will be escaped with %26.</TD></TR>
+  <TR>
+    <TD class=ph8>64</TD>
+    <TD class=ph9>Add&nbsp;64 to flags parm to escape the&nbsp;= character. 
+      The&nbsp;= character will be escaped with %3d.</TD></TR>
+  <TR>
+    <TD class=ph8>128</TD>
+    <TD class=ph9>Add 128 to flags parm to escape the&nbsp;: character. 
+      The&nbsp;: character will be escaped with %3a.</TD></TR>
+  <TR>
+    <TD class=ph8>256</TD>
+    <TD class=ph9>Add&nbsp;256 to flags parm to escape the " and ' characters. 
+      The " character is escaped with %22. The ' character is escaped with 
+    %27.</TD></TR>
+  <TR>
+    <TD class=ph8>512</TD>
+    <TD class=ph9>Add&nbsp;512 to flags parm to escape the&nbsp;+ character. 
+      The&nbsp;+ character will be escaped with %2b.</TD></TR>
+  <TR>
+    <TD class=ph8>1024</TD>
+    <TD class=ph9>Add 1024 to flags parm to escape the&nbsp;space character. 
+      The&nbsp;space character will be escaped with %20.</TD></TR>
+  <TR>
+    <TD class=ph8>2048</TD>
+    <TD class=ph9>Add&nbsp;2048 to flags parm to escape&nbsp;carriage return, 
+      line feed, and tab&nbsp;characters. The&nbsp;carriage 
+      return&nbsp;character will be escaped with %0d. The line feed character is 
+      escaped with %0a. The tab character is escaped with %09.</TD></TR>
+  <TR>
+    <TD class=ph8>4096</TD>
+    <TD class=ph9>Add 4096 to flags parm to escape every character. The 
+      characters will be escaped as %xx where&nbsp;xx is the hexadecimal value 
+      for the character.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+8192
+
+</td>
+
+<td class=ph9>
+
+Add 8192 to flags parm to cause the 
+      escape process to ONLY escape characters after the first 
+
+? character.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_urlescape("http://www.power-home.com/ph-cgi/macro?id=TEST 
+MACRO&amp;parm1=&lt;data&gt;",9217)<BR>The above example will return 
+"http://www.power-home.com/ph-cgi/macro?id=TEST%20MACRO&amp;parm1=
+
+%3cdata%3e"
+
+</div>
+
+</body>
+</html>

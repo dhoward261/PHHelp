@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>s2h</title></head>
+<body>
+<div class=ph1>
+
+s2h PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Hex encode a string or a 
+
+file.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+s2h ( input, type 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>input</TD>
+    <TD class=ph9>String. The string to hex encode or the full path and 
+      filename of a file to hex encode.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+type
+
+</td>
+
+<td class=ph9>
+
+Integer. The type of encoding to 
+      perform. Use 1 to hex encode the string in the input parameter. THis will 
+      be in unicode format. Use 2 to hex encode a file identified by the input 
+      parameter. Use any other value to hex encode the string in input in 
+
+ANSI format.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the hex encoded string. For 
+every byte in a string or file, it will encode into 2 hex characters 
+(effectively doubling the size of 
+
+the data).
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function will allow you to convert 
+binary data (such as from a file) and store it as a hexadecimal string for 
+further processing 
+
+within PowerHome.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+s2h("c:\powerhome\phwiki.gif",2)<BR>The 
+above example will encode the file c:\powerhome\phwiki.gif into a hex 
+string.<BR><BR>s2h("Test",0)<BR>The above example will return 
+
+"54657374"
+
+</div>
+
+</body>
+</html>

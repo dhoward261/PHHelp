@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_posturl1</title></head>
+<body>
+<div class=ph1>
+
+ph_posturl1 PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Use this function to retrieve HTML from the 
+specified URL using an HTTP POST command (vs the GET command that is used in the 
+ph_geturl functions). This allows you to pass large amounts of data (such as 
+form data) to the specified 
+
+URL.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_posturl1 ( url, postdata, type, timeout 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>url</TD>
+    <TD class=ph9>String. The IP or URL you desire to post data to.</TD></TR>
+  <TR>
+    <TD class=ph8>postdata</TD>
+    <TD class=ph9>String. The data to post to the URL.</TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. The method in which to post the data. A type value 
+      of 0 will post the data using a raw socket control with the data 
+      appropriately structured. Any other value will post the data using a 
+      Catalyst HTTP control.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+timeout&nbsp;
+
+</td>
+
+<td class=ph9>
+
+Integer. The max time to wait for a 
+      return 
+
+in seconds.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. The returned raw HTML from the HTTP 
+
+post operation.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Most of the time, the ph_geturl or 
+ph_geturl1 function is all that is needed in order to retrieve raw HTML from a 
+website. This is accomplished via an HTTP GET command. Some websites though, for 
+whatever reason, don't support an HTTP GET and instead require an HTTP POST. 
+This function allows you to retrieve data from these websites. A very good 
+explanation of the differences between POST and GET can be found here: <A 
+href="http://www.w3schools.com/tags/ref_httpmethods.asp">http://www.w3schools.com/tags/ref_httpmethods.asp</A>
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_posturl1("www.w3schools.com","Host: 
+power-home.com",1,5)
+
+</div>
+
+</body>
+</html>

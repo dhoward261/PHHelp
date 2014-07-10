@@ -1,0 +1,85 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_settemps</title></head>
+<body>
+<div class=ph1>
+
+ph_settemps&nbsp;PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>Allows for the quick initialization 
+of&nbsp;temp variables [TEMP1] thru [TEMP5] </div>
+<div class=ph4>Syntax</div>
+<div class=ph5>ph_settemps ( temp1, temp2, temp3, temp4, 
+temp5 ) </div>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <tr>
+    <td class=ph8>temp1</td>
+    <td class=ph9>Any. The value to assign to [TEMP1]. 
+      Data can be of any standard type. </td></tr>
+  <tr>
+    <td class=ph8>temp2&nbsp;</td>
+    <td class=ph9>Any. The value to assign to [TEMP2]. 
+      Data can be of any standard type. </td></tr>
+  <tr>
+    <td class=ph8>temp3&nbsp;</td>
+    <td class=ph9>Any. The value to assign to [TEMP3]. 
+      Data can be of any standard type. </td></tr>
+  <tr>
+    <td class=ph8>temp4&nbsp;</td>
+    <td class=ph9>Any. The value to assign to [TEMP4]. 
+      Data can be of any standard type. </td></tr>
+  <tr>
+    <td class=ph8>temp5&nbsp;</td>
+    <td class=ph9>Any. The value to assign to [TEMP5]. 
+      Data can be of any standard type. </td></tr></table></div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. 
+
+Returns 0.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to rapidly set the first 
+5 TEMP variables. If you only want to set some of the TEMP variables, supply a 
+string containing a single space for the variables you wish to 
+
+leave unchanged.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_settemps(35,"Test"," 
+",2014-06-19,321.25)<BR>The above example will set TEMP1, TEMP2, TEMP4, and 
+TEMP5 to the specified number, string, date, and decimal respectively. TEMP3 
+will not be changed since it is set to a single 
+
+space.
+
+</div>
+
+</body>
+</html>

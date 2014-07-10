@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_sendsocketdata1</title>
 </head>
@@ -23,7 +24,7 @@ ph_sendsocketdata1 ( url, port, flags, data )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -60,7 +61,12 @@ flags
 </td>
 <td class=ph9>
 
-Integer.  Flags controlling how the function performs.  Indivdual flag values are added together to create the Flags value.  Use 0 to have the function return on "CloseConnection".  Use 1 to have the function return on "SendComplete".  Use 2 to have special characters translated before sending.  Use 4 to have special characters returned translated.
+Integer. Flags controlling how the 
+      function performs. Indivdual flag values are added together to create the 
+      Flags value.&nbsp;Add 1 to have the function return on 
+      "SendComplete".&nbsp;Add 2 to have special characters translated 
+
+before  sending.&nbsp;Add 4 to have special characters  returned translated. Add 8 to have the function return when data  is received. You should not use 1 and 8  together as they mutually exclusive. If neither 1 or  8 are added to the flags parameter, then the  function will return when the connection is closed.
 
 </td>
 </tr>

@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Broadcasts</title>
+  </head>
+  <body>
+    <div class="ph1"> Broadcasts </div>
+    <div class="indent2 padtop1">
+      PowerHome includes a UDP Broadcast server that will send UDP Ethernet
+      packets to an internal network whenever certain activities occur within
+      the PowerHome program. This server is used by the PowerHome Remote Clients
+      as well as by other third party programs to monitor PowerHome internal
+      activities and is a powerful means for communicating with other machines
+      and applications running on your internal network. The UDP broadcast
+      server runs in a separate thread from the main PowerHome program thereby
+      offloading the broadcast activity so that PowerHome is not burdened with
+      this activity.</div>
+    <div class="indent2 padtop1">PowerHome sends four different types of broadcast
+      messages with each message type being sent on a different port and to a
+      different IP address.You can optionally set the values on this screen so
+      that all four messges are sent to the same port if so desired. Usually the
+      default values are sufficient for this screen (most third party software
+      is designed with these defaults in mind) but you may set the values
+      however you like.</div>
+  </body>
+</html>

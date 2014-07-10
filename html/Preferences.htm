@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Preferences</title>
+  </head>
+  <body>
+    <div class="ph1"> Preferences </div>
+    <div class="topic indent3 padtop1"> Web Center</div>
+    <div class="indent4 padtop1">The Web Center is an internally controlled version of
+      Internet Explorer.&nbsp; It is essentially a web browser within a
+      PowerHome window.&nbsp; You may set the startup webpage to be any URL you
+      like, either internal or external to PowerHome.&nbsp; This parameter
+      controls whether the Web Center will appear within PowerHome as a normal
+      window or will appear as a background.&nbsp; If a screen is a window, it
+      can be resized, moved, minimized, or closed.&nbsp; A background does not
+      have a title bar and cannot be closed or moved.&nbsp; However, windows or
+      other backgrounds may appear on top of a background, thereby obscuring
+      it.&nbsp; Choose whether you want the Web Center to be Windowed or
+      Background.</div>
+    <div class="topic indent3 padtop1"> Startup Window</div>
+    <div class="indent4 padtop1">When PowerHome is launched or reinitialized, you can
+      have it default open one of several windows.&nbsp; Choose the window you
+      want PowerHome to automatically launch from this dropdown.&nbsp; You may
+      also create a trigger on Startup or ReInit and call functions to launch
+      additional windows or windows not in the dropdown.</div>
+    <div class="topic indent3 padtop1"> Auto Window Timeout</div>
+    <div class="indent4 padtop1">PowerHome may occasionally pop-up informational or
+      selection type windows.&nbsp; These windows all have a countdown timer in
+      which the window will automatically close or choose the default selection
+      and automatically close.&nbsp; This value controls how long that countdown
+      timer is.&nbsp; The default value is 5.</div>
+    <div class="topic indent3 padtop1"> Drop Down Lines</div>
+    <div class="indent4 padtop1">The Drop Down Line parameter is default set to 0 and
+      this is fine as the functionality for this has not been fully implemented
+      yet.&nbsp; The only place that it currently has an effect is on the drop
+      down for the Macro Player on the main PowerHome frame.</div>
+    <div class="topic indent3 padtop1"> Quiet Start</div>
+    <div class="indent4 padtop1">When PowerHome starts, it will normally pop-up two
+      selection windows.&nbsp; The first window will ask if you want to
+      automatically turn Timed Events on.&nbsp; If the answer is yes (the
+      default), the next selection window will ask if you want to Execute Past
+      Due Timed Events (the default is yes).&nbsp; Both of these windows are
+      determined by other parameters below.&nbsp; If Quiet Start is checked,
+      both of these windows are suppressed with their default values being
+      automatically executed (assuming the parameters below are set to normally
+      cause these windows to be displayed).</div>
+    <div class="topic indent3 padtop1"> Minimize to System Tray</div>
+    <div class="indent4 padtop1">Checking this option will cause PowerHome to minimize
+      to the system tray when the main PowerHome frame is minimized.&nbsp; If
+      this option is not checked, PowerHome will minimize to the Start bar like
+      most Windows applications.</div>
+    <div class="topic indent3 padtop1"> Confirm Shutdown</div>
+    <div class="indent4 padtop1">Checking this parameter will cause PowerHome to
+      display a messagebox before it shuts down confirming that you indeed would
+      like to shutdown.</div>
+    <div class="topic indent3 padtop1"> Export Append</div>
+    <div class="indent4 padtop1">Checking this parameter will cause PowerHome to
+      append any exports made from the PowerHome Explorer to an already existing
+      file rather than overwriting the file if it already exists.</div>
+    <div class="topic indent3 padtop1"> Single Explorer Window</div>
+    <div class="indent4 padtop1">Within PowerHome, some windows are only allowed a
+      single instance to be opened.&nbsp; The Control Center, the Web Center,
+      Device Status, etc. are examples of windows that can only be opened a
+      single time.&nbsp; The PowerHome Explorer window however may be opened
+      multiple times with a different set of data displayed within each
+      window.&nbsp; Checking this option will override the normal operation and
+      allow only a single PowerHome Explorer window to be opened.</div>
+    <div class="topic indent3 padtop1"> Explorer Color Scheme</div>
+    <div class="indent4 padtop1">This section allows you to customize the color scheme
+      used in the PowerHome Explorer.&nbsp; You can set the foreground and
+      background colors for the left hand pane (the tree) and the foreground and
+      background colors for both even and odd rows in the right hand pane
+      maintenance screens.</div>
+    <div class="topic indent3 padtop1"> Activate Timed Events at Startup</div>
+    <div class="indent4 padtop1">Checking this option will cause PowerHome to
+      automatically start the Timed Event timer upon startup.&nbsp; If “Quiet
+      Start” is not checked, a selection window will be displayed with a
+      countdown timer asking if you want to start the Timed Event timer.&nbsp;
+      The default value will be “yes”.</div>
+    <div class="topic indent3 padtop1"> Execute Past Timed Events at Startup</div>
+    <div class="indent4 padtop1">If “Activate Timed Events at Startup” is checked (and
+      the default of yes is selected), PowerHome will next pop-up a selection
+      window asking if past timed events should be executed (the default is
+      yes).&nbsp; This means that any events that should have been executed in
+      the past will all be executed.</div>
+    <div class="indent4 padtop1"> If you don’t Execute Past Timed Events at Startup,
+      then PowerHome will automatically calculate the appropriate time for the
+      Timed Event to next be run.&nbsp; If it has been a long time since
+      PowerHome was last run with a lot of past due Timed Events, it could take
+      an extremely long time for PowerHome to catch up.&nbsp; In this case, it
+      would be best to let Timed Events automatically start, but not execute
+      past due events.</div>
+    <div class="topic indent3 padtop1"> Resume Waiting Macros</div>
+    <div class="indent4 padtop1">When a macro is made to wait with the “Wait” command,
+      its state is written to the database.&nbsp; If PowerHome were to be
+      shutdown and restarted (manual or power failure), checking this box would
+      cause any macros which were waiting prior to the shutdown or reinit to
+      resume and execute.</div>
+    <div class="topic indent3 padtop1"> Load Controllers</div>
+    <div class="indent4 padtop1">Checking this parameter will cause PowerHome to
+      automatically start any controllers defined in the “Controllers” section
+      of the PowerHome Explorer Setup.&nbsp; Normally you would want to start
+      controllers when PowerHome is launched, but if there is a problem with a
+      controller causing PowerHome to hang or error out, you can uncheck this
+      box allowing PowerHome to start without an error so that the problem can
+      be fixed.</div>
+    <div class="topic indent3 padtop1"> Load Plugins</div>
+    <div class="indent4 padtop1">Checking this parameter will cause any defined
+      Plugins to automatically be started when PowerHome starts.&nbsp; However,
+      you may want to temporarily disable the loading of plugins for reasons
+      similar to those listed in the “Load Controllers” section.</div>
+    <div class="topic indent3 padtop1"> Event Logging</div>
+    <div class="indent4 padtop1">The next parameter controls what events are logged in
+      the Event Log.&nbsp; You can select to log only the events that you are
+      interested in tracking.&nbsp; I recommend that you initially log every
+      event until you are comfortable with PowerHome as the log is extremely
+      useful in troubleshooting any problems you may be having.</div>
+    <div class="topic indent3 padtop1"> Proxy Server</div>
+    <div class="indent4 padtop1">If you only have access to the internet via a proxy
+      server, this section allows you to define the parameters so that PowerHome
+      can access the internet for freedb access on the formula function
+      ph_geturl.</div>
+  </body>
+</html>

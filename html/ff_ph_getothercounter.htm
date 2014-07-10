@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getothercounter</title></head>
+<body>
+<div class=ph1>
+
+ph_getothercounter&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function returns the value associated 
+with a counter object within a 
+
+controller
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_getothercounter ( ctlr, counter 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>ctlr</TD>
+    <TD class=ph9>String. The ID of the controller whose counter you want to 
+      retrieve.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+counter
+
+</td>
+
+<td class=ph9>
+
+Integer. The number of the counter 
+      within the specified controller that you wish 
+
+to retrieve.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. Returns the requested counter value 
+from 
+
+the controller.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function is currently only supported 
+by the Elk M1 Gold controller.&nbsp;Counter numbers can be from 1 to 64.&nbsp; 
+This function will cause the controller to retrieve the actual value from the 
+controller vs retrieving a value from 
+
+PowerHome memory.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_getothercounter("ELK",5)
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_varsub</title></head>
+<body>
+<div class=ph1>
+
+ph_varsub PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Use this function to enable or disable 
+variable 
+
+substitution.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_varsub ( value 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+
+<td class=ph8>
+
+value
+
+</td>
+
+<td class=ph9>
+
+Integer. Use 0 to turn off variable 
+      substitution. Use any other value to turn variable 
+
+substitution on.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. 
+
+Returns 0.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Variable substitution is typically 
+performed on all formulas before they are executed. Using variable notation such 
+as [LOCAL1] and {TEMP} within your formula and variable substitution enabled 
+will cause PowerHome to search the formula and replace the [LOCAL1] notation 
+with the actual value contained in LOCAL1 and {TEMP} will be replaced with the 
+actual value contained with the TEMP global variable. Disabling variable 
+substitution will cause this variable notation to NOT be substituted and will 
+instead be interpreted literally.<BR><BR>Disabling variable substitution will 
+have the benefit of making PowerHome a little more efficient and faster. Without 
+having to do a search and replace on every formula prior to execution, you will 
+recover precious CPU cycles. If you do disable variable substitution, you can 
+use the ph_getvar_X and ph_getglobal_X functions to utilize global and system 
+variables within 
+
+your formulas.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_varsub(1)<BR>The above example will 
+enable variable 
+
+substitution.
+
+</div>
+
+</body>
+</html>

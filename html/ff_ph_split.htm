@@ -1,0 +1,105 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_split</title></head>
+<body>
+<div class=ph1>
+
+ph_split PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Splits a formatted string that consists of 
+smaller strings separated by a separator character and places the results into 
+local 
+
+variables.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_split ( data, sep, local 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>data</TD>
+    <TD class=ph9>String. The data you would like split.</TD></TR>
+  <TR>
+    <TD class=ph8>sep</TD>
+    <TD class=ph9>String. The separater character or string.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+local
+
+</td>
+
+<td class=ph9>
+
+Integer. The starting index of the 
+      local variables to have the split strings 
+
+copied into.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. Returns the number of strings that 
+
+were split.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function quickly break apart short 
+strings into individual data. Useful for parsing out data from comma 
+
+separated values.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_split("70.0,69.5,32.8,65.1,Windy",",",3)<BR>The above 
+example will set [LOCAL3] to 70.0, [LOCAL4] to 69.5, [LOCAL5] to 32.8, [LOCAL6] 
+to 65.1, and [LOCAL7] to 
+
+Windy.
+
+</div>
+
+</body>
+</html>

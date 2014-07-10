@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_ping1</title></head>
+<body>
+<div class=ph1>
+
+ph_ping1 PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Pings a machine on the network 
+using&nbsp;either a Catalyst ICMP control or function within Microsofts 
+
+ICMP.DLL.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_ping1 ( type, ip, ttl, timeout 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. Determines the method that 
+      will be used to ping the machine. Use 0 to ping using Microsofts ICMP.DLL 
+      (same as the ph_ping function). Use any other value to ping using the 
+      Catalyst ICMP control.</TD></TR>
+  <TR>
+    <TD class=ph8>ip</TD>
+    <TD class=ph9>String. The IP or URL you wish to 
+    ping.</TD></TR>
+  <TR>
+    <TD class=ph8>ttl</TD>
+    <TD class=ph9>Integer. The Time To Live value to pass 
+      to the ping function for the ICMP echo datagram.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+timeout
+
+</td>
+
+<td class=ph9>
+
+Long. The time in milliseconds before 
+      the function 
+
+times out.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. Returns a positive value representing 
+the time in milliseconds to complete the ping operation. A negative return 
+indicates an 
+
+error occured.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to verify a machine is 
+available on 
+
+the network.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_ping1(1,"www.google.com",100,50)<BR>The 
+above example will ping Google with a TTL value of 100 ms using the Catalyst 
+ICMP control. The function will timeout after 50 ms if the ping has not yet 
+
+returned.
+
+</div>
+
+</body>
+</html>

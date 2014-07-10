@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_snapxml</title></head>
+<body>
+<div class=ph1>
+
+ph_snapxml PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Extracts specified information from an XML 
+
+string.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_snapxml ( xml, value 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>xml</TD>
+    <TD class=ph9>String. Contains the XML you'd like to parse.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+value
+
+</td>
+
+<td class=ph9>
+
+String. The XML tag whose value you'd 
+      
+
+like returned.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the data between the 
+opening and closing tags of the tag specified in the 
+
+value parameter.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to extract tag 
+information from 
+
+XML data.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_snapxml(ph_readfile("c:\powerhome\test.xml"),"data1")<BR>The 
+above example will open and read the c:\powerhome\test.xml file and return the 
+data between the &lt;data1&gt; and &lt;/data1&gt; 
+
+tags.
+
+</div>
+
+</body>
+</html>

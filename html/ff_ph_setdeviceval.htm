@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setdeviceval</title></head>
+<body>
+<div class=ph1>
+
+ph_setdeviceval PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Allows the user to certain device value 
+parameters within the PowerHome database without having to resort to using 
+
+SQL.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_setdeviceval ( type, id, parm, value 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. The type of data you'd like to update. Current 
+      valid values are 5 for Insteon devices and 20 for UPB devices. Any other 
+      type will cause the function to return either a 1 or 4.</TD></TR>
+  <TR>
+    <TD class=ph8>id</TD>
+    <TD class=ph9>String. The ID of the device whose value you'd like to 
+      update.</TD></TR>
+  <TR>
+    <TD class=ph8>parm</TD>
+    <TD class=ph9>String. The specific value for the device that you'd like to 
+      update. See usage below.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+value
+
+</td>
+
+<td class=ph9>
+
+Double. The actual value to be written 
+      into the column identified by the 
+
+parm parameter.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. Returns the result of the 
+operation. Success will return a 0. An invalid type will be either 1 or 4. If an 
+error occurs in SQL during the update, 2 will be returned. If an invalid parm is 
+specified, 3 will 
+
+be returned.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to update specific device 
+parameter values within the PowerHome database without having to know or write 
+SQL.<BR><BR>For type = 5 (Insteon), 
+the following values are valid for the parm parameter. Each value will match an 
+appropriate column in the&nbsp;Insteon device table. 
+<BR>commcnt<BR>ackcnt<BR>nakcnt<BR>timeoutcnt<BR>ttacnt<BR>xcommcnt<BR>xackcnt<BR>xnakcnt<BR>xtimeoutcnt<BR>xttacnt<BR>failedmatch<BR>iengine<BR>firmware<BR>activeflag<BR><BR>For 
+type = 20 (UPB), the following values are valid for the parm parameter. Each 
+value will match an appropriate column in the UPB device 
+table.<BR>commcnt<BR>ackcnt<BR>nakcnt<BR>avgss<BR> firmware            
+           
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_setdeviceval(5,"KITCHEN","commcnt",0)<BR>The above 
+example will set the commcnt for the Insteon KITCHEN device to 
+
+0.
+
+</div>
+
+</body>
+</html>

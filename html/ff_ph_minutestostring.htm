@@ -1,0 +1,160 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_minutestostring</title></head>
+<body>
+<div class=ph1>
+
+ph_minutestostring PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Use this function to convert a numeric 
+representation of minutes into a 
+
+string.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_minutestostring ( minutes, flags 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>minutes</TD>
+    <TD class=ph9>Double. A decimal number representing the minutes to conver. 
+      For one hour, three and a half minutes, the value would be 63.5</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+flags
+
+</td>
+
+<td class=ph9>
+
+Integer. This parameter controls how to 
+      structure the output string. See 
+
+usage below.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. The minutes converted into a string 
+representation 
+
+is returned.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Details of the flags parameter is in the 
+table below:
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Add 1 to the flags parameter&nbsp;to include milliseconds in 
+      the string output.</TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>Add 2 to the flags parameter to include seconds in the 
+      string output.</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Add&nbsp;4 to the flags parameter to include minutes in the 
+      string output.</TD></TR>
+  <TR>
+    <TD class=ph8>8</TD>
+    <TD class=ph9>Add&nbsp;8 to the flags parameter to include hours in the 
+      string output.</TD></TR>
+  <TR>
+    <TD class=ph8>16</TD>
+    <TD class=ph9>Add&nbsp;16 to the flags parameter to include days in the 
+      string output.</TD></TR>
+  <TR>
+    <TD class=ph8>32</TD>
+    <TD class=ph9>Add&nbsp;32 to the flags parameter to include weeks in the 
+      string output.</TD></TR>
+  <TR>
+    <TD class=ph8>64</TD>
+    <TD class=ph9>Add&nbsp;64 to the flags parameter to include months in the 
+      string output.</TD></TR>
+  <TR>
+    <TD class=ph8>128</TD>
+    <TD class=ph9>Add&nbsp;128 to the flags parameter to include years in the 
+      string output.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+256
+
+</td>
+
+<td class=ph9>
+
+Add 256 to the flags parameter to 
+      include all other specified values in the output even if they 
+
+are blank.
+
+</td>
+
+</tr>
+</table>
+</div>Add individual values together to get the 
+
+flags value.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_minutestostring(63.5,14)<BR>The above 
+example will take 63 and a half minutes and will convert it into hours, minutes, 
+and seconds (flags = 14). The returned output will be: 1 hour, 3 minutes, 30 
+
+seconds
+
+</div>
+
+</body>
+</html>

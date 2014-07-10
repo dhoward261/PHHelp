@@ -1,0 +1,146 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getsyspwrstat</title></head>
+<body>
+<div class=ph1>
+
+ph_getsyspwrstat&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function retrieves power related status 
+from the Windows 
+
+system.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_getsyspwrstat ( parm 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+
+<td class=ph8>
+
+parm
+
+</td>
+
+<td class=ph9>
+
+String. The specific power parameter 
+      you're requesting information on. See Usage info for 
+
+valid values.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. Returns the requested 
+
+parameter status.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function will return values associated 
+with power from the Windows OS.&nbsp; If a UPS is connected (serial or USB) to 
+the PowerHome PC for monitoring, PowerHome can query and retrieve the various 
+status values.<BR><BR>Below are the valid values for the 
+
+parm parameter.
+
+</div>
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>aclinestat</TD>
+    <TD class=ph9>Returns the status of the AC 
+      power.&nbsp; Returns 1 if AC is up, 0 if the UPS is running on 
+  battery.</TD></TR>
+  <TR>
+    <TD class=ph8>batteryflag</TD>
+    <TD class=ph9>Returns the status of the battery. 1 is 
+      returned if the battery level is at least 66%. 2 is returned if the 
+      battery is less than 33%. 4 is returned if the battery level is less than 
+      5%. 8 is returned if the battery is charging. 128 is returned if there is 
+      no battery. 255 is returned if the battery is not able to be read.</TD></TR>
+  <TR>
+    <TD class=ph8>batterylifepct</TD>
+    <TD class=ph9>Returns the remaining level of battery 
+      as a percentage.&nbsp; This would be 100 at fully charged and 0 at fully 
+      discharged.</TD></TR>
+  <TR>
+    <TD class=ph8>batterylifetime</TD>
+    <TD class=ph9>Returns the number of seconds of 
+      battery life remaining.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+batteryfulllifetime
+
+</td>
+
+<td class=ph9>
+
+   Returns the 
+      number of seconds of battery life when at 
+
+full charge.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_getsyspwrstat("batterylifepct")<BR>The 
+above example will return the a number from 0 to 100 (255 if unknown) 
+representing the battery 
+
+percentage.
+
+</div>
+
+</body>
+</html>

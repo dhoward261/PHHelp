@@ -1,0 +1,126 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sendsmtpemailfileasync</title></head>
+<body>
+<div class=ph1>ph_sendsmtpemailfileasync PowerHome formula 
+function </DIV>
+<div class=ph2>Description</DIV>
+<div class=ph3>Sends email via SMTP asynchronously with the 
+option to automatically perform a PowerHome action once the email is sent. This 
+function also allows for file attachments to be sent.</DIV>
+<div class=ph4>Syntax</DIV>
+<div class=ph5>ph_sendsmtpemailfileasync ( type, id, 
+server, port, from, to, subject, message, attach&nbsp;) </DIV>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</SPAN></TD>
+    <td><span class=ph7 
+      >Description</SPAN></TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. The type of PowerHome action 
+      you'd like executed when the email is sent. Use 0 to not trigger any 
+      action. Use 1 to trigger a macro. Use 2 to execute a named formula ID. Use 
+      3 to execute a raw formula. This parameter goes hand in hand with the id 
+      parameter.</TD></TR>
+  <TR>
+    <TD class=ph8>id</TD>
+    <TD class=ph9>String. Data for the triggered action. 
+      If type is 0, then set this parameter to an empty string. If type is 1, 
+      then set ID to a valid macro ID. If type is 2, then set ID to a valid 
+      formula ID. If type is 3, then ID should contain a valid raw formula you'd 
+      like to be executed.</TD></TR>
+  <TR>
+    <TD class=ph8>server</TD>
+    <TD class=ph9>String. The IP or URL of the SMTP 
+      server.</TD></TR>
+  <TR>
+    <TD class=ph8>port</TD>
+    <TD class=ph9>Long. The port for the SMTP server. 
+      Typically, this will be 25.</TD></TR>
+  <TR>
+    <TD class=ph8>from</TD>
+    <TD class=ph9>String. An email address for who the 
+      mail is from. If your SMTP server requires authentication then this field 
+      will also contain the userid and password. See usage below for more 
+    detail.</TD></TR>
+  <TR>
+    <TD class=ph8>to</TD>
+    <TD class=ph9>String. The email address to send the 
+      email to. If you're sending to multiple recipients, then separate the 
+      email addresses with a comma. </TD></TR>
+  <TR>
+    <TD class=ph8>subject</TD>
+    <TD class=ph9>String. The subject of the email. 
+</TD></TR>
+  <TR>
+    <TD class=ph8>message</TD>
+    <TD class=ph9>String. The message body of the email.</TD></TR>
+<tr>
+<td class=ph8>
+attach</td>
+<td class=ph9 >
+ String. The full path and filename of 
+      the file attachment you'd like to send. Separate multiple attachments with 
+      a vertical bar character "|". Don't use spaces.</td>
+</tr></TABLE></DIV>
+<div class=ph10>Return value</div>
+<div class=ph11>
+Integer. This function will return a 0. 
+
+</div>
+<div class=ph12>
+
+   Usage
+
+</div>
+
+<div class=ph13>Use this function to send email with 
+attachments via SMTP asynchronously. Email will be sent in the background and 
+PowerHome will operate without hanging for the email to complete. If you'd like 
+to trigger an action once the email is sent, set the type and id parameters 
+appropriately.
+
+<BR >
+
+<BR >If you trigger a 
+process (type = 1, 2, 3) when the email is sent, then your macro or formula will 
+have access to the results of the SMTP email send operation. Three return values 
+are available. Use ph_getmtret to retrieve the results of the send process. If 
+successful, this value will be 0. If a failure occured, this value will be a 
+positive number from 1 to 9 indicating at what step in the send process the 
+failure occured. Use ph_getlasterror to retrieve a numeric value indicating what 
+the specific error was. This value will be 0 if there is no failure, otherwise 
+non-zero if a failure occured. Use ph_getlasterrorstring to retrieve a string 
+representation of what step in the send process a failure occured. If email 
+transmission was successful, then this string will indicate success.&nbsp;
+
+<BR >
+
+<BR>
+If your SMTP server requires 
+authentication, then embed the credentials in the from parameter. The from 
+parameter should first contain the from email address followed by a comma (don't 
+use any spaces) followed by the SMTP userid followed by a comma followed by the 
+SMTP password.</div>
+<div class=ph18>
+Examples
+</div>
+<div class=ph19>
+The following examples demonstrate typical 
+syntax/usage for this function.
+</div>
+<div class=ph20>ph_sendsmtpemailfileasync(1,"EMAILCOMPLETE","www.smtpserver.com",25,"power-home.com,ph,mypass","dhoward@myx10.com","Test 
+Message","This is a test message 
+body","c:\powerhome\phwiki.gif|c:\powerhome\pwrhome.ini")<BR >The above example will send email asynchronously along with 
+the two specified attachments and when complete, will execute the EMAILCOMPLETE 
+macro.</div>
+
+</body>
+</html>

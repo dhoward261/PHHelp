@@ -1,0 +1,108 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_pad</title></head>
+<body>
+<div class=ph1>
+
+ph_pad PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Multi-purpose string padding 
+
+function.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_pad ( input, type, char, len 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>input</TD>
+    <TD class=ph9>String. The string to which you will "pad" characters 
+  to.</TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>String. The type of padding. Use "L" to leftpad the string. 
+      Use "R" to rightpad the string.</TD></TR>
+  <TR>
+    <TD class=ph8>char</TD>
+    <TD class=ph9>String. The text to be used to "pad" the input.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+len&nbsp;
+
+</td>
+
+<td class=ph9>
+
+Long. The total desired length of the 
+      
+
+padded string.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. The&nbsp;input data padded by the 
+char data (L/R) truncated to 
+
+the len.&nbsp;
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to left or right pad a 
+string to a 
+
+desired length.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_pad("arf","L","123",8) This example will 
+return "23123arf".<BR>ph_pad("arf","R","123",8) This example will return 
+
+"arf12312".
+
+</div>
+
+</body>
+</html>

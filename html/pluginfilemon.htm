@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>File Monitor</title>
+  </head>
+  <body>
+    <div class="ph1"> Plugin: File Monitor </div>
+    <div class="indent2 padtop1"><STRONG>Launch Data (ActiveX 
+Classname):</STRONG>     PH_FileMon.phfilemon</div>
+    <div class="indent2 padtop1"><STRONG>Initialization Data:</STRONG>  Enter the full path and filename
+      of the INI file for this particular instance of the File Monitor plugin.
+      If you're using the defaults, then this value will be: c:\program
+      files\powerhome\plugins\phfilemon.ini</div>
+    <div class="indent2 padtop1"> The PowerHome File Monitor plugin allows the user to
+      specify up to 256 files to monitor for changes. It does this by monitoring
+      the date/time stamp of the file. Any change to a monitored files date/time
+      stamp will cause the plugin to fire an appropriate Generic Plugin trigger.
+      If more than 256 files need to be monitored, then another instance of the
+      plugin can be loaded for an additional 256 files to be monitored. Since
+      the plugin runs in it's own thread, it takes no PowerHome resources.</div>
+    <div class="topic indent3 padtop1"> Configuring the phfilemon.ini file:</div>
+    <ol class="indent4">
+      <li>Open the phfilemon.ini file in Notepad. You'll need 
+  to configure the File Monitor plugin by modifying this file. 
+      <li>Under [Setup] section, set the "FileCount" parameter 
+  to the number of files you will be defining in the INI file for monitoring. 
+      <li>Under the [Files] section, set the full path and 
+  filename of the files you wish to monitor. If you wish to monitor 3 separate 
+  files, you will set the FileCount parameter to 3 and you will have 3 
+  parameters beneath the [Files] section running from File1 to File3. 
+      <li>Once you've finished editing your INI file, close and save the file.</li>
+    </ol>
+    <div class="topic indent3 padtop1">Using the PowerHome File Monitor Plugin:</div>
+    <ul class="indent4">
+      <li>The File Monitor plugin will fire Generic Plugin 
+  triggers anytime a change is detected on any of the monitored files. The 
+  trigger fired will be "Command 1" and the "Trigger Value" will match the File 
+  Number of the monitored file. For example, if "File2" in the INI file is 
+  "c:\program files\powerhome\pwrhome.ini" and this file changes, the plugin 
+  will fire a Generic Plugin trigger on the Plugin ID, Command 1, Option 2 
+  (Option 2 for File 2). The [TEMP5] variable will contain the datetime of the 
+  modified file and [TEMP10] will contain the path and filename of the modified 
+  file. 
+      <li>The File Monitor plugin also allows for a small 
+  selection of commands to be sent to it using ph_picmd function. The allowed 
+  command numbers are: 
+      <ol>
+        <li>Retrieve number of monitored files.<br>
+          lData1 = Unused<br>
+          lData2 =
+           
+            Unused<br>
+          sData3 = Unused<br>
+          sData4 = Unused<br>
+          Returns the 
+    number of monitored files. 
+        <li>Retrieve the path/filename of a specified monitored file.<br>
+          lData1 = The filenumber of file to be returned.<br>
+          lData2 = Unused<br>
+          sData3 = Unused<br>
+          sData4 =
+           
+            Unused<br>
+          Returns the full path/filename of the 
+    specified file number. If the file number is out of range, 998 will be 
+    returned. 
+        <li>Add a new file to be monitored into the first available spot. A spot
+          is considered available if the path/filename is empty.<br>
+          lData1 = Unused<br>
+          lData2 = Unused<br>
+          sData3 = The full path and filename of the file to be added for
+          monitoring.<br>
+          sData4 = Unused<br>
+          Returns the 
+    filenumber that the file was added to. 
+        <li>Change an -existing monitored filenumber to a new path and filename.<br>
+          lData1 = The file number to change<br>
+          lData2 = Unused<br>
+          sData3 = The full path and filename of the new file to be to be
+          monitored.<br>
+          sData4 = Unused<br>
+          Returns the filenumber that was changed. 998 is returned if the file
+          number is out of range. To stop a file from being monitored, set it's
+          filenumber path and filename to an empty string.</li>
+      </ol>
+      <li>A 999 will be returned for any unsupported commands.</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_trim</title></head>
+<body>
+<div class=ph1>
+
+ph_trim PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Trims the specified string using the 
+specified trim 
+
+type.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_trim ( data, type, trim 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>data</TD>
+    <TD class=ph9>String. The string you would to perform the trim operation 
+      on.</TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. The type of trim operation to perform. See usage 
+      below.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+trim&nbsp;
+
+</td>
+
+<td class=ph9>
+
+String. A set of characters that you 
+      would like to have trimmed from the string. Use an empty string "" to trim 
+      
+
+only spaces.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the 
+
+trimmed string.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to perform trim 
+operations on a string. Most trim operations only remove space characters but by 
+specifiying a group of characters in the trim parameter, you can trim other 
+characters as well.<BR><BR>The valid values for the type parameter are detailed 
+below:
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9>Performs a left trim. Characters will be removed from the 
+      left</TD></TR>
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Performs a right trim. Characters will be removed from the 
+      right</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+2
+
+</td>
+
+<td class=ph9>
+
+Performs both a left and right trim. 
+      Characters will be removed from both the left and 
+
+the right.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_trim("&nbsp;&nbsp; , | &amp;&nbsp; This 
+is a test. &amp; |",2," ,|&amp;")<BR>The above example will return "This is a 
+
+test."
+
+</div>
+
+</body>
+</html>

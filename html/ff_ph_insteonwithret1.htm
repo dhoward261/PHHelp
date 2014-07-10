@@ -1,0 +1,99 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_insteonwithret1</title></head>
+<body>
+<div class=ph1>
+
+ph_insteonwithret1&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Send a standard 
+
+length Insteon command and waits for the 
+return value. The value returned will be the CMD2 value followed by the extended return 
+data if it 
+
+exists.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_insteonwithret1 ( id, cmd1, cmd2 
+
+)
+
+</div>
+<div>
+<table style="WIDTH: 100%" width="100%" x-use-null-cells>
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <tr>
+    <td class=ph8>id </td>
+    <td class=ph9>String. The ID of the Insteon device to 
+      send commands to. </td></tr>
+  <tr>
+    <td class=ph8>cmd1 </td>
+    <td class=ph9>Integer. The command 1 value. Use 
+      standard 0 to 255 for Insteon Direct commands.&nbsp;Add 1000 to the cmd1 
+      value to send Group Cleanup commands.</td></tr>
+  <tr>
+    <td class=ph8>cmd2 </td>
+    <td class=ph9>Integer. The command 2 value. 
+  </td></tr></table></div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the CMD2 value and extended 
+return data (if 
+
+it exists).
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function is nearly identical to the 
+ph_insteonwithret function except it is also capable of returning extended 
+data.&nbsp;Some Insteon standard commands return an extended data message so 
+this function will be able to return this data whereas the ph_insteonwithret 
+command ONLY returns the 
+
+CMD2 value.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_insteonwithret ("MID 
+CHANDELIER",3,2)<BR>The above example sends a standard Device Text String 
+Request.&nbsp;This particular Insteon command will respond with an extended data 
+message which will be returned along with CMD2 as a 
+
+string.
+
+</div>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_rtne</title>
 </head>
@@ -13,17 +14,17 @@ ph_rtne PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Takes any numeric value and returns an empty string.
+ Takes any value and returns an empty string.
 
 </div>
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_rtne ( n )
+ ph_rtne (&nbsp;any )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -31,12 +32,15 @@ ph_rtne ( n )
 <tr>
 <td class=ph8>
 
-n
+any&nbsp;
 
 </td>
 <td class=ph9>
 
-Any numeric value
+Any value (numeric, string, datetime, 
+      
+
+date, time, etc).
 
 </td>
 </tr>
@@ -45,7 +49,13 @@ Any numeric value
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-String.  This function will always return an empty string.  It is very handy within formulas within Send Keys commands and PSP pages when you are running a sequence of functions that return a numeric value.  You can place all the functions added together within a ph_rtne function so that no extra keys or HTML is generated in the output.
+String. This function will always return an 
+empty string. It is very handy within formulas within Send Keys commands and PSP 
+pages when you are running a sequence of functions that return a&nbsp;value. You 
+can place all the functions added together within a ph_rtne function so that no 
+extra keys or HTML is generated in the output.</div>
+
+                                                             
 
 </body>
 </html>

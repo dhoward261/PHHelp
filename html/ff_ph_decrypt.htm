@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Blank</title></head>
+<body>
+<div class=ph1>
+
+ph_decrypt PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function will decrypt strings that were 
+previously encrypted using the ph_encrypt 
+
+function
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_decrypt ( data, key 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>data</TD>
+    <TD class=ph9>String. The encrypted string you wish to decrypt.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+key
+
+</td>
+
+<td class=ph9>
+
+String.&nbsp; The key to use for 
+      decryption.&nbsp; This key must match the key that was used to encrypt the 
+      
+
+data originally.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String.&nbsp; Returns the decrypted string 
+in standard 
+
+ASCII format.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+The ph_encrypt and ph_decrypt functions use 
+the Microsoft Cryptograghy library.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_decrypt("C2DB941D6A1754A02778D80C9C91","abc123") The 
+output of this function will be the originally encrypted string: "This is a 
+test".&nbsp; The "abc123" is the key/password that used to orignally encrypt the 
+
+string.&nbsp;
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Socket Server</title>
+  </head>
+  <body>
+    <div class="ph1"> Socket Server </div>
+    <div class="indent2 padtop1">PowerHome includes a Socket Server Interface that is
+      useful for remote interfacing with PowerHome.&nbsp; Some third party
+      applications and the PowerHome Remote Clients (Remote Control Center and
+      Remote Device Status) require the Socket Server to be enabled.&nbsp; You
+      can also fire triggers in response to socket communications.&nbsp; The
+      Socket Server protocol is loosely based upon the HTTP 1.0 specification.</div>
+    <div class="topic indent3 padtop1">a.&nbsp;&nbsp;&nbsp;&nbsp; Enable Socket Server</div>
+    <div class="indent4 padtop1">Check this box if you wish to enable the Socket
+      Server.</div>
+    <div class="topic indent3 padtop1">b.&nbsp;&nbsp;&nbsp; Socket Server Port</div>
+    <div class="indent4 padtop1">Set the port that the Socket Server should listen
+      to.&nbsp; The default is 8500.</div>
+    <div class="topic indent3 padtop1">c.&nbsp;&nbsp;&nbsp;&nbsp; UserID and Password</div>
+    <div class="indent4 padtop1">Set the userid and password to appropriate
+      values.&nbsp; The socket server uses standard Base64 encoding.</div>
+    <div class="topic indent3 padtop1">d.&nbsp;&nbsp;&nbsp; Restricted IP’s</div>
+    <div class="indent4 padtop1">If you want to restrict access to the Socket Server
+      to only certain IP’s, you must enter them in the Restricted IP’s
+      field.&nbsp; If you declare any restricted IP masks, then the socket
+      server may only be accessed if the remote IP matches one of the declared
+      IP masks.&nbsp; If you want the socket server to be accessible by any IP,
+      leave the Restricted IP’s field blank.&nbsp; Whether you use restricted
+      IP’s or not, the socket server always requires a valid userid and
+      password.&nbsp; The masks may contain exact IP’s or end with an asterisk
+      (wildcard character) to match multiple IP’s.&nbsp; When entering multiple
+      restricted IP’s, you must separate them with a ; (semicolon). </div>
+  </body>
+</html>

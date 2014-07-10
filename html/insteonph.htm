@@ -1,62 +1,69 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>Setting up Insteon</title>
-</head>
-<BODY>
-<DIV class=ph1>Insteon and PowerHome </DIV>
-<DIV class=ph2>How PowerHome uses Insteon: </DIV>
-<P>PowerHome supports both direct commands from the PLC to another Insteon 
-device as well as group commands sent from the PLC. PowerHome should also 
-accurately track all Insteon commands whether they originate from PowerHome or 
-from any other Insteon device on the network and update the Device Status screen 
-appropriately.</P>
-<P>PowerHome also supports the creation of links within the PLC and remote 
-devices from within PowerHome. If you prefer to create links using the physical 
-tap-tap method, PowerHome supports this as well and will automatically query 
-remote devices for any changes within their database.</P>
-<P>To set PowerHome up for Insteon use, you must first declare an Insteon 
-controller in the PowerHome Explorer. Open the PowerHome Explorer and using the 
-left-hand tree view, navigate to PowerHome-&gt;Setup-&gt;Controllers. Assign a 
-short, meaningful ID (you will use this ID to send Insteon commands) and choose 
-either the "Insteon DM" controller type if you have a PLC or the "Insteon PLM" 
-if you have a PLM. Click the "Active" box. You can click the "Settings" button 
-to see the individual settings, but the defaults should be fine. Restart or 
-Reinitialize (Files-&gt;Reinitialize) PowerHome in order for the changes to take 
-effect and allow the Insteon Controller to load.</P>
-<P>Once PowerHome is restarted, the SmartHome Insteon Device Manager should 
-automatically load if selected "Insteon DM".&nbsp; PLM users can ignore the 
-comments concerning the SDM.&nbsp; You should see a new icon in the System Tray 
-(the list of icons on the far right of the Start toolbar). The Device Manager 
-should automatically detect the type of PLC and what port it is on but sometimes 
-fails to do so. If the Device Manager is unable to sense your PLC, PowerHome 
-will respond with the message: "The XXX PLC is not responding. Commands will not 
-be sent." where XXX is the ID you assigned to your Insteon controller. If you 
-should get this message, open the SmartHome Device Manager by doubleclicking 
-it's icon in the System Tray. You should see the SmartHome Device Manager window 
-open. Left click anywhere in the big log window and then type the letters D M. A 
-single line edit window should open towards the bottom of the screen. Type 
-"port=?" without the quotes in the edit window and press enter. This should 
-force the DM to locate your PLC. Give it a few seconds and you should see "PLC: 
-port=true" in the log window. However, if it still cannot locate your PLC, you 
-may get a "PLC: port=false" message. Whatever message you get, type "getport" in 
-the edit window and press enter. In the log window, you should see what port the 
-DM is currently looking at. If you have a USB PLC, then the port should be 
-"USB4". If your PLC is serial, then you should see COM followed by the number of 
-the COM port the PLC is in. If the port returned by getport is not correct for 
-your setup then type "port=USB4" if your PLC is USB and "port=COM1" if your PLC 
-is serial and connected to COM1. Adjust the COM port number for your situation. 
-You can verify the port was set using the "getport" command. Once the DM finally 
-recognizes your PLC, it will store the settings in the registry and will be 
-remembered unless you change the port. Once everything is communicating, you can 
-minimize the DM.</P>
-<P>Once a controller has been created and communications established with the 
-Insteon Device Manager, you're ready to setup your Insteon network. The easiest 
-way to do this is to use the Insteon Explorer. This new window is totally 
-dedicated to setting and maintaining your Insteon network. You can read about 
-this screen in the next section.</P>
-
-</BODY>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Setting up Insteon</title>
+  </head>
+  <body>
+    <div class="ph1">Insteon and PowerHome </div>
+    <div class="topic indent3 padtop1">How PowerHome uses Insteon:</div>
+    <div class="indent4 padtop1">
+      PowerHome supports both direct commands from the PLC to another Insteon
+      device as well as group commands sent from the PLC. PowerHome should also
+      accurately track all Insteon commands whether they originate from
+      PowerHome or from any other Insteon device on the network and update the
+      Device Status screen appropriately.</div>
+    <div class="indent4 padtop1">
+      PowerHome also supports the creation of links within the PLC and remote
+      devices from within PowerHome. If you prefer to create links using the
+      physical tap-tap method, PowerHome supports this as well and will
+      automatically query remote devices for any changes within their database.</div>
+    <div class="indent4 padtop1">
+      To set PowerHome up for Insteon use, you must first declare an Insteon
+      controller in the PowerHome Explorer. Open the PowerHome Explorer and
+      using the left-hand tree view, navigate to
+      PowerHome-&gt;Setup-&gt;Controllers. Assign a short, meaningful ID (you
+      will use this ID to send Insteon commands) and choose either the "Insteon
+      DM" controller type if you have a PLC or the "Insteon PLM" if you have a
+      PLM. Click the "Active" box. You can click the "Settings" button to see
+      the individual settings, but the defaults should be fine. Restart or
+      Reinitialize (Files-&gt;Reinitialize) PowerHome in order for the changes
+      to take effect and allow the Insteon Controller to load.</div>
+    <div class="indent4 padtop1">
+      Once PowerHome is restarted, the SmartHome Insteon Device Manager should
+      automatically load if selected "Insteon DM".&nbsp; PLM users can ignore
+      the comments concerning the SDM.&nbsp; You should see a new icon in the
+      System Tray (the list of icons on the far right of the Start toolbar). The
+      Device Manager should automatically detect the type of PLC and what port
+      it is on but sometimes fails to do so. If the Device Manager is unable to
+      sense your PLC, PowerHome will respond with the message: "The XXX PLC is
+      not responding. Commands will not be sent." where XXX is the ID you
+      assigned to your Insteon controller. If you should get this message, open
+      the SmartHome Device Manager by doubleclicking it's icon in the System
+      Tray. You should see the SmartHome Device Manager window open. Left click
+      anywhere in the big log window and then type the letters D M. A single
+      line edit window should open towards the bottom of the screen. Type
+      "port=?" without the quotes in the edit window and press enter. This
+      should force the DM to locate your PLC. Give it a few seconds and you
+      should see "PLC: port=true" in the log window. However, if it still cannot
+      locate your PLC, you may get a "PLC: port=false" message. Whatever message
+      you get, type "getport" in the edit window and press enter. In the log
+      window, you should see what port the DM is currently looking at. If you
+      have a USB PLC, then the port should be "USB4". If your PLC is serial,
+      then you should see COM followed by the number of the COM port the PLC is
+      in. If the port returned by getport is not correct for your setup then
+      type "port=USB4" if your PLC is USB and "port=COM1" if your PLC is serial
+      and connected to COM1. Adjust the COM port number for your situation. You
+      can verify the port was set using the "getport" command. Once the DM
+      finally recognizes your PLC, it will store the settings in the registry
+      and will be remembered unless you change the port. Once everything is
+      communicating, you can minimize the DM.</div>
+    <div class="indent4 padtop1">
+      Once a controller has been created and communications established with the
+      Insteon Device Manager, you're ready to setup your Insteon network. The
+      easiest way to do this is to use the Insteon Explorer. This new window is
+      totally dedicated to setting and maintaining your Insteon network. You can
+      read about this screen in the next section.</div>
+  </body>
 </html>
-

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_random</title></head>
+<body>
+<div class=ph1>
+
+ph_random PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Generates random 
+
+numbers.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_random ( max 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+
+<td class=ph8>
+
+max
+
+</td>
+
+<td class=ph9>
+
+Long. The maximum random value 
+
+to return.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. Returns a random number which will be 
+between 1 and 
+
+max inclusive.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function uses the random number 
+generator provided with the Microsoft cryptographic routines (vs the internal 
+random number generator used by the rand function). This function creates much 
+more random numbers than the rand function and should be used instead for truly 
+random number generation. This function also does NOT require the randomize() 
+function to be executed and will generate completely random numbers immediately.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_random(10)<BR>The above example will 
+return a randomly generated number between 1 and 10 
+
+inclusive.
+
+</div>
+
+</body>
+</html>

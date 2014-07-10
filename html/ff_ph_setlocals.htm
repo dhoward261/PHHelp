@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_setlocals</title>
 </head>
@@ -23,7 +24,7 @@ ph_setlocals ( local1, local2, local3, local4, local5 )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -96,5 +97,18 @@ Any.  The value to assign to [LOCAL5].  Data can be of any standard type.
 Integer.  Returns 0.
 
 </div>
+<div class=ph12>
+Usage
+</div>
+<div class=ph13>Use this function to rapidly set the first 
+5 LOCAL variables. If you only want to set some of the LOCAL variables, supply a 
+string containing a single space for the variables you wish to leave unchanged.</div><div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical 
+syntax/usage for this function.</div><div class=ph20>ph_setlocals(35,"Test"," 
+",2014-06-19,321.25)
+<BR>
+The above example will set LOCAL1, 
+LOCAL2, LOCAL4, and LOCAL5 to the specified number, string, date, and decimal 
+respectively. LOCAL3 will not be changed since it is set to a single space.</div>
 </body>
 </html>

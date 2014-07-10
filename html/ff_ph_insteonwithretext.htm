@@ -1,0 +1,113 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_insteonwithretext</title></head>
+<body>
+<div class=ph1>
+
+ph_insteonwithretext&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function sends an extended Insteon 
+command to an Insteon device and waits for a return.&nbsp; The returned CMD2 
+value is returned from this 
+
+function.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_insteonwithretext ( id, cmd1, cmd2, 
+extdata 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>id</TD>
+    <TD class=ph9>String. The ID of the Insteon device to send extended 
+      commands to.</TD></TR>
+  <TR>
+    <TD class=ph8>cmd1</TD>
+    <TD class=ph9>Integer. The Insteon CMD1 value to send.</TD></TR>
+  <TR>
+    <TD class=ph8>cmd2</TD>
+    <TD class=ph9>Integer. The Insteon CMD2 value to send.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+extdata
+
+</td>
+
+<td class=ph9>
+
+String. The extended data to send. This 
+      data must be in hexadecimal format (up to 14 bytes) with a single space 
+      between each byte (2 hex digits).&nbsp; If less than 14 bytes are 
+      included, PowerHome will pad the remaining bytes with 00 characters. If 
+      the 14th byte is 00, then PowerHome will automatically calculate and 
+      include the 
+
+I2CS checksum.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. Waits for the Insteon command to 
+return and then returns the 
+
+CMD2 value.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to send extended Insteon 
+commands and retrieve the result (CMD2) of 
+
+the command.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_insteonwithretext("KITCHENLIGHT",h2d("2E"),0,"03 
+
+00")
+
+</div>
+
+</body>
+</html>

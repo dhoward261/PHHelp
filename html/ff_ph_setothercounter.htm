@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setothercounter</title></head>
+<body>
+<div class=ph1>ph_setothercounter&nbsp;PowerHome formula 
+function </DIV>
+<div class=ph2>Description</DIV>
+<div class=ph3>This function&nbsp;will set a specific value 
+to a counter object within a controller </DIV>
+<div class=ph4>Syntax</DIV>
+<div class=ph5>ph_setothercounter ( ctlr, counter, 
+value&nbsp;) </DIV>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</SPAN></TD>
+    <td><span class=ph7 
+      >Description</SPAN></TD></TR>
+  <TR>
+    <TD class=ph8>ctlr</TD>
+    <TD class=ph9>String. The ID of the controller whose 
+      counter you want to set.</TD></TR>
+  <TR>
+    <TD class=ph8>counter </TD>
+    <TD class=ph9>Integer. The number of the counter within the specified 
+      controller that you wish to set.</TD></TR>
+  <tr>
+    <td class=ph8>value</TD>
+    <td class=ph9>Long. The actual value you'd like to 
+      set the counter to.</TD></TR></TABLE></DIV>
+<div class=ph10>Return value</DIV>
+<div class=ph11>Integer. Returns the&nbsp;result of the 
+counter set operation. A 0 would indicate success. Any other value would be a 
+failure.</DIV>
+<div class=ph12>Usage</DIV>
+<div class=ph13>This function is currently only supported 
+by the Elk M1 Gold controller.&nbsp;Counter numbers can be from 1 to 64.&nbsp; 
+This function will cause the controller to set the specified counter to the 
+specified value.</DIV>
+<div class=ph18>Examples</DIV>
+<div class=ph19>The following examples demonstrate typical 
+syntax/usage for this function.</DIV>
+<div class=ph20>ph_setothercounter("ELK",5,0) 
+</DIV>
+
+</body>
+</html>

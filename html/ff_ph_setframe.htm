@@ -1,0 +1,124 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_setframe</title></head>
+<body>
+<div class=ph1>
+
+ph_setframe&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Allows you to programmatically control the 
+state and size/position of the PowerHome main application 
+
+window.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_setframe ( state, x, y, width, height 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>state</TD>
+    <TD class=ph9>Integer. Controls the state of the frame. Use 0 for normal. 
+      Use 1 for minimized. Use 2 for maximized.</TD></TR>
+  <TR>
+    <TD class=ph8>x</TD>
+    <TD class=ph9>Integer. The x position of the upper 
+      left corner of the frame. Set this value to a negative number to not change the x 
+      position.</TD></TR>
+  <TR>
+    <TD class=ph8>y</TD>
+    <TD class=ph9>Integer. The y position of the upper 
+      left corner of the frame. Set this value to a negative number to not change the y 
+      position.</TD></TR>
+  <TR>
+    <TD class=ph8>width</TD>
+    <TD class=ph9>Integer. The desired width of the 
+      frame. Set this value to 0 or negative to not change the width.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+height
+
+</td>
+
+<td class=ph9>
+
+Integer. The desired height of the 
+      frame. Set this value to 0 
+
+or negative to not change 
+
+the height.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. Returns 0 if successful. Returns 1 
+if the state parm is 0 and the frame is currently in kiosk mode (see <A 
+href="ff_ph_setmode.htm">ph_setmode</A> &nbsp;function).
+
+       
+             Returns 1 if PowerHome 
+is currently in kiosk mode and any of the x, y, width, or height parms are 
+
+not 0.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to control size, 
+position, and state of the main PowerHome application window.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_setframe (0,100,100,1200,1000)<BR>The 
+above example will set the main PowerHome window to normal mode and position it 
+at 100,100 with dimensions of 1200 
+
+x 
+
+1000.
+
+</div>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_modifytimedevent</title>
 </head>
@@ -23,7 +24,7 @@ ph_modifytimedevent ( id, active, reftime, flags )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -72,7 +73,10 @@ flags
 </td>
 <td class=ph9>
 
-Integer.  Determines which parameters are used to update the Timed Event.  Add values together.  1 - Recalculate a new StartTime, 2 - Update the Active parameter, 4 - Set a new RefTime and recalculate StartTime
+Integer. Determines which parameters 
+      are used to update the Timed Event. Add 
+
+values  together. 1 - Recalculate a new StartTime, 2 - Update  the Active parameter,  4 - Set a new RefTime and recalculate StartTime, 8 - Delete the Timed event (other flag options will be ignored).
 
 </td>
 </tr>

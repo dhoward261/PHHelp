@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_sumnum</title></head>
+<body>
+<div class=ph1>
+
+ph_sumnum PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function will take a string of numerics 
+and perform one of several summations on 
+
+them.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_sumnum ( data, numtype, sumtype 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>data</TD>
+    <TD class=ph9>String. The string containing the numbers to sum. Numbers 
+      should be separated using commas, spaces, or some other non-numeric 
+      character (the "-" sign is reserved to indicate a negative number).</TD></TR>
+  <TR>
+    <TD class=ph8>numtype</TD>
+    <TD class=ph9>Integer. The type of numbers contained in the data 
+      parameter. Use 0 for standard whole numbers. Use 1 for numbers that 
+      contain a decimal point. Use 2 for hexadecimal numbers.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+sumtype
+
+</td>
+
+<td class=ph9>
+
+Integer. The type of summation to 
+      perform. Use 0 to have the individual numbers added together. Use 1 to 
+      return the average of the numbers. Use 2 to return a checksum of 
+
+the numbers.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Double. Returns the result of the specified 
+summation. Returns 0 if the numtype or sumtype are 
+
+invalid values.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to quickly add a string of 
+delimited numbers or return their average. The checksum option uses the same 
+technique specified for Insteon I2CS operations. The checksum operation is 
+defined as: ph_and(ph_xor(ph_and(d_sum,255),255) + 1,255) where d_sum is the 
+total of individual numbers 
+
+added together.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_sumnum("A5 19 2E 45 AA BB 34 1A 
+2D",2,2)<BR>The above example will add the hexadecimal numbers in the data 
+parameter and then perform the I2CS checksum operation. The result returned will 
+be 
+
+239.
+
+</div>
+
+</body>
+</html>

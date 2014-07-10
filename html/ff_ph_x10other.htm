@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_x10other</title></head>
+<body>
+<div class=ph1>
+
+ph_x10other PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function is used to send non-standard 
+X10 commands via the specified 
+
+controller.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_x10other ( ctlr, house, cmd 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>ctlr</TD>
+    <TD class=ph9>String. The ID of the controller to send the X10 command 
+    to.</TD></TR>
+  <TR>
+    <TD class=ph8>house</TD>
+    <TD class=ph9>String. The housecode for the X10 command.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+cmd
+
+</td>
+
+<td class=ph9>
+
+String. The X10 command 
+
+to send.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. Returns - 1 if an error occurs 
+(such as the controller does not exist or the controller does not support X10 
+other commands). Otherwise, 0 
+
+is returned.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function is currently only supported 
+by the CM15A RF controller. This function is for sending the non-standard X10 
+commands to this controller such as camera control commands. See the ActiveHome 
+Scripting SDK for a complete list of 
+
+valid commands.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_x10other("CM15ARF","K","CamGoPosition5")<BR>The above 
+example tells the X10 camera on housecode K to go to preset position 
+
+5.
+
+</div>
+
+</body>
+</html>

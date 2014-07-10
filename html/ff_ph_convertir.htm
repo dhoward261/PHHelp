@@ -1,0 +1,121 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Blank</title></head>
+<body>
+<div class=ph1>
+
+ph_convertir PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Converts raw IR code strings to other IR 
+
+formats.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_convertir ( convertto, code 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>convertto</TD>
+    <TD class=ph9>String.&nbsp; The type of IR code to convert to.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+code
+
+</td>
+
+<td class=ph9>
+
+String.&nbsp; The IR code 
+
+to convert.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String.&nbsp; Returns the converted IR code 
+in the specified format or an 
+
+error message.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Valid convertto formats are:<BR>
+
+   <BR>
+<li>"pronto"
+<li>"cir"
+<li>"howtek"
+<li>"rr2"
+<li>"slinke"
+<li>"uirtraw"
+<li>"uirtstruct"
+<li>"rr3"
+<li>"gc" <BR><BR>You do not need to specify the input code 
+format as the system will autodetermine it based upon the code itself.&nbsp; If 
+the function fails, it will return a string detailing the error.&nbsp; All error 
+strings start with "***ERROR:"</li>
+  
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_convertir("pronto","&lt;rr2&gt;F61L847042AC08191923X43FBF7EF7BDFBF7FEF7BFF7BFF7BDEC43FBF7EF7BDFBF7FEF7BFF7BFF7BDEC00P45BBR02")<BR>The 
+above call will convert the RedRat2 IR string into the Pronto format.&nbsp; The 
+result of this conversion is: &lt;pronto&gt;0000 0065 0022 0022 015E 00B0 0015 
+0015 0015 0015 0015 0015 0015 0042 0015 0015 0015 0042 0015 0015 0015 0042 0015 
+0042 0015 0042 0015 0042 0015 0015 0015 0042 0015 0015 0015 0042 0015 0015 0015 
+0015 0015 0015 0015 0042 0015 0042 0015 0042 0015 0015 0015 0015 0015 0015 0015 
+0042 0015 0042 0015 0015 0015 0015 0015 0015 0015 0042 0015 0042 0015 0042 0015 
+05C0 015E 00B0 0015 0015 0015 0015 0015 0015 0015 0042 0015 0015 0015 0042 0015 
+0015 0015 0042 0015 0042 0015 0042 0015 0042 0015 0015 0015 0042 0015 0015 0015 
+0042 0015 0015 0015 0015 0015 0015 0015 0042 0015 0042 0015 0042 0015 0015 0015 
+0015 0015 0015 0015 0042 0015 0042 0015 0015 0015 0015 0015 0015 0015 0042 0015 
+0042 0015 0042 0015 05C0&lt;repeat&gt;1&lt;zone&gt;1
+
+</div>
+
+</body>
+</html>

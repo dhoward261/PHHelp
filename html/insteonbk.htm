@@ -1,46 +1,143 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>Insteon</title>
-</head>
-<body>
-<div class=ph1>
-
-Insteon Background
-
-</div>
-
-<div class=ph2>
-
-To fully realize the features and possibilities of Insteon, it helps to understand a little about how it works.
-
-</div>
-
-<p>Unlike X-10, each Insteon device comes preconfigured from the factory with a unique address.  With X-10, you could individually address each device by choosing a housecode from A to P (16 possible choices) and a unitcode from 1 to 16.  This gave you a maximum of 256 possible unique devices.  With Insteon, each device is preconfigured with a 3 byte address yielding a possible 16777216 combinations.  This 3 byte address is represented in hexadecimal format (the decimal numbers 0 thru 9 and the letters A thru F).  You will typically see an Insteon address such as: 01.2A.4C.  Each two hexadecimal digits represent a single byte with each byte representation separated by a period.  All Insteon devices will have a label showing what their unique address is.</p>
-
-<p>Dimmable Insteon devices will have an output level ranging from 0 to 255.  A value of 0 would be fully dimmed or off and a value of 255 would be 100% bright.  When you control an Insteon device locally, it will default to turning full on.  You can optionally set a "local level" so that when you turn a dimmable Insteon device on locally, it will turn on at a predefined level of your choosing.  Once on at this level, if you press the "On" switch again, the light will go to "full on".  If you set the "local level" to 0, the light will turn on to the last level the light was at when it was turned off.  Additionally, each dimmable Insteon device has an individual "local ramprate".  The local ramprate controls how quickly the device turns On or Off when the device is locally switched.  Values for the ramprate range from 0 to 31 with 31 being nearly instant and 0 taking close to 9 minutes.</p>
-
-<p>All Insteon devices are inherently two-way unlike X-10 where typically only the more expensive devices were capable of two-way communication.  Most Insteon devices are capable of being remotely controlled as well as acting as a controller to control other Insteon devices.</p>
-
-<p>The Insteon specification allow for a number of standard and extended length messages, but for our purposes, we really only need to concern ourselves with two types of standard messages.  These are direct commands and group commands.  A direct command is a single Insteon device directly communicating with another single Insteon device.  These communcations are typically acknowledged through two-way communication between the devices and automatically retried in the event of communication failure.  The second type of message is a group message.  Group messages are not acknowledged and are a broadcast command.  In other words, the message is not sent to a single device.  The message originates with a single device and is "broadcast" to any device within range.</p>
-
-<p>When an Insteon device controls another Insteon device, this is accomplished through group commands.  A standard SwitchLinc dimmer has a single on/off paddle.  As such, a SwitchLinc dimmer is capable of controlling a single group of devices.  Multiple devices may be contained within a single group.  When a SwitchLinc dimmer is turned on locally by pressing the "On" paddle, the dimmer turns itself on to the "local level" using the "local ramprate".  It also sends out a group command if it has been "linked" to any other Insteon devices.  This group command will be for group 1 of the SwitchLinc's address.  Any device linked to the SwitchLinc will turn on at the "group level" and "group ramprate".  Without getting overly complicated and technical, in addition the a "local level" and "local ramprate", each device has a "group level" and "group ramprate" for each group/device combination that it belongs to.</p>
-
-<p>When the group broadcast command from the SwitchLinc is received by another Insteon device, that device will check it's internal database and see wheither or not it is a member of the SwitchLinc's group 1.  If it is, it will look up the "group level" and "group ramprate" associated with the SwitchLinc's address and group 1 and will turn on to that level using the ramprate.  A similar thing happens when the SwitchLinc is switched off or dimmed or brightened locally at the switch.</p>
-
-<p>As part of the Insteon standard, after the group command is sent (not acknowledged), the controller will then scan it's internal database and will send a direct group cleanup command (acknowledged) to each device that is a member of it's group to insure that the group command is carried out.  It's important to remember that when a device is added to a group (this process is called "linking"), not only is a record created in the database of the controlled device, but also a record is created in the database of the controlling device.  This way, the controlled device knows who is controlling it and the controlling device knows who it is controlling.</p>
-
-<p>The process of creating groups is called "linking".  Each Insteon device has it's own "database" of devices it controls and devices that control it.  This data is stored in EEPROM and is remembered even in the event of power failure.  A standard use of linking, is during the setup of 3 or multi-way switches.  Unlike X-10 where a 3-way lighting circuit had a master controller and then a cheap "dummy" slave switch that is electrically linked to the master, Insteon accomlishes 3 and multi-way circuits virtually.  Essentially, a single Insteon switch (the master) is electrically connected to the light being controlled with any "slave" type switches being removed from the circuit with simple wiring changes.  The "slave" switch is then wired into the house wiring, but with no load(light) connected and without a direct connection to the master.  The slave switch is then "linked" to the master with an Insteon group.  When the slave switch is turned on, a group command is sent to the master and the master switch then turns on.  At this point, it is not required to do any more in order for the 3 way circuit to work.  However, if you want the LED indicator light on the slave switch to reflect the status of the light when the light is switched using the master, you must "cross link" the slave to the master.  Basically what is done is that the slave is linked to the master such that the slave controls the master (this is necessary just to get the 3 way switch to work) and additionally, the master is "cross linked" to the slave so that the master controls the slave.  Even though the slave is not electrically tied to the light, it will still receive an "on" command when the master is switched on and it's status LED will reflect that the master is "on".</p>
-
-<p>An important point to remember is that if an Insteon device does not control any other devices (no links exist in it's database as a controller), when the device is switched locally, no Insteon message is generated from the switch.  What this means is that the PLC and any program attached to it will be unaware that a transition ocurred.  As long as the switch is controlling at least one other device, a group message will be sent and the PLC and any program attached will know that the switch was turned on or off locally.</p>
-
-<p>If local switch sensing is desired and the switch does not control any other loads, you can still link the switch directly to the PLC.  This will in effect create a record in the switch's database and a group command will be sent.  Although the PLC will not respond to the command, it will receive the message and pass it on to any connected program.</p>
-
-<p>The PLC device itself can have it's own groups and control them as well.  The PLC device can have a total of 254 groups from 1 to 254.  The PLC CANNOT trigger another devices groups.  All Insteon messages are signed with the address of the originating device and the PLC is no different.  If you have a KeyPadLinc that controls 5 lights in it's group 3, then you cannot trigger that group directly from the PLC and would instead have to re-create the same group of 5 lights into a PLC group.</p>
-
-<p>Group 255 is an "All Units On" group.  If the PLC or another Insteon device sends a command to group 255, then any device that is a member of any group from the controlling device will respond.  This is how a ControLinc performs an "All Lights On" and "All Lights Off" commands.</p>
-
-</body>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Insteon Background</title>
+  </head>
+  <body>
+    <div class="ph1"> Insteon Background </div>
+    <div class="topic indent3 padtop1"> To fully realize the features and possibilities of
+      Insteon, it helps to understand a little about how it works.</div>
+    <div class="indent4 padtop1">
+      Unlike X10, each Insteon device comes preconfigured from the factory with
+      a unique address. With X10, you could individually address each device by
+      choosing a housecode from A to P (16 possible choices) and a unitcode from
+      1 to 16. This gave you a maximum of 256 possible unique devices. With
+      Insteon, each device is preconfigured with a 3 byte address yielding a
+      possible 16777216 combinations. This 3 byte address is represented in
+      hexadecimal format (the decimal numbers 0 thru 9 and the letters A thru
+      F). You will typically see an Insteon address such as: 01.2A.4C. Each two
+      hexadecimal digits represent a single byte with each byte representation
+      separated by a period. All Insteon devices will have a label showing what
+      their unique address is.</div>
+    <div class="indent4 padtop1">
+      Dimmable Insteon devices will have an output level ranging from 0 to 255.
+      A value of 0 would be fully dimmed or off and a value of 255 would be 100%
+      bright. When you control an Insteon device locally, it will default to
+      turning full on. You can optionally set a "local level" so that when you
+      turn a dimmable Insteon device on locally, it will turn on at a predefined
+      level of your choosing. Once on at this level, if you press the "On"
+      switch again, the light will go to "full on". If you set the "local level"
+      to 0, the light will turn on to the last level the light was at when it
+      was turned off. Additionally, each dimmable Insteon device has an
+      individual "local ramprate". The local ramprate controls how quickly the
+      device turns On or Off when the device is locally switched. Values for the
+      ramprate range from 0 to 31 with 31 being nearly instant and 0 taking
+      close to 9 minutes.</div>
+    <div class="indent4 padtop1">
+      All Insteon devices are inherently two-way unlike X10 where typically
+      only the more expensive devices were capable of two-way communication.
+      Most Insteon devices are capable of being remotely controlled as well as
+      acting as a controller to control other Insteon devices.</div>
+    <div class="indent4 padtop1">
+      The Insteon specification allow for a number of standard and extended
+      length messages, but for our purposes, we really only need to concern
+      ourselves with two types of standard messages. These are direct commands
+      and group commands. A direct command is a single Insteon device directly
+      communicating with another single Insteon device. These communcations are
+      typically acknowledged through two-way communication between the devices
+      and automatically retried in the event of communication failure. The
+      second type of message is a group message. Group messages are not
+      acknowledged and are a broadcast command. In other words, the message is
+      not sent to a single device. The message originates with a single device
+      and is "broadcast" to any device within range.</div>
+    <div class="indent4 padtop1">
+      When an Insteon device controls another Insteon device, this is
+      accomplished through group commands. A standard SwitchLinc dimmer has a
+      single on/off paddle. As such, a SwitchLinc dimmer is capable of
+      controlling a single group of devices. Multiple devices may be contained
+      within a single group. When a SwitchLinc dimmer is turned on locally by
+      pressing the "On" paddle, the dimmer turns itself on to the "local level"
+      using the "local ramprate". It also sends out a group command if it has
+      been "linked" to any other Insteon devices. This group command will be for
+      group 1 of the SwitchLinc's address. Any device linked to the SwitchLinc
+      will turn on at the "group level" and "group ramprate". Without getting
+      overly complicated and technical, in addition the a "local level" and
+      "local ramprate", each device has a "group level" and "group ramprate" for
+      each group/device combination that it belongs to.</div>
+    <div class="indent4 padtop1">
+      When the group broadcast command from the SwitchLinc is received by
+      another Insteon device, that device will check it's internal database and
+      see wheither or not it is a member of the SwitchLinc's group 1. If it is,
+      it will look up the "group level" and "group ramprate" associated with the
+      SwitchLinc's address and group 1 and will turn on to that level using the
+      ramprate. A similar thing happens when the SwitchLinc is switched off or
+      dimmed or brightened locally at the switch.</div>
+    <div class="indent4 padtop1">
+      As part of the Insteon standard, after the group command is sent (not
+      acknowledged), the controller will then scan it's internal database and
+      will send a direct group cleanup command (acknowledged) to each device
+      that is a member of it's group to insure that the group command is carried
+      out. It's important to remember that when a device is added to a group
+      (this process is called "linking"), not only is a record created in the
+      database of the controlled device, but also a record is created in the
+      database of the controlling device. This way, the controlled device knows
+      who is controlling it and the controlling device knows who it is
+      controlling.</div>
+    <div class="indent4 padtop1">
+      The process of creating groups is called "linking". Each Insteon device
+      has it's own "database" of devices it controls and devices that control
+      it. This data is stored in EEPROM and is remembered even in the event of
+      power failure. A standard use of linking, is during the setup of 3 or
+      multi-way switches. Unlike X10 where a 3-way lighting circuit had a
+      master controller and then a cheap "dummy" slave switch that is
+      electrically linked to the master, Insteon accomlishes 3 and multi-way
+      circuits virtually. Essentially, a single Insteon switch (the master) is
+      electrically connected to the light being controlled with any "slave" type
+      switches being removed from the circuit with simple wiring changes. The
+      "slave" switch is then wired into the house wiring, but with no
+      load(light) connected and without a direct connection to the master. The
+      slave switch is then "linked" to the master with an Insteon group. When
+      the slave switch is turned on, a group command is sent to the master and
+      the master switch then turns on. At this point, it is not required to do
+      any more in order for the 3 way circuit to work. However, if you want the
+      LED indicator light on the slave switch to reflect the status of the light
+      when the light is switched using the master, you must "cross link" the
+      slave to the master. Basically what is done is that the slave is linked to
+      the master such that the slave controls the master (this is necessary just
+      to get the 3 way switch to work) and additionally, the master is "cross
+      linked" to the slave so that the master controls the slave. Even though
+      the slave is not electrically tied to the light, it will still receive an
+      "on" command when the master is switched on and it's status LED will
+      reflect that the master is "on".</div>
+    <div class="indent4 padtop1">
+      An important point to remember is that if an Insteon device does not
+      control any other devices (no links exist in it's database as a
+      controller), when the device is switched locally, no Insteon message is
+      generated from the switch. What this means is that the PLC and any program
+      attached to it will be unaware that a transition ocurred. As long as the
+      switch is controlling at least one other device, a group message will be
+      sent and the PLC and any program attached will know that the switch was
+      turned on or off locally.</div>
+    <div class="indent4 padtop1">
+      If local switch sensing is desired and the switch does not control any
+      other loads, you can still link the switch directly to the PLC. This will
+      in effect create a record in the switch's database and a group command
+      will be sent. Although the PLC will not respond to the command, it will
+      receive the message and pass it on to any connected program.</div>
+    <div class="indent4 padtop1">
+      The PLC device itself can have it's own groups and control them as well.
+      The PLC device can have a total of 254 groups from 1 to 254. The PLC
+      CANNOT trigger another devices groups. All Insteon messages are signed
+      with the address of the originating device and the PLC is no different. If
+      you have a KeyPadLinc that controls 5 lights in it's group 3, then you
+      cannot trigger that group directly from the PLC and would instead have to
+      re-create the same group of 5 lights into a PLC group.</div>
+    <div class="indent4 padtop1">
+      Group 255 is an "All Units On" group. If the PLC or another Insteon device
+      sends a command to group 255, then any device that is a member of any
+      group from the controlling device will respond. This is how a ControLinc
+      performs an "All Lights On" and "All Lights Off" commands.</div>
+  </body>
 </html>
-

@@ -1,0 +1,137 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_htmlescape1</title></head>
+<body>
+<div class=ph1>
+
+ph_htmlescape1&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function accepts a string and searches 
+for HTML reserved characters and substitutes them as 
+
+needed.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_htmlescape1 ( input, flags 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>input</TD>
+    <TD class=ph9>String. The data you'd like to have HTML reserved characters 
+      replaced.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+flags
+
+</td>
+
+<td class=ph9>
+
+Integer. A numeric value specifying 
+      which type of HTML characters will be replaced. See usage below 
+
+for details
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the string with the HTML 
+reserved characters replaced.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+The table below details the flags 
+parameter. Add each number together for each type of replacement desired to get 
+the value for the flags parameter.<BR><BR>
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Less than (&lt;), greater than (&gt;), and double quote (") 
+      characters will be replaced with &amp;lt;, &amp;gt;, &amp;quot;</TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>Ampersand (&amp;) characters will be replaced with 
+    &amp;amp;</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Space characters will be replaced with &amp;nbsp;</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+8
+
+</td>
+
+<td class=ph9>
+
+Carriage return/line feed pairs will be 
+      replaced 
+
+with &lt;br&gt;
+
+</td>
+
+</tr>
+</table>
+</div>
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_htmlescape("Mike &amp; Ike are 
+home.",6)<BR>The above example will replace &amp; and space characters (2 and 4 
+added together = 6) with HTML equivalents.&nbsp; The return value will be: 
+Mike&amp;nbsp;&amp;amp;&amp;nbsp;Ike&amp;nbsp;are&amp;nbsp;home.
+
+</div>
+
+</body>
+</html>

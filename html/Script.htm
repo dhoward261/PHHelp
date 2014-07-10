@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Script</title>
+  </head>
+  <body>
+    <div class="ph1"> Script </div>
+    <div class="topic indent3 padtop1">Global Variable Max Substitutions</div>
+    <div class="indent4 padtop1">This field determines the maximum global variable
+      substitutions that can occur before an error occurs.&nbsp; This is mainly
+      to prevent an infinite loop situation from occurring.&nbsp; When a global
+      variable is used within a formula or other situations, its actual value is
+      looked up and substituted for the global variable.&nbsp; Since a global
+      variable can contain other global variables that can also contain global
+      variables, this value places a limit on the maximum number of
+      substitutions.&nbsp; An infinite loop situation would occur if global
+      variable {ABC} contained an actual value of {XYZ} which is another global
+      variable.&nbsp; If global variable {XYZ} contains {ABC}, then the
+      substitution algorithm would continue forever and the PowerHome program
+      would be hung.&nbsp; The default value for this field is 25. </div>
+    <div class="topic indent3 padtop1">Maximum Number of Recursive Calls</div>
+    <div class="indent4 padtop1">This field is similar to the Maximum Global Variable
+      Substitutions field in that its purpose is to prevent infinite loop
+      situations.&nbsp; This value comes into effect when a macro calls another
+      macro that calls another macro, ad infinitum.&nbsp; If a situation where
+      macro A calls macro B which calls macro C which calls macro A were to
+      occur, this value would prevent the PowerHome program from hanging within
+      an infinite loop.&nbsp; The default value for this field is 25.</div>
+    <div class="topic indent3 padtop1">Macro Jump Limit</div>
+    <div class="indent4 padtop1">This field will allow you to limit the number of
+      times a macro may transfer control to another line within the same
+      macro.&nbsp; Useful in preventing infinite loop situations but could also
+      limit a legitimate macro from looping properly if set to low.&nbsp; Set
+      this value to 0 to disable this feature.</div>
+    <div class="topic indent3 padtop1">Use Proxy Server in ph_geturl function</div>
+    <div class="indent4 padtop1">Specifies whether the ph_geturl function should use
+      the proxy server values defined under Proxy screen. </div>
+  </body>
+</html>

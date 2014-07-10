@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Caller ID</title>
+  </head>
+  <body>
+    <div class="ph1"> Plugin: Caller ID
+    </div>
+    <div class="indent2 padtop1"><STRONG>Launch Data (ActiveX 
+Classname):</STRONG>
+          PH_CID.phcid</div>
+    <div class="indent2 padtop1"><STRONG>Initialization Data:</STRONG>  The full path and filename
+      pointing to the phcid.ini configuration file.&nbsp; The phcid.ini file
+      will need to be edited to set the proper configuration.&nbsp; The first
+      section to configure is the [config] section.&nbsp; Set the "port" value
+      to the COM port your CID modem is listening to.&nbsp; The default settings
+      of "9600,N,8,1" should be fine for most modems.&nbsp; There will be
+      several "CIDInit" parameters with all but one commented out (preceeded
+      with a semicolon).&nbsp; Select the CID Initialization parameter for your
+      modem and make sure it is the only uncommented one.&nbsp; For a caller ID
+      modem, set the "format" to 1.&nbsp; For a NetCallerID box, set the
+      "format" to 2.&nbsp; "Lookupnames" can be set to 1 to have CID supplied
+      names substituted with names of your choosing as defined in the [Names]
+      section.&nbsp; A value of 0 will use CID supplied names.&nbsp; The
+      [HangUp] section can be configured to optionally automatically hang up on
+      user defined numbers. </div>
+    <div class="indent2 padtop1">
+      This plugin provides Caller ID support within PowerHome.&nbsp; With a
+      properly configured Caller ID modem or NetCallerID box, PowerHome will
+      fire triggers when the phone rings based upon caller ID information.&nbsp;
+      When a call comes in, the plugin will fire a generic plugin trigger on
+      command 1, option 1 for all calls.&nbsp; The CID number will be in [TEMP5]
+      and the CID name will be in [TEMP10].&nbsp; If you have configured the CID
+      plugin to hang up on certain numbers, calls that are hung up on will ALSO
+      fire a generic plugin trigger on command 1, option 2.&nbsp; The same
+      information will be available in the [TEMP] variables.&nbsp; In addition
+      to the triggers, the plugin also provides support for directly
+      communicating with the modem via the ph_picmd function.&nbsp; Command 1
+      and 2 are available in the CID plugin.&nbsp; Command 1 will send the
+      string in data3 direct to the modem. This string can contain binary
+      characters by escaping them with the "\" character followed by 3 digits
+      for a decimal representation of the ASCII code or followed by an "x" and 2
+      digits for a hexadecimal representation of the ASCII code. Command 2 will
+      send the string in data3 to the modem with no interpretation and will
+      automatically embed a carriage return at the end.</div>
+  </body>
+</html>

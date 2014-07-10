@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_runsync1</title></head>
+<body>
+<div class=ph1>
+
+ph_runsync1 PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Execute 
+
+an application synchronously or 
+
+asynchronously.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_runsync1 ( path, currdir, async, 
+
+wait 
+
+)
+
+</div>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <tr>
+    <td class=ph8>path </td>
+    <td class=ph9>String. The full path and filename of 
+      the executable to run. </td></tr>
+  <TR>
+    <TD class=ph8>currdir</TD>
+    <TD class=ph9>String. The default directory for the program to be executed 
+      in.</TD></TR>
+  <TR>
+    <TD class=ph8>async</TD>
+    <TD class=ph9>Integer. Determines whether the application will run 
+      asynchronously or synchronously. Use 0 for synchronous execution. Use 1 
+      for asynchronous execution. </TD></TR>
+  <tr>
+    <td class=ph8>wait </td>
+    <td class=ph9>Long. The number of milliseconds to 
+      wait for the executable to complete if 
+      the async parameter is 0. Use - 1 to wait indefinately. </td></tr></table></div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Long. If the async parameter is 1, then 0 
+will be returned immediately. If the async parameter&nbsp;is 0 and the 
+application is still running when the wait parameter expires, then 259 will be 
+returned signifying that the application is still running. If the application completes before the wait parameter expires, then the 
+return value will be the exit code returned by 
+
+the application.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to execute an application 
+under the PowerHome users context either asynchronously or synchronously. If you 
+need to execute an application using a different user context, use the 
+ph_runasuser or ph_runasuser1 functions.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_runsync1("notepad.exe","",1,0)<BR>The 
+above example will execute the Windows notepad application and return control 
+immediately back to PowerHome (run asynchronously).
+
+</div>
+
+</body>
+</html>

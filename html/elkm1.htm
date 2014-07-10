@@ -1,144 +1,166 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>Elk M1 Gold</title>
-</head>
-<BODY>
-<DIV class=ph1>Elk M1 Gold as a PowerHome Controller </DIV>
-<P>Using the Elk M1 Gold as a PowerHome controller:</P>
-<P>You must first set the Elk up as a PowerHome controller. This can be done 
-from the PowerHome Explorer under PowerHome|Setup|Controllers. You may connect 
-to the Elk directly using a serial connection or via ethernet if you have an 
-M1XEP.</P>
-<P>After creating the Elk controller, click the "Settings" button to define the 
-COM port (or IP address and Port) and the Analog Poll Interval. The Analog Poll 
-Interval determines in seconds, how often PowerHome will query the Elk for the 
-current value of any input points defined as analog inputs. You must also use 
-the Elk RM utility to configure the Elk serial port for 115200 bps or properly 
-configure the ethernet settings.</P>
-<P>PowerHome provides support for all aspects of the Elk M1 Gold. The Elks 
-lighting devices (X10, Insteon, etc.) are available as X10 devices in PowerHome. 
-The&nbsp;digital (16 multiple-state) inputs on the Elk and external boards are 
-available as Multi-State Inputs in the Analog I/O screen. Alternatively, if 
-you're only interested in the open/close status of the multi-state inputs, you 
-can define these points as Digital Inputs in the Digital I/O screen.&nbsp; The 
-Elk digital outputs are available within PowerHome as Digital Outputs in the 
-Digital I/O screen. Inputs on the Elk setup as analog inputs are available 
-within PowerHome as analog inputs in the Analog I/O screen. Elk temperature 
-inputs can be declared as "Temperature" in the Analog I/O screen. The Elk 
-digital inputs, if defined as Multi-State Inputs on the analog I/O screen, have 
-a built in formula that will display appropriate values automatically. You can 
-however override these built in formulas by declaring your own. All analog 
-inputs, digital inputs, digital outputs, and lighting devices are automatically 
-available within the PowerHome Device status screen. Manipulation and reading of 
-these control points are also available using appropriate PowerHome functions 
-and macro commands.&nbsp; PowerHome also supports defining inputs (and triggers) 
-for the Elk "Arm Status", "Arm State", and "Alarm State".&nbsp; The definition 
-for these points are all done in the Analog I/O screen.</P>
-<P>When defining digital outputs, digital inputs, and analog inputs, the 
-controller will be the ID of the Elk controller, the unit will be the board 
-number from 1 to 13 (1 is used for the controls onboard the Elk), and the point 
-will be the individual device number on the board from 1 to 16. Temperature 
-inputs will have a unit of&nbsp;1 for temperature probes,&nbsp;2 for keypads, 
-and&nbsp;3 for thermostats. The point value for temperature inputs will be from 
-1 to 16 corresponding with the available units in each category.&nbsp; There is 
-also an alternative numbering scheme that is allowed that matches the Elk RM 
-numbering scheme rather than the unit number / point number method.&nbsp; Using 
-this method, set the Unit to 0.&nbsp; The Point will then be a value starting at 
-1.&nbsp; For example, if you are declaring the 5th input on expansion board 3, 
-you can use either Unit 3, Point 5 or Unit 0, Point 37.</P>
-<P>In order for PowerHome to work properly with the above Elk controls, you MUST 
-also use the Elk RM configuration software to setup each control appropriately. 
-This cannot be done from within PowerHome since the protocol for this 
-configuration is proprietary and is not made available to developers. This is 
-less painless if using the ethernet interface since both PowerHome and the Elk 
-RM software will be able to connect simultaneously rather than just one software 
-at a time.</P>
-<P>PowerHome also supports standard triggers for the above Elk control types. 
-When a digital output changes state either from programming internal to the Elk 
-or from PowerHome control, a digital output trigger will be fired. Similarly, 
-when an Elk input changes state, a PowerHome Multi-State Input trigger or 
-Digital Input trigger will automatically be fired. When an analog input changes, 
-a PowerHome Analog Input trigger will be fired. For Elk Temperature devices 
-(Temp Probe, Keypad, Thermostat), a Temperature trigger will be fired.&nbsp; For 
-lighting devices, the appropriate X10 In and X10 Out triggers will be fired.</P>
-<P>The standard functions ph_getothervar, ph_setothervar, ph_getothertimer, and 
-ph_setothertimer may be used to access and update the Elk Custom values. These 
-values are numbered from 1 to 20. Use the ph_getothervar and ph_setothervar to 
-access and update custom values that are either numbers or timers. Use 
-ph_getothertimer and ph_setothertimer to access custom values that are 
-configured as time of day. For time of day custom values, pass the data as an 
-integer representing the time. For example, to pass 9:40 pm, the value should be 
-set to 2140.</P>
-<P>PowerHome also supports all of the additional control features within the 
-Elk. In addition to the standard triggers defined above, PowerHome will also 
-fire the Generic Controller Trigger for certain Elk specific functions. These 
-are detailed below:</P>
-<UL>
-  <LI>System Log Data Update: If Elk Global Programming Location 35 is enabled, 
-  PowerHome will fire the Generic Controller Trigger with a trigger number of 1 
-  and a trigger value of 1. All of the data contained within the command will be 
-  available in the [TEMP] variables. 
-  <LI>Tasks Change Update: If Elk Global Programming Location 38 is enabled, the 
-  Generic Controller Trigger will be fired with a trigger number of 2 and a 
-  trigger value matching the task number (1 to 32). 
-  <LI>Keypad KeyChange Update: If Elk Global Programming Location 40 is enabled, 
-  the GCT will be fired with a trigger number of 3 and a trigger value of 1. 
-  <LI>Send Valid User Number and Invalid User Code: The GCT trigger will be 
-  fired with a trigger number of 4 and a trigger value of 1. 
-  <LI>Reply Arming Status Report Data: If Elk Global Programming Location 40 
-  (transmit Keypad keys) is enabled, then the GCT trigger will be fired with a 
-  trigger number of 5 and a trigger value of 1. </LI></UL>
-<P>Support for the Elk specific control commands is available using the 
-ph_ctlrcmd and ph_ctlrcmd1 functions. The specific controller command values and 
-parameters are detailed below. To send an "Arming Status Request" command, the 
-function would look like: ph_ctlrcmd1("ELKID",120,0,0,"","",1)</P>
-<UL>
-  <LI>Arming Status Request - 120. No parms. Seconds returned in ret1. Data 
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Elk M1 Gold</title>
+  </head>
+  <body>
+    <div class="ph1">Elk M1 Gold as a PowerHome Controller </div>
+    <div class="indent2 padtop1">You must first set the Elk up as a PowerHome
+      controller. This can be done from the PowerHome Explorer under
+      PowerHome|Setup|Controllers. You may connect to the Elk directly using a
+      serial connection or via ethernet if you have an M1XEP.</div>
+    <div class="indent2 padtop1">After creating the Elk controller, click the "Settings"
+      button to define the COM port (or IP address and Port) and the Analog Poll
+      Interval. The Analog Poll Interval determines in seconds, how often
+      PowerHome will query the Elk for the current value of any input points
+      defined as analog inputs. You must also use the Elk RM utility to
+      configure the Elk serial port for 115200 bps or properly configure the
+      ethernet settings.</div>
+    <div class="indent2 padtop1">PowerHome provides support for all aspects of the Elk
+      M1 Gold. The Elks lighting devices (X10, Insteon, etc.) are available as
+      X10 devices in PowerHome. The digital (16 multiple-state) inputs on the
+      Elk and external boards are available as Multi-State Inputs in the Analog
+      I/O screen. Alternatively, if you're only interested in the open/close
+      status of the multi-state inputs, you can define these points as Digital
+      Inputs in the Digital I/O screen.&nbsp; The Elk digital outputs are
+      available within PowerHome as Digital Outputs in the Digital I/O screen.
+      Inputs on the Elk setup as analog inputs are available within PowerHome as
+      analog inputs in the Analog I/O screen. Elk temperature inputs can be
+      declared as "Temperature" in the Analog I/O screen. The Elk digital
+      inputs, if defined as Multi-State Inputs on the analog I/O screen, have a
+      built in formula that will display appropriate values automatically. You
+      can however override these built in formulas by declaring your own. All
+      analog inputs, digital inputs, digital outputs, and lighting devices are
+      automatically available within the PowerHome Device status screen.
+      Manipulation and reading of these control points are also available using
+      appropriate PowerHome functions and macro commands.&nbsp; PowerHome also
+      supports defining inputs (and triggers) for the Elk "Arm Status", "Arm
+      State", and "Alarm State".&nbsp; The definition for these points are all
+      done in the Analog I/O screen.</div>
+    <div class="indent2 padtop1">When defining digital outputs, digital inputs, and
+      analog inputs, the controller will be the ID of the Elk controller, the
+      unit will be the board number from 1 to 13 (1 is used for the controls
+      onboard the Elk), and the point will be the individual device number on
+      the board from 1 to 16. Temperature inputs will have a unit of 1 for
+      temperature probes, 2 for keypads, and 3 for thermostats. The point value
+      for temperature inputs will be from 1 to 16 corresponding with the
+      available units in each category.&nbsp; There is also an alternative
+      numbering scheme that is allowed that matches the Elk RM numbering scheme
+      rather than the unit number / point number method.&nbsp; Using this
+      method, set the Unit to 0.&nbsp; The Point will then be a value starting
+      at 1.&nbsp; For example, if you are declaring the 5th input on expansion
+      board 3, you can use either Unit 3, Point 5 or Unit 0, Point 37.</div>
+    <div class="indent2 padtop1">In order for PowerHome to work properly with the above
+      Elk controls, you MUST also use the Elk RM configuration software to setup
+      each control appropriately. This cannot be done from within PowerHome
+      since the protocol for this configuration is proprietary and is not made
+      available to developers. This is less painless if using the ethernet
+      interface since both PowerHome and the Elk RM software will be able to
+      connect simultaneously rather than just one software at a time.</div>
+    <div class="indent2 padtop1">PowerHome also supports standard triggers for the above
+      Elk control types. When a digital output changes state either from
+      programming internal to the Elk or from PowerHome control, a digital
+      output trigger will be fired. Similarly, when an Elk input changes state,
+      a PowerHome Multi-State Input trigger or Digital Input trigger will
+      automatically be fired. When an analog input changes, a PowerHome Analog
+      Input trigger will be fired. For Elk Temperature devices (Temp Probe,
+      Keypad, Thermostat), a Temperature trigger will be fired.&nbsp; For
+      lighting devices, the appropriate X10 In and X10 Out triggers will be
+      fired.</div>
+    <div class="indent2 padtop1">The standard functions ph_getothervar, ph_setothervar,
+      ph_getothertimer, and ph_setothertimer may be used to access and update
+      the Elk Custom values. These values are numbered from 1 to 20. Use the
+      ph_getothervar and ph_setothervar to access and update custom values that
+      are either numbers or timers. Use ph_getothertimer and ph_setothertimer to
+      access custom values that are configured as time of day. For time of day
+      custom values, pass the data as an integer representing the time. For
+      example, to pass 9:40 pm, the value should be set to 2140.</div>
+    <div class="indent2 padtop1">PowerHome also supports all of the additional control
+      features within the Elk. In addition to the standard triggers defined
+      above, PowerHome will also fire the Generic Controller Trigger for certain
+      Elk specific functions. These are detailed below:</div>
+    <ul class="indent2">
+      <li>System Log Data Update: If Elk Global Programming 
+  Location 35 is enabled, PowerHome will fire the Generic Controller Trigger 
+  with a trigger number of 1 and a trigger value of 1. All of the data contained 
+  within the command will be available in the [TEMP] variables. 
+      <li>Tasks Change Update: If Elk Global Programming 
+  Location 38 is enabled, the Generic Controller Trigger will be fired with a 
+  trigger number of 2 and a trigger value matching the task number (1 to 32). 
+      <li>Keypad KeyChange Update: If Elk Global Programming 
+  Location 40 is enabled, the GCT will be fired with a trigger number of 3 and a 
+  trigger value of 1. 
+      <li>Send Valid User Number and Invalid User Code: The GCT 
+  trigger will be fired with a trigger number of 4 and a trigger value of 1. 
+      <li>Reply Arming Status Report Data: If Elk Global Programming Location 40
+        (transmit Keypad keys) is enabled, then the GCT trigger will be fired
+        with a trigger number of 5 and a trigger value of 1. </li>
+    </ul>
+    <div class="indent2 padtop1">Support for the Elk specific control commands is
+      available using the ph_ctlrcmd and ph_ctlrcmd1 functions. The specific
+      controller command values and parameters are detailed below. To send an
+      "Arming Status Request" command, the function would look like:
+      ph_ctlrcmd1("ELKID",120,0,0,"","",1)</div>
+    <ul class="indent2">
+      <li>Arming Status Request - 120. No parms. Seconds 
+  returned in ret1. Data returned in ret3. 
+      <li> Alarm by Zone Request - 240. No parms. Data returned 
+  in ret3. 
+      <li> Zone Partition Request - 250. No parms. Data returned 
+  in ret3. 
+      <li> Zone Bypass Request - 260. Zone in parm1, Area in 
+  parm2, PIN in parm3. Data returned in ret1. 
+      <li> Request Keypad FUnction Key Illumination Status - 
+  270. Keypad in parm1. Code Req returned in ret1, Illum returned in ret3, Beep 
+  returned in ret4. 
+      <li> Request PLC Status - 280. Bank in parm1. Data 
   returned in ret3. 
-  <LI>Alarm by Zone Request - 240. No parms. Data returned in ret3. 
-  <LI>Zone Partition Request - 250. No parms. Data returned in ret3. 
-  <LI>Zone Bypass Request - 260. Zone in parm1, Area in parm2, PIN in parm3. 
-  Data returned in ret1. 
-  <LI>Request Keypad FUnction Key Illumination Status - 270. Keypad in parm1. 
-  Code Req returned in ret1, Illum returned in ret3, Beep returned in ret4. 
-  <LI>Request PLC Status - 280. Bank in parm1. Data returned in ret3. 
-  <LI>Request ASCII String Text Descriptions - 290. Type in parm1, Textnum in 
-  parm2. Data returned in ret3. 
-  <LI>Request Thermostat Data - 300. Thermostat in parm1. Temp returned in ret1, 
-  Flags returned in ret2, CoolSP in ret3, HeatSP in ret4. 
-  <LI>Request Temperature Format - 310. Type in parm1, Device in parm2. Temp 
-  returned in ret1. 
-  <LI>Request Temperature Data - 312. No parms. Data returned in ret3. 
-  <LI>Request Valid User Code Areas - 320. Usercode in parm3. Areamask returned 
-  in ret1, type in ret2, diagnostic in ret3, and digitstemp in ret4. 
-  <LI>Request Keypad Area Assignment - 330. No parms. Data returned in ret3. 
-  <LI>Request Keypad Function Keypress - 340. Keypad in parm1, Keynum in parm2. 
-  Data returned in ret3. 
-  <LI>Request Zone Definition - 350. No parms. Data returned in ret3. 
-  <LI>Request Change User Code - 360. Codenum in parm1, areamask in parm2, 
-  oldcode in parm3, newcode in parm4. Return data in ret1. </LI></UL>
-<P>In addition to the above Controller commands supported by the Elk, there are 
-a number of "Queued" commands that are also available for the Elk. "Queued" 
-commands are normal tasks supported by controllers such as Send X10, Play IR, 
-and Set Digital. The standard "Queued" commands such as the ones just listed are 
-available by using the appropriate PowerHome functions or macro commands (such 
-as ph_x10, ph_ir, etc). To access the non-standard queued commands supported by 
-the Elk, use the PowerHome ph_ctlrsq function. An example of arm to away in area 
-1 with a usercode of 1234 would be: ph_ctlrsq("ELKCTLRID",121,"1234",1,1). 
-Details on the Elk specific queued commands are below:</P>
-<UL>
-  <LI>Arm and Disarm commands - 121. User Code in parm1, level in parm2, and 
-  area in parm3. 
-  <LI>Speak Word at Voice Siren Output - 211. Word index in parm2. 
-  <LI>Speak Phrase at Voice Siren Output - 212. Phrase index in parm2. 
-  <LI>Task Activation - 221. Task index in parm2. 
-  <LI>Display Text on LCD Screen - 231. Text in parm1, Flags in parm2, timeout 
-  in parm3. 
-  <LI>Set Thermostat Data - 301. Value in parm1, Tstat in parm2, element in 
-  parm3. </LI></UL>
+      <li> Request ASCII String Text Descriptions - 290. Type in 
+  parm1, Textnum in parm2. Data returned in ret3. 
+      <li> Request Thermostat Data - 300. Thermostat in parm1. 
+  Temp returned in ret1, Flags returned in ret2, CoolSP in ret3, HeatSP in ret4. 
 
-</BODY>
+      <li> Request Temperature Format - 310. Type in parm1, 
+  Device in parm2. Temp returned in ret1. 
+      <li> Request Temperature Data - 312. No parms. Data 
+  returned in ret3. 
+      <li> Request Valid User Code Areas - 320. Usercode in 
+  parm3. Areamask returned in ret1, type in ret2, diagnostic in ret3, and 
+  digitstemp in ret4. 
+      <li> Request Keypad Area Assignment - 330. No parms. Data 
+  returned in ret3. 
+      <li> Request Keypad Function Keypress - 340. Keypad in 
+  parm1, Keynum in parm2. Data returned in ret3. 
+      <li> Request Zone Definition - 350. No parms. Data 
+  returned in ret3. 
+      <li> Request Change User Code - 360. Codenum in parm1, areamask in parm2,
+        oldcode in parm3, newcode in parm4. Return data in ret1. </li>
+    </ul>
+    
+    <div class="indent2 padtop1"> In addition to the above Controller commands supported
+      by the Elk, there are a number of "Queued" commands that are also
+      available for the Elk. "Queued" commands are normal tasks supported by
+      controllers such as Send X10, Play IR, and Set Digital. The standard
+      "Queued" commands such as the ones just listed are available by using the
+      appropriate PowerHome functions or macro commands (such as ph_x10, ph_ir,
+      etc). To access the non-standard queued commands supported by the Elk, use
+      the PowerHome ph_ctlrsq function. An example of arm to away in area 1 with
+      a usercode of 1234 would be: ph_ctlrsq("ELKCTLRID",121,"1234",1,1).
+      Details on the Elk specific queued commands are below:</div>
+    <ul class="indent2">
+      <li>Arm and Disarm commands - 121. User Code in parm1, 
+  level in parm2, and area in parm3. 
+      <li> Speak Word at Voice Siren Output - 211. Word index in 
+  parm2. 
+      <li> Speak Phrase at Voice Siren Output - 212. Phrase 
+  index in parm2. 
+      <li> Task Activation - 221. Task index in parm2. 
+      <li> Display Text on LCD Screen - 231. Text in parm1, 
+  Flags in parm2, timeout in parm3. 
+      <li> Set Thermostat Data - 301. Value in parm1, Tstat in parm2, element in
+        parm3. </li>
+    </ul>
+  </body>
 </html>
-

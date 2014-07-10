@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_webaddblob</title>
 </head>
@@ -23,7 +24,7 @@ ph_webaddblob ( type, parm1 )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -36,7 +37,9 @@ type
 </td>
 <td class=ph9>
 
-The type of blob data to add.  Use 1 to convert parm1 string data into blob data.  Use 2 to read the file specified in parm1 into the blob output.  Use 3 to retrieve the URL specified in parm1 into the blob output.
+The type of blob data to add. Use 1 to 
+      convert parm1 string data into blob data. Use 2 to read the file specified 
+      in parm1 and add it to the blob output. Use 3 to retrieve the URL specified in  parm1 into the blob output. Use 4 to add binary  data contained in parm1 that has been previously encoded using the s2h function.  The data will be decoded to binary and added to the blob output.
 
 </td>
 </tr>
@@ -48,7 +51,8 @@ parm1
 </td>
 <td class=ph9>
 
-String.  If the type is 1, the string is converted to a blob and added to the blob output page.  If the type is 2, then parm1 should point to the full path and filename of a file to append to the blob output page.  If type is 3, then parm1 should contain the URL of a file or webpage to be retrieved and appended to the blob output file.
+String. If the type is 1, the string is 
+      converted to a blob and added to the  blob output page. If the type is 2, then parm1 should point to the full path and filename of  a file to append to the blob output page. If type is 3, then parm1 should contain the URL of a file or webpage to  be retrieved and appended to the blob output file. If type is 4, then parm1 should contain data that was encoded using the s2h function.
 
 </td>
 </tr>

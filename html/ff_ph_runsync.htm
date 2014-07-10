@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_runsync</title>
 </head>
@@ -19,26 +20,14 @@ Launches an external executable and waits for it to complete.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_runsync ( id, path, wait, waittype )
+ ph_runsync ( path, wait, waittype )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
-</tr>
-<tr>
-<td class=ph8>
-
-id
-
-</td>
-<td class=ph9>
-
-String.  The ID of the controller to use.
-
-</td>
 </tr>
 <tr>
 <td class=ph8>
@@ -72,7 +61,10 @@ waittype
 </td>
 <td class=ph9>
 
-Integer.  The type of waiting for PowerHome to perform.  If 0, then PowerHome will not be locked and other functions may be performed (however, the execution queue will not process any more actions until this function completes).  Any other value and PowerHome will be frozen and appear to be hung.
+Integer. The type of waiting for 
+      PowerHome 
+
+to  perform. If 0, then PowerHome will not be  locked and other functions may be performed (however, the execution queue will not process any more actions until this function completes). Any other value and PowerHome will be  frozen and appear to be hung until the application completes or times out.
 
 </td>
 </tr>

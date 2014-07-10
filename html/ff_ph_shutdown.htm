@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_shutdown</title></head>
+<body>
+<div class=ph1>
+
+ph_shutdown&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Initiate a programmatic shutdown of 
+
+PowerHome.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_shutdown ( type 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+
+<td class=ph8>
+
+type
+
+</td>
+
+<td class=ph9>
+
+Integer. The type of shutdown to 
+      perform. See 
+
+usage below.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. Returns 1 if the 
+allowphshutdownfunc parameter is not set to YES. Otherwise a 0 
+
+is returned.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function for controlled and 
+uncontrolled programmatic shutdowns of PowerHome. In order for this function to 
+be allowed, you must have set the allowphshutdownfunc to YES under the [system] 
+section of the pwrhome.ini file otherwise the function will be 
+ignored.<BR><BR>Valid values for the type parameter are detailed below. Add 
+individual values together to achieve the desired shutdown operation.
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Initiate a controlled user shutdown. This value is ignored 
+      if 8, 16, or 256 have been added to the type parameter.</TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>If any unsaved data exists, any save prompts will be 
+    skipped.</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Bypass the confirm shutdown message.</TD></TR>
+  <TR>
+    <TD class=ph8>8</TD>
+    <TD class=ph9>If PowerHome is running as a service, then the shutdown is 
+      performed via a service kill message. If PowerHome is not running as a 
+      service then 16 will be OR'ed into the type parameter.</TD></TR>
+  <TR>
+    <TD class=ph8>16</TD>
+    <TD class=ph9>Initiates a quick shutdown. Other type values are 
+  ignored.</TD></TR>
+  <TR>
+    <TD class=ph8>256</TD>
+    <TD class=ph9>Perform a hard shutdown bypassing all prompts. PowerHome is 
+      immediately terminated as if the process was 
+killed.</TD></TR>
+</table>
+</div>
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_shutdown(7)<BR>The above example will 
+initiate a controlled user shutdown, bypassing any save prompts and the confirm 
+shutdown 
+
+message.
+
+</div>
+
+</body>
+</html>

@@ -13,7 +13,7 @@ ph_x10 PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Sends an X-10 command to the specified controller.
+Sends an X10 command to the specified controller.
 
 </div>
 <div class=ph4>Syntax</div>
@@ -36,7 +36,7 @@ s
 </td>
 <td class=ph9>
 
-The ID of the controller you wish to send the X-10 command to.
+The ID of the controller you wish to send the X10 command to.
 
 </td>
 </tr>
@@ -48,7 +48,7 @@ s
 </td>
 <td class=ph9>
 
-A string representing the housecode portion of the X-10 command.  If you are sending a preset dim command, set this string to “PRESET DIM”
+A string representing the housecode portion of the X10 command.  If you are sending a preset dim command, set this string to “PRESET DIM”
 
 </td>
 </tr>
@@ -60,7 +60,7 @@ n
 </td>
 <td class=ph9>
 
-An integer representing the unitcode portion of the X-10 command.  If you are addressing a specific unitcode, use the unitcode number.  If this is a standard command, add 100 to the command.  An on command is normally 2 so you would encode it as 102.  If this is an extended command, then add 200 to the unitcode.  If you were sending an extended command to unit 5, then encode it as 205.  If this is a preset dim command, then add 300 to the preset dim level.  If you were sending a preset dim command as level 26 then encode it as 326.
+An integer representing the unitcode portion of the X10 command.  If you are addressing a specific unitcode, use the unitcode number.  If this is a standard command, add 100 to the command.  An on command is normally 2 so you would encode it as 102.  If this is an extended command, then add 200 to the unitcode.  If you were sending an extended command to unit 5, then encode it as 205.  If this is a preset dim command, then add 300 to the preset dim level.  If you were sending a preset dim command as level 26 then encode it as 326.
 
 </td>
 </tr>

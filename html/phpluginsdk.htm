@@ -1,60 +1,67 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>Plugin SDK</title>
-</head>
-<BODY>
-<DIV class=ph1>PowerHome Generic Plugin SDK: </DIV>
-<P>PowerHome now supports the use of user developed and third party generic 
-plugins. With the Generic Plugin SDK, PowerHome functionality can now be 
-extended or enhanced as the user sees fit. The details of how to create your own 
-PowerHome plugins are listed below.</P>
-<P>Starting with version 1.2 of the SDK, all plugins run in their own separate 
-thread.</P>
-<P>To initialize a plugin within PowerHome, open the PowerHome Explorer and 
-navigate to PowerHome|Setup|Plugins. In the Setup Plugins screen, you give 
-specific details about the plugins you wish PowerHome to load. The Load Order 
-column determines what order a plugin loads. You must give a unique ID to all 
-plugins. Currently only ActiveX type plugins are supported. The "Launch Data" 
-field MUST contain the ActiveX Classname of the plugin. Some plugins may require 
-Initialization Data. If none is required, leave this field blank. Otherwise, 
-enter the data appropriate to the specific plugin. PowerHome must either be 
-restarted or reintialized before any changes on this screen take effect.</P>
-<P>Version 1.2 of the PowerHome Generic Plugin SDK:</P>
-<OL>
-  <LI>All plugins MUST be compiled as a COM (activex control) object. Plugins 
-  may be written in any language that supports these objects including Visual 
-  Basic, C, and PowerBuilder. 
-  <LI>All plugins MUST support a predefined set of public interface functions. 
-  These functions are detailed below: </LI>
-  <UL>
-    <LI><B>PHPI_Init(long hPH, integer iI, string sID) returns 
-    integer.</B><BR>This function is called within the plugin when PowerHome 
-    initializes the plugin. This is the first function called within the plugin 
-    and it is passed vital initialization data which should be stored for future 
-    reference and use by the plugin. The hPH parameter contains the Windows 
-    handle of PowerHome and is required for the plugin to communicate back to 
-    PowerHome. The iI parameter contains the PowerHome internal plugin index. 
-    This value is necessary for any plugins wishing to make use of the PowerHome 
-    Plugin Passthru window. The sID parameter contains the ID that was assigned 
-    to the Plugin within the Setup Plugins screen of PowerHome. It is required 
-    if you will be firing Generic Plugin Triggers. You should return a 0 from 
-    this function. 
-    <LI><B>PHPI_SDKVersion() returns double.</B><BR>This function will be called 
-    to determine what SDK level the plugin supports. Currently, all plugins 
-    should return a value of 1.2. Version 1.1 of the plugin SDK is no longer 
-    supported. This function is called immediately after PHPI_Init during 
-    initialization of a plugin. 
-    <LI><B>PHPI_InitData(string sData) returns integer.</B><BR>This function is 
-    called by PowerHome immediately after initialization but before PHPI_Enable. 
-    The string data that is passed to it is the data defined in the Setup 
-    Plugins screen under "Initialization Data". What the plugin does with this 
-    data or the type of data required is entirely up to the plugin developer. If 
-    a plugin requires multiple initialization parameters, the plugin developer 
-    may opt to use this data to point to the location of an INI file. This 
-    function should return a 0. 
-    <LI><B>PHPI_Enable() returns integer.</B><BR>This function is called by 
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Plugin SDK</title>
+  </head>
+  <body>
+    <div class="ph1">PowerHome Generic Plugin SDK:</div>
+    <div class="indent2 padtop1">PowerHome now supports the use of user
+      developed and third party generic plugins. With the Generic Plugin SDK,
+      PowerHome functionality can now be extended or enhanced as the user sees
+      fit. The details of how to create your own PowerHome plugins are listed
+      below.</div>
+    <div class="indent2 padtop1"> Starting with version 1.2 of the SDK, all
+      plugins run in their own separate thread.</div>
+    <div class="indent2 padtop1"> To initialize a plugin within PowerHome, open
+      the PowerHome Explorer and navigate to PowerHome|Setup|Plugins. In the
+      Setup Plugins screen, you give specific details about the plugins you wish
+      PowerHome to load. The Load Order column determines what order a plugin
+      loads. You must give a unique ID to all plugins. Currently only ActiveX
+      type plugins are supported. The "Launch Data" field MUST contain the
+      ActiveX Classname of the plugin. Some plugins may require Initialization
+      Data. If none is required, leave this field blank. Otherwise, enter the
+      data appropriate to the specific plugin. PowerHome must either be
+      restarted or reintialized before any changes on this screen take effect.</div>
+    <div class="indent2 padtop1">Version 1.2 of the PowerHome Generic Plugin
+      SDK:</div>
+    <div class="indent2">
+      <ol>
+        <li>All plugins MUST be compiled as a COM (activex 
+  control) object. Plugins may be written in any language that supports these 
+  objects including Visual Basic, C, and PowerBuilder. 
+        <li>All plugins MUST support a predefined set of public interface
+          functions. These functions are detailed below:
+          <ul>
+            <li><span class="bold">PHPI_Init(long hPH, integer iI, string sID)
+                returns integer.</span><br>
+              This function is called within the 
+    plugin when PowerHome initializes the plugin. This is the first function 
+    called within the plugin and it is passed vital initialization data which 
+    should be stored for future reference and use by the plugin. The hPH 
+    parameter contains the Windows handle of PowerHome and is required for the 
+    plugin to communicate back to PowerHome. The iI parameter contains the 
+    PowerHome internal plugin index. This value is necessary for any plugins 
+    wishing to make use of the PowerHome Plugin Passthru window. The sID 
+    parameter contains the ID that was assigned to the Plugin within the Setup 
+    Plugins screen of PowerHome. It is required if you will be firing Generic 
+    Plugin Triggers. You should return a 0 from this function. 
+            <li><span class="bold">PHPI_SDKVersion() returns double.</span><br>
+              This function will be called to determine what SDK 
+    level the plugin supports. Currently, all plugins should return a value of 
+    1.2. Version 1.1 of the plugin SDK is no longer supported. This function is 
+    called immediately after PHPI_Init during initialization of a plugin. 
+            <li><span class="bold">PHPI_InitData(string sData) returns integer.</span><br>
+              This function is called by PowerHome immediately after 
+    initialization but before PHPI_Enable. The string data that is passed to it 
+    is the data defined in the Setup Plugins screen under "Initialization Data". 
+    What the plugin does with this data or the type of data required is entirely 
+    up to the plugin developer. If a plugin requires multiple initialization 
+    parameters, the plugin developer may opt to use this data to point to the 
+    location of an INI file. This function should return a 0. 
+            <li><span class="bold">PHPI_Enable() returns integer.</span><br>
+              This function is called by 
     PowerHome after the plugin is initialized and when PowerHome is ready for 
     the plugin to be enabled. A plugin developer does not HAVE to directly do 
     anything with this function but if the plugin runs tasks in the background, 
@@ -62,124 +69,159 @@ restarted or reintialized before any changes on this screen take effect.</P>
     to enable and disable plugin functionality. Even if the function is not 
     supported (doesnt do anything) it MUST exist and return a value. You should 
     return a 0 from this function. 
-    <LI><B>PHPI_Disable() returns integer.</B><BR>This function is called by 
-    PowerHome prior to shutting PowerHome down and gives a plugin a chance to 
-    gracefully shutdown running processes. You should return a 0 from this 
-    function. 
-    <LI><B>PHPI_Status() returns integer.</B><BR>This function should return the 
-    enabled or disabled status of the plugin. IF the plugin is enabled, this 
+            <li><span class="bold">PHPI_Disable() returns integer.</span><br>
+              This function is called by PowerHome prior to shutting 
+    PowerHome down and gives a plugin a chance to gracefully shutdown running 
+    processes. You should return a 0 from this function. 
+            <li><span class="bold">PHPI_Status() returns integer.</span><br>
+              This function should return 
+    the enabled or disabled status of the plugin. IF the plugin is enabled, this 
     function should return a 1. If the plugin is disabled, the function should 
     return 0. 
-    <LI><B>PHPI_GetPIVersion() returns string.</B><BR>This function may be 
-    called by PowerHome to determine what version the plugin is. This value is 
-    particular to the plugin and is primarily used to display in the Help|About 
-    window. It is up to the plugin developer to return a value he deems 
-    appropriate. 
-    <LI><B>PHPI_GetPIInfo() returns string.</B><BR>This function is also called 
-    by PowerHome during display of the Help|About window. The plugin developer 
-    is free to return whatever text he deems appropriate and is intended as a 
-    text description of the plugin. 
-    <LI><B>PHPI_Close() returns integer.</B><BR>This function is called by 
+            <li><span class="bold">PHPI_GetPIVersion() returns string.</span><br>
+              This function may be called by PowerHome to determine 
+    what version the plugin is. This value is particular to the plugin and is 
+    primarily used to display in the Help|About window. It is up to the plugin 
+    developer to return a value he deems appropriate. 
+            <li><span class="bold">PHPI_GetPIInfo() returns string.</span><br>
+              This function is also called by PowerHome during 
+    display of the Help|About window. The plugin developer is free to return 
+    whatever text he deems appropriate and is intended as a text description of 
+    the plugin. 
+            <li><span class="bold">PHPI_Close() returns integer.</span><br>
+              This function is called by 
     PowerHome after PHPI_Disable prior to PowerHome shutting down. This is the 
     last function to be called before PowerHome closes a plugin. This function 
     should return a 0. 
-    <LI><B>PHPI_Command(long lCMD, long lData1, long lData2, string sData3, 
-    string sData4) returns string.</B><BR>This function is the gateway into 
-    controlling the plugin from within PowerHome. This is the only function that 
-    is exposed to the user through the PowerHome function ph_picmd. The design 
-    is such that the Plugin developer will use the lCMD parameter to determine 
-    the type of command to be executed with lData1 thru lData4 representing data 
-    specific to the command. It is intended that the plugin developer use a 
-    construct such as a CASE statement to interpret the lCMD parameter and 
-    branch to the appropriate course of action. However, the plugin developer is 
-    free to use these parameters however he sees fit. The return value of this 
-    command will be passed back to the user through the ph_picmd function. 
-    <LI><B>PHPI_SysCommand(long lCMD, long lData1, long lData2, string sData3, 
-    string sData4) returns string.</B><BR>This function is similar to the 
-    PHPI_Command function but is intended for internal use rather than directly 
-    by the user through PowerHome. This function is used to pass data from the 
-    PowerHome Plugin Passthru window with the wparam and lparam values in lData1 
-    and lData2. The plugin developer is free to implement this function in 
-    whatever manner he deems appropriate. 
-    <LI><B>PHPI_WebCmd(string sAction, integer iAuth, string sB64Auth, string 
-    sIP, string sParms) return string.</B><BR>This function is a users gateway 
-    into the plugin via the internal PowerHome webserver. This function must 
-    exist even if you don't plan to implement a web interface for your plugin. 
-    If you dont want a web interface, you may return an empty string or 
-    optionally a simple HTML message saying that the plugin does not have a web 
-    interface. This function is activated via the PowerHome webserver with a 
-    /phpi-cgi/ type of URL call. A standard URL would appear similar to: 
-    http://127.0.0.1/phpi-cgi/PLUGIN_ID/command?param1=val1&amp;parm2=val2. When 
-    a call similar to the above is made to the PowerHome webserver, the data 
-    will be passed to the plugin whose ID is PLUGIN_ID using the PHPI_WebCmd 
-    function. The "command" in the URL will be passed in the sAction variable 
-    and the current user authorization will be in the iAuth variable (0 - 
-    Unauthorized, 1 - Guest, 2 - Administrator). You can use the iAuth if you 
-    want to use the same security that the internal PowerHome webserver uses. If 
-    you wish to implement security separate from PowerHome's, then the sB64Auth 
-    will contain the Base64 authorization string that a user has entered. The 
-    sIP contains the IP of the user's machine and the sParms field will contain 
-    the parameters after the "?" mark in the sample URL above. </LI></UL></OL>
-<P>The above functions are the required minimum in order for a plugin to comply 
-with version 1.2 of the PowerHome Generic Plugin SDK. In order for a plugin to 
-be truly useful, it needs to have a mechanism to communicate with PowerHome. 
-Since the language that PowerHome is written in (PowerBuilder) does not support 
-the use of callback functions, an alternative method of communicating with 
-PowerHome had to be devised. This was implemented via the use of Windows 
-messages and a special form of the COPYDATASTRUCT. In order for this method to 
-work, it's useful if the plugin developer also creates an internal function 
-using this method to communicate with PowerHome. The details of this are 
-explained below in the optional ph_formula function.</P>
-<P>To make use of the plugin COPYDATASTRUCT, a standard COPYDATASTRUCT structure 
-must be defined consisting of three 4 byte long values. The first long value 
-contains a value of from 1000 to 1003 inclusive. If a value of 1000 is used, 
-PowerHome will evaluate the accompanying formula using the currently loaded 
-internal LOCAL and TEMP variables and wait for a return. If a value of 1001 is 
-used, PowerHome will evaluate the formula using a newly created copy of LOCAL 
-and TEMP variable values and wait for a return. A value of 1002 is the same as 
-1000 except that PowerHome returns immediately and the formula is queued. A 
-value of 1003 is the same as 1001 and PowerHome returns immediately. The second 
-long contains the length in bytes of the PowerHome formula to be evaluated. The 
-third long contains the address in memory of the PowerHome formula to be 
-evaluated. Once this COPYDATASTRUCT is initialized, it is sent to PowerHome 
-using a standard windows message (remember the PowerHome handle that was passed 
-in the PHPI_Init function). The event to send the COPYDATASTRUCT to is 74, the 
-larpam should contain the PowerHome Index of the plugin (PHPI_Init), and the 
-wparam must contain the address in memory of the COPYDATASTRUCT. PowerHome will 
-then evaluate the formula pointed to by the COPYDATASTRUCT's third long variable 
-and store the result within a COPYDATASTRUCT within PowerHome. The address of 
-this COPYDATASTRUCT containing the formula result (type 1000 and 1001) will be 
-returned from the "sendmsg" api call. You will need to use this returned address 
-to access the COPYDATASTRUCT and parse out the formula return value. A sample 
-ph_formula function in VB syntax is listed below:</P><CODE>Private Function 
-ph_formula(ByRef sFormula As String, ByVal lType As Long) As String<BR>'lType = 
-1000 - Use current PH variable set and wait for return<BR>'lType = 1001 - Create 
-new PH variable set and wait for return<BR>'lType = 1002 - Use current PH 
-variable set and return immediately<BR>'lType = 1003 - Create new PH variable 
-set and return immediately<BR><BR>Dim lRet As Long<BR>Dim lLen As Long<BR>Dim 
-lPtr As Long<BR>Dim sRet As String<BR><BR>cds.dwData = lType<BR>cds.cbData = 
-Len(sFormula)<BR>cds.lpData = sFormula<BR><BR>lRet = SendMessage(hPwrHome, 74, 
-iIndex, cds)<BR><BR>If lRet &lt;&gt; 0 Then<BR>CopyMemAny lLen, lRet + 4, 
-4<BR>CopyMemAny lPtr, lRet + 8, 4<BR>sRet = Space(lLen - 1)<BR>CopyMemStr sRet, 
-lPtr, lLen<BR>End If<BR><BR>ph_formula = sRet<BR>End Function<BR></CODE>
-<P>Plugin developers are free to interact with PowerHome through any of the 
-available PowerHome control methods, but it is recommended to use the provided 
-COPYDATASTRUCT method to evaluate formulas. PowerHome interacts with plugins 
-using the ph_picmd function that is a direct link to the PHPI_Command plugin 
-function. PowerHome also has a new trigger type of "Generic Plugin Trigger" with 
-trigger numbers from 1 to 256 and trigger values from 1 to 256 giving a plugin a 
-total of over 65,000 possible trigger combinations. A new PowerHome formula is 
-provided for plugins to use called ph_pitrigger. It is intended for a plugin to 
-call this PowerHome function whenever the plugin needs to raise a PowerHome 
-trigger. The advantage to using this trigger is that PowerHome will actually 
-convert the single function call into 4 separate trigger calls to include the 
-[Any] options available in the Generic Plugin Trigger. Plugin developers are 
-free to fire any triggers however using the ph_checktrigger function but are 
-encouraged to use the Generic Plugin Trigger for plugin specific processes that 
-do not fit within the current available trigger types.</P>
-<P>Complete details of these processes as well as how to create a working plugin 
-can be seen in the sample PowerHome plugins sourcecode available for download on 
-the PowerHome website.</P>
-
-</BODY>
+            <li><span class="bold">PHPI_Command(long lCMD, long lData1, long
+                lData2, string sData3, string sData4) returns string.</span><br>
+              This function is the gateway into controlling the 
+    plugin from within PowerHome. This is the only function that is exposed to 
+    the user through the PowerHome function ph_picmd. The design is such that 
+    the Plugin developer will use the lCMD parameter to determine the type of 
+    command to be executed with lData1 thru lData4 representing data specific to 
+    the command. It is intended that the plugin developer use a construct such 
+    as a CASE statement to interpret the lCMD parameter and branch to the 
+    appropriate course of action. However, the plugin developer is free to use 
+    these parameters however he sees fit. The return value of this command will 
+    be passed back to the user through the ph_picmd function. 
+            <li><span class="bold">PHPI_SysCommand(long lCMD, long lData1, long
+                lData2, string sData3, string sData4) returns string.</span><br>
+              This function is similar to the PHPI_Command function 
+    but is intended for internal use rather than directly by the user through 
+    PowerHome. This function is used to pass data from the PowerHome Plugin 
+    Passthru window with the wparam and lparam values in lData1 and lData2. The 
+    plugin developer is free to implement this function in whatever manner he 
+    deems appropriate. 
+            <li><span class="bold">PHPI_WebCmd(string sAction, integer iAuth,
+                string sB64Auth, string sIP, string sParms) return string.</span><br>
+                  This function is a users gateway into the
+              plugin via the internal PowerHome webserver. This function must exist
+              even if you don't plan to implement a web interface for your
+              plugin. If you dont want a web interface, you may return an
+              empty string or optionally a simple HTML message saying that the plugin does
+              not have a web
+              interface.ThisfunctionisactivatedviathePowerHomewebserverwitha/phpi-cgi/typeofURLcall.AstandardURLwouldappearsimilarto:http://127.0.0.1/phpi-cgi/PLUGIN_ID/command?param1=val1&amp;parm2=val2.
+              When a call similar to the above is made to the PowerHome
+              webserver, the data will be passed to the plugin whose ID is
+              PLUGIN_ID using the PHPI_WebCmd function. The "command" in the URL
+              will be passed in the sAction variable and the current user
+              authorization will be in the iAuth variable (0 - Unauthorized, 1 -
+              Guest, 2 - Administrator). You can use the iAuth if you want to
+              use the same security that the internal PowerHome webserver uses.
+              If you wish to implement security separate from PowerHome's, then
+              the sB64Auth will contain the Base64 authorization string that a
+              user has entered. The sIP contains the IP of the user's machine
+              and the sParms field will contain the parameters after the "?"
+              mark in the sample URL above. </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+    <div class="indent2 padtop1"> The above functions are the required minimum
+      in order for a plugin to comply with version 1.2 of the PowerHome Generic
+      Plugin SDK. In order for a plugin to be truly useful, it needs to have a
+      mechanism to communicate with PowerHome. Since the language that PowerHome
+      is written in (PowerBuilder) does not support the use of callback
+      functions, an alternative method of communicating with PowerHome had to be
+      devised. This was implemented via the use of Windows messages and a
+      special form of the COPYDATASTRUCT. In order for this method to work, it's
+      useful if the plugin developer also creates an internal function using
+      this method to communicate with PowerHome. The details of this are
+      explained below in the optional ph_formula function.</div>
+    <div class="indent2 padtop1"> To make use of the plugin COPYDATASTRUCT, a
+      standard COPYDATASTRUCT structure must be defined consisting of three 4
+      byte long values. The first long value contains a value of from 1000 to
+      1003 inclusive. If a value of 1000 is used, PowerHome will evaluate the
+      accompanying formula using the currently loaded internal LOCAL and TEMP
+      variables and wait for a return. If a value of 1001 is used, PowerHome
+      will evaluate the formula using a newly created copy of LOCAL and TEMP
+      variable values and wait for a return. A value of 1002 is the same as 1000
+      except that PowerHome returns immediately and the formula is queued. A
+      value of 1003 is the same as 1001 and PowerHome returns immediately. The
+      second long contains the length in bytes of the PowerHome formula to be
+      evaluated. The third long contains the address in memory of the PowerHome
+      formula to be evaluated. Once this COPYDATASTRUCT is initialized, it is
+      sent to PowerHome using a standard windows message (remember the PowerHome
+      handle that was passed in the PHPI_Init function). The event to send the
+      COPYDATASTRUCT to is 74, the larpam should contain the PowerHome Index of
+      the plugin (PHPI_Init), and the wparam must contain the address in memory
+      of the COPYDATASTRUCT. PowerHome will then evaluate the formula pointed to
+      by the COPYDATASTRUCT's third long variable and store the result within a
+      COPYDATASTRUCT within PowerHome. The address of this COPYDATASTRUCT
+      containing the formula result (type 1000 and 1001) will be returned from
+      the "sendmsg" api call. You will need to use this returned address to
+      access the COPYDATASTRUCT and parse out the formula return value. A sample
+      ph_formula function in VB syntax is listed below:</div>
+    <div class="code padtop1 indent4">Private Function ph_formula(ByRef sFormula
+      As String, ByVal lType As Long) As String<br>
+      'lType = 1000 - Use current PH variable set and wait for return<br>
+      'lType = 1001 - Create new PH variable set and wait for return<br>
+      'lType = 1002 - Use current PH variable set and return immediately<br>
+      'lType = 1003 - Create new PH variable set and return immediately<br>
+      <br>
+      Dim lRet As Long<br>
+      Dim lLen As Long<br>
+      Dim lPtr As Long<br>
+      Dim sRet As String<br>
+      <br>
+      cds.dwData = lType<br>
+      cds.cbData = Len(sFormula)<br>
+      cds.lpData = sFormula<br>
+      <br>
+      lRet =
+       
+        SendMessage(hPwrHome, 74, iIndex, cds)<br>
+      <br>
+      If lRet &lt;&gt; 0 Then<br>
+      CopyMemAny lLen, lRet + 4, 4<br>
+      CopyMemAny lPtr, lRet + 8, 4<br>
+      sRet =
+       
+        Space(lLen - 1)<br>
+      CopyMemStr sRet, lPtr, lLen<br>
+      End If<br>
+      <br>
+      ph_formula = sRet End Function</div>
+    <div class="indent2 padtop1"> Plugin developers are free to interact with
+      PowerHome through any of the available PowerHome control methods, but it
+      is recommended to use the provided COPYDATASTRUCT method to evaluate
+      formulas. PowerHome interacts with plugins using the ph_picmd function
+      that is a direct link to the PHPI_Command plugin function. PowerHome also
+      has a new trigger type of "Generic Plugin Trigger" with trigger numbers
+      from 1 to 256 and trigger values from 1 to 256 giving a plugin a total of
+      over 65,000 possible trigger combinations. A new PowerHome formula is
+      provided for plugins to use called ph_pitrigger. It is intended for a
+      plugin to call this PowerHome function whenever the plugin needs to raise
+      a PowerHome trigger. The advantage to using this trigger is that PowerHome
+      will actually convert the single function call into 4 separate trigger
+      calls to include the [Any] options available in the Generic Plugin
+      Trigger. Plugin developers are free to fire any triggers however using the
+      ph_checktrigger function but are encouraged to use the Generic Plugin
+      Trigger for plugin specific processes that do not fit within the current
+      available trigger types.</div>
+    <div class="indent2 padtop1"> Complete details of these processes as well as
+      how to create a working plugin can be seen in the sample PowerHome plugins
+      sourcecode available for download on the PowerHome website.</div>
+  </body>
 </html>

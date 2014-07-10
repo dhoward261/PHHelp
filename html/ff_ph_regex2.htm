@@ -1,0 +1,135 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_regex2</title></head>
+<body>
+<div class=ph1>
+
+ph_regex2 PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Performs a regular expression search against 
+a string of 
+
+data.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_regex2 (&nbsp;pattern, data, start, 
+occur,&nbsp;flags, localstart, 
+
+locallength 
+
+)
+
+</div>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <tr>
+    <td class=ph8>pattern</td>
+    <td class=ph9><span class=ph-datype 
+      >String</span>. A regular expression search 
+  pattern.</td></tr>
+  <tr>
+    <td class=ph8>data</td>
+    <td class=ph9><span class=ph-datype 
+      >String</span>. The string in which to perform the 
+      search.</td></tr>
+  <tr>
+    <td class=ph8>start</td>
+    <td class=ph9><span class=ph-datype 
+      >Long</span>. The position within the data in which to 
+      start the search. Use 1 to start at the beginning.</td></tr>
+  <TR>
+    <TD class=ph8>occur</TD>
+    <TD class=ph9><span class=ph-datype 
+      >Integer</span>. The occurence of the match you'd like 
+      returned.&nbsp;If a file contains multiple matches and this value is 3, 
+      then the 3rd matching occurence will be returned.</TD></TR>
+  <tr>
+    <td class=ph8>flags</td>
+    <td class=ph9><span class=ph-datype 
+      >Integer</span>        
+        . Flags that control how the search is performed. Set 
+      this value to 1 in order to match case. Use 0 for case insensitive 
+    searches.</td></tr>
+  <tr>
+    <td class=ph8>localstart </td>
+    <td class=ph9><span class=ph-datype 
+      >Integer</span>. The index of a local variable in 
+      which to have the start of the found data returned. Use 0 to not have the 
+      start returned.</td></tr>
+  <tr>
+    <td class=ph8>locallength </td>
+    <td class=ph9><span class=ph-datype 
+      >Ingeger</span>. The index of a local variable in 
+      which to have the length of the found data returned. Use 0 to not have the 
+      length returned.</td></tr></table></div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the regular 
+
+expression match.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function is very similar to the 
+ph_regex function except that it uses the&nbsp;regular expression engine 
+contained within&nbsp;the Microsoft VBScript library.&nbsp;The ph_regex function 
+uses the open source Scintilla editor to perform regular expression searches 
+which is more limited in options and capabilities.<BR><BR>The full documentation 
+for this regular expression library is way too much information for this help 
+file. Please reference this site for a very good reference and tutorial for 
+utilizing the Microsoft VBScript regular expression library: <A 
+href="http://www.regular-expressions.info/vb.html">http://www.regular-expressions.info/vb.html</A>
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_regexsnap2("def[\S\s]*mn","abcdefghijklmnopqrstuvwxyz",1,1,0,0,0)<BR>  
+         
+              
+            
+            
+            
+              
+           
+            The above example 
+will return 
+
+"defghijklmn".
+
+</div>
+
+</body>
+</html>

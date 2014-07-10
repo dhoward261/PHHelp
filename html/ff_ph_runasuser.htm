@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_runasuser</title></head>
+<body>
+<div class=ph1>
+
+ph_runasuser PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Executes an application as a specific 
+
+user.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_runasuser ( domain, user, pass, appl, 
+currdir, vis, async, 
+
+wait 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>domain</TD>
+    <TD class=ph9>String. The domain of the userid you're attempting to run 
+      as. Typically you would enter an empty string unless you're trying to 
+      authenticate over a corporate network.</TD></TR>
+  <TR>
+    <TD class=ph8>user</TD>
+    <TD class=ph9>String. The userid to run the program as.</TD></TR>
+  <TR>
+    <TD class=ph8>pass</TD>
+    <TD class=ph9>String. The password for the userid.</TD></TR>
+  <TR>
+    <TD class=ph8>appl</TD>
+    <TD class=ph9>String. The full path and filename of the application to 
+      execute.</TD></TR>
+  <TR>
+    <TD class=ph8>currdir</TD>
+    <TD class=ph9>String. The default directory you wish the application to 
+      start from.</TD></TR>
+  <TR>
+    <TD class=ph8>vis</TD>
+    <TD class=ph9>Integer. Whether the application should be visible or not. 
+      Use 0 for the app to run in the background without a visible window. Use 1 
+      to run the application normally.</TD></TR>
+  <TR>
+    <TD class=ph8>async</TD>
+    <TD class=ph9>Integer. Whether the application runs asynchronously or not. 
+      Use 0 to run the app synchronously and have PowerHome wait until the app 
+      completes or the wait parameter is exceeded. Use 1 to have the app run 
+      asynchronously and return control immediately to PowerHome.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+wait
+
+</td>
+
+<td class=ph9>
+
+Long. The time in milliseconds to wait 
+      for an app that is run synchronously (async parameter is 0) to complete. 
+      If the app is not done within the specified time, the function will 
+      return. Use a negative value in order to 
+
+wait indefinitely.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+       
+          Long. Returns the status of 
+the operation or the exit code from the application. -&nbsp;1 is returned if PowerHome 
+cannot launch the application as the specified user. If the async parameter = 1 
+and the application was successfully launched, then 0 will be returned. If the 
+async parameter = 0 and the application is still running when the wait parameter 
+expires, then 259 will be returned signifying that the application is still 
+running. If the application completes before the wait parameter expires, then 
+the return value will be the exit code returned by 
+
+the application.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function (or the ph_runasuser1 
+function) to execute an application as a specific user. Both the 
+ph_runasuser and ph_runasuser1 functions do the same thing but each uses a 
+different mechanism. Depending upon the system, one function or the other may 
+have better results. The ph_runasuser function uses CreateProcessWithLogon while the ph_runasuser1 function 
+
+uses&nbsp;CreateProcessAsUser .
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_runasuser("","administrator","adminpass","regsvr32.exe 
+phuirt.dll","c:\powerhome",1,0,5000)
+
+</div>
+
+</body>
+</html>

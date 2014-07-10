@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Control Center</title>
+  </head>
+  <body>
+    <div class="ph1"> Control Center </div>
+    <div class="indent2 padtop1">This screen allows you to set the appearance of the
+      internal Control Center window.&nbsp; The internal Control Center can be
+      either windowed or background.&nbsp; You can also select if you want the
+      tab control to be visible or not and if visible, how the tabs will
+      appear.&nbsp; The two settings that may require an explanation are below:</div>
+    <div class="topic indent3 padtop1">Click on Mouse Up</div>
+    <div class="indent4 padtop1">This parameter controls how the Control Center
+      responds when clicking on Control Center buttons with the mouse.&nbsp; If
+      this parameter is checked, then the action associated with the Control
+      Center object will not be added to the execution queue until the mouse
+      actually clicks up.&nbsp; When the mouse clicks up, you MUST be on the
+      Control Center object whose action you want to perform.&nbsp; If this
+      parameter is unchecked, then the action associated with a Control Center
+      object is sent to the execution queue immediately down clicking the mouse.</div>
+    <div class="topic indent3 padtop1">Auto Clear Changes</div>
+    <div class="indent4 padtop1">The Control Center has a table called ccbuttonstemp
+      that is a mirror of the ccbuttons table (where the Control Center object
+      details are stored when editing the Control Center from the PowerHome
+      Explorer).&nbsp; When a Control Center screen is rendered, the values are
+      read from the ccbuttonstemp table rather than the ccbuttons table.&nbsp;
+      Since details of Control Center objects can be dynamically updated via
+      PowerHome functions, the updates are done to the ccbuttonstemp table and
+      not the ccbuttons table.&nbsp; This parameter controls how often the
+      dynamic changes made to the ccbuttonstemp table are discarded (the
+      ccbuttons table is copied to the ccbuttonstemp table).</div>
+  </body>
+</html>

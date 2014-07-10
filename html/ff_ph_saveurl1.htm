@@ -1,89 +1,146 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>ph_saveurl</title>
-</head>
+<title>ph_saveurl1</title></head>
 <body>
 <div class=ph1>
 
-ph_saveurl1 PowerHome formula function
+ph_saveurl1&nbsp;PowerHome formula function
 
 </div>
+
 <div class=ph2>Description</div>
+
 <div class=ph3>
-  Retrieves the specified URL and saves the returned body to a file.  <br>
-  The first three parameters are the same as the 'ph_saveurl' but uses different controls and methods to achieve the same result but with more user control.
+
+Retrieves the specified URL and saves the 
+returned body to a 
+
+file.
+
 </div>
+
 <div class=ph4>Syntax</div>
+
 <div class=ph5>
 
-ph_saveurl1(url,filespec,writemode,type,timeout)</div>
+ph_saveurl1 ( url, file, writemode, type, 
+timeout 
+
+)
+
+</div>
+
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+  <TR>
+    <TD class=ph8>url</TD>
+    <TD class=ph9>String. The URL whose return you'd like 
+      to save. </TD></TR>
+  <TR>
+    <TD class=ph8>file</TD>
+    <TD class=ph9>String. The full path and filename of 
+      the file to save the output to. </TD></TR>
+  <TR>
+    <TD class=ph8>writemode</TD>
+    <TD class=ph9>Integer. How the data will be written to 
+      the file. Use 0 to append the output to the file. Use 1 to replace the 
+      file if it currently exists. </TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. The method by witch the URL 
+      will be retrieved. See usage below. </TD></TR>
 
 <tr>
-<td class=ph8><strong>
-url</strong></td>
-<td class=ph9>
-<span class="ph-datype">String</span> representing URL you wish to retrieve.</td>
-</tr>
 
-<tr>
-<td class=ph8><strong>
-filespec</strong></td>
-<td class=ph9>
-<span class="ph-datype">String</span> representing the full path and filename you wish to save the URL's data to.</td>
-</tr>
+<td class=ph8>
 
-<tr>
-<td class=ph8><strong>
-writemode</strong></td>
-<td class=ph9>
-<span class="ph-datype">Integer</span> representing whether to overwrite the file if it exists or append to it.  A 0 will cause the data to be appended to the existing file.  Any other value will cause the file to be replaced.</td>
-</tr>
+timeout
 
-<tr>
-<td class=ph8><strong>
-type</strong></td>
-<td class=ph9>
-<span class="ph-datype">Integer</span> representing different methods of achieving result.  Type=0 matches ph-saveurl function bit types 1 and 2 use different approaches to attempt to better match user/machine combination.  Try all, if needed, to get success.</td>
-</tr>
+</td>
 
-<tr>
-<td class=ph8><strong>
-timeout</strong></td>
 <td class=ph9>
-<span class="ph-datype">Integer</span> representing timeout in seconds before failure is triggered.  The ph_saveurl is hardcoded to 40 seconds.  If the server is on a local network a much lower timeout can be used.</td>
-</tr>
 
+ Integer. The
+
+ maximum amount of time to wait in 
+      seconds for the save operation to
+
+ complete.
+
+</td>
+
+</tr>
 </table>
 </div>
+
 <div class=ph10>Return value</div>
+
 <div class=ph11>
 
-String.  Returns the http header of the requested URL if the function succeeds.  Otherwise, a message indicating the error is returned.
+String. 
+
+Returns either the HTTP headers from the 
+URL or an 
+
+error message.
 
 </div>
+
 <div class=ph12>Usage</div>
+
 <div class=ph13>
-Use this function to retrieve and save HTML, text, graphic, or binary data from a URL to a file.
+
+Use this function to retrieve the output 
+from a URL and directly save it to a file. This will allow you to retrieve 
+binary data that isnt possible to retrieve using the ph_geturl 
+functions.<BR><BR>See the table below for an explanation of options available to 
+the type parameter:
+
+<div>
+<table width="100%">
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9>Retrieves the URL output using a raw 
+      socket. This would be identical to the method used by the 
+      ph_saveurl function. </TD></TR>
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>    Retrieves the    URL output using 
+      a Catalyst HTTP control using method 1. </TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>        
+               Retrieves the URL output using a Catalyst 
+      HTTP control using method 2. </TD></TR>
+  <TR>
+    <TD class=ph8>3</TD>
+    <TD class=ph9> Retrieves the URL output using a 
+      Catalyst HTTP control using method 3. </TD></TR>
+</table>
+</div>Multiple 
+methods are provided as certain websites, operating systems, etc. may have a 
+problem with one method or the other. Choose the method that produces the most 
+desireable results.
+
+ 
+
 </div>
 
-<div class=ph10>Examples</div>
-<div class=ph11>
-The following examples demonstrate typical syntax/ usage for this function. <br>
-</div>
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
 <div class=ph20>
-  &bull; ph_saveurl1("http://192.168.1.90:1002/image/DrvCam","C:\powerhome\web\CAM1.jpg",1,0,10) <br>
-  &bull; ph_saveurl1("http://image.weather.com/images/maps/current/curwx_600x405.jpg","C:\powerhome\web\WthrImgs\weather13.jpg",1,0,20)
+
+ph_saveurl1("www.power-home.com/images/phwiki.gif","c:\powerhome\phwiki.gif",1,1,5)
+
 </div>
 
 </body>
 </html>
-
-

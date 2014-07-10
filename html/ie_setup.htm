@@ -1,83 +1,82 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>Insteon Explorer - Setup</title>
-</head>
-<body>
-<div class=ph1>
-
-Insteon Explorer - Setup
-
-</div>
-
-<div class=ph2>
-
-<a name="download">Download</a>
-
-</div>
-
-<p>This step is required with a new PLC or anytime the PLC is reset.  It may also be occasionally necessary if the PLC is not acting normally.</p>
-
-<div class=ph2>
-
-<a name="clear">Clear</a>
-
-</div>
-
-<p>Clears all ID's from the PLC internal database.  Usually a good idea to perform this step prior to adding PowerHome Insteon device ID's to PLC.</p>
-
-<div class=ph2>
-
-<a name="addmin">Add Min</a>
-
-</div>
-
-<p>Add's PowerHome Device ID's to the PLC internal database in a minimal format.  This is the default method and will add the minimum amount of information in order for PowerHome to function properly.  If it is desired for the PLC to have fully constructed link information, then use the "Add Full" option instead.</p>
-
-<p>If the PLC is new or has been reset, this is a required step in order for PowerHome to function properly.  Also may be required if Insteon Devices have been manually added to PowerHome.  Usually best to Clear PLC Database prior to executing this function.</p>
-
-<div class=ph2>
-
-<a name="addfull">Add Full</a>
-
-</div>
-
-<p>Add's PowerHome Device ID's to the PLC internal database in full linked format.  Use this method if the PLC will have custom code or be connected to an application that requires the PLC to have fully formed link information.  It is not necessary to use this option if the PLC will be used only with PowerHome.</p>
-
-<p>Use the "Clear" option to clear current PLC device ID's before adding new device ID's.</p>
-
-<div class=ph2>
-
-<a name="links">Links</a>
-
-</div>
-
-<p>Clears stored Insteon Device link information from PowerHome database.  Does NOT affect actual link data stored within Insteon devices.  Useful when you want to have PowerHome rediscover link information from Insteon devices.</p>
-
-<div class=ph2>
-
-<a name="devices">Devices</a>
-
-</div>
-
-<p>Clears stored Insteon Device data from PowerHome database.  Use with caution.  You will either have to manually re-enter or Auto Discover Insteon devices in order for PowerHome to work properly after using this command.</p>
-
-<div class=ph2>
-
-<a name="create">Create</a>
-
-</div>
-
-<p>This option will scan the currently connected PLC for stored Device ID's (Insteon Addresses).  Any ID's not found in the PowerHome Insteon Devices table will be queued for Pinging.  Pinged devices that respond properly will then be automatically added to the PowerHome Insteon Devices table with a default ID in the form of "NEW SPIDER ??" where ?? is a sequential unique number.<br><br>This option is useful for quickly getting Insteon Devices into PowerHome if the PLC has already been configured to recognize them.</p>
-
-<div class=ph2>
-
-<a name="autodiscovery">Auto Discovery</a>
-
-</div>
-
-<p>Places PowerHome and the PLC into Auto Discovery mode.  This will allow you to register Insteon devices within PowerHome without having to manually key in their unique address.  Especially useful if switches are already installed and you don't wish to remove the faceplate to read the address.  Once Auto Discovery is turned on, you must visit every Insteon device and place it in linking mode by pressing the set button for 3 seconds or the On button for 10 seconds.  As soon as the device enters link mode, you will hear the WAV file and/or TTS confirmation if you've enabled those options.  Once link mode has been entered and confirmation received, press the On button briefly to exit link mode.  Make a list of the order in which you visit the switches.  When done, return to PowerHome and turn off Auto Discovery mode.  Your Insteon devices will have been automatically entered into the PowerHome database for you with an ID that begins with "NEW DEVICE XX" where XX will be a number in the order that the devices were discovered (hence the need to make a list).  You will want to rename the ID and Description appropriately.</p>
-
-</body>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Setup</title>
+  </head>
+  <body>
+    <div class="ph1"> Insteon Explorer - Setup </div>
+    <div class="topic indent3 padtop1"> Download</div>
+    <div class="indent4 padtop1">
+      This step is required with a new PLC or anytime the PLC is reset. It may
+      also be occasionally necessary if the PLC is not acting normally.</div>
+    <div class="topic indent3 padtop1">Clear</div>
+    <div class="indent4 padtop1">
+      Clears all ID's from the PLC internal database. Usually a good idea to
+      perform this step prior to adding PowerHome Insteon device ID's to PLC.</div>
+    <div class="topic indent3 padtop1">Add Min</div>
+    <div class="indent4 padtop1">
+      Add's PowerHome Device ID's to the PLC internal database in a minimal
+      format. This is the default method and will add the minimum amount of
+      information in order for PowerHome to function properly. If it is desired
+      for the PLC to have fully constructed link information, then use the "Add
+      Full" option instead.</div>
+    <div class="indent4 padtop1">
+      If the PLC is new or has been reset, this is a required step in order for
+      PowerHome to function properly. Also may be required if Insteon Devices
+      have been manually added to PowerHome. Usually best to Clear PLC Database
+      prior to executing this function.</div>
+    <div class="topic indent3 padtop1">Add Full</div>
+    <div class="indent4 padtop1">
+      Add's PowerHome Device ID's to the PLC internal database in full linked
+      format. Use this method if the PLC will have custom code or be connected
+      to an application that requires the PLC to have fully formed link
+      information. It is not necessary to use this option if the PLC will be
+      used only with PowerHome.</div>
+    <div class="indent4 padtop1">
+      Use the "Clear" option to clear current PLC device ID's before adding new
+      device ID's.</div>
+    <div class="topic indent3 padtop1">Links</div>
+    <div class="indent4 padtop1">
+      Clears stored Insteon Device link information from PowerHome database.
+      Does NOT affect actual link data stored within Insteon devices. Useful
+      when you want to have PowerHome rediscover link information from Insteon
+      devices.</div>
+    <div class="topic indent3 padtop1">Devices</div>
+    <div class="indent4 padtop1">
+      Clears stored Insteon Device data from PowerHome database. Use with
+      caution. You will either have to manually re-enter or Auto Discover
+      Insteon devices in order for PowerHome to work properly after using this
+      command.</div>
+    <div class="topic indent3 padtop1">Create</div>
+    <div class="indent4 padtop1">
+      This option will scan the currently connected PLC for stored Device ID's
+      (Insteon Addresses). Any ID's not found in the PowerHome Insteon Devices
+      table will be queued for Pinging. Pinged devices that respond properly
+      will then be automatically added to the PowerHome Insteon Devices table
+      with a default ID in the form of "NEW SPIDER ??" where ?? is a sequential
+      unique number.</div>
+    <div class="indent4 padtop1">
+      This option is useful for quickly getting Insteon Devices into PowerHome
+      if the PLC has already been configured to recognize them.</div>
+    <div class="topic indent3 padtop1">Auto Discovery</div>
+    <div class="indent4 padtop1">
+      Places PowerHome and the PLC into Auto Discovery mode. This will allow you
+      to register Insteon devices within PowerHome without having to manually
+      key in their unique address. Especially useful if switches are already
+      installed and you don't wish to remove the faceplate to read the address.
+      Once Auto Discovery is turned on, you must visit every Insteon device and
+      place it in linking mode by pressing the set button for 3 seconds or the
+      On button for 10 seconds. As soon as the device enters link mode, you will
+      hear the WAV file and/or TTS confirmation if you've enabled those options.
+      Once link mode has been entered and confirmation received, press the On
+      button briefly to exit link mode. Make a list of the order in which you
+      visit the switches. When done, return to PowerHome and turn off Auto
+      Discovery mode. Your Insteon devices will have been automatically entered
+      into the PowerHome database for you with an ID that begins with "NEW
+      DEVICE XX" where XX will be a number in the order that the devices were
+      discovered (hence the need to make a list). You will want to rename the ID
+      and Description appropriately.</div>
+  </body>
 </html>

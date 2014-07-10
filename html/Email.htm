@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Email</title>
+  </head>
+  <body>
+    <div class="ph1"> Email </div>
+    <div class="indent2 padtop1">This section controls whether or not PowerHome will
+      process control Email with embedded Send Keys, Formulas, or
+      Macros.&nbsp;&nbsp; PowerHome has the ability to retrieve Email at
+      intervals you specify and process any that are intended to control the
+      system. </div>
+    <div class="topic indent3 padtop1"> Enable Control via Email</div>
+    <div class="indent4 padtop1">Check this box to enable this feature.&nbsp; You will
+      still have to program PowerHome to periodically check the email either
+      through the macro command Process Email or the formula function
+      ph_processemail.</div>
+    <div class="topic indent3 padtop1"> Restrict Email Control to Address</div>
+    <div class="indent4 padtop1">If you’ve enabled the Control via Email option, you
+      can restrict processing of control Email to only the addresses that you
+      specify.&nbsp; If you choose this option, enter the Email addresses you
+      will process Email from in the Restricted Email Control Addresses field..</div>
+    <div class="topic indent3 padtop1"> Restricted Email Control
+      Addresses</div>
+    <div class="indent4 padtop1">Enter as many email addresses as you like that you
+      will accept Control Email from.&nbsp; Separate multiple email addresses
+      with a , (comma).</div>
+    <div class="topic indent3 padtop1"> Delete Processed Control Email</div>
+    <div class="indent4 padtop1">Once you’ve processed a Control Email, you can have
+      the system delete it. </div>
+    <div class="topic indent3 padtop1"> MAPI Client Login</div>
+    <div class="indent4 padtop1">If your MAPI client requires a logon then use this
+      field and the password field to enter your credentials.</div>
+    <div class="topic indent3 padtop1"> MAPI Client Password</div>
+    <div class="indent4 padtop1">Enter the password for your default MAPI client if
+      one is required.</div>
+    <div class="topic indent3 padtop1"> End of Message String</div>
+    <div class="indent4 padtop1">When sending control email, you don’t want extra
+      characters within the body of the email to be interpreted as control
+      characters.&nbsp; Many free email accounts or email sent via cellphones
+      add additional text to the email body.&nbsp; Use this field to enter a
+      string of characters that you will add to your control email to signify
+      the end of the control email body.</div>
+    <div class="indent2 padtop1">PowerHome uses MAPI for its Email processing and you
+      must have a MAPI compliant Email client properly setup.&nbsp; Any Email
+      that is not intended for PowerHome will be retrieved but left unaltered in
+      the inbox of your MAPI compliant client. </div>
+  </body>
+</html>

@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_getdigitalstat</title>
 </head>
@@ -23,7 +24,7 @@ ph_getdigitalstat ( id )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -36,6 +37,8 @@ id
 </td>
 <td class=ph9>
 
+String. 
+
 The ID of the digital device to retrieve the status for.
 
 </td>
@@ -45,7 +48,10 @@ The ID of the digital device to retrieve the status for.
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-Integer.  Returns 0 if the device is clear.  Returns 1 if the device is set.
+Integer. Returns 0 if the device is clear. 
+Returns 1 
+
+if  the device is set. If PowerHome cant  retrieve the status -100 will be returned.
 
 </div>
 <div class=ph12>Usage</div>

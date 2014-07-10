@@ -1,0 +1,133 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>Blank</title></head>
+<body>
+<div class=ph1>
+
+ph_formulabtnparm&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Executes a PowerHome saved formula 
+(PowerHome Explorer-&gt;PowerHome-&gt;Formulas) with optional 
+
+parameters.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_formulabtnparm ( vartype, id, local1, 
+local2, local3, local 4, local5 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>vartype</TD>
+    <TD class=ph9>Integer. Determines whether the current set of variables 
+      will be updated during the formula evaluation or current variable values 
+      will be preserved. Use 0 to update the current set of variables.&nbsp; Use 
+      any other number to preserve the current values.</TD></TR>
+  <TR>
+    <TD class=ph8>id</TD>
+    <TD class=ph9>String. The ID of the Formula that you'd like to have 
+      evaluated.</TD></TR>
+  <TR>
+    <TD class=ph8>local1</TD>
+    <TD class=ph9>Any. This value will become the new LOCAL1 value.</TD></TR>
+  <TR>
+    <TD class=ph8>local2</TD>
+    <TD class=ph9>Any. This value will become the new LOCAL2 value.</TD></TR>
+  <TR>
+    <TD class=ph8>local3</TD>
+    <TD class=ph9>Any. This value will become the new LOCAL3 value.</TD></TR>
+  <TR>
+    <TD class=ph8>local4</TD>
+    <TD class=ph9>Any. This value will become the new LOCAL4 value.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+local5
+
+</td>
+
+<td class=ph9>
+
+Any. This value will become the new 
+      
+
+LOCAL5 value.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns the result of the 
+
+formula evaluation.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+You can use this function similar to 
+calling a macro 
+
+with parameters.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ 
+           
+            
+             
+              
+               
+              
+             ph_formulabtnparm(1,"SENDEMAIL","youraddress@email.com","Subject","Message 
+
+body",0,0)
+
+</div>
+<div class=ph19>The above example will execute the 
+SENDEMAIL formula that was previously created in the PowerHome Explorer.&nbsp; 
+It will set the LOCAL1 thru LOCAL5 variables with LOCAL1 being the address to 
+send email to, LOCAL2 being the subject of the email, and LOCAL3 being the body 
+of the email.&nbsp; LOCAL4 and LOCAL5 are not needed by the formula so their 
+values are default set to 0.&nbsp; The first parameter (vartype) of 1 will cause 
+the current variable set to be preserved with no changes occuring to any variables as a result of running the function.</div>
+
+</body>
+</html>

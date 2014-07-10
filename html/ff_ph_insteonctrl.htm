@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_insteonctrl</title>
 </head>
@@ -12,61 +13,32 @@ ph_insteonctrl PowerHome formula function
 
 <div class=ph2>Description</div>
 <div class=ph3>
-Sets the operating parameters for the Insteon SDM controller.
+ Sets the operating parameters for the Insteon controller.
 </div>
 
 <div class=ph4>Syntax</div>
 <div class=ph5>
-ph_insteonctrl ( pollinterval, statusscan, lrxscan, lrxwrite, linkscan, maxfailures,  plcgroupcu, ackupdate, linkspider)
+     ph_insteonctrl ( ctlrid,  parm, data )
 </div>
 
 <div>
-<table width=100%>
+<table width="100%">
 <tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
 
 <tr>
-  <td class=ph8>pollinterval</td> 
-  <td class=ph9><span class="ph-datype">integer</span>.  Poll Interval in seconds. </td>
+  <td class=ph8>ctlrid</td> 
+  <td class=ph9><span class="ph-datype">String</span>. The ID  of the Insteon controller. </td>
 </tr>
 
 <tr>
-  <td class=ph8>statusscan</td> 
-  <td class=ph9><span class="ph-datype">integer</span>. Status scan disable/enable. </td>
+  <td class=ph8>parm</td> 
+  <td class=ph9><span class="ph-datype">String</span>. The specific parameter you would like 
+      to change. See usage below for valid values. </td>
 </tr>
 
 <tr>
-  <td class=ph8>lrxscan</td> 
-  <td class=ph9><span class="ph-datype">integer</span>.  Level/RampRate/X10 scan disable/enable.</td>
-</tr>
-
-<tr>
-  <td class=ph8>lrxwrite</td> 
-  <td class=ph9><span class="ph-datype">integer</span>.  Level/RampRate/X10 write disable/enable.</td>
-</tr>
-
-<tr>
-  <td class=ph8>linkscan</td> 
-  <td class=ph9><span class="ph-datype">integer</span>.  Link can disable/enable.</td>
-</tr>
-
-<tr>
-  <td class=ph8>maxfailures</td> 
-  <td class=ph9><span class="ph-datype">integer</span>. Max number of COMM failures before device flagged as failed. </td>
-</tr>
-
-<tr>
-  <td class=ph8>plcgroupcu</td> 
-  <td class=ph9><span class="ph-datype">integer</span>.  PLC Group Cleanup Message disable/enable.</td>
-</tr>
-
-<tr>
-  <td class=ph8>ackupdate</td> 
-  <td class=ph9><span class="ph-datype">integer</span>.  Update on ACK's disable/enable.</td>
-</tr>
-
-<tr>
-  <td class=ph8>linkspider</td> 
-  <td class=ph9><span class="ph-datype">integer</span>.  Link Spidering  disable/enable.</td>
+  <td class=ph8>data</td> 
+  <td class=ph9><span class="ph-datype">Double</span>. The value to be set  to the parameter.</td>
 </tr>
 </table>
 </div>
@@ -78,7 +50,7 @@ Integer. Returns 0 if successful.  Returns - 1 if the controller ID cannot be fo
 
 <div class=ph12>Usage</div>
 <div class=ph13>
-Use this function to on-the-fly programmatically change the operating parameters of the specified Insteon SDM controller.  Parameters must  be a string (enclosed by single or double quotes).  Valid parameters are:<br><br>
+ Use this function to on-the-fly programmatically change the operating parameters of the specified Insteon controller.  Parameters must  be a string (enclosed by single or double quotes).  Valid parameters are:<br><br>
 <b>pollinterval</b> - Poll Interval.  Data should contain the poll interval in seconds.<br>
 <b>statusscan</b> - Status Scan.  Data should be 0 to disable status scan and 1 to enable.<br>
 <b>lrxscan</b> - Level / Ramprate / X10 Scan.  Data should be 0 to disable and 1 to enable.<br>
@@ -87,7 +59,8 @@ Use this function to on-the-fly programmatically change the operating parameters
 <b>maxfailures</b> - Max Failures.  Data should be an integer representing the maximum number of COMM failures before a device is flagged as failed.<br>
 <b>plcgroupcu</b> - PLC Group Cleanup messages.  Data should be 0 to disable and 1 to enable.<br>
 <b>ackupdate</b> - Update on ACK's.  Data should be 0 to disable and 1 to enable.<br>
-<b>linkspider</b> - Allow Link Spidering.  Data should be 0 to disable and 1 to enable.<br>
+<b>linkspider</b> - Allow Link Spidering.  Data should be 0 to disable and 1 to enable.<br><STRONG>echofile</STRONG> - 
+Echo Raw Log to File. Data should be 0 to disable and 1 to enable.
 </div>
 
 <div class=ph10>
@@ -97,7 +70,8 @@ Examples
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-&bull;&nbsp;ph_insteonctrl(10, 1, 1, 1, 0, 5,  0, 0, 0)
+•&nbsp;ph_insteonctrl("PLM","echofile",1) 
+<BR>The above example will enable the Echo Raw Log to File option for the Insteon controller  identifed by PLM.
 </div>
 
 </body>

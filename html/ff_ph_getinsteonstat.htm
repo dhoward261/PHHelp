@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_getinsteonstat</title>
 </head>
@@ -19,11 +20,11 @@ Retrieves the current status of the specifed Insteon Device ID.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_getinsteonstat ( s )
+ ph_getinsteonstat (&nbsp;id )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -31,12 +32,12 @@ ph_getinsteonstat ( s )
 <tr>
 <td class=ph8>
 
-s
+id&nbsp;
 
 </td>
 <td class=ph9>
 
-A string representing the Insteon Device ID from which you wish to retrieve the status.
+  String. The Insteon Device ID from which you wish to retrieve the status.
 
 </td>
 </tr>
@@ -45,7 +46,12 @@ A string representing the Insteon Device ID from which you wish to retrieve the 
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-Integer.  Returns the status associated with the specified Insteon Device ID that PowerHome currently has stored.  Valid values are 0 for Unknown, 1 for Off, and 2 for On.
+Integer. Returns the status associated with 
+the specified Insteon Device ID that PowerHome currently has stored. Valid 
+values are 0 for Unknown, 1 for Off, and 2 for On. If the ID does not exist, 
+then -1 is returned.</div>
+
+                              
 
 </body>
 </html>

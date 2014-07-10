@@ -1,0 +1,126 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>h2s</title></head>
+<body>
+<div class=ph1>
+
+h2s PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Converts a string of 
+
+hexadecimal ASCII characters back to their ASCII 
+
+representation
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+h2s(&nbsp;input, file, 
+
+type&nbsp;)&nbsp;
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>input</TD>
+    <TD class=ph9>String.&nbsp; The hexadecimal string.</TD></TR>
+  <TR>
+    <TD class=ph8>file</TD>
+    <TD class=ph9>String.&nbsp; The path and filename to writed the decoded 
+      hexadecimal string into (Useful for hex strings that are binary in 
+    nature).</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+type
+
+</td>
+
+<td class=ph9>
+
+Integer.&nbsp; The Type of 
+
+output to be returned by 
+      the function.&nbsp; See 
+
+Usage below.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String.&nbsp; Returns the decoded 
+hexadecimal string or a status message if the 
+
+decoded string is written to 
+a file.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+ The following type values are  valid:<br><ul>
+<li>1 - Return the decoded hexadecimal string from the function
+<li>2 - Save the decoded hexadecimal string in the file 
+  specified in the second parameter. The file will be appended to and the encoding will be  what currently exists in the file.
+<li>3 - Save the decoded string in the specified file. This operation will overwrite the file if it already exists  and will save with ANSI encoding.
+<li>4 - Save the decoded string in the specified file.&nbsp;This operation will overwrite the file if it already  exists and will save with&nbsp;UTF8 encoding.
+<li>5 - Save the decoded string in the specified file.&nbsp;This operation will overwrite the file if it already exists  and will save with UTF16LE encoding.
+<li>6&nbsp;- Save the decoded string in the specified 
+  file.&nbsp;This operation will overwrite the file if it already exists and 
+  will save with UTF16BE encoding. 
+                          
+<li>         
+   Any other value will return the decoded hexadecimal string with ANSI 
+encoding.</li>
+</ul>
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+h2s("5400650073007400","",1) This call will 
+return the string 
+
+"Test".<BR>h2s("5400650073007400","c:\output.txt",4) This call will 
+create the file c:\output.txt with UTF8 encoding and write the string "Test" to 
+it.&nbsp; The function will return "*SUCCESS" if succesful and will return "*ERROR" 
+if it 
+
+fails.
+
+</div>
+
+</body>
+</html>

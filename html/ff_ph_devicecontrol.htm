@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_devicecontrol</title>
 </head>
@@ -19,11 +20,11 @@ Allows the user to pass a standard Device Control String and have it performed.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_devicecontrol ( String. )
+ ph_devicecontrol (&nbsp;as_control&nbsp;)
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -31,10 +32,12 @@ ph_devicecontrol ( String. )
 <tr>
 <td class=ph8>
 
-String.
+as_control
 
 </td>
 <td class=ph9>
+
+String. 
 
 A valid Device Control String.
 
@@ -51,8 +54,20 @@ Integer.  Returns the result of the Device Control Evaluation.
 <div class=ph12>Usage</div>
 <div class=ph13>
 
-See the Device Control Strings produced by the Device Control String builder for examples on valid strings.
+See the Device Control Strings produced by 
+the Device Control String builder for examples on valid strings. You also have 
 
+the option of performing multiple device control action but separating the Device Control strings with a '|'
+
+</div>
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical 
+syntax/usage for this function.</div>
+<div class=ph20>ph_devicecontrol("INSTEON+KITCHENFANLIGHT+ON") 
+</div>
+<div class=ph19>The next example demontrates multiple Device Control strings (3) 
+to be executed sequentially.</div>
+<div class=ph20>ph_devicecontrol("INSTEON+KITCHENFANLIGHT+ON|INSTEON+FRONTCOACH+ON|X10+HTPC+OFF") 
 </div>
 </body>
 </html>

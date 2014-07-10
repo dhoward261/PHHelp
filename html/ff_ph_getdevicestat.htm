@@ -1,0 +1,201 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getdevicestat</title></head>
+<body>
+<div class=ph1>
+
+ph_getdevicestat&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function retrieves an internally stored 
+device status for the specified device. It does not cause PowerHome to query the 
+device for its current 
+
+status.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+    
+ph_getdevicestat ( type, id, data, 
+
+flags)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. The device type whose status you're trying to 
+      retrieve.&nbsp; See Usage below.</TD></TR>
+  <TR>
+    <TD class=ph8>id</TD>
+    <TD class=ph9>String. The ID of the device you're 
+      retrieving the status of. </TD></TR>
+  <TR>
+    <TD class=ph8>data</TD>
+    <TD class=ph9>Integer. The specific piece of data you'd 
+      like to retrieve.&nbsp; See Usage below. </TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+flags
+
+</td>
+
+<td class=ph9>
+
+ Integer. This parm is currently unused 
+      and is reserved for future enhancements.&nbsp; Use a 0 until this parm is 
+ 
+
+ implemented.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Return Info
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to retrieve values 
+concerning a device that is internally tracked by PowerHome.<BR>The type argument must be a number from 0 to 6.&nbsp; 
+The meaning if each is detailed below:
+<div>
+<table width="100%">
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9> X10</TD></TR>
+  <TR>
+    <TD class=ph8>1</TD><TD class = ph9>Digital 
+    Input/Output </TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>       
+           Analog </TD></TR>
+  <TR>
+    <TD class=ph8>3</TD>
+    <TD class=ph9>       
+            Insteon</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>       
+         Insteon group</TD></TR>
+  <TR>
+    <TD class=ph8>5</TD>
+    <TD class=ph9>       
+                    
+      UPB</TD></TR>
+  <TR>
+    <TD class=ph8>6</TD>
+    <TD class=ph9>     
+         UPB link</TD></TR>
+</table>
+</div><BR>The data argument is a string that 
+must be chosen from the list below:
+
+<div>
+<table width="100%">
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9>Returns the stat_msg column which is 
+      the status message for the device as displayed on 
+      the Device Status screen</TD></TR>
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Returns the value1 from the view.&nbsp; 
+      This will typically be the status of the device with 0 = unknown, 1 = off, 
+      2 =     on (in 
+      the case of X10). </TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>  Returns the value2.&nbsp;This will typically 
+      be the level for a device </TD></TR>
+  <TR>
+    <TD class=ph8>3</TD>
+    <TD class=ph9>Returns the value3. This will be string 
+      representation of value1 (status) of the device</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Returns the lastchange column which is the datetime for when the status 
+      was last updated by PowerHome</TD></TR>
+  <TR>
+    <TD class=ph8>5</TD>
+    <TD class=ph9>Returns the stat_textcolor column. This 
+      is the numeric color value for the 
+      text of the status (this will match what is displayed on the Device Status 
+      screen)</TD></TR>
+  <TR>
+    <TD class=ph8>6</TD>
+    <TD class=ph9>Returns the stat_backcolor column. This 
+      is the numeric background color 
+      value for the status field</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+7
+
+</td>
+
+<td class=ph9>
+
+ Returns the stat_graphic column.&nbsp; 
+      This
+
+ is the path and filename for the 
+      status graphic that is being
+
+ displayed..
+
+</td>
+
+</tr>
+</table>
+</div>   
+</div>
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_getdevicestat(3,"KITCHEN",0,0)<BR>This 
+example will return the status message for&nbsp;KITCHEN which is an Insteon 
+device.&nbsp; The value returned during testing was 
+
+"On"
+
+</div>
+
+</body>
+</html>

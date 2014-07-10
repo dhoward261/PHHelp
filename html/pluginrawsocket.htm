@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Raw Socket</title>
+  </head>
+  <body>
+    <div class="ph1">Plugin: Raw Socket</div>
+    <div class="indent2 padtop1"><STRONG>Launch Data (ActiveX 
+Classname):</STRONG>    PH_Socket.phsocket</div>
+    <div class="indent2 padtop1"><STRONG>Initialization Data:</STRONG>  The IP address to connect to, a
+      space, the port to connect to. Can also be left blank to connect manually
+      after launch</div>
+    <div class="indent2 padtop1">This plugin provides raw socket 
+connectivity for PowerHome. If an IP and port is supplied in the Init Data, then 
+a connection will be established when the plugin is loaded. Otherwise, you can 
+initiate a connection manually using the ph_picmd function. This plugin supports 
+several commands via the ph_picmd function. Command 1 will cause the plugin to 
+send the data in the data3 parameter over the socket if a connection is 
+established. Command 2 will establish a connection manually to the IP in the 
+data3 parameter and the port in the data1 parameter (you must not be currently 
+connected). Command 3 will disconnect the socket if it's currently connected. 
+Command 4 will return the status of the current connection (0 =     
+               
+             
+           
+             
+              
+             
+              
+           
+         connected, 1 =      
+                   
+                
+               
+                
+                   
+                
+                   
+                
+                 
+               not connected). Command 5
+      returns the current remote IP of the socket. Command 6 returns the remote
+      port of the socket.</div>
+    <div class="indent2 padtop1">The plugin will also fire generic plugin triggers. The
+      trigger for command 1, option 1 will be fired when data is received on the
+      socket. The trigger for command 1, option 2 will be fired when the socket
+      establishes a connection. The trigger for command 1, option 3 will be
+      fired when the socket disconnects. </div>
+  </body>
+</html>

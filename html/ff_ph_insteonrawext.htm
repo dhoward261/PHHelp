@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_insteonrawext</title></head>
+<body>
+<div class=ph1>
+
+ph_insteonrawext&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function allows the sending of raw 
+Insteon extended 
+
+commands.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_insteonrawext ( ctlr, address, flags, 
+cmd1, cmd2, data 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>ctlr</TD>
+    <TD class=ph9>String. The controller ID for the 
+      Insteon controller.</TD></TR>
+  <TR>
+    <TD class=ph8>address</TD>
+    <TD class=ph9>String. The address of the device to 
+      send commands to.</TD></TR>
+  <TR>
+    <TD class=ph8>flags</TD>
+    <TD class=ph9>Integer. The Insteon flags to 
+  send.</TD></TR>
+  <TR>
+    <TD class=ph8>cmd1</TD>
+    <TD class=ph9>Integer. The Insteon CMD1 value.</TD></TR>
+  <TR>
+    <TD class=ph8>cmd2</TD>
+    <TD class=ph9>Integer. The Insteon CMD2 value.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+data
+
+</td>
+
+<td class=ph9>
+
+String. The extended Insteon data to 
+      send. This should be in hexadecimal format with a single space between 
+      each byte (two hex characters).&nbsp; Insteon extended data is 14 bytes of 
+      data.&nbsp; If you leave this field blank or have less than 14 bytes of 
+      data then this function will pad the extended data with 00 byte 
+      characters. If the 14th byte contains 00, then PowerHome will 
+      automatically calculate the I2CS checksum and apply it to the 
+
+extended data.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. A value indicating the success of 
+failure of 
+
+the operation.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to send extended commands 
+to an Insteon address (the device/address does not need to exist as an Insteon 
+device in the PowerHome database).
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_insteonrawext("PLM","34.AB.7C",h2d("1F"),h2d("2E"),0,"03 
+00")<BR>The above example sends an extended request to an Insteon keypadlic to 
+retrieve its extended 
+
+settings.
+
+</div>
+
+</body>
+</html>

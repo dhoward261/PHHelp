@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getdeviceval</title></head>
+<body>
+<div class=ph1>
+
+ph_getdeviceval&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Returns data associated with specific 
+columns for a particular 
+
+device.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_getdeviceval ( type, id, 
+
+parm)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. A numeric value equating to the type of device 
+      whose values are being retrieved.&nbsp;See usage below.</TD></TR>
+  <TR>
+    <TD class=ph8>id</TD>
+    <TD class=ph9>String. The ID for the device you're retrieving.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+parm
+
+</td>
+
+<td class=ph9>
+
+String. The particular parameter you're 
+      retrieving the value of. See 
+
+usage below.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Double. Returns the numeric value from the 
+column specified in the parm parameter. - 1.0 is returned for invalid types. 
+-2.0 is returned if there is an error retrieving the data from the database. 
+-3.0 is returned if the parm parameter is invalid. -4.0 is returned if 
+
+the type parameter is one that is 
+currently 
+
+reserved (0,2,4,6,21)
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to retrieve specific 
+values for a device directly from the PowerHome database without having to write 
+SQL statements.<BR>The type parameter specifies the device type and is a numeric 
+value as defined below:
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9>Reserved for X10 device types.&nbsp; Not yet 
+  implemented.</TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>Reserved for Digital Input/Output types.&nbsp; Not yet 
+      implemented.</TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Reserved for Analog device types.&nbsp; Not yet 
+    implemented.</TD></TR>
+  <TR>
+    <TD class=ph8>5</TD>
+    <TD class=ph9>Insteon device type</TD></TR>
+  <TR>
+    <TD class=ph8>6</TD>
+    <TD class=ph9>Reserved for Insteon Groups.&nbsp; Not yet 
+implemented.</TD></TR>
+  <TR>
+    <TD class=ph8>20</TD>
+    <TD class=ph9>UPB device type</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+21
+
+</td>
+
+<td class=ph9>
+
+Reserved for UPB links.&nbsp; Not 
+
+yet implemented.
+
+</td>
+
+</tr>
+</table>
+</div><BR>The parm parameter is a string 
+representing the database column you'd like returned. <BR><BR>      
+       Below are the allowed 
+values for Insteon (type 5) device 
+types:<BR>commcnt<BR>ackcnt<BR>nakcnt<BR>timeoutcnt<BR>ttacnt<BR>xcommcnt<BR>xackcnt<BR>xnakcnt<BR>xtimeoutcnt<BR>xttacnt<BR>failedmatch<BR>xfailedmatch<BR>iengine<BR>usexaldb<BR>firmware<BR>
+
+ activeflag<BR><BR>Below 
+are the allowed values for UPB (type 20) device 
+types:<BR>commcnt<BR>ackcnt<BR>nakcnt<BR>avgss<BR>
+
+ firmware
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_getdeviceval(5,"KITCHEN","commcnt")<BR>The above example 
+will return the total commcnt for Insteon device 
+
+KITCHEN.
+
+</div>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_insteongroupcu</title>
 </head>
@@ -19,7 +20,7 @@ ph_insteongroupcu ( id, deviceid, cmd1 )
 </div>
 
 <div>
-<table width=100%>
+<table width="100%">
 <tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
 
 <tr><td class=ph8>id</td> <td class=ph9><span class="ph-datype">String</span>.  The ID of the PLC Insteon Group.</td>
@@ -42,11 +43,17 @@ Integer. Returns a 0 if successful. -1 is returned if the controller is not avai
 <div class=ph13>
   Use this funciton to send Insteon group cleanup commands to a device within a PLC group. This function differs from the ph_insteongroup command by sending group cleanup commands (direct commands to a specific device) rather than group broadcast commands (commands to all members of a group) like the ph_insteongroup function.  Using this function in association with Insteon Explorer&gt;PLC/PLM Groups you can achieve a very fine degree of control over your Insteon devices by creating  groups with specific on levels and ramprates amongst all your devices, even if you never intend to send a group command (so that all devices respond together). and then just control one, or more, specific devices. <br>
     <br>
-  Using the groupcu commands with individual devices, you can achieve, for instance, a variable ramprate for only that specific device. This method is also used to control the light status on individual KPL keypad buttons. For instance, to turn on the a KPL's button 3 light where that button has been assigned group number 103 in the Insteon Explorer PLC/PLM Groups tab, the following could be used: <strong>ph_insteongroupcu(&quot;BUT3&quot;,&quot;DOOR_OPEN&quot;,ifaston)</strong><br><br>
+  Using the groupcu commands with individual devices, you can achieve, for instance, a variable ramprate for only that specific device. This method is also used to control the light status on individual KPL keypad buttons. For instance, to turn on the a KPL's button 3 light where that button has been assigned group number 103 in the Insteon Explorer PLC/PLM Groups tab, the following could be used: <strong>ph_insteongroupcu("BUT3","DOOR_OPEN",ifaston)</strong><br><br>
 
-    See also  &quot;.FAQs-KPL Linking.Button.Ctrl Groups&quot; for additional  help information. <br> 
+    See also  ".FAQs-KPL Linking.Button.Ctrl Groups" for additional  help information. <br> 
     <br>
-    Valid commands are 17 for on, 18 for fast on, 19 for off, 20 for fast off, 21 to brighten, and 22 to dim. You can also use the enumerated values: ion, ifaston, ioff, ifastoff, ibright, idim. Set cmd2 to 0 for all cmd1 values. Using a cmd1 value of 17 will cause the group to turn on to their individual group values using their individual ramprates. An 18 command (ifaston) causes all devices in the group to go full on ignoring the ramprate.  </p>
+    Valid commands are 17 for on, 18 
+for fast on, 19 for off, 20 for fast off, 21 to brighten, and 22 to dim. You can 
+also use the enumerated values: ion, ifaston, ioff, ifastoff, ibright, idim. Set 
+cmd2 to 0 for all cmd1 values. Using a cmd1 value of 17 will cause the group to 
+turn on to their individual group values using their individual ramprates. An 18 
+command (ifaston) causes all devices in the group to go full on ignoring the 
+ramprate. 
 </div>
 
 <div class=ph10>
@@ -56,7 +63,7 @@ Examples
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-&bull;&nbsp;ph_insteongroupcu("KPL-B6","DWN SCONCE KPL",18)
+ph_insteongroupcu("KPL-B6","DWN SCONCE KPL",18)
 </div>
 
 </body>

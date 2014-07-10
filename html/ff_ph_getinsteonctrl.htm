@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_getinsteonctrl</title>
 </head>
@@ -23,7 +24,7 @@ ph_getinsteonctrl ( id, parm )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -57,7 +58,7 @@ String.  The parameter you wish to set.
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-Integer. Returns the value of the parameter if successful.  Returns - 1 if the controller ID cannot be found, returns - 100 if the parameter is not valid.
+Integer. Returns the value of the parameter if successful.  Returns - 1 if the controller ID cannot be found, returns - 100 if the parm parameter&nbsp;is not valid.
 
 </div>
 <div class=ph12>Usage</div>
@@ -72,7 +73,10 @@ Use this function to retrieve the current operating parameters of the specified 
 <b>maxfailures</b> - Max Failures.  Returned value is the maximum number of failures allowed before a device is flagged as failed.<br>
 <b>plcgroupcu</b> - PLC Group Cleanup messages.  Returned value is 0 for disabled and 1 for enabled.<br>
 <b>ackupdate</b> - Update on ACK's.  Returned value is 0 for disabled and 1 for enabled.<br>
-<b>linkspider</b> - Allow Link Spidering.  Returned value is 0 for disabled and 1 for enabled.<br>
+<b>linkspider</b> - Allow Link Spidering.  Returned value is 0 for disabled and 1 for enabled.<br><STRONG>echofile</STRONG> - Echo raw log to File. Returned value is 
+0 for disabled and 1 for enabled.<BR>  
+            
+
 
 </div>
 </body>

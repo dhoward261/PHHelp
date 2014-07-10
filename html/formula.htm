@@ -1,18 +1,54 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>Formulas</title>
-</head>
-<body>
-<div class=ph1>
-
-Formulas
-
-</div>
-
-<p>Formulas are where most of your automation power is derived.  Formulas are used within macros on several functions, within triggers, within PSP (PowerHome Server Pages) and all Send Keys are a formula whose result is sent to the Send Keys interpreter.  Formulas can return text, numeric, and date/time values.  Before a formula is evaluated, variable substitution is performed upon it.  Once variable substitution is complete, the formula is passed to the formula evaluator.  The results of the formula are then passed back.  Formulas themselves can contain a number of functions.  You can find a list of these formula functions under Formulas -> Functions.</p>
-
-</body>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Formulas</title>
+  </head>
+  <body>
+    <div class="ph1"> Formulas </div>
+    <div class="indent2 padtop1">Formulas are where most of your automation
+      power is derived. Formulas are used within macros on several functions,
+      within triggers, within PSP (PowerHome Server Pages) and all Send Keys are
+      a formula whose result is sent to the Send Keys interpreter. Formulas can
+      return text, numeric, and date/time values. Before a formula is evaluated,
+      variable substitution is performed upon it. Once variable substitution is
+      complete, the formula is passed to the formula evaluator. The results of
+      the formula are then passed back. Formulas themselves can contain a number
+      of functions.</div>
+    <div class="indent2 padtop1">The key thing to remember with formulas is that
+      it's basically a math equation.&nbsp; You can add, subtract, multiply, and
+      divide numerics ( + - / * ).&nbsp; You can also add strings.&nbsp;
+      Functions can return either numeric, string, date, time, or datetime
+      values.&nbsp; You can use parenthesis to force a particular order of
+      evaluation.&nbsp; Strings can be delimited by either single quotes or
+      doubles quotes.&nbsp; If you need an embedded double quote, delimit your
+      string with single quotes, etc.&nbsp; Within a formula, all operands must
+      be of the same type.&nbsp; The simplest formula would be just the number
+      one like this:</div>
+    <div class="indent3 padtop1 code">1</div>
+    <div class="indent2 padtop1">From there, you can have 1 + 1.&nbsp; Another
+      formula is just a simple string.&nbsp; You can have:&nbsp; </div>
+    <div class="indent3 padtop1 code">"Test"&nbsp; </div>
+    <div class="indent2 padtop1">and then add another string:&nbsp; </div>
+    <div class="indent3 padtop1 code">"This is" + char(32) + "a test"</div>
+    <div class="indent2 padtop1">The char() function returns a string so were
+      adding 3 string operands.</div>
+    <div class="indent2 padtop1">A formula can also evaluate to a boolean
+      (true/false) value so this is also a valid formula:</div>
+    <div class="indent3 padtop1 code">2 &lt; 3</div>
+    <div class="indent2 padtop1"> This&nbsp;will evaluate to true.&nbsp; One thing
+      you cant do is assignment (like you can in most programming
+      languages).&nbsp; You must use either a function or a macro command to
+      perform an assignment.&nbsp; If you have a global variable with an ID of
+      TEST, you can cant do this:</div>
+    <div class="indent3 padtop1 code">TEST = "This is" + char(32) + "a test"</div>
+    <div class="indent2 padtop1">To do the assignment, you would have to do
+      this:</div>
+    <div class="indent3 padtop1 code">ph_setglobal_s("TEST","This is" + char(32)
+      + "a test")</div>
+    <div class="indent2 padtop1">Last, all of the standard comparison operators
+      are valid: &lt; &gt; &lt;= &gt;= &lt;&gt;, etc.<br>
+    </div>
+  </body>
 </html>
-

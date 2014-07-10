@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>UDP Listener</title>
+  </head>
+  <body>
+    <div class="ph1">Plugin: UDP Listener </div>
+    <div class="indent2 padtop1"><STRONG>Launch Data (ActiveX 
+Classname):</STRONG>    PH_UDPListener.phudp</div>
+    <div class="indent2 padtop1"><STRONG>Initialization Data:</STRONG>  The UDP port to listen on</div>
+    <div class="indent2 padtop1">
+      This plugin listens for UDP broadcasts on the specified port. There are no
+      commands accessible using the ph_picmd function. UDP broadcasts received
+      on the specified port will cause the plugin to fire a generic plugin
+      trigger on command 1, option 1. Data available in the [TEMP] variables
+      will be the port the UDP was received on, the UDP message, and the IP
+      address of the device originating the UDP message. If you need to listen
+      for UDP broadcasts on multiple ports, create a plugin entry for each port.</div>
+  </body>
+</html>

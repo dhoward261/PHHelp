@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Web</title>
+  </head>
+  <body>
+    <div class="ph1"> Web </div>
+    <div class="indent2 padtop1">PowerHome includes an internal web server allowing for
+      remote web based control and monitoring of your system.&nbsp; You can use
+      the system generated web pages which provide most of the support you would
+      ever need and/or you can create your own dynamic content using PSP
+      (PowerHome Server Pages).&nbsp; With this formula language, you can
+      totally customize the web interface that you are presented with for
+      PowerHome control.</div>
+    <div class="topic indent3 padtop1">Enable Web Server</div>
+    <div class="indent4 padtop1">Check this box if you want to make the internal web
+      server available. </div>
+    <div class="topic indent3 padtop1">Allow Guest on Internal Pages</div>
+    <div class="indent4 padtop1">If the web server is enabled, you may also choose
+      whether to allow the guest login to access the internal web pages.&nbsp;
+      The guest account is userid guest with a password of guest.&nbsp; The
+      guest account cannot make changes to your system with the internal web
+      pages and is limited in what it can see.&nbsp; You may still have
+      sensitive information contained within certain areas of your setup that
+      you don’t want the guest account to see.&nbsp; Unless you have a good
+      reason, you should leave the guest account disabled. </div>
+    <div class="topic indent3 padtop1">Web Server Directory</div>
+    <div class="indent4 padtop1">The web server directory should be set to where
+      PowerHome installed its web files.&nbsp; This directory should be default
+      located in C:\Program Files\PowerHome\Web.&nbsp; If you are creating
+      custom HTML or PSP pages to be served up by the internal web server, you
+      should place them in this directory or a subdirectory of it. </div>
+    <div class="topic indent3 padtop1">Web Server Port</div>
+    <div class="indent4 padtop1">Set the web server port to the port that you would
+      like to use.&nbsp; If this is your only web server, you should set this to
+      80 as that is the default port generally used by web servers.&nbsp; You
+      can set this to a different value, but you will have to enter the port
+      number in the address line of your browser to access PowerHome. </div>
+    <div class="topic indent3 padtop1">Enable Smart NextURL</div>
+    <div class="indent4 padtop1">This parameter controls how PowerHome processes the
+      next URL for internal PH web addresses.&nbsp; If this value is unchecked
+      or the next URL is not an internal address, PowerHome uses a redirect to
+      cause the browser to load the next URL.&nbsp; If this parameter is checked
+      (and the next URL is an internal PH URL), the PowerHome webserver will
+      automatically execute the appropriate next URL code and return it’s HTML
+      rather than forcing a redirect first.</div>
+    <div class="topic indent3 padtop1">Master UserID and Password</div>
+    <div class="indent4 padtop1">Set the userid and password to appropriate values for
+      you to access the system.&nbsp; The password is hidden on this screen.</div>
+    <div class="topic indent3 padtop1">Access</div>
+    <div class="indent4 padtop1">Within this section you can set the authorization
+      level for each type of external web page that can be served by the
+      PowerHome web server.&nbsp; If you set the PSP pages as ‘Any’, you can use
+      internal PSP functions for a finer level of control over user access.</div>
+    <div class="topic indent3 padtop1">Blacklisted IP’s</div>
+    <div class="indent4 padtop1">You may enter any number of blacklisted IP masks
+      within this section.&nbsp; A blacklisted IP is not allowed access to the
+      PowerHome webserver under any circumstances.&nbsp; When a request is made
+      to the webserver, the referrers IP is checked to see if it is
+      blacklisted.&nbsp; If not, it is then checked to see if it’s
+      trusted.&nbsp; If not, it is then checked for an appropriate userid and
+      password.&nbsp; You may declare the masks as an exact IP or include an
+      asterisk character as a wildcard.&nbsp; When entering multiple trusted
+      IP’s, separate them with a ; (semicolon).</div>
+    <div class="topic indent3 padtop1">Trusted IP’s</div>
+    <div class="indent4 padtop1">You may enter any number of trusted IP masks within
+      this section.&nbsp; A trusted IP is not required to enter a userid /
+      password and will have the same authorization as the master user.&nbsp;
+      You may declare the masks as an exact IP or include an asterisk character
+      as a wildcard.&nbsp; If you were running an internal network at home and
+      wanted all of your internal IP’s to be trusted, you could enter an IP mask
+      of 192.168.0.*.&nbsp; When entering multiple trusted IP’s, separate them
+      with a ; (semicolon).</div>
+    <div class="topic indent3 padtop1">Main Page</div>
+    <div class="indent4 padtop1">This section allows you to declare the default main
+      page for the PowerHome webserver.&nbsp; Unless you’re using PSP to write
+      your own webpages and wish to use your own main page, you should leave
+      these values at their default.&nbsp; The main page is the URL that is
+      loaded when accessing built in secondary pages and the menu option shows
+      “Main”.</div>
+    <div class="topic indent3 padtop1">Menu</div>
+    <div class="indent4 padtop1">This section allows you define the 
+URL’s that appear on the default main page menu.&nbsp; All of the default 
+internal pages will initially appear in the menu.&nbsp; You can remove pages if 
+you desire (use the “Default Menu” button to restore these if you like) or add 
+additional entries if you’ve created your own custom pages. </div>
+  </body>
+</html>

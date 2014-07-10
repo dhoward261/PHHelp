@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getmtret</title></head>
+<body>
+<div class=ph1>
+
+ph_getmtret&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function retrieves the result of the 
+last asynchronous 
+
+operation
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_getmtret ( 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+<tr>
+<td class=ph8>
+
+
+
+</td>
+<td class=ph9>
+
+         
+
+</td>
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer.&nbsp; The result of the last 
+asynchronous operation.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+This function currently only has meaning in 
+conjunction with the ph_sendsmtpemailasync and ph_sendsmtpemailfileasync 
+function.&nbsp; When using these functions, you have the option to specify the 
+ID of a macro or formula that you would like to have executed once the 
+asynchronous operation is complete.&nbsp; In this macro or formula, you would 
+call the ph_getmtret function to retrieve the result of the asynchronous operation.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_getmtret()
+
+</div>
+
+</body>
+</html>

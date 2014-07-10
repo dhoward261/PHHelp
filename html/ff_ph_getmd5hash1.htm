@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getmd5hash1</title></head>
+<body>
+<div class=ph1>ph_getmd5hash1&nbsp;PowerHome formula 
+function </div>
+<div class=ph2>Description</div>
+<div class=ph3>Returns the standard MD5 hash for the 
+specified string of data. </div>
+<div class=ph4>Syntax</div>
+<div class=ph5>ph_getmd5hash1 ( data, type&nbsp;) </div>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <TR>
+    <TD class=ph8>data</TD>
+    <TD class=ph9>String. The data you'd like the MD5 calculated for. </TD></TR>
+  <tr>
+    <td class=ph8>type</td>
+    <td class=ph9>Integer. Specifies how the data in the 
+      data parameter is to be interpreted for calculating MD5.&nbsp;See usage 
+      below.</td></tr></table></div>
+<div class=ph10>Return value</div>
+<div class=ph11>String. Returns the MD5 hash as a string of 
+hex digits. </div>
+<div class=ph12>Usage</div>
+<div class=ph13>Use this function to calculate general MD5 
+hashes including hashes for binary data.<BR><BR>Below is the list of valid 
+values for the type parameter:
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Takes the value in the data parameter and interprets is as full unicode data. </TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>The value in the data parameter is interpreted as 
+      hexadecimal representations of binary characters.</TD></TR>
+  <TR>
+    <TD class=ph8>3</TD>
+    <TD class=ph9>The value in the data parameter should point to a full path 
+      and filename of a file that will be read in and the MD5 calculated for 
+    it.</TD></TR>
+  <tr>
+    <td class=ph8>Any other value</td>
+    <td class=ph9>Any other value for the type parameter 
+      will interpret the value in the data parameter as ANSI 
+      data.</td></tr></table></div></div>
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical 
+syntax/usage for this function.</div>
+<div class=ph20>ph_getmd5hash1("2020200D0A",2)<BR>This example interprets the data parameter as a string of 
+hex characters with every 2 characters representing a byte of data.&nbsp;Hex 20 
+is a space char, 0D is carriage return, and 0A is line feed. This example will return the following MD5 hash: 
+0C544100BE9EEE1C4FA2BACA5B51E3B2 </div>
+
+</body>
+</html>

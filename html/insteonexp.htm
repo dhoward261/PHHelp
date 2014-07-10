@@ -1,81 +1,296 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>Insteon</title>
-</head>
-<body>
-<div class=ph1>
-
-Insteon Explorer
-
-</div>
-
-<div class=ph2>
-
-Overview
-
-</div>
-
-<p>PowerHome's Insteon Explorer is a dedicated screen for all things Insteon.  From this single centralized screen, you can completely manage your Insteon network from device setup and discovery to link creation, maintenance, and discovery to specialized reports detailing the particulars of your Insteon network and communication statistics.</p>
-
-<p>Each section of Insteon Maintenance has been broken down into a tabbed screen with related functions grouped together.  Within the Insteon Explorer, there is no need to right-click for popup menus.  Context sensitive help is available for most sections of the Insteon Explorer by clicking on the question mark icons.</p>
-
-<p>The top section of the Insteon Explorer contains the global Insteon controller settings.  These are the same settings that appear in the controller setup screen.  When you open the Insteon Explorer, these controls will reflect the current settings.  You can use the Insteon Explorer to on-the-fly make changes to these settings (and optionally save them permanent) without having to restart or reinitialize.  In the case of the "Poll Interval" and "Max Failures" settings, you must tab off of (or click out of) these fields for PowerHome to know that changes have been made.  For the other fields, checking or unchecking the box will take effect immediately.</p>
-
-<p>Below the Insteon controller settings are three windows giving you a real-time update of what is going on with the PLC and what PowerHome is doing.  The first window to the left is the "Pending Operations" window.  This window will list what background operations PowerHome is planning to do.  How often PowerHome performs a background operation is determined by the "Poll Interval" parameter.  The background operations that PowerHome will perform are controlled in part by the controller settings you've selected and by what operations you've asked PowerHome to perform such as create or delete links.  After PowerHome has performed the next background operation, it will be removed from the "Pending Operations" window and copied to the "Completed Operations" window.  This window displays a history of background operations performed by PowerHome whilst the Insteon Explorer has been open.  The third window to the right is the "Insteon SDM Log".  This color coded real-time log shows you the raw data that is being sent and received from the SmartHome Insteon Device Manager.  Log entries in black shows received transactions, blue transactions are transmits.  Red entries are an indication of something not working right such as a command not being acknowledged.  Occasional red entries are nothing to be too concerned about since communication errors do occur.  However, if every blue transmit is followed by a red NAK (No Acknowledge), then you may want to view your communication reports to try and identify where the problem is.</p>
-
-<p>Below the status windows is the tabbed maintenance control.  You can resize the amount of screen space utilized by the status windows and the tabbed maintenance window by clicking and dragging the horizontal bar between the two.</p>
-
-<div class=ph2>
-
-Getting Started
-
-</div>
-
-<p>Before you can work with your Insteon network, PowerHome must know what Insteon devices you have.  However, before we get to this step, we must first configure our connected PLC to work with PowerHome if not done so previously.  On the "Setup" tab are all of the functions for configuring the PLC.</p>
-
-<p>The PLC is like a miniature computer in itself and the first thing we must do is make sure it's running the right program.  This program is called the "Core Application" and PowerHome requires a specific version in order to operate properly.  This program was installed along with PowerHome and can be installed on the PLC by pressing the "Download" button.  The progress bar will move and you'll get status messages in the log.  This step must be done before any other operations can be performed.  You may also need to do this occasionally if your PLC does not seem to be working properly.</p>
-
-<p>Once the "Core Application" is downloaded to the PLC, we have a couple of choices to make.  If this is a fresh PLC that hasnt been used by any other software application (meaning it should contain no useful data we want to copy), we can proceed to "Clear PLC Database" by pressing the "Clear" button.  This will make sure that the PLC's database memory is clear in preparation for Auto Discovery or manual entry of our Insteon devices.  If the PLC has been used by another software application or has been linked to existing devices that you'd like to have entered in PowerHome, then you can use the "Create PowerHome Insteon Devices from PLC ID's" option to read the PLC database and automatically enter the Insteon addresses into the PowerHome database.  The problem with this method of device entry is that the devices will have default ID's beginning with "NEW SPIDER" and a sequential, unique number with no way of knowing what the device really is.</p>
-
-<p>We're now ready to let PowerHome know what Insteon devices we have.  We have several options, one of which was detailed above with the "Create" button to "Create PowerHome Insteon Devices from PLC ID's".  In addition to this, we have a couple of other "automated" methods of device creation.  The first method is "Auto Discovery".  While this is not a true "blind" discovery where PowerHome just looks for Insteon devices (the Insteon protocol does not allow for this type of discovery due to the built-in "security" features), it does simplify the entry process significantly.  You must turn auto discovery on by pressing the "On" button.  PowerHome will pause any background operations (so remember to turn it off when you're done) and will listen for switches to identify themselves.  To get a switch to identify itself, you must physically visit the switch and either push and hold the "on" button for 10 seconds or push and hold the "set" button for 3 seconds until the device enters linking mode.  As soon as the device enters linking mode, press the on or off button to exit linking mode.  When the switch entered link mode, it sent a message on the Insteon network identifying itself.  If you had TTS or the Play WAV file options checked, you should have gotten an audible confirmation.  If you didnt, repeat the procedure above since it's possible that the identification message was lost.  If you are auto discovering several switches at once, keep a list of the order in which you discover the switches.  Switches that are auto-discovered will have a default ID of "NEW DEVICE??" where ?? is a sequential, unique number in the order that it was discovered.  You'll want to use your list to rename the ID's to something more appropriate and identifiable.</p>
-
-<p>The other method of auto discovery is spidering.  The way spidering works is that every Insteon device contains a database of what devices it controls and what devices controls it.  PowerHome is able to read this database and then ask the devices contained in the database to identify themselves.  These newly identified devices can then have their databases read as well allowing PowerHome to query even more devices ad infinitum until every device has been identified.  Spidering only works as long every device is linked in some fashion to another device.  If you have an Insteon switch that has no links whatsoever, then spidering will not discover this device.  The advantage of spidering is that you only have to enter 1 or 2 devices with a decent number of links (KeypadLincs are usually good for this due to their large number of links) either manually or through auto-discovery and then let PowerHome do the rest.  The disadvantage is that like "Create PowerHome Insteon Devices from PLC ID's" you will not have any idea what device is what other than what a device is linked to and it's device type.  Devices discovered through spidering will have an ID of "NEW SPIDER??" where ?? is a sequential, unique number.  To enable spidering, make sure that the "Allow Link Spidering" controller setting is checked.  Keep in mind that spidering is ONLY performed when a device's database is scanned.  When a new device is entered into PowerHome through any of it's input methods (auto discovery, manual, etc.), PowerHome will immediately attempt to scan it's database.  If spidering is not enabled at this time, the database will be scanned and spidering will not occur even if you enable spidering at a later time since the device's database has already been scanned.  If a device's database has already been scanned and you wish to spider it's links, you must first check "Allow Link Spidering" and then flag the device so that PowerHome will rescan it's database.  This can be done from the "Devices" tab.</p>
-
-<p>Manual entry of Insteon devices can be done using the "Devices" tab.  You MUST enter in an ID, Insteon address, and Insteon Type before the record can be saved.</p>
-
-<p>Once PowerHome knows the Insteon devices in your network, it will scan every device's link database to discover the relationships between devices (if "Link Scan" is enabled).  This is a good thing and essential initially in order for PowerHome to understand your network and maintain it.</p>
-
-<div class=ph2>
-
-<a name="insteonsettings">Insteon Settings</a>
-
-</div>
-
-<p>"Poll Interval" is how often (in seconds) that PowerHome will attempt a background process.  Background processes are what appear in the "Pending Operations" window.  Control commands coming from PowerHome (either direct or group) take priority over the background operations and do not appear in the "Pending Operations" window.  The default is 10 seconds and PowerHome will perform a queued background operation every 10 seconds.  You can change this value (and tab off of the field) and the change will take place immediately.  If you set this value to 0, no background operations will be performed.</p>
-
-<p>Starting with version 1.03.4.12, PowerHome now includes a "quick write" feature.  As long as the Insteon Explorer window is open, PowerHome will perform certain background operations (Pending Operations) as fast as the PLC will go, temporarily overriding the value set in the "Poll Interval".  Most background operations such as CREATE and DELETE links will be executed as quickly as possible while the Insteon Explorer window is open.  If the Insteon Explorer window is closed, then ALL background operations will be performed according to the "Poll Interval".  The only background operations that do not take advantage of the "quick write" are POLL STATUS and SCAN LINK</p>
-
-<p>"Status Scan" enables or disables the POLL STATUS background operation.  The POLL STATUS operation gets the current level status as well as the database changes flag (which lets PowerHome know if database changes have occurred and whether PowerHome should rescan the links).</p>
-
-<p>"Level/Ramp/X10 Scan" goes hand in hand with "Status Scan".  If Status Scan is disabled, then this flag has no effect.  If Status Scan is enabled and Level/Ramp/X10 Scan is enabled, then when a "Status Scan" (POLL STATUS) operation is performed, PowerHome will also scan the "local" level, ramprate, and X10 address.</p>
-
-<p>"Write Level/Ramp/X10" controls whether PowerHome will attempt to write the "local" settings for level, ramprate, and X10.  This is determined by a "difference" in the "Local Level" and "Desired Local Level", etc.  fields in the Devices tab.  It's usually best to keep this flag disabled and let PowerHome scan the current settings.  In a fresh system, PowerHome will set the "Local" and "Desired" fields to the same "scanned" value.  If you wish to change the currently stored value, set the "Desired" field to the desired setting and save your changes.  Then enable this field and PowerHome will program all devices where the local and desired fields do not match.  When done, disable this setting and airgap (power cycle) the affected switches.  You could leave this field always checked and PowerHome will always overwrite any scanned values with the desired values but these writes will not take effect until the switch is airgapped.</p>
-
-<p>"Link Scan" controls whether PowerHome will scan a remote devices link database.  PowerHome will scan a devices link database when it thinks changes have occurred (as determined by the Status Scan operation) if this field is checked.</p>
-
-<p>"Max Failures" determines the maximum number of critical communication errors to a device before that device is flagged as "Failed Match".  PowerHome will attempt communications with a device as long as the "Active" flag is set and the "Max Failures" limit for the device is not met.  Setting this value to low could cause false positives.  A value too high will cause PowerHome to attempt communicating to a device unneccessarily at the detriment of other device communications.  If PowerHome does not seem to communicating with a device, ie. you've created links and the links are never created and always say FLAGGED CREATE, then most likely your device is flagged as failed (reddish background in "Clear Failed" column of "Devices" tab).  To fix this, place a checkmark in the "Clear Failed" column for any device flagged as failed and click the "Save / Refresh" button.</p>
-
-<p>"PLC Group Cleanup" controls whether PowerHome will automatically send group cleanup messages after sending a group broadcast command.  The Insteon protocol states that after sending a group broadcast command, a device should then follow this up with individual group cleanup commands to each member of the group.  Group cleanups can cause a lot of addtional Insteon traffic.  The way a group command works is that the PLC sends a single group broadcast command that it is turning on its group 5.  Group Broadcast commands are NOT Acknowledged so the PLC doesnt know if the command is heard by every device or not.  Any device hearing this command will search its link database to see if it's supposed to respond or not.  This is the main command that will make all lights appear to act in sync.  Since the broadcast is not ACKed, you can have the PLC send individual group cleanup messages.  These group cleanup messages are direct commands and ARE acknowledged.  These happen sequentially one after another.  You'll see this behaviour when switching a KPL or SwitchLinc that controls multiple devices.  If all is working well, all lights come on together.  Occasionally though, you'll see most of the lights come on together followed by one or two lights coming on afterwards sequentially.  These one or two lights are the result of the group cleanup commands.</p>
-
-<p>"Update on ACK" controls how PowerHome updates it's internal database of device status.  Since Insteon is inherently two-way, PowerHome will wait to receive an ACKnowledge command from the controlled switch before updating its internal status if the "Update on ACK" field is checked.  Basically, when this field is checked, PowerHome will only set its device status if a switch actually responded to a sent command.  This can cause problems with the web-based Device Status screen when an Insteon command is sent.  The page will be refreshed and the device will show the state as unchanged.  If you refresh a second time, then the status will be correct because the ACK has now been received.  It is also a problem because sometimes a device will receive a command and control OK, but the ACK message is lost due to noise or some other factor.  Leaving this field unchecked, PowerHome will update the internal device status when the command is sent (in addition to also updating on ACK).  It's the users choice as to which mode is more accurate because you can control a device and the controlling command is lost or you can control a device and the responding ACK is lost.  Most people are probably content to leave the "Update on ACK" field unchecked because they're already used to X10 and the fact that it is inherently only 1 way.</p>
-
-<p>"Allow Link Spidering" allows PowerHome to automatically create Insteon Devices during device link database scanning.  If this option is checked, during link scanning of a device, if PowerHome encounters an address that is not in its device table PowerHome will Ping the device and if it responds, create a new device entry with an ID in the form of "NEW SPIDER ??" where ?? is a sequential unique number.  This allows the user to enter in only 1 or 2 main devices during initial setup and have PowerHome "discover" all linked devices.  The drawbacks to this are that the user will have little info (unlike "Auto Discovery" which creates the sequential numbers in the order the devices were discovered) to rename the default ID to something meaningful other than the device type and what it's linked to.  Another possible problem will be orphans (devices not in any way linked to the initial devices either directly or indirectly to any of its linked devices) will not be discovered.</p>
-
-<p>"Scroll Log" determines whether the "Insteon SDM Log" window will auto scroll as commands are sent/received.  If you're trying to read the log data, it's hard to scroll back without it scrolling forward when new data arrives.  Unchecking this field will still allow commands to be logged, but the window will now no longer auto scroll it into view.</p>
-
-<p>"Tab Scrollbars" adds horizontal and vertical scrollbars to the tabbed window in the Insteon Explorer.  This would just be a personal preference and primarily useful for people running very low screen resolutions and the default Insteon Explorer screen does not fully fit within the window.</p>
-
-</body>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Insteon Explorer</title>
+  </head>
+  <body>
+    <div class="ph1"> Insteon Explorer </div>
+    <div class="topic indent3 padtop1"> Overview</div>
+    <div class="indent4 padtop1">
+      PowerHome's Insteon Explorer is a dedicated screen for all things Insteon.
+      From this single centralized screen, you can completely manage your
+      Insteon network from device setup and discovery to link creation,
+      maintenance, and discovery to specialized reports detailing the
+      particulars of your Insteon network and communication statistics.</div>
+    <div class="indent4 padtop1">
+      Each section of Insteon Maintenance has been broken down into a tabbed
+      screen with related functions grouped together. Within the Insteon
+      Explorer, there is no need to right-click for popup menus. Context
+      sensitive help is available for most sections of the Insteon Explorer by
+      clicking on the question mark icons.</div>
+    <div class="indent4 padtop1">
+      The top section of the Insteon Explorer contains the global Insteon
+      controller settings. These are the same settings that appear in the
+      controller setup screen. When you open the Insteon Explorer, these
+      controls will reflect the current settings. You can use the Insteon
+      Explorer to on-the-fly make changes to these settings (and optionally save
+      them permanent) without having to restart or reinitialize. In the case of
+      the "Poll Interval" and "Max Failures" settings, you must tab off of (or
+      click out of) these fields for PowerHome to know that changes have been
+      made. For the other fields, checking or unchecking the box will take
+      effect immediately.</div>
+    <div class="indent4 padtop1">
+      Below the Insteon controller settings are three windows giving you a
+      real-time update of what is going on with the PLC and what PowerHome is
+      doing. The first window to the left is the "Pending Operations" window.
+      This window will list what background operations PowerHome is planning to
+      do. How often PowerHome performs a background operation is determined by
+      the "Poll Interval" parameter. The background operations that PowerHome
+      will perform are controlled in part by the controller settings you've
+      selected and by what operations you've asked PowerHome to perform such as
+      create or delete links. After PowerHome has performed the next background
+      operation, it will be removed from the "Pending Operations" window and
+      copied to the "Completed Operations" window. This window displays a
+      history of background operations performed by PowerHome whilst the Insteon
+      Explorer has been open. The third window to the right is the "Insteon SDM
+      Log". This color coded real-time log shows you the raw data that is being
+      sent and received from the SmartHome Insteon Device Manager. Log entries
+      in black shows received transactions, blue transactions are transmits. Red
+      entries are an indication of something not working right such as a command
+      not being acknowledged. Occasional red entries are nothing to be too
+      concerned about since communication errors do occur. However, if every
+      blue transmit is followed by a red NAK (No Acknowledge), then you may want
+      to view your communication reports to try and identify where the problem
+      is.</div>
+    <div class="indent4 padtop1">
+      Below the status windows is the tabbed maintenance control. You can resize
+      the amount of screen space utilized by the status windows and the tabbed
+      maintenance window by clicking and dragging the horizontal bar between the
+      two.</div>
+    <div class="topic indent3 padtop1">Getting Started</div>
+    <div class="indent4 padtop1">
+      Before you can work with your Insteon network, PowerHome must know what
+      Insteon devices you have. However, before we get to this step, we must
+      first configure our connected PLC to work with PowerHome if not done so
+      previously. On the "Setup" tab are all of the functions for configuring
+      the PLC.</div>
+    <div class="indent4 padtop1">
+      The PLC is like a miniature computer in itself and the first thing we must
+      do is make sure it's running the right program. This program is called the
+      "Core Application" and PowerHome requires a specific version in order to
+      operate properly. This program was installed along with PowerHome and can
+      be installed on the PLC by pressing the "Download" button. The progress
+      bar will move and you'll get status messages in the log. This step must be
+      done before any other operations can be performed. You may also need to do
+      this occasionally if your PLC does not seem to be working properly.</div>
+    <div class="indent4 padtop1">
+      Once the "Core Application" is downloaded to the PLC, we have a couple of
+      choices to make. If this is a fresh PLC that hasnt been used by any other
+      software application (meaning it should contain no useful data we want to
+      copy), we can proceed to "Clear PLC Database" by pressing the "Clear"
+      button. This will make sure that the PLC's database memory is clear in
+      preparation for Auto Discovery or manual entry of our Insteon devices. If
+      the PLC has been used by another software application or has been linked
+      to existing devices that you'd like to have entered in PowerHome, then you
+      can use the "Create PowerHome Insteon Devices from PLC ID's" option to
+      read the PLC database and automatically enter the Insteon addresses into
+      the PowerHome database. The problem with this method of device entry is
+      that the devices will have default ID's beginning with "NEW SPIDER" and a
+      sequential, unique number with no way of knowing what the device really
+      is.</div>
+    <div class="indent4 padtop1">
+      We're now ready to let PowerHome know what Insteon devices we have. We
+      have several options, one of which was detailed above with the "Create"
+      button to "Create PowerHome Insteon Devices from PLC ID's". In addition to
+      this, we have a couple of other "automated" methods of device creation.
+      The first method is "Auto Discovery". While this is not a true "blind"
+      discovery where PowerHome just looks for Insteon devices (the Insteon
+      protocol does not allow for this type of discovery due to the built-in
+      "security" features), it does simplify the entry process significantly.
+      You must turn auto discovery on by pressing the "On" button. PowerHome
+      will pause any background operations (so remember to turn it off when
+      you're done) and will listen for switches to identify themselves. To get a
+      switch to identify itself, you must physically visit the switch and either
+      push and hold the "on" button for 10 seconds or push and hold the "set"
+      button for 3 seconds until the device enters linking mode. As soon as the
+      device enters linking mode, press the on or off button to exit linking
+      mode. When the switch entered link mode, it sent a message on the Insteon
+      network identifying itself. If you had TTS or the Play WAV file options
+      checked, you should have gotten an audible confirmation. If you didnt,
+      repeat the procedure above since it's possible that the identification
+      message was lost. If you are auto discovering several switches at once,
+      keep a list of the order in which you discover the switches. Switches that
+      are auto-discovered will have a default ID of "NEW DEVICE??" where ?? is a
+      sequential, unique number in the order that it was discovered. You'll want
+      to use your list to rename the ID's to something more appropriate and
+      identifiable.</div>
+    <div class="indent4 padtop1">
+      The other method of auto discovery is spidering. The way spidering works
+      is that every Insteon device contains a database of what devices it
+      controls and what devices controls it. PowerHome is able to read this
+      database and then ask the devices contained in the database to identify
+      themselves. These newly identified devices can then have their databases
+      read as well allowing PowerHome to query even more devices ad infinitum
+      until every device has been identified. Spidering only works as long every
+      device is linked in some fashion to another device. If you have an Insteon
+      switch that has no links whatsoever, then spidering will not discover this
+      device. The advantage of spidering is that you only have to enter 1 or 2
+      devices with a decent number of links (KeypadLincs are usually good for
+      this due to their large number of links) either manually or through
+      auto-discovery and then let PowerHome do the rest. The disadvantage is
+      that like "Create PowerHome Insteon Devices from PLC ID's" you will not
+      have any idea what device is what other than what a device is linked to
+      and it's device type. Devices discovered through spidering will have an ID
+      of "NEW SPIDER??" where ?? is a sequential, unique number. To enable
+      spidering, make sure that the "Allow Link Spidering" controller setting is
+      checked. Keep in mind that spidering is ONLY performed when a device's
+      database is scanned. When a new device is entered into PowerHome through
+      any of it's input methods (auto discovery, manual, etc.), PowerHome will
+      immediately attempt to scan it's database. If spidering is not enabled at
+      this time, the database will be scanned and spidering will not occur even
+      if you enable spidering at a later time since the device's database has
+      already been scanned. If a device's database has already been scanned and
+      you wish to spider it's links, you must first check "Allow Link Spidering"
+      and then flag the device so that PowerHome will rescan it's database. This
+      can be done from the "Devices" tab.</div>
+    <div class="indent4 padtop1">
+      Manual entry of Insteon devices can be done using the "Devices" tab. You
+      MUST enter in an ID, Insteon address, and Insteon Type before the record
+      can be saved.</div>
+    <div class="indent4 padtop1">
+      Once PowerHome knows the Insteon devices in your network, it will scan
+      every device's link database to discover the relationships between devices
+      (if "Link Scan" is enabled). This is a good thing and essential initially
+      in order for PowerHome to understand your network and maintain it.</div>
+    <div class="topic indent3 padtop1">Insteon Settings</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Poll Interval:</span> how often (in
+      seconds) that PowerHome will attempt a background process. Background
+      processes are what appear in the "Pending Operations" window. Control
+      commands coming from PowerHome (either direct or group) take priority over
+      the background operations and do not appear in the "Pending Operations"
+      window. The default is 10 seconds and PowerHome will perform a queued
+      background operation every 10 seconds. You can change this value (and tab
+      off of the field) and the change will take place immediately. If you set
+      this value to 0, no background operations will be performed.</div>
+    <div class="indent4 padtop1">
+      Starting with version 1.03.4.12, PowerHome now includes a "quick write"
+      feature. As long as the Insteon Explorer window is open, PowerHome will
+      perform certain background operations (Pending Operations) as fast as the
+      PLC will go, temporarily overriding the value set in the "Poll Interval".
+      Most background operations such as CREATE and DELETE links will be
+      executed as quickly as possible while the Insteon Explorer window is open.
+      If the Insteon Explorer window is closed, then ALL background operations
+      will be performed according to the "Poll Interval". The only background
+      operations that do not take advantage of the "quick write" are POLL STATUS
+      and SCAN LINK</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Status Scan: </span>enables or disables
+      the POLL STATUS background operation. The POLL STATUS operation gets the
+      current level status as well as the database changes flag (which lets
+      PowerHome know if database changes have occurred and whether PowerHome
+      should rescan the links).</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Level/Ramp/X10 Scan:</span> goes hand in
+      hand with "Status Scan". If Status Scan is disabled, then this flag has no
+      effect. If Status Scan is enabled and Level/Ramp/X10 Scan is enabled, then
+      when a "Status Scan" (POLL STATUS) operation is performed, PowerHome will
+      also scan the "local" level, ramprate, and X10 address.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Write Level/Ramp/X10:</span> controls
+      whether PowerHome will attempt to write the "local" settings for level,
+      ramprate, and X10. This is determined by a "difference" in the "Local
+      Level" and "Desired Local Level", etc. fields in the Devices tab. It's
+      usually best to keep this flag disabled and let PowerHome scan the current
+      settings. In a fresh system, PowerHome will set the "Local" and "Desired"
+      fields to the same "scanned" value. If you wish to change the currently
+      stored value, set the "Desired" field to the desired setting and save your
+      changes. Then enable this field and PowerHome will program all devices
+      where the local and desired fields do not match. When done, disable this
+      setting and airgap (power cycle) the affected switches. You could leave
+      this field always checked and PowerHome will always overwrite any scanned
+      values with the desired values but these writes will not take effect until
+      the switch is airgapped.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Link Scan:</span> controls whether
+      PowerHome will scan a remote devices link database. PowerHome will scan a
+      devices link database when it thinks changes have occurred (as determined
+      by the Status Scan operation) if this field is checked.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Max Failures:</span> determines the
+      maximum number of critical communication errors to a device before that
+      device is flagged as "Failed Match". PowerHome will attempt communications
+      with a device as long as the "Active" flag is set and the "Max Failures"
+      limit for the device is not met. Setting this value to low could cause
+      false positives. A value too high will cause PowerHome to attempt
+      communicating to a device unneccessarily at the detriment of other device
+      communications. If PowerHome does not seem to communicating with a device,
+      ie. you've created links and the links are never created and always say
+      FLAGGED CREATE, then most likely your device is flagged as failed (reddish
+      background in "Clear Failed" column of "Devices" tab). To fix this, place
+      a checkmark in the "Clear Failed" column for any device flagged as failed
+      and click the "Save / Refresh" button.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">PLC Group Cleanup:</span> controls
+      whether PowerHome will automatically send group cleanup messages after
+      sending a group broadcast command. The Insteon protocol states that after
+      sending a group broadcast command, a device should then follow this up
+      with individual group cleanup commands to each member of the group. Group
+      cleanups can cause a lot of addtional Insteon traffic. The way a group
+      command works is that the PLC sends a single group broadcast command that
+      it is turning on its group 5. Group Broadcast commands are NOT
+      Acknowledged so the PLC doesnt know if the command is heard by every
+      device or not. Any device hearing this command will search its link
+      database to see if it's supposed to respond or not. This is the main
+      command that will make all lights appear to act in sync. Since the
+      broadcast is not ACKed, you can have the PLC send individual group cleanup
+      messages. These group cleanup messages are direct commands and ARE
+      acknowledged. These happen sequentially one after another. You'll see this
+      behaviour when switching a KPL or SwitchLinc that controls multiple
+      devices. If all is working well, all lights come on together. Occasionally
+      though, you'll see most of the lights come on together followed by one or
+      two lights coming on afterwards sequentially. These one or two lights are
+      the result of the group cleanup commands.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Update on ACK:</span> controls how
+      PowerHome updates it's internal database of device status. Since Insteon
+      is inherently two-way, PowerHome will wait to receive an ACKnowledge
+      command from the controlled switch before updating its internal status if
+      the "Update on ACK" field is checked. Basically, when this field is
+      checked, PowerHome will only set its device status if a switch actually
+      responded to a sent command. This can cause problems with the web-based
+      Device Status screen when an Insteon command is sent. The page will be
+      refreshed and the device will show the state as unchanged. If you refresh
+      a second time, then the status will be correct because the ACK has now
+      been received. It is also a problem because sometimes a device will
+      receive a command and control OK, but the ACK message is lost due to noise
+      or some other factor. Leaving this field unchecked, PowerHome will update
+      the internal device status when the command is sent (in addition to also
+      updating on ACK). It's the users choice as to which mode is more accurate
+      because you can control a device and the controlling command is lost or
+      you can control a device and the responding ACK is lost. Most people are
+      probably content to leave the "Update on ACK" field unchecked because
+      they're already used to X10 and the fact that it is inherently only 1 way.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Allow Link Spidering:</span> allows
+      PowerHome to automatically create Insteon Devices during device link
+      database scanning. If this option is checked, during link scanning of a
+      device, if PowerHome encounters an address that is not in its device table
+      PowerHome will Ping the device and if it responds, create a new device
+      entry with an ID in the form of "NEW SPIDER ??" where ?? is a sequential
+      unique number. This allows the user to enter in only 1 or 2 main devices
+      during initial setup and have PowerHome "discover" all linked devices. The
+      drawbacks to this are that the user will have little info (unlike "Auto
+      Discovery" which creates the sequential numbers in the order the devices
+      were discovered) to rename the default ID to something meaningful other
+      than the device type and what it's linked to. Another possible problem
+      will be orphans (devices not in any way linked to the initial devices
+      either directly or indirectly to any of its linked devices) will not be
+      discovered.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Scroll Log:</span> determines whether the
+      "Insteon SDM Log" window will auto scroll as commands are sent/received.
+      If you're trying to read the log data, it's hard to scroll back without it
+      scrolling forward when new data arrives. Unchecking this field will still
+      allow commands to be logged, but the window will now no longer auto scroll
+      it into view.</div>
+    <div class="indent4 padtop1">
+      <span style="FONT-WEIGHT: bold">Tab Scrollbars:</span> adds horizontal
+      and vertical scrollbars to the tabbed window in the Insteon Explorer. This
+      would just be a personal preference and primarily useful for people
+      running very low screen resolutions and the default Insteon Explorer
+      screen does not fully fit within the window.</div>
+  </body>
 </html>

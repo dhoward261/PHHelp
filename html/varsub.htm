@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Variable Substitution</title>
+  </head>
+  <body>
+    <div class="ph1">
+      Variable Substitution
+    </div>
+    <div class="indent1 padtop1">
+      Within the PowerHome environment, you have access to two types of
+      variables.&nbsp; The first are global variables which can be unlimited in
+      number and are defined by the user and the second are system variables
+      which are finite, some of which can be indirectly created by the
+      user.&nbsp; Global variables are created from within the global variable
+      maintenance section of the PowerHome Explorer.&nbsp; Once created, their
+      values can be changed over and over again from within macros and
+      formulas.&nbsp; A global variable will retain its state or value until
+      changed.&nbsp; Even if PowerHome is shut down, restarted, or the computer
+      should physically lose power, a global variable will retain its last
+      value.&nbsp; Global variables are referenced from within formulas by their
+      ID name (UPPER CASE A MUST) surrounded by curly braces or through an
+      appropriate formula function.&nbsp; A global variable defined within the
+      global variable maintenance section with an ID of TEST can be referenced
+      via variable substitution as {TEST}.&nbsp; A system variable is similar to
+      a global variable in that it stores information, but system variables are
+      not defined by the user.&nbsp; System variables also are reinitialized
+      everytime PowerHome is started.&nbsp; They DO NOT retain their
+      state.&nbsp; Some system variables cannot have their values directly
+      changed either.&nbsp; System variables are referenced by their name
+      surrounded by square brackets (UPPER CASE A MUST) or through an
+      appropriate formula function.&nbsp; An example of a system variable via
+      variable substitution is the sunset system variable [SUNSET].&nbsp;
+      Variable substitution occurs when you have text with references to system
+      and / or global variables.&nbsp; The way this substitution process takes
+      place is with a repetitive search and replace loop.&nbsp; When a formula
+      is processed for variable substitution, global and system variables are
+      searched for from the start of the formula.&nbsp; If a global variable is
+      found first, its value is looked up in the database and substituted for
+      the global variable reference.&nbsp; If a system variable is found first,
+      its value is referenced from memory and substituted for the system
+      variable reference.&nbsp; This process is repeated indefinitely until no
+      system or global variables exist to be replaced or until the max variable
+      substitution limit is reached.&nbsp; This limit is set in the PowerHome
+      Setup section under Script.&nbsp; Note that it is possible for global and
+      system variables to contain references to other global and system
+      variables.&nbsp; When a global or system variable is substituted, if the
+      value is a number, you should be careful to place a space before and after
+      the global or system variable if any math is to be performed.&nbsp; This
+      is to solve the problems one will encounter when trying to perform math on
+      global or system variables and not placing a space between the operators
+      and the global or system variables. </div>
+    <div class="indent1 padtop1">
+      NOTE:&nbsp; When referencing global variables and system variables with
+      variable substitution from within formulas, remember to CAPTITALIZE the ID
+      name.&nbsp; If this is not done, it will not be recognized as a variable
+      and no substitution will be performed.&nbsp; Certain Send Keys sequences
+      can appear as a global variable and will be looked up in the global
+      variable table.&nbsp; If not found, they will then be treated as a Send
+      Keys text and not be substituted.&nbsp; For this reason you should not
+      name any global variables F1 through F12 because {F1} through {F12} is a
+      valid Send Keys string.&nbsp; A special case of curly braces is included
+      in the global variable substitution function.&nbsp; An open and close
+      curly brace with nothing between them, ie. {}, will be removed during the
+      substitution and not left in the result as would be the case with any
+      other use of curly braces that is not a global variable.&nbsp; This
+      special situation is useful when dealing with certain issues of ODBC
+      databases which prevent one from storing certain combinations of
+      characters in the first position.&nbsp; An example of this is trying to
+      store {DSS POWER FLAG} in a formula.&nbsp; The {D is assumed to be an ODBC
+      control character.&nbsp; You can eliminate this problem by placing the
+      open and close curly braces in front of the global variable like this:
+      {}{DSS POWER FLAG}.&nbsp; Since the open and close curly braces will be
+      removed during substitution, the net effect is the same as if they never
+      existed.</div>
+    <div class="indent1 padtop1">PowerHome has a number of 
+formula functions which allow you to access the contents of global and system 
+variables without using variable substitution.&nbsp; These functions will return 
+the variables data as the specific data type you request within the 
+formula.&nbsp; Using these functions is slightly more efficient than variable 
+substitution as the functions access the variables contents at evaluation time 
+instead of being searched and replaced prior to formula evaluation.&nbsp; You 
+can find details on these functions in the online help or the function appendix 
+under ph_getglobal, ph_getsystem, and ph_getvar.</div>
+      <div class="indent1 padtop1">You can also disable variable substitution by
+        editing the pwrhome.ini file and setting the VARSUBSTITUTION parameter
+        under the [Script] section to NO. To enable variable substitution, set
+        this parqameter to YES. You can also enable and disable variable
+        substitution via code with the ph_varsub function. You can retrieve the
+        status of the variable substitution parameter with the ph_getvarsub
+        function. Disabling variable substitution means you'll have to use the
+        ph_getvar, ph_getglobal, and ph_getsystem functions exclusively in order
+        to reference variables from within a formula but has the benefit of
+        allowing PowerHome to run as fast as possible.</div>
+    </body>
+</html>

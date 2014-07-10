@@ -1,0 +1,136 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_timedeventsinfo</title></head>
+<body>
+<div class=ph1>
+
+ph_timedeventsinfo PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Returns the requested info for the specified 
+Timedevent 
+
+ID.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_timedeventsinfo ( id, command 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>id</TD>
+    <TD class=ph9>String. The ID of the Timedevent whose info you're trying to 
+      receive.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+command
+
+</td>
+
+<td class=ph9>
+
+String. Specifies the type of data you'd 
+      like to retrieve for the timedevent. See 
+
+usage below.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+String. Returns either the ID of the next 
+timedevent or a string containing the date and time for when the specified 
+timedevent ID is going to fire. Returns empty string if the command parameter is 
+invalid or the timedevent ID is not found.<BR><BR>The valid values for the 
+command parameter are detailed in the table below:
+
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>nextevent</TD>
+    <TD class=ph9>This value will cause the function to return the timedevent 
+      ID of the next timedevent to fire. Set the ID parameter to empty string "" 
+      when using this option.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+nexttime
+
+</td>
+
+<td class=ph9>
+
+This value will cause the function to 
+      return a formatted string (yyyy-mm-dd hh:mm:ss) for the next date/time 
+      when the specified timedevent ID will 
+
+be fired.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+ &nbsp;
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Use this function to retrieve information 
+concerning Timedevents.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_timedeventsinfo("SUNRISE","nexttime")<BR>The above 
+example will return the date/time for when the SUNRISE timed event will next be 
+fired.<BR><BR>ph_timedeventsinfo("","nextevent")<BR>The above example will 
+return the ID of the next timedevent that will be 
+
+fired.
+
+</div>
+
+</body>
+</html>

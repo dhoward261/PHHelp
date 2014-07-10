@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+    <title>Raw COMM</title>
+  </head>
+  <body>
+    <div class="ph1"> Plugin: Raw COMM
+    </div>
+    <div class="indent2 padtop1"><STRONG>Launch Data (ActiveX 
+Classname):</STRONG>
+          PH_Socket.phsocket</div>
+    <div class="indent2 padtop1"><STRONG>Initialization Data:</STRONG>  The COM port, a space, the comma
+      separated settings string. Can be left blank to establish a connection
+      manually. In all cases where a "settings" string is required, it consists
+      of the BPS, the data bits, the parity, and the stop bits all separated by
+      commas. An example of 9600 BPS, 8 data bits, No parity, and 1 stop bit
+      would be: 9600,N,8,1 </div>
+    <div class="indent2 padtop1">This plugin provides raw COM port 
+functionality for PowerHome. If a COM port and settings string is supplied in 
+the Init Data parameter then the connection will be established when the plugin 
+is loaded. Several commands are available using the ph_picmd function. Command 1 
+will send the string in data3 out the COM if a connection is already 
+established. This string can contain binary characters by escaping them with the 
+"\" character followed by 3 digits for a decimal representation of the ASCII 
+code or followed by an "x" and 2 digits for a hexadecimal representation of the 
+ASCII code. Command 2 will send a single character represented by the ASCII 
+value contained in the data1 parameter (assuming the COM is connected). Command 
+3 will manually connect to the COM port in data1 using the settings supplied in 
+data3 (you must be disconnected first). Command 4 disconnect the COM port if 
+already connected. Command 5 will return the current connection status (0 =
+                 
+                  
+                
+                 
+                  
+                
+                  
+                  
+                 
+                
+                  
+                 
+                 
+           connected, 1 = disconnected). Command 6
+      will return the COM port. Command 7 will return the settings.</div>
+    <div class="indent2 padtop1">This plugin will also fire a generic plugin trigger
+      whenever data is received on a connected COM port. The trigger fired will
+      be command 1, option 1 with the length of the data, the string data with
+      binary characters escaped, and the string data with ALL characters escaped
+      available in the [TEMP] variables.</div>
+  </body>
+</html>

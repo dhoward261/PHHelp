@@ -1,0 +1,109 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_saveurlviaproxy1</title></head>
+<body>
+<div class=ph1>
+
+ph_saveurlviaproxy1 PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>Retrieves the output&nbsp;from a URL using 
+the specified proxy server values and saves it to a file. </div>
+<div class=ph4>Syntax</div>
+<div class=ph5>ph_saveurlviaproxy1 ( url, proxy, port, auth, 
+file, writemode, type, timeout&nbsp;) </div>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+    >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <tr>
+    <td class=ph8>url </td>
+    <td class=ph9>String. The URL whose HTML you wish to 
+      retrieve. </td></tr>
+  <tr>
+    <td class=ph8>proxy </td>
+    <td class=ph9>String. The proxy server the request 
+      will made through. </td></tr>
+  <tr>
+    <td class=ph8>port</td>
+    <td class=ph9>Unsigned Integer. The proxy server 
+    port</td></tr>
+  <TR>
+    <TD class=ph8>auth</TD>
+    <TD class=ph9>String. The userid and password for the 
+      proxy server. Separate the userid from the password using a colon 
+      character. Example: userid:password. </TD></TR>
+  <TR>
+    <TD class=ph8>file</TD>
+    <TD class=ph9>String. The full path and filename to save the URL output 
+    to.</TD></TR>
+  <TR>
+    <TD class=ph8>writemode</TD>
+    <TD class=ph9>Integer. Controls how the data is saved. 
+      Use 0 to append the output to the file. Use 1 to replace the file if it currently exists.</TD></TR>
+  <TR>
+    <TD class=ph8>type</TD>
+    <TD class=ph9>Integer. A number representing the 
+      method of HTML retrieval from the URL. See usage below for an explanation 
+      of the valid types. </TD></TR>
+  <tr>
+    <td class=ph8>timeouot </td>
+    <td class=ph9>Integer. The max length of time in 
+      seconds to wait for the HTML before the function times out. 
+</td></tr></table></div>
+<div class=ph10>Return value</div>
+<div class=ph11>String. Returns either the HTTP headers from the URL or an 
+error message. </div>
+<div class=ph12>Usage</div>
+<div class=ph13>Use this function to retrieve the output 
+from a URL via a proxy server and directly save it to a file. This will allow 
+you to retrieve binary data that isnt possible to retrieve using the ph_geturl 
+functions.<BR><BR>See the table below 
+for an explanation of options available to the type parameter: 
+<div>
+<table width="100%">
+  
+  <TR>
+    <TD class=ph8>0</TD>
+    <TD class=ph9>Retrieves the URL output using a raw 
+      socket. This would be identical to the method used by the ph_saveurl 
+      function. </TD></TR>
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>Retrieves the URL output using a 
+      Catalyst HTTP control using method 1. </TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>Retrieves the URL output using a 
+      Catalyst HTTP control using method 2. </TD></TR>
+  <TR>
+    <TD class=ph8>3</TD>
+    <TD class=ph9>Retrieves the URL output using a 
+      Catalyst HTTP control using method 3. </TD></TR></TABLE></DIV>Multiple 
+methods are provided as certain websites, operating systems, etc. may have a 
+problem with one method or the other. Choose the method that produces the most 
+desireable results. </DIV>
+<div class=ph18>Examples</div>
+<div class=ph19>
+The following examples demonstrate typical 
+syntax/usage for this function.
+
+</div>
+<div class=ph20>          
+        
+         
+
+   ph_saveurlviaproxy1("www.power-home.com/images/phwiki.gif","192.168.0.150",80,"userid:password","c:\powerhome\phwiki.gif",1,1,5)
+
+</div>
+
+</body>
+</html>

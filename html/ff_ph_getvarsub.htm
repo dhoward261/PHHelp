@@ -1,0 +1,97 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_getvarsub</title></head>
+<body>
+<div class=ph1>
+
+ph_getvarsub&nbsp;PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+Returns the value of the variable 
+substitution 
+
+parameter.
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_getvarsub ( 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+
+<td class=ph8>
+
+
+
+</td>
+
+<td class=ph9>
+
+ 
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer. The value of the variable 
+substitution parameter. If variable substitution is enabled, then 1 is 
+returned.&nbsp; If variable substitution is disabled then 0 
+
+is returned.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Within the pwrhome.ini file under the 
+[Script] section is a parameter named VARSUBSTITUTION.&nbsp;If this parameter is 
+set to NO, then variable substitution is disabled and syntax such as [LOCAL1] or 
+{TEMP} within formulas will NOT be substituted and will instead be interpreted 
+as literal text.&nbsp; If the parameter is set to YES, then variable 
+substitution will 
+
+be performed.
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_getvarsub()
+
+</div>
+
+</body>
+</html>

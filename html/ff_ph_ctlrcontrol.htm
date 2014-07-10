@@ -1,0 +1,107 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_ctlrcontrol</title></head>
+<body>
+<div class=ph1>
+
+ph_ctlrcontrol PowerHome formula function
+
+</div>
+
+<div class=ph2>Description</div>
+
+<div class=ph3>
+
+This function allows you to control 
+(connect, disconnect, restart) a preconfigured PowerHome 
+
+controller
+
+</div>
+
+<div class=ph4>Syntax</div>
+
+<div class=ph5>
+
+ph_ctlrcontrol ( ctlr, control 
+
+)
+
+</div>
+
+<div>
+<table width="100%">
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+  <TR>
+    <TD class=ph8>ctlr</TD>
+    <TD class=ph9>String.&nbsp; The ID of the PowerHome controller that you 
+      wish to control.</TD></TR>
+
+<tr>
+
+<td class=ph8>
+
+control
+
+</td>
+
+<td class=ph9>
+
+String.&nbsp; The type of action you'd 
+      like to 
+
+be performed.
+
+</td>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Integer.&nbsp; Returns 0 if 
+successful.&nbsp; 1 if the specified controller ID does not exist.&nbsp; 2 if 
+PowerHome is not registered.&nbsp; 3 if the control string 
+
+is invalid.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+Valid control strings are:<BR>
+
+   <BR>
+<li>"connect" 
+<li>"disconnect"
+<li>"restart"<BR><BR>This function 
+replaces the deprecated functions ph_connect and ph_disconnect</li>
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_ctlrcontrol("ELK","disconnect") This call 
+will cause the controller "ELK" to be 
+
+disconnected.
+
+</div>
+
+</body>
+</html>
