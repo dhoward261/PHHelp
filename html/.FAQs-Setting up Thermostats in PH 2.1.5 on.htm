@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_clearvars</title>
+<style type="text/css">
+<!--
+.style1 {
+	color: #FF00FF;
+	font-style: italic;
+	font-weight: bold;
+}
+-->
+</style>
+</head>
+<body>
+<div class=ph1>
+FAQ: New Thermostat Setup Proceedure </div>
+
+<div class=ph2>Knowledge Notes </div>
+
+<div class=ph3>
+  <p>With the release of PowerHome 2.1.5, an entirely new support system for Insteon Thermostats has been implemented.</p>
+  <p>While this is a substantial benefit, it unfortunately means that <strong>old (pre 2.1.5) PowerHome configurations will no longer work</strong>.</p>
+  <p>This tutorial documents the process for migrating, or creating new, thermostat configurations.</p>
+  <p>  If you are creating a NEW thermostat installation, then the first thing to do is to <strong>Find your STAT device in the Insteon Explorer &quot;Types&quot;</strong> Tab and <strong>Modify</strong> the Ctlr Groups entry for all Insteon stats you will be using. The default value is usually &quot;1&quot;. Change this to &quot;254&quot; </p>
+  <p><img src="images/STAT-type.jpg" alt="Stat Type Setup" width="536" height="152"></p>
+  <p>Now Open the <strong>Devices</strong> Tab. If you are upgrading from an earlier version of PH then you may skip this step, as your devices are already entered in the data base. Configure all of your STAT devices as exampled below. </p>
+  <p><img src="images/STAT-Devices.jpg" alt="Stat Devices Setup" width="1257" height="105"></p>
+  <p> Enter an <strong>ID</strong> and <strong>Description</strong> (Usually the same.  The ID is used in Formulas to identify the device, and the Description is what appears in the Device Status window. (Most users find it most usefull to just make the two fields the same.)</p>
+  <p>    Enter the STAT Insteon <strong>Address</strong>, the <strong>Location, and</strong> the &quot;<strong>Device Type.</strong>&quot; Because you are setting up the thermostat as an Analog device, you will also want to check the <strong>Don't Display</strong> attribute to prevent having this Insteon device appear as a duplicate in the Analog Device entries in the Device Status window. If you are not sure what the Device Type is, then select the * Auto Discovery * parameter in the Device Type cell and then click on the &quot;Save/Refresh&quot; button. Once  the auto discovery process completes successfully, click on the Save/Refresh button again to refresh the window. The correct Device 
+    <ype>Type</ype>
+should then be displayed. </p>
+  <p>After clicking on the Save/Refrresh button, look at the Pending and Completed Operations windows in Insteon Explorer. If the Save/Refresh operation does not complete succecssfully you will see something as shown below where the &quot;CREATE I2CS INITIAL:&quot; operation keeps trying and trying without success. You will see <span class="ph-txt-red">red</span> entries in the Insteon Raw Log window (red arrows) indicating NAK responses from the device, because a connection cannot be made. This occurs because some I2CS Insteon devices  contain firewalls to protect against program modification.</p>
+  <p>If your  Save/Refresh operation went successfully, then you should see in the Completed Operations window a single CREATE I2CS INITIAL entrty with several CREATE CTLR LINK entries above it (one for each Controller Group you defined. </p>
+  <p><img src="images/STAT-Creat I2CS.jpg" alt="STAT-Create I2CS" width="663" height="299"></p>
+  <p>If you encounter blocked access to your I2CS device, then the following proceedure must be used to get around the I2CS device firewall protection.</p>
+  <p>Go to the <strong>Devices</strong> Tab and change the IEngine entry for the I2CS device from I2CS to I2. Do a Save/Refresh. This should allow the CREATE CTLR LINK operations to successfully run. Once they do, change the IEngine type back to I2CS and do another Save/Refresh.</p>
+  <p>Now open the PH Explorer <strong>Links</strong> tab and set up the Links between each STAT and and your Insteon Controller.</p>
+  <p>PowerHome now has support that causes Thermostat devices to update within PowerHome as items change so  you don't have to rely solely on polling. (See setting up Triggers, below.) With the thermostat as the current  device, you'll want to create responder links with the STAT as the controller  and the PLM as responder. The first link created should be from group 239. Next  create the group 1 followed by group 2 followed by group 3.&nbsp;</p>
+  <p>You can control the order of group creation (and thus Trigger handling priority) by using the CTRL  Sort field Place a 1 in the 239 group, a 2 in the 1 group, etc and place a 9  in all other groups as the order doesnt really matter after that).</a> </p>
+  <p><img src="images/STAT-Links.png" alt="STAT-Links" width="1169" height="356"></p>
+  <p>You now have the Device configuration parameters all set up, and you are ready to use it. </p>
+  <p>From PowerHome Explorer open the Analog I/O window...</p>
+  <p><img src="images/STAT-PH Exp-Analog.png" alt="STAT-Analog Object" width="230" height="299"></p>
+  <p>and Add the five Insteon Stat attributes that can be sensed (Cool Set Point, Heat Set Point, Humidity, Stat Mode, and Temp) for each of your thermostat devices. </p>
+  <p>Create ID Names to use with Macros, Triggers, etc. and enter a description for each item. This Description will be used in the Device Status window to describe the item. Select the <strong>I/O,</strong> and <strong>Controller</strong> parameters from the pull-down lists. Enter the <strong>IP Address</strong> for the STAT (this will change to the Device ID string in later releases of PH) and a poll interval (in seconds) to repeatedly check the status of each item. Enter a string in the <strong>Message</strong> field that you want to appear in the Device Status window, after the parameter value. </p>
+  <p><img src="images/STAT-analog win.png" alt="STAT-Analog Table" width="1276" height="219"></p>
+  <p>Device Status Window showing &quot;Message&quot; strings appended to parameter values...</p>
+  <p><img src="images/STAT-Dvc Status.png" alt="STAT-Dvc Status" width="240" height="175"> </p>
+  <p>This completes the setup of the Thermostats. </p>
+  <p>Reinit/Restart PowerHome to assure all changes are locked in and saved. </p>
+  <p>You can now read/write STAT values using the following PH Functions...</p>
+  <p><strong>&nbsp;&nbsp;ph_getanalog(&quot;ID&quot;)<br>
+  &nbsp;&nbsp;ph_setanalogout(&quot;ID&quot;,&quot;value&quot;)</strong></p>
+  <p>where &quot;ID&quot; is the string used to identify the individual STAT parameter of interest.</p>
+  <p>For instance the following reads all of the &quot;TS1&quot; thermostat parameters, and writes each to a Global Variable (which you have already defined in the Global Variables window...</p>
+  <p><img src="images/STAT-read values.png" alt="STAT-read" width="528" height="136"></p>
+  <p>And the following writes a new Heat Setpoint value to the &quot;TS2&quot; thermostat. </p>
+  <p>&nbsp;&nbsp;<strong>ph_setanalogout(&quot;TS2HSP&quot;,72)</strong>   </p>
+  <p>In order to have the changing thermostat values updated into your Global variables, or in your Control Center or web page, appropriate Triggers must be defined in the <strong>Triggers</strong> window. </p>
+  <p><strong>NOTE</strong>: When the Trigger is activated, <strong>LOCAL4</strong> will contain the appropriate value read from the STAT for use in setting Global Variables, or in formula actions you may wish to take. The best way to fetch the LOCAL4 value is to use the <em><strong>ph_getvar(2,4)</strong></em> function. </p>
+  <p>A typical setup might look like this...</p>
+  <p><img src="images/STAT-Trigger Setup.png" alt="STAT-trigger setup" width="1422" height="355"> </p>
+  <p>Note the &quot;Action Type&quot;, &quot;Trigger Type&quot;, and &quot;Trigger ID&quot; are all pull-down selections. Everything else in the blue background areas, you will enter yourself. The grayed area values are automatically inserted by your pull-down choices.</p>
+  <p>A typical Action would be this...</p>
+  <p class="style1">&nbsp;&nbsp;ph_setglobal_s(&quot;STAT-DWN-COOLSP&quot;,ph_getvar_s(2,4))+<br>
+&nbsp;&nbsp;ph_setglobal_s(&quot;STAT-DWN-SET&quot;,ph_getglobal_s(&quot;STAT-DWN-COOLSP&quot;))</p>
+  <p>which reads the contents of LOCAL4 and writes it to the Global &quot;STAT-DWN-COOLSP&quot; and also updates the STAT-DWN-SET variable which is used as a single convenient setpoint variable that holds either the Heat or the Cool setpoint, as appropriate for the current STAT Mode.</p>
+  <p>At this point, you should have a working Insteon Thermostat setup in PowerHome. From this base, you are now ready to read and control your thermostats as dictated by your needs and imagination. </p>
+  <p>&nbsp;  </p>
+</div>
+</body>
+</html>

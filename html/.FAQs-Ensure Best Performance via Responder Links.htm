@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_clearvars</title>
+</head>
+<body>
+<div class=ph1>
+FAQ: Setting up PLM as Responder Links to Assure Best PowerHome Performance </div>
+
+<div class=ph2>Knowledge Notes </div>
+
+<div class=ph3>
+  <p class="ph3">You almost always want the PLM  as a responder link for every Insteon device. </p>
+  <p class="ph3"><img src="images/Respond Links.png" alt="Responder Links" width="763" height="349"></p>
+  <p class="ph3">This is not necessary  for  responder only devices such as LampLincs though (if Responder groups does not equal 0 in the  types table, you can create Responder links). </p>
+  <p class="ph3">Thus none needed for the red boxed device, but suggested for the green boxed devices. </p>
+  <p class="ph3"><img src="images/Responder Link OK.png" alt="Responder Link OK?" width="543" height="189"></p>
+  <p class="ph3"> If there are multiple Responder Links, then it is good practice to make this link  the first link,  so that the PLM will have the greatest chance of being  updated. </p>
+  <p class="ph3">When you control an Insteon device manually (at the switch), it  will send an Insteon Group Broadcast command (unacknowledged without retries) to any device  listening. </p>
+  <p class="ph3">If the receiving device hears it (the PLM) then we're good. If it isn't heard, then we must rely on a Group Cleanup message. </p>
+  <p class="ph3">This message is  sent to every device in the Group (in the order that the links appear) up  to/until another Insteon message is placed on the power line. </p>
+  <p class="ph3">If you have two  Insteon switches right next to each other, and first switch one and then immediately  the other, you'll get a group broadcast from the first one but the group  broadcast from the second one will cut off any (or if you're lucky, the first group  cleanup may already be sent) group cleanups being sent and you'll only get them  from the second switch (up until another Insteon message is placed on the  line).</p>
+  <p class="ph3"><br>
+    The second reason its good to  have a Responder link to the PLM is that the message is sent directly to the PLM and  acknowledged. Due to the way Insteon works, if a Switch controls another  Insteon device (but not the PLC/PLM) it will send the group broadcast (which  the PLM may hear) and if you're lucky the Group Cleanup message directly to the  controlled device (which the PLM may also hear). If the PLM is far away and the  switch and its controlled device are close to one another, the PLM may  never get a chance to hear the Group Cleanup as the message will stop being  repeated as soon as the remote device acknowledges it. (Insteon relies upon a  simulcast repeating message network to try and get its messages through to  every device).</p>
+ 
+ <p class="ph3">You  typically only need a controller link to a device with the PLM as the  controller if you plan on controlling multiple devices through the PLM groups.  A special situation would be where a LampLinc (eg, SmartHome Model 2456D2, which can't have a Responder  link) is I2CS. </p>
+ <p class="ph3">Then you <strong>MUST</strong> have the PLM address somewhere in its database so  a controller link is the most logical answer. </p>
+</div>
+ 
+</body>
+</html>
