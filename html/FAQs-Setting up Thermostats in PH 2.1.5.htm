@@ -12,11 +12,9 @@
 	font-weight: bold;
 }
 -->
-</style>
-  </head>
+</style> </head>
   <body>
-    <div class="ph1">
-      FAQ: New Thermostat Setup Proceedure </div>
+    <div class="ph1"> FAQ: New Thermostat Setup Procedure </div>
     <div class="ph2">Knowledge Notes </div>
     <div class="ph3">
       <p>With the release of PowerHome 2.1.5, an entirely new support system for
@@ -50,8 +48,8 @@
         is, then select the * Auto Discovery * parameter in the Device Type cell
         and then click on the "Save/Refresh" button. Once the auto discovery
         process completes successfully, click on the Save/Refresh button again
-        to refresh the window. The correct Device <ype>Type</ype>
-        should then be displayed. </p>
+        to refresh the window. The correct Device <ype>Type</ype> should then
+        be displayed. </p>
       <p>After clicking on the Save/Refrresh button, look at the Pending and
         Completed Operations windows in Insteon Explorer. If the Save/Refresh
         operation does not complete succecssfully you will see something as
@@ -105,10 +103,10 @@
         seconds) to repeatedly check the status of each item. Enter a string in
         the <strong>Message</strong> field that you want to appear in the
         Device Status window, after the parameter value. The <span style="font-weight: bold;">Poll
-          Intvl </span>field allows you to specify how often PowerHome should manually
-        "poll" for the values from the thermostat. This column is in seconds.
-        From the examples below, a Poll Interval of 300 is used which equates to
-        5 minutes.</p>
+          Intvl </span>field allows you to specify how often PowerHome should
+        manually "poll" for the values from the thermostat. This column is in
+        seconds. From the examples below, a Poll Interval of 300 is used which
+        equates to 5 minutes.</p>
       <p><img src="images/STAT-analog%20win.png" alt="STAT-Analog Table" height="219"
           width="1276"></p>
       <p>Device Status Window showing "Message" strings appended to parameter
@@ -123,6 +121,15 @@
           &nbsp;&nbsp;ph_setanalogout("ID","value")</strong></p>
       <p>where "ID" is the string used to identify the individual STAT parameter
         of interest.</p>
+      <p>The information returned by the ph_getanalog function will be a string
+        value. In the case of values such as temperature and cool setpoint, this
+        string value will be a numeric (eg. 37, 72, 78, etc).&nbsp; You will
+        need to use a function such as integer() to convert the string to a
+        numeric for further processing.&nbsp; Executing ph_getanalog for the
+        thermostat mode will return values such as "Off", "Cool", "Heat",
+        etc.&nbsp; Unlike previous PowerHome Insteon Thermostat routines, the
+        data values for setpoint and termperature are now direct reading and do
+        not have to be divided by two to obtain the correct value. </p>
       <p>For instance the following reads all of the "TS1" thermostat
         parameters, and writes each to a Global Variable (which you have already
         defined in the Global Variables window...</p>
