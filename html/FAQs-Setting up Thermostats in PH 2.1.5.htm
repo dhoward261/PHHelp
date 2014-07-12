@@ -12,7 +12,7 @@
 	font-weight: bold;
 }
 -->
-</style> </head>
+    </style> </head>
   <body>
     <div class="ph1"> FAQ: New Thermostat Setup Procedure </div>
     <div class="ph2">Knowledge Notes </div>
@@ -33,7 +33,8 @@
         an earlier version of PH then you may skip this step, as your devices
         are already entered in the database. Configure all of your STAT devices
         as exampled below. </p>
-      <p><img src="images/STAT-Devices.jpg" alt="Stat Devices Setup" height="105"
+      <p><img src="images/STAT-Devices.jpg" alt="Stat Devices Setup" height="105"
+
           width="1257"></p>
       <p> Enter an <strong>ID</strong> and <strong>Description</strong>
         (Usually the same. The ID is used in Formulas to identify the device,
@@ -63,7 +64,8 @@
         in the Completed Operations window a single CREATE I2CS INITIAL entrty
         with several CREATE CTLR LINK entries above it (one for each Controller
         Group you defined. </p>
-      <p><img src="images/STAT-Creat%20I2CS.jpg" alt="STAT-Create I2CS" height="299"
+      <p><img src="images/STAT-Creat%20I2CS.jpg" alt="STAT-Create I2CS" height="299"
+
           width="663"></p>
       <p>If you encounter blocked access to your I2CS device, then the following
         proceedure must be used to get around the I2CS device firewall
@@ -89,7 +91,8 @@
       <p>You now have the Device configuration parameters all set up, and you
         are ready to use it. </p>
       <p>From PowerHome Explorer open the Analog I/O window...</p>
-      <p><img src="images/STAT-PH%20Exp-Analog.png" alt="STAT-Analog Object" height="299"
+      <p><img src="images/STAT-PH%20Exp-Analog.png" alt="STAT-Analog Object" height="299"
+
           width="230"></p>
       <p>and Add the five Insteon Stat attributes that can be sensed (Cool Set
         Point, Heat Set Point, Humidity, Stat Mode, and Temp) for each of your
@@ -107,15 +110,16 @@
         manually "poll" for the values from the thermostat. This column is in
         seconds. From the examples below, a Poll Interval of 300 is used which
         equates to 5 minutes.</p>
-      <p><img src="images/STAT-analog%20win.png" alt="STAT-Analog Table" height="219"
+      <p><img src="images/STAT-analog%20win.png" alt="STAT-Analog Table" height="219"
+
           width="1276"></p>
       <p>Device Status Window showing "Message" strings appended to parameter
         values...</p>
-      <p><img src="images/STAT-Dvc%20Status.png" alt="STAT-Dvc Status" height="175"
+      <p><img src="images/STAT-Dvc%20Status.png" alt="STAT-Dvc Status" height="175"
+
           width="240"> </p>
       <p>This completes the setup of the Thermostats. </p>
-      <p>Reinit/Restart PowerHome to assure all changes are locked in and saved.
-      </p>
+      <p>Reinit/Restart PowerHome to assure all changes are locked in and saved.      </p>
       <p>You can now read/write STAT values using the following PH Functions...</p>
       <p><strong>&nbsp;&nbsp;ph_getanalog("ID")<br>
           &nbsp;&nbsp;ph_setanalogout("ID","value")</strong></p>
@@ -134,7 +138,13 @@
         parameters, and writes each to a Global Variable (which you have already
         defined in the Global Variables window...</p>
       <p><img src="images/STAT-read%20values.png" alt="STAT-read" height="136" width="528"></p>
-      <p>And the following writes a new Heat Setpoint value to the "TS2"
+      <p class="ph11"><strong>NOTE</strong>:  The ph_getanalog function ONLY returns <strong>text</strong> values. In the case of setpoint and temps, the text value returned will be numeric but it is still a text value in terms of a formula. For example... </p>
+      <p class="ph11"><strong>&nbsp;&nbsp;&nbsp;&nbsp;if(ph_getanalog("TS1CSP") < 78,1,0) </strong></p>
+      <p class="ph11">The above formula will fail because you're comparing  text  to a numeric.  You would need to use this instead...</p>
+      <p class="ph11"><strong> &nbsp;&nbsp;&nbsp;&nbsp;if(integer(ph_getanalog("TS1CSP")) < 78,1,0) </strong></p>
+      <p class="ph11">This function is now proper because a  number is now compared to another number.</p>
+      <p class="ph11">&nbsp;</p>
+      <p>The following writes a new Heat Setpoint value to the "TS2"
         thermostat. </p>
       <p>&nbsp;&nbsp;<strong>ph_setanalogout("TS2HSP","72")</strong> </p>
       <p>Its important to note that the second value is a <span style="font-weight: bold;">string</span>
@@ -157,7 +167,8 @@
         contain the calculated value "Cool". The best way to fetch the TEMP5
         value is to use <span style="font-weight: bold; font-style: italic;">ph_getvar(2,5)</span>.</p>
       <p>A typical setup might look like this...</p>
-      <p><img src="images/STAT-Trigger%20Setup.png" alt="STAT-trigger setup" height="355"
+      <p><img src="images/STAT-Trigger%20Setup.png" alt="STAT-trigger setup" height="355"
+
           width="1422"> </p>
       <p>Note the "Action Type", "Trigger Type", and "Trigger ID" are all
         pull-down selections. Everything else in the blue background areas, you
