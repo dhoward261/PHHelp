@@ -145,11 +145,17 @@
       <p>In order to have the changing thermostat values updated into your
         Global variables, or in your Control Center or web page, appropriate
         Triggers must be defined in the <strong>Triggers</strong> window. </p>
-      <p><strong>NOTE</strong>: When the Trigger is activated, <strong>LOCAL4</strong>
-        will contain the appropriate value read from the STAT for use in setting
-        Global Variables, or in formula actions you may wish to take. The best
-        way to fetch the LOCAL4 value is to use the <em><strong>ph_getvar(2,4)</strong></em>
-        function. </p>
+      <p><strong>NOTE</strong>: When the Trigger is activated, <strong>TEMP4</strong>
+        will contain the appropriate <span style="font-weight: bold;">RAW</span>
+        value read from the STAT for use in setting Global Variables, or in
+        formula actions you may wish to take. The best way to fetch the TEMP4
+        value is to use the <em><strong>ph_getvar(2,4)</strong></em> function.
+        The <span style="font-weight: bold;">TEMP5</span> variable will contain
+        the calculated value read from the STAT. In the case of temps and
+        setpoints, the raw and calculated values are the same. In the case of
+        the thermostat mode, TEMP4 will contain the raw value 2 while TEMP5 will
+        contain the calculated value "Cool". The best way to fetch the TEMP5
+        value is to use <span style="font-weight: bold; font-style: italic;">ph_getvar(2,5)</span>.</p>
       <p>A typical setup might look like this...</p>
       <p><img src="images/STAT-Trigger%20Setup.png" alt="STAT-trigger setup" height="355"
           width="1422"> </p>
@@ -160,10 +166,11 @@
       <p>A typical Action would be this...</p>
       <p class="style1">&nbsp;&nbsp;ph_setglobal_s("STAT-DWN-COOLSP",ph_getvar_s(2,4))+<br>
 &nbsp;&nbsp;ph_setglobal_s("STAT-DWN-SET",ph_getglobal_s("STAT-DWN-COOLSP"))</p>
-      <p>which reads the contents of LOCAL4 and writes it to the Global
-        "STAT-DWN-COOLSP" and also updates the STAT-DWN-SET variable which is
-        used as a single convenient setpoint variable that holds either the Heat
-        or the Cool setpoint, as appropriate for the current STAT Mode.</p>
+      <p>which reads the contents of <span style="font-weight: bold;">TEMP4</span>
+        and writes it to the Global "STAT-DWN-COOLSP" and also updates the
+        STAT-DWN-SET variable which is used as a single convenient setpoint
+        variable that holds either the Heat or the Cool setpoint, as appropriate
+        for the current STAT Mode.</p>
       <p>At this point, you should have a working Insteon Thermostat setup in
         PowerHome. From this base, you are now ready to read and control your
         thermostats as dictated by your needs and imagination. </p>
