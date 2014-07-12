@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_clearvars</title>
+</head>
+<body>
+<div class=ph1>
+FAQ: LOCAL/TEMP/GLOBAL VARS </div>
+
+<div class=ph2>Knowledge Notes </div>
+
+<div class=ph3>
+  <p>Here is the changelog for 2.1.5.  <br>
+      <br>
+  NOTE: This changelog represents cumulative  changes since version 2.1b. </p>
+  <p>Version 2.1.4 did not have a changelog, so changes  in that version (that still exist in 2.1.5) will be listed here.&nbsp;<br>
+    <br>
+    PowerHome code has been updated to the latest  version of PowerBuilder libraries (version 12.5).&nbsp;<br>
+    <br>
+    Database engine has been upgraded to SQL  Anywhere 11 from Adaptive Server Anywhere 7.&nbsp;<br>
+    <br>
+    New Insteon engine with full I2CS support. All  previous Insteon bugs should be resolved. New Insteon tables hold all published  Insteon device types and will be auto-added to the Insteon Types table during  auto discovery.&nbsp;NOTE that some I2CS devices may be firewalled and not readily &quot;discovered&quot; by programatic methods. See discussion about this issue in &quot;FAQs-Setting up Thermostats in PH 2.1.5&quot; for more information on how to resolve this, should it be a problem. <br>
+    <br>
+    I2CS Thermostats now fully supported.&nbsp;NOTE: PH Version 2.1.5 on, uses a significantly different approach to Thermostat support than previous PH Versions did. See Help File &quot;FAQs-Setting up Thermostats in PH 2.1.5&quot; for detailed information. <br>
+    <br>
+    New Options window for Insteon devices. Allows  for extended programming of various Insteon devices.&nbsp;<br>
+    <br>
+    Insteon KPL config has been updated to use the  Insteon KPL configuration commands (instead of the old peek/poke memory  locations). KPL tab has been removed from Insteon Explorer and added to the new  Insteon Options window. Peek/Poke commands still available for legacy devices.&nbsp;<br>
+    <br>
+    Added support for Insteon GarageHawk.&nbsp;<br>
+    <br>
+    Changed most timing operations within  PowerHome to a single background multi-threaded object. Should solve contention  issues between multiple components.&nbsp;<br>
+    <br>
+    All references to MSCOMM32 (Microsoft COMM  control) have been removed. Serial port controls have all been replaced with  COMM32 control. Allows COM ports 1 thur 255.&nbsp;<br>
+    <br>
+    All references to MSWINSCK (Microsoft Winsock  control) have been removed. All socket controls have been upgraded with  Catalyst 8 controls.&nbsp;<br>
+    <br>
+    All plugins have been brought up to current  controls (serial/winsock) and current codebase (PowerBuilder plugins are 12.5).  This should solve the problems people were having with the PH_CID plugin.<br>
+    <br>
+    Eventlog and weblog tables have been moved to  their own database (phlogs.db). No more corrupt databases due to the eventlog  and weblog growing to very large sizes.&nbsp;<br>
+    <br>
+    Eventlog report has been rewritten as a  background thead with the option to cancel retrieval. No more hanging of  PowerHome when retrieving very large logs. Start reviewing log immediately  while retrieval continues in the background.&nbsp;<br>
+    <br>
+   New log options. Resume Macro  will fire when a macro is resumed from waiting. Verbose macro will cause the  existing Macro and the new Resume Macro to also display the values of [LOCAL1]  thru [LOCAL10] and [TEMP1] thru [TEMP10]. Now you'll be able to get a better  idea of what is going on with your macros until the macro debugger is released.&nbsp;<br>
+    <br>
+    New Analog device types. Dedicated analog  types for Insteon GarageHawk, IOLinc, EZRain/EZFlora, Insteon Responder Group  (eliminates need for virtual Insteon devices), etc. Allows for complete control  of these devices without having to do any scripting.&nbsp;<br>
+    <br>
+    Thermostats  table has been deprecated. Insteon and Elk Thermostats have their own  individual device types (Temperature, Cool SetPoint, etc) in the Analog I/O  table.&nbsp;While this is a substantial improvement, unfortunately it means that prior Thermostat coding in earlier versions of PH will have to be re-visited in order to obtain full benefits. See Help File &quot;FAQs-Setting up Thermostats in PH 2.1.5&quot; for detailed information. <br>
+    <br>
+    Timed Events routine has been reworked to  solve problem with disappearing timed events. Now using update instead of  Delete/Insert during timed event processing.&nbsp;<br>
+    <br>
+    New labeling system added. Add one or more  user defined labels to devices, macros, triggers, etc. Filter by label in PowerHome  Explorer and Device Status screen. Group devices, formulas, macros, etc.  together logically.&nbsp;<br>
+    <br>
+    New 1-wire controller type. Support 1-wire  devices directly within PowerHome. This controller runs in a separate thread  due to the overhead of 1-wire communications.&nbsp;<br>
+    <br>
+    New generic parallel port controller type.&nbsp;<br>
+    <br>
+    New CM15A controller type. Supports both PLC  and RF capabilities of this device.&nbsp;<br>
+    <br>
+    New Insteon SmartLinc/NetLinc/Hub controller  type. Connect directly to Insteon IP capable PLM's without having to use a  virtual serial port.&nbsp;<br>
+    <br>
+    Virtual Serial Port plugin updated to use the  latest version 7.2 of Eltima controls. Plugin rewritten to be an activex EXE  (rather than OCX) for better reliability and stability.&nbsp;<br>
+    <br>
+    Reworked execution queue to support priority  and top items. See ph_postexequeue function.&nbsp;<br>
+    <br>
+    Direct control and status of Controllers from  the PowerHome UI. Under Help-&gt;About-&gt;Controllers, you'll be able to see  the connect status of the controllers as well as change the status.&nbsp;<br>
+    <br>
+  New options to select lines in a macro and delete,  cut, copy, or paste them to other macros (or the current macro).&nbsp;</p>
+  <p class="ph11">To use this feature CTRL-Click on any Macro line of code and the entire line will be selected. Additional CTRL-Clicks will select additional individual lines of code, while a Shift_Click will select all lines between the first and last Click. </p>
+  <p class="ph11"><img src="images/Macro Select.png" alt="Macro Cut/Paste" width="592" height="545"></p>
+  <p class="ph11">Once your Selection is made, Right-Click the mouse anywhere in the Macro and a context menu will appear. Choose the &quot;Selected&quot; menu item and the desired action.</p>
+  <p><span class="ph11">If you Cut/Copy, you can Paste it in this or another Macro. After you select a target row, you can then Paste and the clipboard content will be Inserted at that location. It inserts, not overwrites, so following lines will be moved down to make room. <br>
+    </span><br>
+    New regular expression capability (available  in functions ph_regex2, ph_regexdiff2, and ph_regexsnap2). This regular expression  syntax is the same as VB and offers many more options than the regex  functionality in Scintilla. Reference this website for very detailed  documentation concerning this syntax:  http://www.regular-expressions.info/vb.html&nbsp;<br>
+    <br>
+    Webserver and Socket Server rewritten to  eliminate contention errors.&nbsp;<br>
+    <br>
+    Webserver has additional security options  (cookie) and now supports SSL.&nbsp;<br>
+    <br>
+    SMTP email functions have all been rewritten  to use Catalyst SMTP control vs a raw socket. Improved stability and  performance. New ph_sendsmtpemailasync function allows you send email  asynchronously rather than holding up PowerHome execution waiting for the email  function to return.&nbsp;<br>
+    <br>
+    Numerous bugfixes, critical error fixes, and  tweaks throughout. Too many to list. Since alot of the base code is completely  new, please re-report any bugs or critical errors as they occur.&nbsp;<br>
+    <br>
+    New Plugins:&nbsp;<br>
+    Virtual Serial Port, Roku, Directory Monitor,  Windows Lock Monitor, AVTech DVR control, Windows Monitor, Growl Control, ODBC  Database Control, Windows Power Monitor, URL Scraper&nbsp;<br>
+    <br>
+    New Functions:&nbsp;<br>
+    d2h, h2d, h2s, ph_base64decode1, ph_convertir,  ph_ctlrcontrol, ph_decrypt, ph_deletetimedevent, ph_encrypt, ph_fill,  ph_formulabtnparm, ph_funcdef, ph_funclist, ph_getdevicestat, ph_getdeviceval,  ph_getlasterrorstring, ph_getmd5hash, ph_getmd5hash1, ph_getmtret,  ph_getothercounter, ph_getsyspwrstat, ph_gettstat, ph_gettstat_s, ph_geturl1,  ph_geturlviaproxy1, ph_getvarsub, ph_htmlescape1, ph_insteonprodlistimport,  ph_insteonrawext, ph_insteonwithret1, ph_insteonwithretext,  ph_insteonwithretext1, ph_isssrunning, ph_iswslocked, ph_latlongdist,  ph_locatehandle1, ph_lockworkstation, ph_minutestostring, ph_not, ph_number,  ph_pad, ph_ping1, ph_postexequeue, ph_posturl1, ph_posturlviaproxy1, ph_random,  ph_regex2, ph_regexdiff2, ph_regexsnap2, ph_retrievevars, ph_runasuser1,  ph_runsync1, ph_saveurl1, ph_saveurlviaproxy1, ph_sendsmtpemailasync,  ph_sendsmtpemailfileasync, ph_setdeviceval, ph_setothercounter, ph_settemps,  ph_settstat, ph_shutdown, ph_snapxml, ph_split, ph_storevars, ph_sumnum,  ph_timedeventsinfo, ph_trim, ph_urlescape, ph_varsub, ph_x10other, s2h&nbsp;<br>
+    <br>
+    Changed Functions:&nbsp;<br>
+    ph_devicebtn, ph_getdigitalstat,  ph_getinsteonctrl, ph_getinteonstat, ph_getvar_d, ph_getvar_dt, ph_getvar_n,  ph_getvar_s, ph_getvar_t, ph_insteonctrl, ph_modifytimedevent, ph_rtne,  ph_runasuser, ph_sendsocketdata1, ph_setanalogout, ph_webaddblob, ph_webds&nbsp;<br>
+  </p>
+</div>
+ 
+</body>
+</html>
