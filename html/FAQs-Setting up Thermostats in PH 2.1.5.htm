@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
   <head>
-    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <link rel="stylesheet" type="text/css" href="ph-help.css">
-    <title>ph_clearvars</title>
+    <title>Setting up Insteon Thermostats</title>
     <style type="text/css">
 <!--
 .style1 {
@@ -28,14 +28,14 @@
           "Types"</strong> Tab and <strong>Modify</strong> the Ctlr Groups
         entry for all Insteon stats you will be using. The default value is
         usually "1". Change this to "254" </p>
-      <p><img src="images/STAT-type.jpg" alt="Stat Type Setup" height="152" width="536"></p>
+      <p><IMG alt="Stat Type Setup" src ="images/STAT-type.jpg" width=536 height=152 ></p>
       <p>Now Open the <strong>Devices</strong> Tab. If you are upgrading from
         an earlier version of PH then you may skip this step, as your devices
         are already entered in the database. Configure all of your STAT devices
         as exampled below. </p>
-      <p><img src="images/STAT-Devices.jpg" alt="Stat Devices Setup" height="105"
+      <p><IMG alt="Stat Devices Setup" src ="images/STAT-Devices.jpg"
 
-          width="1257"></p>
+          width=1257 height=105 ></p>
       <p> Enter an <strong>ID</strong> and <strong>Description</strong>
         (Usually the same. The ID is used in Formulas to identify the device,
         and the Description is what appears in the Device Status window. (Most
@@ -49,7 +49,8 @@
         is, then select the * Auto Discovery * parameter in the Device Type cell
         and then click on the "Save/Refresh" button. Once the auto discovery
         process completes successfully, click on the Save/Refresh button again
-        to refresh the window. The correct Device <ype>Type</ype> should then
+        to refresh the window. The correct Device <ype>  
+         Type </YPE> should then
         be displayed. </p>
       <p>After clicking on the Save/Refrresh button, look at the Pending and
         Completed Operations windows in Insteon Explorer. If the Save/Refresh
@@ -64,9 +65,9 @@
         in the Completed Operations window a single CREATE I2CS INITIAL entrty
         with several CREATE CTLR LINK entries above it (one for each Controller
         Group you defined. </p>
-      <p><img src="images/STAT-Creat%20I2CS.jpg" alt="STAT-Create I2CS" height="299"
+      <p><IMG alt="STAT-Create I2CS" src ="images/STAT-Creat%20I2CS.jpg"
 
-          width="663"></p>
+          width=663 height=299 ></p>
       <p>If you encounter blocked access to your I2CS device, then the following
         proceedure must be used to get around the I2CS device firewall
         protection.</p>
@@ -87,13 +88,13 @@
         priority) by using the CTRL Sort field Place a 1 in the 239 group, a 2
         in the 1 group, etc and place a 9 in all other groups as the order
         doesnt really matter after that). </p>
-      <p><img src="images/STAT-Links.png" alt="STAT-Links" height="356" width="1169"></p>
+      <p><IMG alt=STAT-Links src="images/STAT-Links.png" width=1169 height=356></p>
       <p>You now have the Device configuration parameters all set up, and you
         are ready to use it. </p>
       <p>From PowerHome Explorer open the Analog I/O window...</p>
-      <p><img src="images/STAT-PH%20Exp-Analog.png" alt="STAT-Analog Object" height="299"
+      <p><IMG alt="STAT-Analog Object" src ="images/STAT-PH%20Exp-Analog.png"
 
-          width="230"></p>
+          width=230 height=299 ></p>
       <p>and Add the five Insteon Stat attributes that can be sensed (Cool Set
         Point, Heat Set Point, Humidity, Stat Mode, and Temp) for each of your
         thermostat devices. </p>
@@ -105,19 +106,19 @@
         the Device ID string in later releases of PH) and a poll interval (in
         seconds) to repeatedly check the status of each item. Enter a string in
         the <strong>Message</strong> field that you want to appear in the
-        Device Status window, after the parameter value. The <span style="font-weight: bold;">Poll
+        Device Status window, after the parameter value. The <span style="FONT-WEIGHT: bold">Poll
           Intvl </span>field allows you to specify how often PowerHome should
         manually "poll" for the values from the thermostat. This column is in
         seconds. From the examples below, a Poll Interval of 300 is used which
         equates to 5 minutes.</p>
-      <p><img src="images/STAT-analog%20win.png" alt="STAT-Analog Table" height="219"
+      <p><IMG alt="STAT-Analog Table" src ="images/STAT-analog%20win.png"
 
-          width="1276"></p>
+          width=1276 height=219 ></p>
       <p>Device Status Window showing "Message" strings appended to parameter
         values...</p>
-      <p><img src="images/STAT-Dvc%20Status.png" alt="STAT-Dvc Status" height="175"
+      <p><IMG alt="STAT-Dvc Status" src ="images/STAT-Dvc%20Status.png"
 
-          width="240"> </p>
+          width=240 height=175 > </p>
       <p>This completes the setup of the Thermostats. </p>
       <p>Reinit/Restart PowerHome to assure all changes are locked in and saved.      </p>
       <p>You can now read/write STAT values using the following PH Functions...</p>
@@ -137,17 +138,18 @@
       <p>For instance the following reads all of the "TS1" thermostat
         parameters, and writes each to a Global Variable (which you have already
         defined in the Global Variables window...</p>
-      <p><img src="images/STAT-read%20values.png" alt="STAT-read" height="136" width="528"></p>
+      <p><IMG alt=STAT-read src="images/STAT-read%20values.png" width=528 height=136></p>
       <p class="ph11"><strong>NOTE</strong>:  The ph_getanalog function ONLY returns <strong>text</strong> values. In the case of setpoint and temps, the text value returned will be numeric but it is still a text value in terms of a formula. For example... </p>
-      <p class="ph11"><strong>&nbsp;&nbsp;&nbsp;&nbsp;if(ph_getanalog("TS1CSP") < 78,1,0) </strong></p>
+      <p class="ph11"><strong>&nbsp;&nbsp;&nbsp;&nbsp;if(ph_getanalog("TS1CSP") &lt;  78,1,0) </strong></p>
       <p class="ph11">The above formula will fail because you're comparing  text  to a numeric.  You would need to use this instead...</p>
-      <p class="ph11"><strong> &nbsp;&nbsp;&nbsp;&nbsp;if(integer(ph_getanalog("TS1CSP")) < 78,1,0) </strong></p>
+      <p class="ph11"><strong>&nbsp;&nbsp;&nbsp;&nbsp;if(integer(ph_getanalog("TS1CSP")) 
+ &lt;  78,1,0) </strong></p>
       <p class="ph11">This function is now proper because a  number is now compared to another number.</p>
       <p class="ph11">&nbsp;</p>
       <p>The following writes a new Heat Setpoint value to the "TS2"
         thermostat. </p>
       <p>&nbsp;&nbsp;<strong>ph_setanalogout("TS2HSP","72")</strong> </p>
-      <p>Its important to note that the second value is a <span style="font-weight: bold;">string</span>
+      <p>Its important to note that the second value is a <span style="FONT-WEIGHT: bold">string</span>
         instead of a numeric value.&nbsp; This is because the ph_setanalogout
         function is looking for the calculated value which can be
         anything.&nbsp; In the case of the thermostat device types, the
@@ -156,20 +158,20 @@
         Global variables, or in your Control Center or web page, appropriate
         Triggers must be defined in the <strong>Triggers</strong> window. </p>
       <p><strong>NOTE</strong>: When the Trigger is activated, <strong>TEMP4</strong>
-        will contain the appropriate <span style="font-weight: bold;">RAW</span>
+        will contain the appropriate <span style="FONT-WEIGHT: bold">RAW</span>
         value read from the STAT for use in setting Global Variables, or in
         formula actions you may wish to take. The best way to fetch the TEMP4
         value is to use the <em><strong>ph_getvar(2,4)</strong></em> function.
-        The <span style="font-weight: bold;">TEMP5</span> variable will contain
+        The <span style="FONT-WEIGHT: bold">TEMP5</span> variable will contain
         the calculated value read from the STAT. In the case of temps and
         setpoints, the raw and calculated values are the same. In the case of
         the thermostat mode, TEMP4 will contain the raw value 2 while TEMP5 will
         contain the calculated value "Cool". The best way to fetch the TEMP5
-        value is to use <span style="font-weight: bold; font-style: italic;">ph_getvar(2,5)</span>.</p>
+        value is to use <span style="FONT-STYLE: italic; FONT-WEIGHT: bold">ph_getvar(2,5)</span>.</p>
       <p>A typical setup might look like this...</p>
-      <p><img src="images/STAT-Trigger%20Setup.png" alt="STAT-trigger setup" height="355"
+      <p><IMG alt="STAT-trigger setup" src ="images/STAT-Trigger%20Setup.png"
 
-          width="1422"> </p>
+          width=1422 height=355 > </p>
       <p>Note the "Action Type", "Trigger Type", and "Trigger ID" are all
         pull-down selections. Everything else in the blue background areas, you
         will enter yourself. The grayed area values are automatically inserted
@@ -177,7 +179,7 @@
       <p>A typical Action would be this...</p>
       <p class="style1">&nbsp;&nbsp;ph_setglobal_s("STAT-DWN-COOLSP",ph_getvar_s(2,4))+<br>
 &nbsp;&nbsp;ph_setglobal_s("STAT-DWN-SET",ph_getglobal_s("STAT-DWN-COOLSP"))</p>
-      <p>which reads the contents of <span style="font-weight: bold;">TEMP4</span>
+      <p>which reads the contents of <span style="FONT-WEIGHT: bold">TEMP4</span>
         and writes it to the Global "STAT-DWN-COOLSP" and also updates the
         STAT-DWN-SET variable which is used as a single convenient setpoint
         variable that holds either the Heat or the Cool setpoint, as appropriate
@@ -185,7 +187,7 @@
       <p>At this point, you should have a working Insteon Thermostat setup in
         PowerHome. From this base, you are now ready to read and control your
         thermostats as dictated by your needs and imagination. </p>
-      <p>&nbsp; </p>
+      <p> </p>
     </div>
   </body>
 </html>

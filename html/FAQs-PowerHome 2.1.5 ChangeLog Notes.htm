@@ -1,16 +1,59 @@
 <!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
   <head>
-    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <link rel="stylesheet" type="text/css" href="ph-help.css">
-    <title>ph_clearvars</title>
+    <title>Changelog for PowerHome 2.1.5a</title>
   </head>
   <body>
-    <div class="ph1">
-      FAQ: Changelog for PowerHome 2.1.5</div>
-    <div class="ph2">Knowledge Notes </div>
+    <div class="ph1"> FAQ: Changelog for PowerHome 2.1.5a</div>
+    <div class="ph2">Knowledge Notes</div>
+    <div class="ph3"><br>
+      <span style="font-weight: bold;">Here is the changelog for 2.1.5a:</span><br>
+      <br>
+      Added code to automatically refresh a Control Center tab (if the Control
+      Center is currently open) when changes are made to it via the CC Design
+      screen or through the PowerHome Explorer.<br>
+      <br>
+      Added routines to the Insteon controller to break out of the endless loop
+      of trying to CREATE INITIAL I2CS LINK when it is failing. After 3
+      attempts, the device will be updated as if the initial link was created
+      and will then be allowed to move on to the next step (SCAN I2CS LINKS).<br>
+      <br>
+      Modified Insteon controller to properly update Insteon PLM controller
+      groups in response to external actions (direct control, etc). Device
+      Status screen will now auto update without having to close and reopen.<br>
+      <br>
+      Updated Insteon PLC controller so that the PLC should now work with.
+      Version 2.1.5 introduced a regression where the PLC was unable to be used.<br>
+      <br>
+      Corrected critical error that would occur in PowerHome Explorer if the far
+      left "child" button was double clicked.<br>
+      <br>
+      Added message "No Options available for this device" to the Insteon
+      options screen from the Devices tab in Insteon Explorer for devices that
+      either don't have options or have not yet been implemented.<br>
+      <br>
+      Modified the Set XY and Set HW popups in CC Design view so that if
+      multiple objects are selected, the default of Overwrite or Add is set to
+      Add. Default is still overwrite if a single object is selected. Removed
+      control menu from these screens as closing the window could cause objects
+      to disappear.<br>
+      <br>
+      Modified the Set % popup in CC Design view so that when cancelling, the
+      selected objects are no longer deleted.<br>
+      <br>
+      Corrected issue in Devices tab of Insteon Explorer where the "Replace
+      Address" column is unable to be used.<br>
+      <br>
+      Fixed problem in both PowerHome Multi-editor and Formula builder where the
+      dropdown for global variables was not showing.<br>
+      <br>
+      PowerBuilder runtimes and PowerHome Executables have been upgraded to the
+      latest version of PowerBuilder 12.5.2 build 5629.<br>
+    </div>
     <div class="ph3">
-      <p>Here is the changelog for 2.1.5. <br>
+      <p><span style="font-weight: bold;">Here is the changelog for 2.1.5. </span><br>
         <br>
         NOTE: This changelog represents cumulative changes since version 2.1b. </p>
       <p>Version 2.1.4 did not have a changelog, so changes in that version
@@ -37,8 +80,10 @@
         <br>
         New Options window for Insteon devices. Allows for extended programming
         of various Insteon devices.&nbsp;</p>
-      <p class="ph11">The Options window is accessed via the Options button in the Insteon Explorer Devices tab.</p>
-      <p><img src="images/Options Window.png" alt="Options Window" width="826" height="346" class="ph11"><br>
+      <p class="ph11">The Options window is accessed via the Options button in
+        the Insteon Explorer Devices tab.</p>
+      <p><img class="ph11" alt="Options Window" src="images/Options%20Window.png"
+          height="346" width="826"><br>
         <br>
         Insteon KPL config has been updated to use the Insteon KPL configuration
         commands (instead of the old peek/poke memory locations). KPL tab has
@@ -74,11 +119,14 @@
         <br>
         New log options. Resume Macro will fire when a macro is resumed from
         waiting. Verbose macro will cause the existing Macro and the new Resume
-        Macro to also display in the <strong>Event Log</strong> the values of [LOCAL1] thru [LOCAL10] and [TEMP1]
-        thru [TEMP10]. Now you'll be able to get a better idea of what is going
-      on with your macros until the macro debugger is released.&nbsp;</p>
-      <p class="ph11">These posting parameters are accessed in the PowerHome Explorer&gt;Setup&gt;Logs object. </p>
-      <p><img src="images/LOGS-posting.png" alt="LOGS-Posting" width="912" height="303" class="ph11"><br>
+        Macro to also display in the <strong>Event Log</strong> the values of
+        [LOCAL1] thru [LOCAL10] and [TEMP1] thru [TEMP10]. Now you'll be able to
+        get a better idea of what is going on with your macros until the macro
+        debugger is released.&nbsp;</p>
+      <p class="ph11">These posting parameters are accessed in the PowerHome
+        Explorer&gt;Setup&gt;Logs object. </p>
+      <p><img class="ph11" alt="LOGS-Posting" src="images/LOGS-posting.png" height="303"
+          width="912"><br>
         <br>
         New Analog device types. Dedicated analog types for Insteon GarageHawk,
         IOLinc, EZRain/EZFlora, Insteon Responder Group (eliminates need for
@@ -127,13 +175,12 @@
         of the controllers as well as change the status.&nbsp;<br>
         <br>
         New options to select lines in a macro and delete, cut, copy, or paste
-      them to other macros (or the current macro).&nbsp;</p>
+        them to other macros (or the current macro).&nbsp;</p>
       <p class="ph11">To use this feature CTRL-Click on any Macro line of code
         and the entire line will be selected. Additional CTRL-Clicks will select
         additional individual lines of code, while a Shift_Click will select all
         lines between the first and last Click. </p>
-      <p class="ph11"><img src="images/Macro%20Select.png" alt="Macro Cut/Paste"
-
+      <p class="ph11"><img alt="Macro Cut/Paste" src="images/Macro%20Select.png"
           height="545" width="592"></p>
       <p class="ph11">Once your Selection is made, Right-Click the mouse
         anywhere in the Macro and a context menu will appear. Choose the
