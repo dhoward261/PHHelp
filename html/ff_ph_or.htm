@@ -19,6 +19,7 @@ Bitwise OR’s two numbers.
 <div class=ph5>
 ph_or ( val1, val2 )
 </div>
+
 <div>
 <table width=100%>
 <tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
@@ -53,11 +54,27 @@ A typical use of the OR operator  in an IF function is...
 <div class=ph11>
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
+
 <div class=ph20>
-  &bull; ph_or({DARK},{HOME}) --> yields a "1" if either the DARK or HOME Globals are true (equal 1) <br>
-  &bull; ph_or(8,2) &nbsp;&nbsp;--> Yields "10"&nbsp;&nbsp;&nbsp;{0b1000 AND 0b10 &gt;&gt; 0b1010} <br>
-  &bull; ph_or(10,2) --> Yields "10"&nbsp;&nbsp;&nbsp;{0b1010 AND 0b10 &gt;&gt; 0b1010} <br>
-  &bull; ph_or(21, [LOCAL1] --> Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b11 &gt;&gt; 1}</div>
+<table width=100%>
+
+<tr><td width="160" class=ph8_2> ph_or({DARK},{HOME})</td> 
+<td class=ph9>Yields a "1" if either the DARK or HOME Globals are true (ie, equal to 1)</td>
+</tr>
+
+<tr><td width="160" class=ph8_2> ph_or(8,2)</td> 
+<td class=ph9>Yields "10"&nbsp;&nbsp;&nbsp;{0b1000 AND 0b10 &gt;&gt; 0b1010}</td>
+</tr>
+
+<tr><td width="160" class=ph8_2> ph_or(10,2)</td> 
+<td class=ph9>Yields "10"&nbsp;&nbsp;&nbsp;{0b1010 AND 0b10 &gt;&gt; 0b1010}</td>
+</tr>
+
+<tr><td width="160" class=ph8_2> ph_or(21,[LOCAL1])</td> 
+<td class=ph9>Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b11 &gt;&gt; 1}</td>
+</tr>
+</table>
+</div>
 
 </body>
 </html>

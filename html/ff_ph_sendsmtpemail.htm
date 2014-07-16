@@ -90,7 +90,9 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 <div class=ph20>
 &bull; ph_sendsmtpemailfile("smtp.mail.yahoo.com",465,"yourmail@yahoo.com,login,password", "someone@gmail.com","Motion Alert","Driveway Motion Detected.") <br>
 &nbsp;&nbsp;&nbsp;{Sends a plain email message}<br>
-&bull;  ph_sendsmtpemail("smtp.mail.yahoo.com",465,"yourname@yahoo.com,login,password", "8885551212@txt.att.net","Motion Alert","Driveway Motion on CAM1 detected.")<br>
+&bull; ph_sendsmtpemail(&quot;smtp.gmail.com&quot;,465,&quot;johndoe@gmail.com,johndoe,121239&quot;, &quot;4075551212@cingularme.com&quot;,&quot;Motion Alert&quot;,&quot;Motion on DrvCam detected at &quot; +
+ph_getglobal_s (&quot;LASTRIGDRV&quot;)
+<br>
 &nbsp;&nbsp;&nbsp;{Sends an SMS text mesage to a smartphone.}
 </div>
 

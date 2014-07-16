@@ -59,17 +59,31 @@ In addition to the ph_and() function, the stand-alone AND operator is also avail
 <br>
 <br>
 A typical use of the AND operator  in an IF function is...<br>
-    &bull; if(now()>09:00:00 and {DARK}=0 and {HOME},1,0)  
+    &bull; if(Now()>09:00:00 and {DARK}=0 and {HOME}=1,1,0)  
 </div>
+
 
 <div class=ph10>Examples</div>
 <div class=ph11>
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
+
 <div class=ph20>
-  &bull; ph_and({DARK},{HOME}) --> yields a "1" if both the DARK and HOME Globals are true (equal 1) <br>
-  &bull; ph_and(17,1) --> Yields "1"&nbsp;&nbsp;&nbsp;{0b10001 AND 0b1 &gt;&gt; 1} <br>
-  &bull; ph_and(21, [LOCAL1] --> Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b11 &gt;&gt; 1} 
+<table width=100%>
+
+<tr><td width="160" class=ph8_2> ph_and({DARK},{HOME})</td> 
+<td class=ph9>Yields a "1" if both the DARK and HOME Globals are true (ie, equal to 1)</td>
+</tr>
+
+<tr><td width="160" class=ph8_2>ph_and(17,1)</td> 
+<td class=ph9>Yields "1"&nbsp;&nbsp;&nbsp;{0b10001 AND 0b1 &gt;&gt; 1} </td>
+</tr>
+
+<tr>
+<td width="160" class=ph8_2>ph_and(21, [LOCAL1])</td> 
+<td class=ph9>Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b11 &gt;&gt; 1} </td>
+</tr>
+</table>
 </div>
 
 </body>

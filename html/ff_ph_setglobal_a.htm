@@ -19,7 +19,7 @@ Sets the value of a global variable with any type of data.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_setglobal_a ( s, a )
+ph_setglobal_a ( string, value )
 
 </div>
 <div>
@@ -31,33 +31,41 @@ ph_setglobal_a ( s, a )
 <tr>
 <td class=ph8>
 
-s
+string
 
 </td>
 <td class=ph9>
 
-A string identifying the ID of the global variable to set.
-
-</td>
+A <span class="ph-datype">string</span> identifying the ID of the global variable to set.</td>
 </tr>
 <tr>
 <td class=ph8>
 
-a
-
-</td>
+value</td>
 <td class=ph9>
 
-Any data type which you would like assigned to the specified global variable.
-
-</td>
+Any data type <span class="ph-datype">value</span> which you would like assigned to the specified global variable.</td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-Integer.  Returns a 0 if successful and a 1 if an error occurred while updating the global variable.  You can pass any data type as the a argument.  All global variables are stored internally as strings and will be converted.  Numeric values will be converted as is.  Date values will have a mask of ‘yyyy-mm-dd’ applied.  Datetime values will have a mask of ‘yyyy-mm-dd hh:mm:ss.fff’ applied.  Strings go over without conversion.  Any other data type will just be converted as is to a string and then stored.
+  <p>Integer.  Returns a 0 if successful and a 1 if an error occurred while updating the global variable.  You can pass any data type as the a argument.  </p>
+  <p>All global variables are stored internally as strings and will be converted.  Numeric values will be converted as is.  Date values will have a mask of ‘yyyy-mm-dd’ applied.  Datetime values will have a mask of ‘yyyy-mm-dd hh:mm:ss.fff’ applied.  String values must be contained in quotes and go over without conversion.  </p>
+  <p>Any other data type will just be converted as is to a string and then stored. </p>
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;ph_setglobal_a("ALERT_SMS2",0) <br>
+&bull;&nbsp;ph_setglobal_a("MODE","Heat")</div>
+</div>
 
 </body>
 </html>
