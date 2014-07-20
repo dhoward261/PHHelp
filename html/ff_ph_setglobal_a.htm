@@ -19,7 +19,7 @@ Sets the value of a global variable with any type of data.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_setglobal_a ( string, value )
+ph_setglobal_a ( id, value )
 
 </div>
 <div>
@@ -31,7 +31,7 @@ ph_setglobal_a ( string, value )
 <tr>
 <td class=ph8>
 
-string
+id
 
 </td>
 <td class=ph9>
@@ -44,16 +44,16 @@ A <span class="ph-datype">string</span> identifying the ID of the global variabl
 value</td>
 <td class=ph9>
 
-Any data type <span class="ph-datype">value</span> which you would like assigned to the specified global variable.</td>
+Data of type <span class="ph-datype">any</span> which you would like assigned to the specified global variable.</td>
 </tr>
 </table>
 </div>
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-  <p>Integer.  Returns a 0 if successful and a 1 if an error occurred while updating the global variable.  You can pass any data type as the a argument.  </p>
-  <p>All global variables are stored internally as strings and will be converted.  Numeric values will be converted as is.  Date values will have a mask of ‘yyyy-mm-dd’ applied.  Datetime values will have a mask of ‘yyyy-mm-dd hh:mm:ss.fff’ applied.  String values must be contained in quotes and go over without conversion.  </p>
-  <p>Any other data type will just be converted as is to a string and then stored. </p>
+Integer.  Returns a 0 if successful and a 1 if an error occurred while updating the global variable.  You can pass any data type as the a argument.<br><br>
+All global variables are stored internally as strings and will be converted.  Numeric values will be converted as is.  Date values will have a mask of ‘yyyy-mm-dd’ applied.  Datetime values will have a mask of ‘yyyy-mm-dd hh:mm:ss.fff’ applied.  String values must be contained in quotes and go over without conversion.<br><br>
+Any other data type will just be converted as is to a string and then stored.
 </div>
 
 <div class=ph10>

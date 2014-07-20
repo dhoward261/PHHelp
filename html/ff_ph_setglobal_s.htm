@@ -19,7 +19,7 @@ Assigns a string to the specified global variable.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_setglobal_s ( String, string)
+ph_setglobal_s ( id, value )
 
 </div>
 <div>
@@ -31,7 +31,7 @@ ph_setglobal_s ( String, string)
 <tr>
 <td class=ph8>
 
-string</td>
+id</td>
 <td class=ph9>
 
 A <span class="ph-datype">string</span> identifying the ID of the global variable to set.</td>
@@ -39,7 +39,7 @@ A <span class="ph-datype">string</span> identifying the ID of the global variabl
 <tr>
 <td class=ph8>
 
-string</td>
+value</td>
 <td class=ph9>
 
 A <span class="ph-datype">string</span> which you would like assigned to the global variable.</td>
@@ -59,7 +59,7 @@ Examples
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-&bull;&nbsp;ph_setglobal_s("ALERT_SMS2",0) <br>
+&bull;&nbsp;ph_setglobal_s("ALERT_SMS2","0") <br>
 &bull;&nbsp;ph_setglobal_s("MODE","Heat")</div>
 </div>
 

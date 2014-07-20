@@ -43,7 +43,6 @@ Unsigned long.  Returns the value of the two operands OR’ed together.
 <div class=ph13>Used to compare boolean values to determine if either is true, or not. Can also be used to combine bits from a binary value. See examples below. <br>
   <br>
 In addition to the ph_or() function, the stand-alone OR operator is also available for use in boolean testing, typically in IF functions.  Using the OR operator this way often makes code more 'readable' and has the added advantage that more than  two variables can be compared.
-</p>
 <br>
 <br>
 A typical use of the OR operator  in an IF function is...
@@ -63,15 +62,15 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 </tr>
 
 <tr><td width="160" class=ph8_2> ph_or(8,2)</td> 
-<td class=ph9>Yields "10"&nbsp;&nbsp;&nbsp;{0b1000 AND 0b10 &gt;&gt; 0b1010}</td>
+<td class=ph9>Yields "10"&nbsp;&nbsp;&nbsp;{0b1000 AND 0b0010 &gt;&gt; 0b1010}</td>
 </tr>
 
 <tr><td width="160" class=ph8_2> ph_or(10,2)</td> 
-<td class=ph9>Yields "10"&nbsp;&nbsp;&nbsp;{0b1010 AND 0b10 &gt;&gt; 0b1010}</td>
+<td class=ph9>Yields "10"&nbsp;&nbsp;&nbsp;{0b1010 AND 0b0010 &gt;&gt; 0b1010}</td>
 </tr>
 
 <tr><td width="160" class=ph8_2> ph_or(21,[LOCAL1])</td> 
-<td class=ph9>Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b11 &gt;&gt; 1}</td>
+<td class=ph9>Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b00011 &gt;&gt; 1}</td>
 </tr>
 </table>
 </div>
