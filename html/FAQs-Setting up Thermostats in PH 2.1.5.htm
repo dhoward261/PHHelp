@@ -123,10 +123,22 @@
       <p>Reinit/Restart PowerHome to assure all changes are locked in and saved.      </p>
       <p>You can now read/write STAT values using the following PH Functions...</p>
       <p><strong>&nbsp;&nbsp;ph_getanalog("ID")<br>
-          &nbsp;&nbsp;ph_setanalogout("ID","value")</strong></p>
-      <p>where "ID" is the string used to identify the individual STAT parameter
-        of interest.</p>
-      <p>The information returned by the ph_getanalog function will be a string
+          &nbsp;&nbsp;ph_setanalogout("ID","TYPE/VALUE")</strong></p>
+      <p>where:<br>
+      &nbsp;&nbsp;<strong>ID</strong> is the ID you assigned the thermostat in the THERMOSTATS screen.<br>
+      &nbsp;&nbsp;<strong>VALUE</strong> is a string containing the value you wish to set. <br>
+      &nbsp;&nbsp;<strong>TYPE</strong> is a string describing predefined one of the attributes you have previously defined in the &quot;Analog Input/Output Detail&quot; Table. (See Detail Table figure above.) </p>
+      <p>&nbsp;&nbsp;If you query a Stat with a Stat Mode command, it will return one of these string values ...<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Off<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Heat<br>
+  &nbsp;&nbsp;&nbsp; Cool<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Auto<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Fan<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Program Auto<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Program Heat<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;Program Cool<br>
+      </p>
+            <p>The information returned by the ph_getanalog function will be a string
         value. In the case of values such as temperature and cool setpoint, this
         string value will be a numeric (eg. 37, 72, 78, etc).&nbsp; You will
         need to use a function such as integer() to convert the string to a
@@ -154,10 +166,14 @@
         function is looking for the calculated value which can be
         anything.&nbsp; In the case of the thermostat device types, the
         calculated value and the raw value are essentially the same.</p>
-      <p>In order to have the changing thermostat values updated into your
+      <p>NOTE: In order to set a heat/cool temperature setting, the Stat must be in the appropriate State. Thus the above TS2HSP would fail unless the Stat is in &quot;Heat&quot; mode.</p>
+      <p>The proper sequence would be...</p>
+       <p>&nbsp;&nbsp;<strong>ph_setanalogout(&quot;TS2MODE&quot;,&quot;Heat&quot;)</strong> <br>
+       &nbsp;&nbsp;<strong>ph_setanalogout("TS2HSP","72")</strong> </p>
+       <p>In order to have the changing thermostat values updated into your
         Global variables, or in your Control Center or web page, appropriate
         Triggers must be defined in the <strong>Triggers</strong> window. </p>
-      <p><strong>NOTE</strong>: When the Trigger is activated, <strong>TEMP4</strong>
+       <p><strong>NOTE</strong>: When the Trigger is activated, <strong>TEMP4</strong>
         will contain the appropriate <span style="FONT-WEIGHT: bold">RAW</span>
         value read from the STAT for use in setting Global Variables, or in
         formula actions you may wish to take. The best way to fetch the TEMP4
