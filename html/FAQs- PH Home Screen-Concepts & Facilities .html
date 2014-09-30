@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-help.css">
+    <title>Changelog for PowerHome 2.1.5a</title>
+  </head>
+  <body>
+    <div class="ph1"> FAQ: PH Home Screen - Concepts &amp; Facilities </div>
+    <div class="ph2">Knowledge Notes</div>
+  <div class="ph3"><br>
+  </div>
+    <p>The PowerHome Home Screen is the focal point of almost all PH activities.</p>
+    <p>Understanding well its various features, icons, and capabilities will make using PH a lot easier to use,  and your efforts more productive.</p>
+    <p>This tutorial will examine the many features of this Home Screen. There is no &quot;standard&quot; Home Screen configuration, as what appears there is totally customizable to suit the User's choices. The example shown below is a common configuration, as it shows many of the critical actions occuring in real-time.</p>
+    <p><img src="images/Home-OvrView.png" alt="PH Home Screen" width="1345" height="724"> </p>
+    <p><strong>NOTE</strong>:  When you start PowerHome, or Initialize it, the PH window opens as a blank &quot;clean slate&quot;. To cause the window to be populated with your favorite sub-windows (as above, for example), you can insert the following sample Macro Code in your Initialize Macro, that is triggered by a PH Start or Init...</p>
+    <p><img src="images/Home-windowInit.png" alt="Window Initialization Macro" width="1000" height="144"> </p>
+    <p>The code in line 20 forces Windows to bring the PowerHome window to the foreground and give it focus, while the code in line 30 opens (respectively) the PowerHome Explorer, Insteon Explorer, Device Status windows. </p>
+    <p>The list of PH windows that can be opened includes...</p>
+    <ul>
+      <li>1 - Control Center</li>
+      <li> 2 - Device Status</li>
+      <li>3 - Web Center</li>
+      <li>4 - PowerHome Explorer</li>
+      <li>5   - Insteon Explorer</li>
+      <li>6 - PowerHome Status</li>
+      <li>7 - Palm Pad</li>
+      <li>8 - Eventlog</li>
+      <li>9 -   Multi-Editor </li>
+    </ul>
+    The
+    above Macro Code will cause the designated windows
+	to be open in the same position &amp; size as they were when PH was last shutdown.
+<p class="ph-title">TOOL BAR ICONS</p>
+<p>First, let's look at each of the Tool Bar icons, to understand what they do.</p>
+<p>Each number labeled Toolbar icon will be examined, in the following dialog.
+	<img src="images/Home-toolsbar.png" alt="ToolBar icons"></p>
+    <ol>
+      <li>The &quot;Initialize&quot; icon [<img src="images/Home-icon01.png" width="20" height="20" align="absmiddle">] causes PH to be re-initialized. This is essentially a re-start, except that the PH &quot;Triggers&quot; treat a Restart differently from an Initialize. If you want to take the same, or different, actions upon either event then you need to define two Trigger events in the &quot;Trigger ID&quot; field.<br>
+        <img src="images/Home-Init.Start.png" alt="Init Triggers" width="954" height="79"><br>
+        <br>
+      </li>
+      <li>The &quot;Connect&quot; icon  [<img src="images/Home-icon02.png" width="20" height="20" align="absmiddle">] causes PH to connect to the PLC/PLM controller. <strong>NOTE</strong>: When a connection is &quot;Active&quot; the icon is highlighted. <br>
+        <br>
+      </li>
+      <li>The &quot;PH Explorer&quot; icon [<img src="images/Home-icon03.png" width="20" height="20" align="absmiddle">] opens the window that allows you to select what detailed area of PH you wish to explore.<br>
+        <img src="images/Home-PH Explorer Window.png" alt="PH Explorer Window" width="791" height="353"><br>
+        <br>
+        To open a different database (for instance to look at one of the sample db's included with PH, or to look back at one of your earlier db's to see what how an older configuration was set up, click on  the PH Explorer (3) icon. This will add the db Tools below the Top Toolbar. <br>
+        <img src="images/Home-db Access.png" alt="db Access" width="617" height="128"><br>
+        <br>
+      </li>
+      <li>Icon 4 is the Multi-Edit icon (<img src="images/Home-icon04.png" width="20" height="20" align="absmiddle">) that opens up the Editor Window for all of the editable items associated with PH. The red boxed list shows the various target editors available. Pick the appropriate editor to properly configure the editor's functions to fit the target application...  <br>
+        <img src="images/Home-multiedit.png" alt="Multi Edit" width="630" height="242"> `<br>
+        <br>
+        <br>
+      </li>
+      <li>Icon number 5 icon (<img src="images/Home-icon05.png" width="20" height="20" align="absmiddle">) opens the Insteon Explorer window, which dynamically shows ongoing operations..<br>
+          <img src="images/Home-PH Inst Explr.png" alt="Insteon Explorer" width="972" height="492"><br> 
+        <br>
+      </li>
+      <li>        The 6th icon (<img src="images/Home-icon06.png" width="20" height="20" align="absmiddle">) Opens the &quot;Wizard&quot; that helps you set up many basic functions. This is a powerful tool to help you get started, if you are a new user. Other than initial setup configurations, this icon will seldom be used. <br>
+        <br>
+        <img src="images/Home-Wizard.png" alt="WIzard" width="666" height="363">  <br>
+        <br>
+      </li>
+      <li> Icon 7 (<img src="images/Home-icon07.png" width="20" height="20" align="absmiddle">), opens the Control Center, which is a specialized area of PH that allows you to create your own custom control access to virtually all of the PH features and devices. <br>
+          <img src="images/Home-CtrlCntr.png" alt="Control Center" width="527" height="610"><br>
+          <br>
+        See this Tutorial, for an introduction to designing your own custom Control Center page...  <a href="http://power-home.com/forum/forum_posts.asp?TID=2226&KW=Control+Center" title="Creating a Custom Control Center Page" target="_blank">Control Center Tutorial</a>        <br>
+          <br>
+      </li>
+      <li>Icon number 8 (<img src="images/Home-icon08.png" alt="Home Control" width="20" height="20">), opens the        Device status window. This window shows the real-time status of all &quot;Displayed&quot; devices and allows real-time control of those devices so they can be turned on/off or set to desired light levels.<br>
+        <img src="images/Home-DvcStatus.png" alt="Device Status" width="333" height="544"><br>
+        <br>
+        If you do not want to display a particular device in the Status window, then in the Insteon Explorer&gt;Devices tab, check the &quot;Do Not Display&quot; parameter. <br>
+        <img src="images/Home-DvcStatus Display.png" alt="DvcStatus Display" width="609" height="179">        <br>
+        <br>
+        Typically, one would not want to display Remote Switches linked to a Master (such as at both ends of a hallway), or the PLM or IRLink devices. Checking &quot;Dont Display&quot; will prevent the Device from appearing in the Device Status window. <br>
+        <br>
+        If you have devices appearing in the Device Status Window, but that can't be controlled, (such as a door open/closed state) then check the &quot;No Control&quot; parameter in the Insteon Explorer&gt;Types tab. This will make the Device Status window eliminate the option to turn the device on/off/etc (red box). Only the Status of the device will be shown. <br>
+        <img src="images/Home-DvcStatus Control.png" alt="Device Status Control" width="625" height="222"> &nbsp;&nbsp;<img src="images/Home-NoCtrl.png" alt="Device No Control" width="328" height="70"><br>
+        <br>
+      </li>
+      <li>        The 9th icon opens the (<img src="images/Home-icon09.png" alt="Palm Pad" width="20" height="20">) Palm Pad window. This screen appears similar to a standard X-10 palm pad and is useful for quickly testing your X-10 control with a minimal of setup. <br>
+        <br>
+        You can select the controller from which you want to send as well as the house code.<br>
+        <img src="images/Home-PalmPad.png" alt="Palm Pad Window" width="256" height="399"><br>
+        <br>
+      </li>
+      <li>Icon 10 opens the (<img src="images/Home-icon10.png" alt="PH Stat" width="20" height="20">) PowerHome Status window. This presents a real-time view into what is going on with PH, and is very handy to have shown. This window displays three sub-frames, as follows. . . <br>
+      <img src="images/Home-PH Status.png" alt="PowerHome Status" width="482" height="828"><br>
+      <br>
+      <br>
+        
+      The Top Frame &quot;System Status&quot; displays the PowerHome and Windows OS continuous running time (&quot;Up Times&quot; ) since last restart/reset.<br>
+      <br>
+      This Frame also displays what the next Timed Event will be. Handy if you are wondering when an event will happen so you can see actions occurring in the Event Log (bottom Frame). <br>
+      <br>
+      NOTE: When you toggle OFF the Timed Events (icon 12) there will be nothing shown under the &quot;Upcoming Timed Events:&quot; label in the System Status frame. When this icon is enabled there will be an upcoming event listed (unless there are absolutely no timed events that are defined). <br> 
+      <br>
+      The bottom Frame is a real-time snapshot of the last few Event Log entries. It gives you some idea of what is happening, but to get full details, you need to open the actual Event Log (icon 13).<br>
+      <br>
+      </li>
+      <li>Icon 11 launch's the (<img src="images/Home-icon11.png" alt="Web Center" width="20" height="20">) Web Center page, which is any ANY web page (it doesn't have to be from the PH webserver) and can be set to a users other server, a PSP page, ASP, etc.<br>
+        <br>
+        The location of this web page is determined by the Web Center parameter in the &quot;pwrhome.ini&quot; file. That parameter is defaulted to http://127.0.0.1 but can be set to any valid IP address. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;        [Web Center]<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;home=http://127.0.0.1/<br>
+      <br>
+      </li>
+      <li>Timed Events (<img src="images/Home-icon12.png" alt="Timed Events" width="20" height="20">) can be enabled/disabled with icon 12. This is very useful when debugging in PH, as it stops &quot;clutter&quot; in the Insteon Raw Log  and  the Event Log Windows so you can more readily find the Insteon traffic you are trying to trace. The icon is a toggle that has a highlighted background when Timed Events are turned on. Sometimes the icon is slow to change its appearance in real time, but you can readly tell if Events are enabled, or not, by looking at the System Status frame in the PowerHome Status window. If Timed Events are turned OFF, the there will be no entry below the Upcoming Timed Events: label. It will be blank as shown below...<br>
+        <img src="images/Home-TimedEvents.jpg" alt="Timed Events window" width="410" height="151">        <br>
+        <br>
+      </li>
+      <li>The Event Log (<img src="images/Home-icon13.png" alt="Event Log" width="20" height="20
+	  ">) button is icon 13. Clicking on this icon will open up the Event history window showing chronological actions taken over whatever length of time the Log Size is set at.<br>
+        <img src="images/Home-EventLog.jpg" alt="Event Log" width="761" height="428"><br>
+        <br>
+        Since so much information is logged, the Event Log and the database can grow to enormous proportions if the log is not 
+      periodically trimmed. You have full control when the Event Log is trimmed and how many days worth of information you 
+      want to maintain. The Event Log is trimmed using the macro command &quot;Trim Event Log&quot; or the formula function 
+      ph_trimeventlog. This command allows you to empty the log except for the last X days. <br>
+      <br>
+      You can set X to any value you 
+      want, but would probably be satisfied with 2. You<br>
+      <br>
+      To trim automatically, create a Timed Event (saw at 2:00am) that executes &quot;ph_trimeventlog(2)&quot; That will trim the Log to two days of entries. A &quot;7&quot; would trim to a week, etc.<br>
+      <br>
+      </li>
+      <li>Icons 14-18 (<img src="images/Home-icon14.png" alt="Auto Arrange" width="116" height="20">) provide Auto Arrangements of all windows you have open and showing in the PowerHome window. These icons arrange the windows as Tiled side-by-side, Tiled Vertically, Tiled in Layers, and The last icon allows you to arrange the windows as you choose. <br>
+        <br>
+      If you like PH to start-up with certain windows showing, you can create a Trigger action to automatically open your preferred windows on re-initialization or startup. The following triggers call an Initialization macro on both re-init and startup (but different macros could be called if desired)...<br>
+        <img src="images/Home-Init.Start.png" alt="Init Triggers" width="954" height="79"><br>
+        <br>
+      As described at the beginning of this document, you can run an Initialization Macro, using  code similar to the following to bring PH to the foreground for control, then open your windows. In this example the PowerHome Explorer, PowerHome Status, and Device Status windows are opened. They will be opened with the same size/position settings they had when last visible.<br>
+      <img src="images/Home-OpenWin.png" alt="Open Windows Code" width="297" height="41"><br>
+      <br>
+      The parameter in the ph_openphwin() function is an integer from 1 to 9 that designates the type  of PowerHome window to open.<br>
+      <br> 
+      1 - Control Center, 2 - Device Status, 3 - Web Center, 4 - PowerHome Explorer, 5 - Insteon Explorer, 6 - PowerHome Status, 7 - Palmpad, 8 - Eventlog, 9 - Multi-Editor  <br>
+      <br>
+      </li>
+      <li>The &quot;Question Mark&quot; (<img src="images/Home-icon15.png" alt="Help" width="20" height="22">) icon Opens up the PowerHome Help window. <br>
+        <br>
+      </li>
+      <li>The rightmost icon (<img src="images/Home-icon16.png" alt="Exit" width="20" height="20">) is  &quot;Exit&quot; which is the same as clicking on the red &quot;X&quot; on the top right of the PH window, and causes PH to terminate and close down. </li>
+    </ol>
+ 
+   
+  </body>
+</html>
