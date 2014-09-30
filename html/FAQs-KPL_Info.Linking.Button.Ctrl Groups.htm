@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class=ph1>
-FAQ: KPL Linking, Button & Ctrl Groups 
+FAQ: KPL Care &amp; Feeding;Linking; Button & Ctrl Groups 
 </div>
 
 <div class=ph2>Knowledge Notes </div>
@@ -53,6 +53,32 @@ For <em><strong>Controllers</strong></em> the &quot;Group&quot; number will be t
   In most cases the Button# will just be “0" for  all controllers and responders except KPLs..  <br>
   <br>
 <img src="images/KPL Groups.png" alt="KPL Groups" width="685" height="586">
+<p>With the release of PH version 2.1.5, the management of KPL setups has been moved to the Insteon Explorer&gt;Devices tab.
+<p>To open the KPL configuration window, click on the Options button next to the KPL Device. This will open the Insteon Options Window. Here you can configure the KPL to be a 6 or 8 button device; set the On Level and Ramp Rate for the Button 1 (master KPL device); and also allow you to set KPL Buttons in Toggle/On-Off mode; and control the button back-lighting actions. ...<br>
+  <img src="images/KPL-Config.png" alt="KPL Config" width="839" height="429">
+<p>To set a KPL Button to be a Toggle/On/Off button with every press, use the Explorer&gt;PLC/PLM Groups&gt;Control window to turn the desired KPL buttons on/off.<br>
+  <img src="images/KPL-Buttons.png" alt="KPL Button Control" width="714" height="317"><br>
+  <br>
+  Set the buttons you wish to set as non-toggle ON to be "On" and the buttons you wish to set as non-toggle OFF to be "Off." Save changes.
+  
+  <br>
+  <br>
+  Then using the Explorer&gt;Devices&gt;Options button, (per 2nd image above) set the appropriate buttons from toggle to either non-toggle on or non-toggle off. It doesn’t matter (other than the button is not set to be toggle) as the button will be set as non-toggle on or non-toggle off based upon the current status of the button’s lights.  Press Save/Refresh.
+  
+  <br>
+  <br>
+  Then in order for the KPL to “see” the changes, it must be power cycled to set the changes into ROM.  To do this, pull the KPL Air Gap tab out for 10 seconds, then push it back onto the ON position, or turn the circuit breaker/fuse off/on for the circuit.
+  
+  <br>
+  <br>
+  What the LED On and LED Off checkboxes control is the status of the other KPL buttons when the button in which the checkboxes reside is controlled.
+  
+  <br>
+  <br>
+  For instance, take  “Button 1"	. If you placed a check in LED On for 3 and a check in LED Off for 5, then when you manually control button 1, button 3 will be lit and button 5 will be off. It usually used to make mutually exclusive buttons for a scene. Say button 3 is scene full on, button 4 is scene 75% on, button 5 is scene 50%, and button 6 is scene 25%. In this case, if you press button 4 (scene 75%), you would want the other 3 buttons (3,5,6) to turn off.<br>
+  <br>
+  <br>
+
 </div>
 </body>
 </html>
