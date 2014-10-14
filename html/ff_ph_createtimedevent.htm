@@ -7,7 +7,7 @@
 <body>
 <div class=ph1>
 
-ph_createtimedevent1 PowerHome formula function
+ph_createtimedevent PowerHome formula function
 
 </div>
 
@@ -65,9 +65,15 @@ Integer.  Returns a 0 if the timed event was successfully created.  Otherwise a 
 The following examples demonstrate typical syntax/usage for this function. NOTE: the TimedEvent created will have a generic system id. If a labeled ID is desired see also "ph_createtimedevent()" <br>
 </div>
 
-<div class=ph20>
-&bull; ph_createtimedevent(2,&quot;ph_insteon('DWN ROOM',ifastoff,0)&quot;,ph_relativedatetime(today(),30)) &nbsp;&nbsp;&nbsp;{Create Event in 30 minutes} <br>
-&bull; ph_createtimedevent(0,&quot;XMAS_LITES&quot;,2013-12-25 07:30:00))&nbsp;&nbsp;&nbsp;{Turn on Christmas lighting at 7:30AM Christmas Day} </div>
+<div class=ph20>CREATE AN EVENT  30 MINUTES FROM NOW <br>
+&bull; ph_createtimedevent(2,&quot;ph_insteon('DWN ROOM',ifastoff,0)&quot;,ph_relativedatetime(today(),30)) <br>
+<br>
+CREATE AN EVENT 45 SECONDS FROM NOW<br>
+&bull; ph_createtimedevent(0,&quot;LIGHT_OFF&quot;,datetime(today(),ph_relativetime(now(),45)))<br>
+<br>
+TURN ON CHRISTMAS LIGHTS AT 7:30 AM CHRISTMAS MORNING <br>
+&bull; ph_createtimedevent(0,&quot;XMAS_LITES&quot;,2013-12-25 07:30:00))&nbsp;<br>
+</div>
 
 </body>
 </html>
