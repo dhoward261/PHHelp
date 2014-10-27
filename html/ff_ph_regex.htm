@@ -120,8 +120,28 @@ Examples
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-The following examples assume that the following string (with CR/LF line enders) is stored in [LOCAL1]... <br> 
- <table width="356">
+  <p><strong>*** Simple Example ***</strong><br>
+  Assume you have multiple water leak sensors installed and trigger from each individually, but want to process them all with a single common Macro routine that puts the battery status (GOOD/BAD) in a series of Globals named &quot;BATCHK_SINK&quot;, &quot;BATCHK_WASHING&quot;, &quot;BATCHK_TOILET&quot;<br>
+<br>
+The Leak Sensor battery periodic heartbeat Trigger will pass the triggering device's ID (eg, "WATER LEAK-SINK") to the Macro.  If you name all the device ID's in a similar fashion, such as . . .</p>
+  <p class="ph3"> WATER LEAK-SINK<br>
+    WATER LEAK-WASHING<br>
+  WATER LEAK-TOILET</p>
+  <p>Then you can strip off the unique device name (following the dash) and write the status to the appropriate Global var, as follows.</p>
+  <p>The following string operations would  find the unique device name then append it to the base Global string to form the unique Global variable name.</p>
+  <p> <img src="images/regex-simple.png" alt="string operations" width="864" height="243" longdesc="images/regex-simple.png"></p>
+  <p>Macro line 100 searches the device ID string date passed in TEMP10 by the Trigger and looks for the dash character (&quot;-&quot;) starting at position 1 in the string. Since this is a simple search no special Flag settings are needed, so &quot;0&quot; is used. The last two parameters will store in LOCAL 4 the position of the &quot;-&quot; in the string, and in LOCAL5 the length of the found data (&quot;-SINK&quot;). These are useful for further string operations, but actually not needed here, but shown for generality.</p>
+  <p> Macro line 110 trims the dash off the found string, leaving only &quot;SINK&quot;</p>
+  <p>Macro line 120 appends &quot;SINK&quot; to the common Global name of &quot;BATCHK_&quot; forming &quot;BATCHK_SINK&quot;</p>
+  <p>Finally in line 130, the value &quot;OK&quot; is written to this Global variable.</p>
+  <p>Line 140 prints out the various parameter values FYI.  <br>
+    
+    <br>
+    <br>
+    <strong>*** Complex Example ***</strong> <br>
+    The following examples assume that the following string (with CR/LF line enders) is stored in [LOCAL1]... <br> 
+  </p>
+  <table width="356">
   <tr>
   <td width=30>&nbsp;</td>
   <td>
@@ -134,13 +154,15 @@ The following examples assume that the following string (with CR/LF line enders)
   <br>
 
   The following command extractsthe 9 ending digits of the first ROM ID. Note there is no need to set the CR/LF flag since the Start Pointer (35) positioned the search to start and end in a single line.<br>
-    <span class="ph3"><strong>ph_regex ('.........',"[LOCAL1]", 36, 0,2,3 )</strong></span>  </p>
-    --&gt; &quot;<span class="ph-txt-red">1CD92C728</span>&quot;
-  <p>This captures the initial portion of the first ROM ID  --&gt; &quot;<span class="ph-txt-red">3F000001</span>&quot;<br> 
-      <strong class="ph3">ph_regex ("3F[0-9]+","[LOCAL1]", 1, 0,2,3 )</strong> <br>
+  
+    <strong class="ph3">ph_regex ('.........',"[LOCAL1]", 36, 0,2,3 )</strong> --> returns "<span class="ph-txt-red">1CD92C728</span>" </span>
+    <p>
+  This captures the initial portion of the first ROM ID  <br> 
+  
+      <strong class="ph3">ph_regex ("3F[0-9]+","[LOCAL1]", 1, 0,2,3 )</strong> --> returns  "<span class="ph-txt-red">3F000001</span>"<br>
       <br>
       Because of &quot;greediness&quot; the following will search from &quot;3F&quot; to the beginning of the last word it can find on the line (not the first  word). <br>
-      <span class="ph3"><strong>ph_regex (&quot;3F.+\&lt;&quot;,&quot;[LOCAL1]&quot;, 1, 0,2,3 )</strong> --&gt; returns &quot;</span><span class="ph-txt-red">3F000001CD92C728&quot;,&quot;Refrig&quot;,39.20,37.</span><span class="ph3">&quot;</span></p>
+  <span class="ph3"><strong>ph_regex (&quot;3F.+\&lt;&quot;,&quot;[LOCAL1]&quot;, 1, 0,2,3 )</strong> --&gt; returns &quot;</span><span class="ph-txt-red">3F000001CD92C728&quot;,&quot;Refrig&quot;,39.20,37.</span><span class="ph3">&quot;</span></p>
     <p>Note that if the CR/LF flag had been set to 2 (ignore line endings) the search would have captured everything from the first &quot;3F&quot; all the way to the &quot;...6D28&quot;,&quot;Freezer&quot;,1.96,1.&quot; characters at the end.  </p>
 </div>
 
