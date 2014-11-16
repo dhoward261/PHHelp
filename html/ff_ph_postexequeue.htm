@@ -1,208 +1,177 @@
-﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>ph_postexequeue</title></head>
-<body>
-<div class=ph1>
-
-ph_postexequeue PowerHome formula function
-
-</div>
-
-<div class=ph2>Description</div>
-
-<div class=ph3>
-
-Use this function to place either a macro, 
-send keys, raw formula, or device control string into the execution 
-
-queue.
-
-</div>
-
-<div class=ph4>Syntax</div>
-
-<div class=ph5>
-
-ph_postexequeue ( priority, type, formula 
-
-)
-
-</div>
-
-<div>
-<table width="100%">
-<tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
-</tr>
-  <TR>
-    <TD class=ph8>priority</TD>
-    <TD class=ph9>Integer. Determines where in the queue the formula is to be 
-      placed. See usage below.</TD></TR>
-  <TR>
-    <TD class=ph8>type</TD>
-    <TD class=ph9>Integer. The type of formula to place in the execution 
-      queue. Use 0 for macros, 1 for sendkeys, 2 for raw formulas, and 3 for 
-      Device control strings. Any other value will cause the function to return 
-      a value of 2.</TD></TR>
-
-<tr>
-
-<td class=ph8>
-
-formula&nbsp;
-
-</td>
-
-<td class=ph9>
-
-String. Contains either a macro ID, 
-      sendkeys string, raw formula, or a device control string (determined by 
-      the 
-
-type parameter).
-
-</td>
-
-</tr>
-</table>
-</div>
-
-<div class=ph10>Return value</div>
-
-<div class=ph11>
-
-Integer. Returns 1 if the priority parameter 
-is out of range, 2 if the type parameter is out of range. Returns 
-
-0 otherwise.
-
-</div>
-
-<div class=ph12>Usage</div>
-
-<div class=ph13>
-
-Use this function to enqueue processes into 
-the PowerHome execution queue. For most purposes, the execution queue is a first 
-in, first out queue.&nbsp;However, by changing the priority parameter, you can 
-either insert items to the very top of the queue or to a priority section of the 
-queue.<BR><BR>The allowed values for type are in the table below:
-
-<div>
-<table width="100%">
-  <TR>
-    <TD class=ph8>0</TD>
-    <TD class=ph9>A type parameter of 0 will insert the 
-      process into the queue using standard priority. This is a first in, first out queue and is the normal mechanism for putting 
-      items in the queue.</TD></TR>
-  <TR>
-    <TD class=ph8>1</TD>
-    <TD class=ph9>          
-                     
-         A type parameter of 1 will insert the process 
-      into the priority queue.</TD></TR>
-
-<tr>
-
-<td class=ph8>
-
-2
-
-</td>
-
-<td class=ph9>
-
-    A type 
-      parameter of 2 will insert the process at the very top 
-      of 
-
-the queue.
-
-</td>
-
-</tr>
-</table>
-</div>
-<p>The 
-  execution queue is a single queue with 3 logical sections. Enqueued processes 
-  are executed starting at the top of the queue. The priority parameter determines 
-  where in the queue the process is inserted. A Top priority will always go to the 
-  top of the queue. This ensures that the process will execute before any priority 
-  or normal queue items. However, if a top queue item has not yet executed and 
-  another Top priority process is enqueued, the previous Top queue process will 
-  now be second after the most recent Top queue process. Inserting as a Top 
-  priority ALWAYS inserts the process at the top of the queue. A priority queue 
-  item (type parameter = 1) will be inserted after any Top processes and after any 
-  existing priority processes. It will be inserted before any normal priority 
-  processes. A normal process will always go to the end of the queue.<BR>
-  <BR>
-  This 
-  function is useful to insert priority execution items ahead of any normally 
-  queued items. </p>
-
-<p>In order to get items in the queue ahead of other items, typically needs to be executed in the Boolean field of either the triggers or timed events screen (but it doesnt have to be. </p>
-<p>It can be executed anywhere any other function can be executed). The ph_postexequeue function is just a function and doesnt "change" any PowerHome processing rules. </p>
-<p>In normal operation, all formulas are added to the end of the execution queue. The execution queue is serviced in the background and FIFO and the formulas are executed. When a web request is processed, or a timed event is fired, or a trigger is triggered, etc. the action is always placed into the execution queue. The caveat however is that timed events and triggers also have the boolean field. </p>
-<p>The boolean formula field never goes to the execution queue and is executed immediately. It was orginally intended to never perform any actual "actions" because these could corrupt the processing of events in an orderly fashion and was merely a mechanism for the user to define additional criteria for whether the action of the trigger/timed event should actually be added to the queue.  </p>
-<p>In order to get certain actions ahead of other queued actions, the ph_postexequeue() function was created. </p>
-<p>Instead of putting items in the queue at the end, it can put it to the top or ahead of others. This works without corrupting the execution queue processing because the formula that is passed along with the ph_postexequeue function is executed from the queue (and not from the boolean)...just ahead of other queued items but still via the queue.
-  
-  The thing to remember is that the ph_postexequeue function is just a function like any other. It performs its intended purpose and returns a value (integer in this case). It doesnt interrupt or change any other processing. </p>
-<p>The other thing to keep in mind is that the boolean formula is just a formula but PowerHome is expecting it to return an integer or a true/false. Any other value would confuse PowerHome. The boolean formula is never queued and always executed immediately when the timed event or trigger is fired. No direct actions should be performed in the boolean field (such as a ph_insteon function or similar...simple math or comparisons are acceptable). </p>
-<p>If you want to get an item ahead of other items in the queue, your only option is to do it in a formula (using the ph_postexequeue function) that is executed immediately (that is not itself queued...the boolean field).
-  
-  Since you want to perform ALL of your actions from within the boolean field (using the ph_postexequeue function) and don't care about the action field,  set the action type to Raw Formula and the action to either 1 or 0 (a single number is still a valid formula) because you must have a valid formula.</p>
-<p>Then make sure that your boolean field ALWAYS returns a 0 (or false) so that the action is never executed. So in your case, you've got a case function that will return an integer (because that is what the ph_postexequeue function returns) if the [TEMP9] variable is 17 or 19. If the [TEMP9] variable is not 17 or 19, the return value from the case statement is undefined (not good) so will include the ELSE clause in the case statement. With the ELSE clause in place, the case function will always return an integer whether the [TEMP9] variable is 17/19 or not. So just take the case function and multiply it by 0 to just always have the boolean return a 0 so the action is never fired (you still need the ELSE clause because you cant multiply undefined by 0). </p>
-<p>  Typically you would execute this function in the Boolean field of either the Triggers or Timed Events screen (But it doesnt have to be. It can be executed anywhere any other function can be executed). This formula is executed as the Trigger is checked, and is not 
-  a part of the execution queue. Normal processing would then take the Action 
-  formula and add it to the execution queue as a normal priority. By enqueueing 
-  your desired action using the ph_postexequeue function in the Boolean field, you 
-  have the opportunity to have your action execute before any other enqueued 
-  processes. <br>
-  <br>
-  The ph_postexequeue function is just a function and doesnt "change" any PowerHome processing rules. In normal operation, all formulas are added to the end of the execution queue. The execution queue is serviced in the background and FIFO and the formulas are executed. When a web request is processed, or a timed event is fired, or a trigger is triggered, etc. the action is always placed into the execution queue. The caveat however is that timed events and triggers also have the boolean field. The boolean formula field never goes to the execution queue and is executed immediately. <br>
-  <br>
-  The Boolean field was orginally intended to never perform any actual "actions" because these could corrupt the processing of events in an orderly fashion. It was merely a mechanism for the user to define additional criteria for whether the action of the trigger/timed event should actually be added to the queue.
-
-
-  However, the Insteon controller is not 
-  expecting to execute a send operation whilst in the middle of a receive 
-  operation, and may thus crash the system. You can use the ph_postexequeue() function to achieve the same effect, but in safe 
-  manner that will not create system crashes. </p>
-<p>The ph_postexequeue() function is just  like any other function. It performs its intended purpose and returns a value of 1 if the priority parameter is out of range, 2 if the type parameter is out of range, and a 0 otherwise. <br>
-  <br>
-  Since it was requested to be able to get certain actions ahead of other queued actions, the ph_postexequeue function was created. Instead of putting items in the queue at the end, it can put it to the top or ahead of others. This works without corrupting the execution queue processing because the formula that is passed along with the ph_postexequeue function is executed from the queue (and not from the boolean)...just ahead of other queued items but still via the queue.</p>
-<p>It doesnt interrupt or change any other processing. The other thing to keep in mind is that the boolean formula is just a formula but PowerHome is expecting it to return an integer or a true/false. Any other value would confuse PowerHome. The boolean formula is never queued and always executed immediately when the timed event or trigger is fired. </p>
-<p>No direct actions should be performed in the boolean field (such as a ph_insteon function or similar...simple math or comparisons are acceptable). If you want to get an item ahead of other items in the queue, your only option is to do it in a formula (using the ph_postexequeue function) that is executed immediately.
-  
-  Since you want to perform ALL of your actions from within the boolean field (using the ph_postexequeue function) and don't care about the action field, set the action type to Raw Formula and the action to either 1 or 0 (a single number is still a valid formula) because you must have a valid formula. </p>
-<p>Then make sure that your boolean field ALWAYS returns a 0 (or false) so that the action is never executed. </p>
-<p>So if you've got a case function that will return an integer (because that is what the ph_postexequeue function returns) if the [TEMP4] variable is 1 or 5 and you want to immediately execute a Macro, then use the ph_postexequeue() function defined to call a macro, and  include an ELSE clause in the case statement for anything else. With the ELSE clause in place, the case function will always return an integer whether the [TEMP4] variable is 1/5 or not. </p>
-<p>Then just take the case function and multiply it by 0 to  always have the boolean return a 0 so the action is never fired and add &quot;1&quot; to it so that the Boolean evaluation of &quot;function()*0 + 1&quot; always evaluates to a &quot;1&quot; to fire the Trigger. (See example below.) </p>
-<p>&nbsp;</p>
-</div>
-
-<div class=ph18>Examples</div>
-<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
-
-<div class=ph20>
-
-  <p>** SIMPLE USE<br>
-    ph_postexequeue(2,0,"KITCHEN MACRO")<BR>
-    The 
-above example will enqueu the KITCHEN MACRO macro to the very top of the 
-execution 
-
-queue.</p>
-  <p>** COMPLEX USE  WITH TRIGGERS<br>
-    <img src="images/postexequeue-trig.png" alt="postexequeue-trig" width="1063" height="132"></p>
-  <p><br>
-  </p>
-</div>
-
-</body>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-help.css">
+    <title>ph_postexequeue</title>
+  </head>
+  <body>
+    <div class="ph1">
+      ph_postexequeue PowerHome formula function
+    </div>
+    <div class="ph2">Description</div>
+    <div class="ph3">
+      Use this function to place either a macro, send keys, raw formula, or
+      device control string into the execution queue.
+    </div>
+    <div class="ph4">Syntax</div>
+    <div class="ph5">
+      ph_postexequeue ( priority, type, formula )
+    </div>
+    <div>
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td><span class="ph6">Argument</span></td>
+            <td><span class="ph7">Description</span></td>
+          </tr>
+          <tr>
+            <td class="ph8">priority</td>
+            <td class="ph9">Integer. Determines where in the queue the formula
+              is to be placed. See usage below.</td>
+          </tr>
+          <tr>
+            <td class="ph8">type</td>
+            <td class="ph9">Integer. The type of formula to place in the
+              execution queue. Use 0 for macros, 1 for sendkeys, 2 for raw
+              formulas, and 3 for Device control strings. Any other value will
+              cause the function to return a value of 2.</td>
+          </tr>
+          <tr>
+            <td class="ph8">
+              formula&nbsp;
+            </td>
+            <td class="ph9">
+              String. Contains either a macro ID, sendkeys string, raw formula,
+              or a device control string (determined by the type parameter).
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ph10">Return value</div>
+    <div class="ph11">
+      Integer. Returns 1 if the priority parameter is out of range, 2 if the
+      type parameter is out of range. Returns 0 otherwise.
+    </div>
+    <div class="ph12">Usage</div>
+    <div class="ph13">
+      Use this function to enqueue processes into the PowerHome execution queue.
+      For most purposes, the execution queue is a first in, first out
+      queue.&nbsp;However, by changing the priority parameter, you can either
+      insert items to the very top of the queue or to a priority section of the
+      queue.<br>
+      <br>
+      The allowed values for type are in the table below:
+      <div>
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td class="ph8">0</td>
+              <td class="ph9">A type parameter of 0 will insert the process into
+                the queue using standard priority. This is a first in, first out
+                queue and is the normal mechanism for putting items in the
+                queue.</td>
+            </tr>
+            <tr>
+              <td class="ph8">1</td>
+              <td class="ph9"> A type parameter of 1 will insert the process
+                into the priority queue.</td>
+            </tr>
+            <tr>
+              <td class="ph8">
+                2
+              </td>
+              <td class="ph9"> A type parameter of 2 will insert the process at
+                the very top of the queue.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The execution queue is a single queue with 3 logical sections. Enqueued
+        processes are executed starting at the top of the queue. The priority
+        parameter determines where in the queue the process is inserted. A Top
+        priority will always go to the top of the queue. This ensures that the
+        process will execute before any priority or normal queue items. However,
+        if a top queue item has not yet executed and another Top priority
+        process is enqueued, the previous Top queue process will now be second
+        after the most recent Top queue process. Inserting as a Top priority
+        ALWAYS inserts the process at the top of the queue. A priority queue
+        item (type parameter = 1) will be inserted after any Top processes and
+        after any existing priority processes. It will be inserted before any
+        normal priority processes. A normal process will always go to the end of
+        the queue.<br>
+        <br>
+        This function is useful to insert priority execution items ahead of any
+        normally queued items. </p>
+      <p>In order to get items in the queue ahead of other items, this function
+        typically needs to be executed in the Boolean field of either a trigger
+        or timed event (but it doesnt have to be. It can be executed anywhere
+        any other function can be executed). The ph_postexequeue function is
+        just a function and doesnt "change" any PowerHome processing rules. </p>
+      <p>In normal operation, all processes (formulas, macros, etc) are added to
+        the end of the execution queue unless the new formula, macro, etc. is
+        executed from within a currently running formula or macro. The execution
+        queue is serviced in the background and is FIFO (First In, First Out)
+        and the queued processes are executed. When a web request is processed,
+        or a timed event is fired, or a trigger is triggered, etc. the action is
+        always placed into the execution queue. The caveat however is that timed
+        events and triggers also have the boolean field. </p>
+      <p>The boolean formula field never goes to the execution queue and is
+        executed immediately. It was originally intended to never perform any
+        actual "actions" because these could corrupt the processing of events in
+        an orderly fashion and was merely a mechanism for the user to define
+        additional criteria for whether the action of the trigger/timed event
+        should actually be added to the queue. </p>
+      <p>In order to get certain actions ahead of other queued actions, the
+        ph_postexequeue() function was created. </p>
+      <p>Instead of putting items in the queue at the end, it can put it to the
+        top or ahead of others. This works without corrupting the execution
+        queue processing because the formula that is passed along with the
+        ph_postexequeue function is executed from the queue (and not from the
+        boolean)...just ahead of other queued items but still via the queue. The
+        thing to remember is that the ph_postexequeue function is just a
+        function like any other. It performs its intended purpose and returns a
+        value (integer in this case). It doesnt interrupt or change any other
+        processing. </p>
+      <p>The other thing to keep in mind is that the boolean formula is just a
+        formula but PowerHome is expecting it to return an integer or a
+        true/false. Any other value would confuse PowerHome. The boolean formula
+        is never queued and always executed immediately when the timed event or
+        trigger is fired. No direct actions should be performed in the boolean
+        field (such as a ph_insteon function or similar...simple math or
+        comparisons are acceptable). </p>
+      <p>If you want to get an item ahead of other items in the queue, your only
+        option is to do it in a formula (using the ph_postexequeue function)
+        that is executed immediately (that is not itself queued...the boolean
+        field). If you intend to have your Timed Event or Trigger perform its
+        desired action via a ph_postexequeue function in the boolean field,
+        there is really no need for the action field to be enqueued (unless you
+        also want an additional action that would go to the end of the queue).
+        If the action is not needed, you can set the action type to Raw Formula
+        and set the Formula field to 0 (the formula field MUST still be a valid
+        formula and a 0 is about as simple as it gets).&nbsp;</p>
+      <p>If you're performing your actual action via ph_postexequeue in the
+        boolean field, you can ensure that your action field NEVER executes by
+        making sure that the boolean field ultimately evaluates to a 0 (zero) or
+        false value. This can be easily accomplished by multiplying your
+        ph_postexequeue function by 0.</p>
+      &nbsp;
+    </div>
+    <div class="ph18">Examples</div>
+    <div class="ph19">The following examples demonstrate typical syntax/usage
+      for this function.</div>
+    <div class="ph20">
+      <p>** SIMPLE USE<br>
+        ph_postexequeue(2,0,"KITCHEN MACRO")<br>
+        The above example will enqueu the KITCHEN MACRO macro to the very top of
+        the execution queue.</p>
+      <p>** COMPLEX USE WITH TRIGGERS<br>
+        <img src="images/postexequeue-trig.png" alt="postexequeue-trig" height="132"
+          width="1063"></p>
+      <p><br>
+      </p>
+    </div>
+  </body>
 </html>

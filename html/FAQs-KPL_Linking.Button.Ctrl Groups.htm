@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>KPL Linking Buttons & Control</title>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div class=ph1>
+FAQ: KPL Linking, Button & Ctrl Groups 
+</div>
+
+<div class=ph2>Knowledge Notes </div>
+
+<div class=ph3>
+  <p>KPL  Keypads come in 6 and 8 button configurations.&nbsp; </p>
+  By  changing the faceplate on the KPL, the button config can be modified as  desired, and the PH Insteon Explorer&gt;KPL Config Tab can be used to modify  the KPL&rsquo;s Properties to match.&nbsp; Newer  models of the KPLs are now ordered and configured for specific usage.</p>
+  <p>The  button numbering on a KPL is easily confusing, but the following diagram should  clear things up... <br>
+
+  <img src="images/KPL layout.png" alt="KPL Button Labeling" width="249" height="221"> <br>
+  
+  <p>All keypads have 8 switches numbered from 1-8. The 6-button keypad just has wide buttons on the top/bottom rows that simultaneously activate the 1-2 (top) and 7-8 (bottom) switches when pressed.</p>
+  <p>NOTE: a 6-button keypad uses the top  and bottom  button pairs to create an On/Off switch function.  ALL of these 4 combined buttons (1,2,7,8) are referred to collectively as button  "1" and are associated directly with the KPL device ID just as a normal Insteon wall switch's top/bottom switch presses are linked to the &quot;0&quot; button to control the device.</p>
+  <p><span class="ph-title">Controlling KPL Associated Device </span><br>
+  Insteon "on/off" commands for the KPL's attached device are just sent to either the 6 or 8 button KPL, as a normal wall switch would be treated, eg, <strong>ph_insteon("MID CHANDELIER",ifaston,0)</strong>. By defining the 6-button keypad, this way it allows control to always be the same for both types of KPLs. Associated device control is always to &quot;1&quot; and the remaining buttons control their respective linked devices. </p>
+  <p>Via PowerHome, or Insteon manual controller/responder direct linking the non-button1 keys can be used to control other devices, or the individual key lights can be used merely to show &quot;status&quot; of other devices (eg, garage door open).</p>
+  <p><strong class="ph-title">Controlling KPL Button Lights </strong><br>
+  Buttons on a KPL are controlled with Insteon Group, or Group Cleanup commands.&nbsp;(eg, ph_insteongroup; ph_insteongroupcu).</p>
+  <p>First  Define a PLM Group to assign an ID to the PLM Controller link which  can be used in Macro commands. Define a Macro which turns the KPL button ON or  OFF. As illustrated below, eight buttons have been assigned individual Group Numbers. These may be used with any KPL, as the PH control functions specify both the Device ID as well as a button number. <br>
+    <br>
+  <img src="images/PLC Groups.png" alt="PLC/PLM Groups" width="772" height="274"></p>
+  
+  <p>To control a KPL button, links must be created in the Insteon Explorer&gt;Links tab just as any controller/responder link would be set up between any two linked Insteon devices.</p>
+  <p>For example, using the above Group ID's to light button 4 on a KPL keypad in the bedroom to indicate the garage door was open,the following would do it...</p>
+  <p>&nbsp;&nbsp;&nbsp;<strong>ph_insteongroupcu(&quot;KPL-B4&quot;,&quot;BEDROOM_KPL&quot;,ifaston)</strong></p>
+  <p>If there were multiple KPLs, all with the Garage Door Open status indicated on button-4 then instead of the specific KPL control offered by ph_insteongroupcu(), the broader ph_insteongroup() function could be used. This will light button-4 on all KPLs that have their button four assigned to &quot;KPL-B4&quot; (in point-of-fact such specific usage would be better done with a specific group name like &quot;GDR_STATUS&quot; assigned to its own unique Group Number such as &quot;204&quot;. This also offers the advantage that the Status light could then be on any KPL button that was linked to that Group ID. {See more on linking below}) </p>
+  <p>For example... </p>
+  <p>&nbsp;&nbsp;&nbsp;<strong>ph_insteongroup(&quot;GDR_STATUS&quot;,&quot;ifaston&quot;,0)</strong> </p>
+  
+  <p><strong class="ph-title">Creating Controller/Responder Links </strong> <br>
+  In the example below, links have been created in the &quot;MID PORCH KPL&quot; with the PLM as the Controller and various other switches and KPLs as  Responders. In the Controllers frame, the Group 104 entry allows button-4 on the porch KPL to be controlled by PH functions (eg, ph_insteongroupcu("KPL-B4","MID PORCH KPL ",ifaston) while the link for Group 4 (which is button-4 on this KPL) controls the OUT YARD light. </p>
+  <p><img src="images/KPL Linking.png" alt="KPL Linking" width="679" height="365"><br>
+  </p>
+  
+<p><strong class="ph-title">Understanding KPL Groups </strong> <br>
+When linking KPLs to each other the Group and Button meanings are as follows:
+
+For <em><strong>Controllers</strong></em> the &quot;Group&quot; number will be the button number on the sending KPL and the &quot;Button&quot; number will be the affected button on the receiving KPL.</p>
+<p>For <em><strong>Responders</strong></em> the &quot;Group&quot; # will be the button# on this selected KPL and the &quot;Button&quot;’ # will be the button on the responding Device(0) or KPL(#).
+  
+  In most cases the Button# will just be “0" for  all controllers and responders except KPLs..  <br>
+  <br>
+<img src="images/KPL Groups.png" alt="KPL Groups" width="685" height="586">
+</div>
+</body>
+</html>

@@ -1,73 +1,66 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!DOCTYPE html PUBLIC "-//IETF//DTD HTML//EN">
 <html>
-<head>
-<link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>ph_backupdb</title>
-</head>
-<body>
-<div class=ph1>
-
-ph_backupdb PowerHome formula function
-
-</div>
-<div class=ph2>Description</div>
-<div class=ph3>
-
-Makes a copy of the PowerHome database.
-
-</div>
-<div class=ph4>Syntax</div>
-<div class=ph5>
-
-ph_backupdb ( target, replace )
-
-</div>
-<div>
-<table width=100%>
-<tr>
-<td><span class=ph6>Argument</span></td>
-<td><span class=ph7>Description</span></td>
-</tr>
-
-<tr>
-<td class=ph8>
-target
-</td>
-<td class=ph9>
-<span class="ph-datype">String</span> representing the full path and filename to copy the database file to.  This value must be a fully qualified path and file name and cannot be a relative path.</td>
-</tr>
-
-<tr>
-<td class=ph8>
-replace
-</td>
-<td class=ph9>
-<span class="ph-datype">Integer</span> representing whether to overwrite the file if it already exists.  Use 0 to keep an existing file, any other value to overwrite.</td>
-</tr>
-
-</table>
-</div>
-<div class=ph10>Return value</div>
-<div class=ph11>
-
-Integer.  Returns a 0 if the datbase file copy was successful.  Returns 1 if the target is not a fully qualified path and filename.  Returns 2 if the DBF path in the pwrhome.ini file is not a fully qualified path and filename.  Returns 3 if the target already exists and the replace parameter is 0.  Returns 4 if the SQL backup command fails.  Returns 5 if the backup file rename operation fails.
-
-</div>
-
-<div class=ph10>Examples</div>
-<div class=ph11>
-The following examples demonstrate typical syntax/usage for this function. <br>
-</div>
-
-<div class=ph20>
-  &bull; ph_backupdb(&quot;C:\phdbabckup.db&quot;, 1)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Writes a backup file at the same location, overwriting the prior file <br>
-&nbsp;&nbsp;    <br>
-  &bull; ph_backupdb(&quot;C:\powerhome\Database\dbAutoBaks\ph-&quot;+string(today(),&quot;yymmdd&quot;)+&quot;.db&quot;,0) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Creates a file named &quot;PH-&quot; plus a date string, thus &gt;&gt; &quot;ph-130611.db&quot;. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;This results in unique individual files that must be trimmed occasionally to prevent runaway file clutter! <br>
-</div>
-
-</body>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <link rel="stylesheet" type="text/css" href="ph-help.css">
+    <title>ph_backupdb</title>
+  </head>
+  <body>
+    <div class="ph1"> ph_backupdb PowerHome formula function </div>
+    <div class="ph2">Description</div>
+    <div class="ph3"> Makes a copy of the PowerHome database. </div>
+    <div class="ph4">Syntax</div>
+    <div class="ph5"> ph_backupdb ( target, replace ) </div>
+    <div>
+      <table width="100%">
+        <tbody>
+          <tr>
+            <td><span class="ph6">Argument</span></td>
+            <td><span class="ph7">Description</span></td>
+          </tr>
+          <tr>
+            <td class="ph8"> target </td>
+            <td class="ph9"> <span class="ph-datype">String</span> representing
+              the full path and filename to copy the database file to. This
+              value must be a fully qualified path and file name and cannot be a
+              relative path.</td>
+          </tr>
+          <tr>
+            <td class="ph8"> replace </td>
+            <td class="ph9"> <span class="ph-datype">Integer</span>
+              representing whether to overwrite the file if it already exists.
+              Use 0 to keep an existing file, any other value to overwrite.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="ph10">Return value</div>
+    <div class="ph11"> Integer. Returns a 0 if the datbase file copy was
+      successful. Returns 1 if the target is not a fully qualified path and
+      filename. Returns 2 if the DBF path in the pwrhome.ini file is not a fully
+      qualified path and filename. Returns 3 if the target already exists and
+      the replace parameter is 0. Returns 4 if the SQL backup command fails.
+      Returns 5 if the backup file rename operation fails. </div>
+    <div class="ph10">Notes</div>
+    <div class="ph11"> In order for this function to execute, the SALOGDIR
+      environment variable must be defined on the machine that PowerHome is
+      running on. This environment variable should be set to a directory where
+      the BACKUP.SYB temporary file that this function creates can reside.<br>
+    </div>
+    <div class="ph10">Examples</div>
+    <div class="ph11"> The following examples demonstrate typical syntax/usage
+      for this function. <br>
+    </div>
+    <div class="ph20"> • ph_backupdb("C:\phdbabckup.db", 1)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Writes a backup file at the same location,
+      overwriting the prior file <br>
+      &nbsp;&nbsp; <br>
+      •
+      ph_backupdb("C:\powerhome\Database\dbAutoBaks\ph-"+string(today(),"yymmdd")+".db",0)
+      <br> &nbsp;&nbsp;&nbsp;&nbsp;Creates a file named "PH-" plus a date
+      string, thus &gt;&gt; "ph-130611.db". <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;This results in unique individual files that must
+      be trimmed occasionally to prevent runaway file clutter! <br>
+    </div>
+  </body>
 </html>
-
