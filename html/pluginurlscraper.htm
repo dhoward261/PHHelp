@@ -120,7 +120,7 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
                 The search looks for the unique string of &quot; &lt;td&gt;Temperature&lt;/td&gt;&quot; and then captures everything &quot;[\s\S]&quot; that is either a 'whitespace character or not a whitespace character' (ie, everything) that occurs one or more times &quot;*&quot; and makes the search non-greedy &quot;?&quot; (that is, stop at the first match found, rather than looking for more).</div> 
         <br>
             regexoccur=1 <span class="style2">{Grab the first match found (actually redundant with the ? in the search string}</span> <br>
-            regexflags=0 &nbsp;<span class="style2">{Use 0 for case insentive searchs and 1 for case sensetive searches.} </span><br>
+            regexflags=0 &nbsp;<span class="style2">{Use 0 for case insentive searchs. Add 1 for case sensetive searches, and/or add 2 for triggers only on "new" snaps.} </span><br>
             
             </p>
             
