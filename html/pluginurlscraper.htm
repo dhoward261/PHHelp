@@ -142,9 +142,84 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
           <br>
           If you wanted only a single trigger with temperature and humidity, you   would need to have a single scrape (URL_1_1) with two snap sections.   Then you could have temp in LOCAL1 (if it occurs first) and humidity in   LOCAL2.<br>
           <br> 
-          As referenced above in the URL_1_1 description, up to 5 search matches can be captured in a single trigger. If more are needed, then a 2nd URL_x (ie, URL_2) must be defined. It can pass five more data elements. <br>
-  <br>
-  <img src="images/urlscrape-trig.png" alt="URL Scrape Trigger" width="952" height="65"><br>
-  <br>
-  </body>
+  As referenced above in the URL_1_1 description, up to 5 search matches can be captured in a single trigger. If more are needed, then a 2nd URL_x (ie, URL_2) must be defined. It can pass five more data elements.         
+  <p class="indent4">All Triggers for ULR_1 extractions are triggered with a &quot;Trigger ID Number&quot; of &quot;Command 1&quot;, where the &quot;Trigger Value&quot; will be &quot;Option 1&quot; for the first (LOCAL1) snap, Option 2 for the 2nd (LOCAL2) snap, etc.        
+  <p class="indent4">URL_2 extractions will be triggered from &quot;Command 2&quot; triggers with &quot;Option 1&quot; (LOCAL1) for the 1st snap in this 2nd URL Group, and &quot;Option 2&quot; (LOCAL2) for the next snap, etc.  <br>
+          <br>
+          <img src="images/urlscrape-trig.png" alt="URL Scrape Trigger" width="952" height="65">        
+  <p><br>
+          <br>
+<div class=ph10>
+Weather Extraction Example Using the Weather Underground API
+</div>
+<div class=ph11>
+  <p>The following examples demonstrates an extraordinarily way to extract weather data [Special thanks to &quot;snoker&quot; who discovered this!]  </p>
+  <p>Weather Underground has a free "developer API" you can sign up for that will VERY quickly return a customized XML-formatted document with only the raw information  needed (including full compliment of weather data combined with precipitation over time). </p>
+  <p>You have to sign up for a free API key (be sure to pick the free option which is the developer/500 call-per-day/10 call-per-minute option - any larger volumes they sensibly want you to pay for). </p>
+  <p>You simply register a free account with them. They send a confirmation e-mail for the account creation, and once you're in go through their "cart" (as mentioned previously at no charge to you if you pick the correct option) and check out. </p>
+  <p>You are then issued an unlimited call API key (keep this tight for obvious reasons).    </p>
+  <p>The documentation (http://www.wunderground.com/weather/api/d/docs) is fairly straight up. You can call by LAT/LON, city location, or look up a specific station  by that ID (tif you know of a maintained station nearby at a school, airport, etc.. Here is an example call to a local site using the Weather Underground demo API key that goes after a specific weather station: 
+    
+    <br>
+    <br>
+    <span class="indent4">ph_geturl1( "http://api.wunderground.com/api/6f4c56e1c72e7c82/geolookup/ conditions/q/pws:KCOHIGHL5.json",1,20)</span><br>
+    <br>  
+ ...and here is an example of how to call out to a city location instead: 
+
+ <br>
+ <br>
+ <span class="indent4">ph_geturl1( "http://api.wunderground.com/api/6f4c56e1c72e7c82/conditions /q/CA/San_Francisco.json",1,20) </span></p>
+  <p><U>NOTE:</U> <EM>You have to put your own API key in where theirs (6f4c56e1c72e7c82) is used here (</EM>I'm sure they cycle them so probably disable these on a frequent basis - these may not work directly without inserting your own key<EM>).  Also, if you want to extract the HTML to examine its actual contents, you can use one of the two example method above, </EM>but it's output will be so volumenous that your will have to use a ph_write file() function to get the full results. For example...</p>
+  <p><img src="images/urlscrape-test.png" alt="URL Test Code" width="945" height="40"></p>
+  <p><EM>But you have to open the result in something like NotePad++ to see it...and it's AWESOME</EM> (excerpt below): <br>
+    <br>
+  
+. . . .<br>
+&nbsp;&nbsp;. . . .<br>
+"weather":"Clear", <BR>
+"temperature_string":"69.5 F (20.8 C)", <BR>
+"temp_f":69.5, <BR>
+"temp_c":20.8, <BR>
+"relative_humidity":"57%", <BR>
+"wind_string":"From the West at 1.2 MPH Gusting to 3.0 MPH", <BR>
+"wind_dir":"West", <BR>
+"wind_degrees":270, <BR>
+"wind_mph":1.2, <BR>
+"wind_gust_mph":"3.0", <BR>
+"wind_kph":1.9, <BR>
+"wind_gust_kph":"4.8", <BR>
+"pressure_mb":"1015", <br>
+&nbsp;&nbsp;. . . . <br>
+&nbsp;&nbsp;. . . .</p>
+  <p>The following URLScraper ini structure will access the weather site via its API and scrape off the Temperature and wind speed data elements and pass them via the Trigger in LOCAL1 and LOCAL2 respectively. If the Trigger Action Type field is set to a Macro, that macro can then use the data passed in LOCAL1...LOCALx as apppropriate. </p>
+ <p>NOTE: all of the scrapes could also be captured in a single URL_1_1 scrape as illustrated in the  &quot;five (5) snaps off a page&quot; example  under the "Configuring the urlscraper.ini file" heading above. </p>
+ <p>NOTE: Setting the regexflags=2 would only fire the Trigger when the  weather data actually changed from one reading to the next. If there are no changes, then there will be no attempt to fire the Trigger, thus minimizing extra CPU loading. </p>
+ <br>
+
+  </div>
+<div class=ph20>
+  <strong>[config]</strong><br>
+    urlcount=1
+    </p>
+  </p>
+  <p><strong>[URL_1]</strong><br>
+    url=http://api.wunderground.com/api/7d6ed69e542ccec1/conditions/q/MA/Boston.json<br>
+    freq=15.0<br>
+    scrapecount=1
+    </p>
+  
+  <p><strong>  [URL_1_1]</strong><br>
+    regexsearch=&quot;temp_f&quot;:(.+),<br>
+    regexoccur=1 <br>
+    regexflags=0
+  </p>
+    <strong>[URL_1_2]</strong><br>
+    regexsearch="wind_mph":(.+),<br>
+    regexoccur=1 <br>
+    regexflags=0
+    </p>
+      </p>
+</div>
+
+</body>
 </html>
