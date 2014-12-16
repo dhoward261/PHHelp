@@ -20,9 +20,9 @@ Returns a dynamic HTML table containing the PowerHome Device Status screen.
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
-ph_webds ( dstype, 
+ph_webds ( 
 
-location, filter, sort, nexturl )
+dstype, location, filter, sort, nexturl,&nbsp;cols&nbsp;)
 
 </div>
 <div>
@@ -55,15 +55,19 @@ dstype
     <TD class=ph8>sort</TD>
     <TD class=ph9>String. Sort the device status list using a user defined 
       sort. Use empty string "" to retain the default sort.</TD></TR>
+  <TR>
+    <TD class=ph8>nexturl </TD>
+    <TD class=ph9>String. A string representing the URL of the next page to 
+      open after processing a device status control button. </TD></TR>
 <tr>
 <td class=ph8>
 
-nexturl
+cols
 
 </td>
 <td class=ph9>
 
-String.  A string representing the URL of the next page to open after processing a device status control button.
+String.  A string the columns and column order that would like used in the HTML table. See Usage below.
 
 </td>
 </tr>
@@ -72,8 +76,73 @@ String.  A string representing the URL of the next page to open after processing
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-String.  Returns a complete HTML table source code for the PowerHome Device Status screen at that moment.  Use this function to quickly incorporate the Device Status screen directly into your own PSP code creations with virtually no coding.  Using this function, you can create your own menus and mix or match individual PowerHome web elements.
+                                         String. Returns a complete HTML table source code for the PowerHome Device Status screen at that moment.
 
 </div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>&nbsp;Use this function to quickly 
+incorporate the Device Status screen directly 
+into your own PSP code creations with virtually no coding. Using this function, you can create 
+your own menus and mix or match individual PowerHome web 
+elements.<BR><BR>See the table below for the available columns to use in 
+the cols parameter:
+
+<div>
+<table width="100%">
+  <TR>
+    <TD class=ph8>1</TD>
+    <TD class=ph9>       
+                 
+       Control </TD></TR>
+  <TR>
+    <TD class=ph8>2</TD>
+    <TD class=ph9>            
+            Status </TD></TR>
+  <TR>
+    <TD class=ph8>3</TD>
+    <TD class=ph9>        
+                      
+         Device Name </TD></TR>
+  <TR>
+    <TD class=ph8>4</TD>
+    <TD class=ph9>Location</TD></TR>
+  <TR>
+    <TD class=ph8>5</TD>
+    <TD class=ph9>Type</TD></TR>
+  <TR>
+    <TD class=ph8>6</TD>
+    <TD class=ph9>ID</TD></TR>
+  <TR>
+    <TD class=ph8>7</TD>
+    <TD class=ph9>       
+          Last Change </TD></TR>
+</table>
+</div> 
+          Leave the 
+"cols" parameter blank to accept the default columns and order. This will be equivalent 
+to&nbsp;"1,2,3,4,5,6,7". &nbsp;
+
+ 
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_webds(0,"Family 
+Room","","","ds.psp","2,1,3,7") - Generates a version of the Device Status 
+screen that displays only devices with a location of Family Room and only shows 
+the columns of Status, Control, Device Name, and Last Change in that order. If 
+any Control options are used on this screen, the reload page will be "ds.psp" 
+(typically the file that is used to create this screen in the first 
+
+place).
+
+</div>
+
 </body>
 </html>

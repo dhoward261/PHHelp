@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_sendsmtpemail</title>
 </head>
@@ -21,7 +22,7 @@ ph_sendsmtpemail ( Server, Port, fromAddr, toAddr, Subject, text )
 </div>
 
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -88,10 +89,10 @@ If your SMTP server requires authentication, then supply the userid and password
 The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
-&bull; ph_sendsmtpemailfile("smtp.mail.yahoo.com",465,"yourmail@yahoo.com,login,password", "someone@gmail.com","Motion Alert","Driveway Motion Detected.") <br>
+• ph_sendsmtpemailfile("smtp.mail.yahoo.com",465,"yourmail@yahoo.com,login,password", "someone@gmail.com","Motion Alert","Driveway Motion Detected.") <br>
 &nbsp;&nbsp;&nbsp;{Sends a plain email message}<br>
-&bull; ph_sendsmtpemail(&quot;smtp.gmail.com&quot;,465,&quot;johndoe@gmail.com,johndoe,121239&quot;, &quot;4075551212@cingularme.com&quot;,&quot;Motion Alert&quot;,&quot;Motion on DrvCam detected at &quot; +
-ph_getglobal_s (&quot;LASTRIGDRV&quot;)
+• ph_sendsmtpemail("smtp.gmail.com",465,"johndoe@gmail.com,johndoe,121239", "4075551212@cingularme.com","Motion Alert","Motion on DrvCam detected at " +
+ph_getglobal_s ("LASTRIGDRV")
 <br>
 &nbsp;&nbsp;&nbsp;{Sends an SMS text mesage to a smartphone.}
 </div>

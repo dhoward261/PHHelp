@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>ph_or</title>
 </head>
@@ -12,7 +13,7 @@ ph_or PowerHome formula function
 
 <div class=ph2>Description</div>
 <div class=ph3>
-Bitwise OR�s two numbers.
+Bitwise OR’s two numbers.
 </div>
 
 <div class=ph4>Syntax</div>
@@ -21,7 +22,7 @@ ph_or ( val1, val2 )
 </div>
 
 <div>
-<table width=100%>
+<table width="100%">
 <tr><td><span class=ph6>Argument</span></td> <td><span class=ph7>Description</span></td></tr>
 
 <tr><td class=ph8>val1</td> 
@@ -36,7 +37,7 @@ ph_or ( val1, val2 )
 
 <div class=ph10>Return value</div>
 <div class=ph11>
-Unsigned long.  Returns the value of the two operands OR�ed together.
+Unsigned long.  Returns the value of the two operands OR’ed together.
 </div>
 
 <div class=ph12>Usage</div>
@@ -47,7 +48,8 @@ In addition to the ph_or() function, the stand-alone OR operator is also availab
 <br>
 A typical use of the OR operator  in an IF function is...
 <br>
-    &bull; if(now()>09:00:00 or {DARK}=0 or {ON}=1,1,0)</div>
+    • if(now() &gt; 09:00:00 or {DARK} =
+     0 or {ON}=  1,1,0)</div>
 
 <div class=ph10>Examples</div>
 <div class=ph11>
@@ -55,7 +57,7 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 
 <div class=ph20>
-<table width=100%>
+<table width="100%">
 
 <tr><td width="160" class=ph8_2> ph_or({DARK},{HOME})</td> 
 <td class=ph9>Yields a "1" if either the DARK or HOME Globals are true (ie, equal to 1)</td>
@@ -70,7 +72,7 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 </tr>
 
 <tr><td width="160" class=ph8_2> ph_or(21,[LOCAL1])</td> 
-<td class=ph9>Yields "1" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b00011 &gt;&gt; 1}</td>
+<td class=ph9>Yields "23" if LOCAL1=3&nbsp;&nbsp;&nbsp;{0b10101 AND 0b00011 &gt;&gt; 1}</td>
 </tr>
 </table>
 </div>

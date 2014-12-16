@@ -4,7 +4,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <link rel="stylesheet" type="text/css" href="ph-helpstd.css">
 	<link rel="stylesheet" type="text/css" href="ph-help.css">
-    <title>URL Scrapers</title>
+    <title>URL Scraper</title>
     <style type="text/css">
 <!--
 .style2 {color: #FF00FF}
@@ -21,7 +21,7 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
     <div class="indent2 padtop1"> 
       <p>The PowerHome URL Scraper plugins (URLScraper and URLScraper1) are designed to parse data from designated web pages, in a manner similar to the ph_regex() family of string search functions, except that
       the scraper plugins run in the background in their own independant thread, and take no PowerHome resources.</p>
-      <p><strong>The preferred scraper is &quot;URLScraper</strong>&quot; which is the most general scraper implementation which uses the Catalyst HTTP Control functions. In rare instances where a unique website is incompatible with Catylist Control for some reason, the alternative <strong>URLScraper1</strong> that uses raw socket communications is available, and will generally be successful. </p>
+      <p><strong>The preferred scraper is "URLScraper</strong>" which is the most general scraper implementation which uses the Catalyst HTTP Control functions. In rare instances where a unique website is incompatible with the Catalyst HTTP Control for some reason, the alternative <strong>URLScraper1</strong> that uses raw socket communications is available, and will generally be successful. </p>
       <p>The regex search that is done uses the VBScript regular expression engine (the same that is used in the new ph_regex2 functions). Full details, and good tutorials, on the protocol can be found here ...<br><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.regular-expressions.info/quickstart.html" title="VB Script regex tutorial">http://www.regular-expressions.info/quickstart.html</a></p>
@@ -31,7 +31,7 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
     
 	<p class="indent4">To use the scraper the Plugin must be ...<br>
   &nbsp;&nbsp;1) defined in PowerHome Explorer&gt;Setup&gt;Plugins, <br>
-  &nbsp;&nbsp;2) the default initialization file  &quot;c:\powerhome\ plugins\urlscraper.ini&quot; needs to be modified or replaced, and <br>
+  &nbsp;&nbsp;2) the default initialization file  "c:\powerhome\ plugins\urlscraper.ini" needs to be modified or replaced, and <br>
   &nbsp;&nbsp;3)
 	  a trigger event created in the PowerHome Explorer Triggers table (to call a Macro, or other Action). 
 	<br>
@@ -39,17 +39,17 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
 	<br>
 
 	<div class="topic indent3 padtop1">Defining the urlscraper.ini file:</div>
-  <p class="indent4">A definition for the URLScraper1 plugin must be entered in the PowerHome Explorer&gt;Setup&gt;Plugins table as follows (the 'Load Order'  number doesn't have to be as exampled below. Any sequence number, is appropriate). See following discussion regarding the use of &quot;URLScraper&quot; or &quot;URLScraper1&quot;.     
+  <p class="indent4">A definition for the URLScraper1 plugin must be entered in the PowerHome Explorer&gt;Setup&gt;Plugins table as follows (the 'Load Order'  number doesn't have to be as exampled below. Any sequence number, is appropriate). See following discussion regarding the use of "URLScraper" or "URLScraper1".     
   <p class="indent4">The example image below shows both plugin versions defined for reference purposes, although normally only one would be used.<br>
 	  <br>
-	  <img src="images/urlscrape-plugins.png" alt="plugin definition" width="891" height="89">
+	  <IMG alt="plugin definition" src ="images/urlscrape-plugins.png" width=891 height=89 >
   <p class="indent4">
     
   <div class="topic indent3 padtop1">Configuring the urlscraper.ini file:</div>
   <div class=indent4>
-      <li>Open the &quot;c:\powerhome\ plugins\urlscraper.ini&quot; file in Notepad. You'll need 
+      <li>Open the "c:\powerhome\ plugins\urlscraper.ini" file in Notepad. You'll need 
         to configure the URLScraper plugin actions by modifying that file. 
-      <li>The scraper .ini file is comprised of two main parts (see example below), one of which may be repeating depending on the number and complexity of the &quot;scrapes.&quot;<br>
+      <li>The scraper .ini file is comprised of two main parts (see example below), one of which may be repeating depending on the number and complexity of the "scrapes."<br>
       <br>
       The 1st section is the <strong>[config]</strong> area, which has a single entry that defines how many different URL's will be defined to be searched. The urlcount parameter can be up to a maximum of 10.  If you need to scrape more than 10 URL's, you can declare another instance of the scraper in the Setup Plugins table (ie, URLSCRAPER2). See also, above image. <br>
       <br>
@@ -61,7 +61,7 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
       <br>
       (There can be an unlimited number of scrapes (eg, [URL_1_113] would be possible.) The number of matches (or snaps) is determined by the number of () parenthesis snap blocks within a scrape. The examples below only show a single snap per scrape but you can have up to five (5) multiple snaps per scrape. Within a single scrape, the individual snaps will be placed in the LOCAL variables (LOCAL1 thru LOCAL5) in the same order as found. <br>
       <br>
-      In addition to the LOCALs, all of the snaps within a scrape will also be placed concatenated together in the TEMP5 variable with a separator of <|> between each snap ( ie, &quot;wind&lt;|&gt;15&lt;|&gt;&quot; ). <br>
+      In addition to the LOCALs, all of the snaps within a scrape will also be placed concatenated together in the TEMP5 variable with a separator of &lt;|&gt; between each snap ( ie, "wind&lt;|&gt;15&lt;|&gt;" ). <br>
       <br>
       Here is a weather data extraction Example that pulls five (5) snaps off a page.<br>
       <br>
@@ -88,9 +88,9 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
         <span class="indent4">&lt;td&gt;Temperature&lt;/td&gt;[\s\S]*?&lt;b&gt;(.+)&lt;/b&gt;</span> <br>
         <br>
 
- will match both entries but if you want the second one, you need to change the regexoccur parameter (or change the regex search itself to specifically state Orlando).<br>
+ will match both entries but if you want the second one, you need to change the regexoccur parameter (or change the regex search itself to specifically state Orlando). <br>
  <br>
- In the weather data INI code above, the regexsearch looks for <strong>&lt;div id=&quot;main&quot;&gt;</strong> then skips over everything, with the <strong>[\s\S]*?</strong> which  matchs any text that appears up to the next <strong>&lt;span&gt;</strong> tag.<br>
+In the weather data INI code above, the regexsearch looks for <strong>&lt;div id=&quot;main&quot;&gt;</strong> then skips over everything, with the <strong>[\s\S]*?</strong> which  matchs any text that appears up to the next <strong>&lt;span&gt;</strong> tag.<br>
  <br>
  The <strong>[\s\S]</strong> matches &quot;<strong>\s</strong>&quot; any &quot;whitespace&quot; character (ie, space, tab, line break, form feed) and the &quot;<strong>\S</strong>&quot; matches any non-whitespace character (ie, all characters). <br>
  <br>
@@ -98,8 +98,7 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
         <br>
         The <strong>(.+)</strong> denotes that everything between the &quot;&lt;/span&quot;&gt; and &quot;&lt;/h4&gt;&quot; tags be "snapped" out of the data string (the temperature in this case) for this regex search. This is a greedy search that will find the last occurance on a line. We are safe using it here because there are no data repeats before the next Return code. <br>
         <br>
-        The default <em><strong>regexflags</strong></em> parameter of 0, can have a 1, or 2 (or both) added to it, where the &quot;1&quot; determines case sensitivity, and a &quot;2&quot; determines plugin trigger firing conditions, as follows ... 
-    
+ The default <em><strong>regexflags</strong></em> parameter of 0, can have a 1, or 2 (or both) added to it, where the "1" determines case sensitivity, and a "2" determines plugin trigger firing conditions, as follows ... 
       <li>Adding 1 makes the search case sensitive, otherwise searches are case insensitive.      
       <li>Adding 2   causes the plugin to ONLY fire the generic plugin trigger if the snapped value has changed (the plugin stores the last "snap" of each scrape and if the new "snap" is different from the last snap, then the trigger will be fired. If 2 is not added to the flags parameter, then the trigger will fire everytime even if the value is the same as the last scrape). <br>
         <br><br><br>
@@ -110,24 +109,22 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
             <strong>[config]</strong><br>
             urlcount=1<br>
             <div class="indent2 style2">The urlcount determines how many unique URL’s will be retrieved (NOTE: a single instance of the plugin can retrieve multiple different URL’s). For each URL in the URL count, you’ll have URL_x sections. That is, for URL count of 1, you’ll have a [URL_1] section. If you have a count of 2, you’ll have both a [URL_1} and [URL_2] section.</div>
-        </p>
-            <p><strong>[URL_1]</strong><br>
-              url=http://m.wund.com/cgi-bin/findweather/getForecast?brand=mobile&amp;query=32712<br>
+<P></P>
+            <p><strong>[URL_1]</strong><br>url=http://m.wund.com/cgi-bin/findweather/getForecast?brand=mobile&amp;query=32712<br>
               freq=0.5<br>
               scrapecount=2<br>
             <div class="indent2 style2">Within a [URL_X] section, you’ll have the url, the freq (the frequency in <em><strong>minutes</strong></em> for how often to retrieve the URL), and the scrapecount. The scrapecount is how many regex searches are going to be made against the retrieved URL HTML data. For [URL_1] with a scrapecount of 2, you’ll have both a [URL_1_1] and [URL_1_2] section. If you have a [URL_2] section with a scrapecount of 1, then you’ll have only a [URL_2_1] section. </div>
-      </p>
+<P></P>
             <p><strong>[URL_1_1]</strong><br>
-              ;Temperature <span class="style2">{The &quot;;&quot; makes this a comment line}</span> <br>
+              ;Temperature <span class="style2">{The ";" makes this a comment line}</span> <br>
               regexsearch=&lt;td&gt;Temperature&lt;/td&gt;[\s\S]*?&lt;b&gt;(.+)&lt;/b&gt;<br>
             <div class="indent2 style2">The [URL_X_Y] section defines a regex search for the URL and fires a generic plugin trigger. The “X” value corresponds to the Trigger ID column (Command 1 for an X value of 1) and the “Y” value corresponds to the Trigger Value column (Option 1 for a Y value of 1).<br>
                 <br>
-                The search looks for the unique string of &quot; &lt;td&gt;Temperature&lt;/td&gt;&quot; and then captures everything &quot;[\s\S]&quot; that is either a 'whitespace character or not a whitespace character' (ie, everything) that occurs one or more times &quot;*&quot; and makes the search non-greedy &quot;?&quot; (that is, stop at the first match found, rather than looking for more).</div> 
+                The search looks for the unique string of " &lt;td&gt;Temperature&lt;/td&gt;" and then captures everything "[\s\S]" that is either a 'whitespace character or not a whitespace character' (ie, everything) that occurs one or more times "*" and makes the search non-greedy "?" (that is, stop at the first match found, rather than looking for more).</div> 
         <br>
             regexoccur=1 <span class="style2">{Grab the first match found (actually redundant with the ? in the search string}</span> <br>
             regexflags=0 &nbsp;<span class="style2">{Use 0 for case insentive searchs. Add 1 for case sensetive searches, and/or add 2 for triggers only on "new" snaps.} </span><br>
-            
-            </p>
+<P></P>
             
             <p><strong>[URL_1_2]</strong><br>
               ;Humidity<br>
@@ -135,10 +132,8 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
               regexoccur=1<br>
               regexflags=0</p>
       <p>These two searches will find the Temperature and the Humidity from the m.wund.com web site and return to the Trigger the Temperature in LOCAL1 and the Humidity in LOCAL2. Up to 9 parameters can be captured. If more are needed a second (ie, {URL_2] section could be defined to capture additional data.</p>
-      <p>NOTE: The [URL_x] sections are independant of each other and thus can be used to capture additional data from the same site, as indicated above, or may be directed at totally different sites with different frequencies and scrape counts for different purposes (ie, weather on one and football scores on another). </p>
-      </div>
-  </div>
-</div>
+      <p>NOTE: The [URL_x] sections are independant of each other and thus can be used to capture additional data from the same site, as indicated above, or may be directed at totally different sites with different frequencies and scrape counts for different purposes (ie, weather on one and football scores on another). </p></div></li></div>
+<DIV></DIV>
         <div class="topic indent3 padtop1">Configuring the Triggers:</div>
         <br>
         <p class="indent4">Create a new generic plugin trigger for each of the URL_x scrapes. You can give them ID’s of WEATHER1 and WEATHER2. Set the Trigger ID number to “Command 1" for both and the Trigger Value to “Option 1" for WEATHER1 and “Option 2" for WEATHER2. <br><br>
@@ -148,17 +143,17 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
           If you wanted only a single trigger with temperature and humidity, you   would need to have a single scrape (URL_1_1) with two snap sections.   Then you could have temp in LOCAL1 (if it occurs first) and humidity in   LOCAL2.<br>
           <br> 
   As referenced above in the URL_1_1 description, up to 5 search matches can be captured in a single trigger. If more are needed, then a 2nd URL_x (ie, URL_2) must be defined. It can pass five more data elements.         
-  <p class="indent4">All Triggers for ULR_1 extractions are triggered with a &quot;Trigger ID Number&quot; of &quot;Command 1&quot;, where the &quot;Trigger Value&quot; will be &quot;Option 1&quot; for the first (LOCAL1) snap, Option 2 for the 2nd (LOCAL2) snap, etc.        
-  <p class="indent4">URL_2 extractions will be triggered from &quot;Command 2&quot; triggers with &quot;Option 1&quot; (LOCAL1) for the 1st snap in this 2nd URL Group, and &quot;Option 2&quot; (LOCAL2) for the next snap, etc.  <br>
+  <p class="indent4">All Triggers for ULR_1 extractions are triggered with a "Trigger ID Number" of "Command 1", where the "Trigger Value" will be "Option 1" for the first (LOCAL1) snap, Option 2 for the 2nd (LOCAL2) snap, etc.        
+  <p class="indent4">URL_2 extractions will be triggered from "Command 2" triggers with "Option 1" (LOCAL1) for the 1st snap in this 2nd URL Group, and "Option 2" (LOCAL2) for the next snap, etc.  <br>
           <br>
-          <img src="images/urlscrape-trig.png" alt="URL Scrape Trigger" width="952" height="65">        
+          <IMG alt="URL Scrape Trigger" src ="images/urlscrape-trig.png" width=952 height=65 >        
   <p><br>
           <br>
 <div class=ph10>
 Weather Extraction Example Using the Weather Underground API
 </div>
 <div class=ph11>
-  <p>The following examples demonstrates an extraordinarily way to extract weather data [Special thanks to &quot;snoker&quot; who discovered this!]  </p>
+  <p>The following examples demonstrates an extraordinarily way to extract weather data [Special thanks to "snoker" who discovered this!]  </p>
   <p>Weather Underground has a free "developer API" you can sign up for that will VERY quickly return a customized XML-formatted document with only the raw information  needed (including full compliment of weather data combined with precipitation over time). </p>
   <p>You have to sign up for a free API key (be sure to pick the free option which is the developer/500 call-per-day/10 call-per-minute option - any larger volumes they sensibly want you to pay for). </p>
   <p>You simply register a free account with them. They send a confirmation e-mail for the account creation, and once you're in go through their "cart" (as mentioned previously at no charge to you if you pick the correct option) and check out. </p>
@@ -175,10 +170,10 @@ Weather Extraction Example Using the Weather Underground API
  <br>
  <span class="indent4">ph_geturl1( "http://api.wunderground.com/api/6f4c56e1c72e7c82/conditions /q/CA/San_Francisco.json",1,20) </span></p>
   <p><U>NOTE:</U> <EM>You have to put your own API key in where theirs (6f4c56e1c72e7c82) is used here (</EM>I'm sure they cycle them so probably disable these on a frequent basis - these may not work directly without inserting your own key<EM>).  Also, if you want to extract the HTML to examine its actual contents, you can use one of the two example method above, </EM>but it's output will be so volumenous that your will have to use a ph_write file() function to get the full results. For example...</p>
-  <p><img src="images/urlscrape-test.png" alt="URL Test Code" width="945" height="40"></p>
+  <p><IMG alt="URL Test Code" src ="images/urlscrape-test.png" width=945 height=40 ></p>
   <p><EM>But you have to open the result in something like NotePad++ to see it...and it's AWESOME</EM> (excerpt below): <br>
     <br>
-  
+ &nbsp;
 . . . .<br>
 &nbsp;&nbsp;. . . .<br>
 "weather":"Clear", <BR>
@@ -197,16 +192,16 @@ Weather Extraction Example Using the Weather Underground API
 &nbsp;&nbsp;. . . . <br>
 &nbsp;&nbsp;. . . .</p>
   <p>The following URLScraper ini structure will access the weather site via its API and scrape off the Temperature and wind speed data elements and pass them via the Trigger in LOCAL1 and LOCAL2 respectively. If the Trigger Action Type field is set to a Macro, that macro can then use the data passed in LOCAL1...LOCALx as apppropriate. </p>
- <p>NOTE: all of the scrapes could also be captured in a single URL_1_1 scrape as illustrated in the  &quot;five (5) snaps off a page&quot; example  under the "Configuring the urlscraper.ini file" heading above. </p>
+ <p>NOTE: all of the scrapes could also be captured in a single URL_1_1 scrape as illustrated in the  "five (5) snaps off a page" example  under the "Configuring the urlscraper.ini file" heading above. </p>
  <p>NOTE: Setting the regexflags=2 would only fire the Trigger when the  weather data actually changed from one reading to the next. If there are no changes, then there will be no attempt to fire the Trigger, thus minimizing extra CPU loading. </p>
  <br>
 
   </div>
 <div class=ph20>
   <strong>[config]</strong><br>
-    urlcount=1
-    </p>
-  </p>
+    urlcount=1 
+<P></P>
+<P></P>
   <p><strong>[URL_1]</strong><br>
     url=http://api.wunderground.com/api/7d6ed69e542ccec1/conditions/q/MA/Boston.json<br>
     freq=15.0<br>
@@ -214,17 +209,16 @@ Weather Extraction Example Using the Weather Underground API
     </p>
   
   <p><strong>  [URL_1_1]</strong><br>
-    regexsearch=&quot;temp_f&quot;:(.+),<br>
+    regexsearch="temp_f":(.+),<br>
     regexoccur=1 <br>
     regexflags=0
   </p>
     <strong>[URL_1_2]</strong><br>
     regexsearch="wind_mph":(.+),<br>
     regexoccur=1 <br>
-    regexflags=0
-    </p>
-      </p>
-</div>
+    regexflags=0 
+<P></P>
+<P></P></div>
 
 </body>
 </html>

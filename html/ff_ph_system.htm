@@ -1,0 +1,227 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<title>ph_system</title></head>
+<body>
+<div class=ph1>
+
+ph_system PowerHome formula function
+
+</div>
+<div class=ph2>Description</div>
+<div class=ph3>  Updates and retrieves&nbsp;various 
+system related functions within PowerHome&nbsp; </div>
+<div class=ph4>Syntax</div>
+<div class=ph5>   ph_system (&nbsp;type, 
+parm1, parm2,&nbsp;local&nbsp;) </div>
+<div>
+<table width="100%">
+  
+  <tr>
+    <td><span class=ph6 
+      >Argument</span></td>
+    <td><span class=ph7 
+      >Description</span></td></tr>
+  <tr>
+    <td class=ph8>type</td>
+    <td class=ph9>String. The type of system function you wish to interact with. 
+      Current valid value is "ws" for webserver. </td></tr>
+  <tr>
+    <td class=ph8>parm1</td>
+    <td class=ph9>     Long. Parm1 
+      to be passed for the specific function. </td></tr>
+  <tr>
+    <td class=ph8>parm2</td>
+    <td class=ph9>     String. Parm2 
+      to be passed for the specific function </td></tr>
+  <tr>
+    <td class=ph8>local</td>
+    <td class=ph9>Integer. The local variable that you 
+      want extended data to be returned in (1 thru 10). Use a 
+      value of 0 to discard this data. </td></tr></table></div>
+
+<div class=ph10>Return value</div>
+
+<div class=ph11>
+
+Double.&nbsp;Returns either a value 
+requested for the system parameter or a success/error indicator.&nbsp; Returns 
+-3 if the type parameter is "ws" and 
+
+the other parameters are 
+invalid. Returns -999 if the type parameter 
+
+is invalid.
+
+</div>
+
+<div class=ph12>Usage</div>
+
+<div class=ph13>
+
+        
+              Use this function to 
+access various system related parameters. See&nbsp;the table&nbsp;below for valid usage parameters:&nbsp; <BR>
+<table border=1 cellspacing=0 cellpadding=2>
+ <tr>
+  <td class=ph15><b>type</b></td>
+  <td class=ph15><b>parm1</b></td>
+  <td class=ph15><b>parm2</b></td>
+  <td class=ph15><b>local</b></td>
+  <td class=ph15><b>Return value</b></td>
+  <td class=ph15><b>Notes</b></td>
+ </tr>
+ <tr>
+  <td class=ph15> ws</td>
+  <td class=ph15>     0</td>
+  <td class=ph15>        enable</td>
+  <td class=ph15>0</td>
+  <td class=ph15>0 if successful<BR>-1 if the webserver 
+      is already enabled<BR>-2 if an error occurs</td>
+  <td class=ph15>Use to enable the webserver</td>
+ </tr>
+ <tr>
+  <td class=ph15>  ws  </td>
+  <td class=ph15>     0     </td>
+  <td class=ph15>        disable        </td>
+  <td class=ph15>0</td>
+  <td class=ph15>0 if successful<BR>-1 if the webserver 
+      is already disabled</td>
+  <td class=ph15>Use to disable the webserver</td>
+ </tr>
+ <tr>
+  <td class=ph15> ws </td>
+  <td class=ph15>  0  </td>
+  <td class=ph15>      status      </td>
+  <td class=ph15>0</td>
+  <td class=ph15>0 if the webserver is disabled<BR>1 if 
+      the webserver is enabled</td>
+  <td class=ph15>Check the current status of the 
+      webserver</td>
+ </tr>
+ <tr>
+  <td class=ph15> ws </td>
+  <td class=ph15>          0 to only read count<BR>1 to read and 
+      reset count          </td>
+  <td class=ph15>  getbadlogincnt  </td>
+  <td class=ph15>0</td>
+  <td class=ph15>Returns the total count of bad login 
+      attempts<BR>-1 if the webserver is not active</td>
+  <td class=ph15>Get and optionally reset the count of 
+      bad login attempts</td>
+ </tr>
+ <tr>
+  <td class=ph15>           ws           </td>
+  <td class=ph15>     0 to only read count<BR>1 to read and 
+      reset count     </td>
+  <td class=ph15>                           getblacklistcnt                           </td>
+  <td class=ph15>0</td>
+  <td class=ph15>Returns the total count of hits from 
+      blacklisted IP's<BR>-1 if the webserver is not active</td>
+  <td class=ph15>Get and optionally reset the count of 
+      hits from blacklisted IP's</td>
+ </tr>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0 to only read count<BR>1 to read and reset count</TD>
+    <TD class=ph15>gettrustedcnt</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>Returns the total count of hits from trusted IP's<BR>-1 if 
+      the webserver is not active</TD>
+    <TD class=ph15>Get and optionally reset the count of hits from trusted 
+    IP's</TD></TR>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0 to only read count<BR>1 to read and reset count</TD>
+    <TD class=ph15>getguestcnt</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>Returns the total count of hits using the guest 
+      account<BR>-1 if the webserver is not active</TD>
+    <TD class=ph15>Get and optionally reset the count of hits from the guest 
+      account</TD></TR>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0 to only read count<BR>1 to read and reset count</TD>
+    <TD class=ph15>getmastercnt</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>Returns the total count of hits using the master 
+      account<BR>-1 if the webserver is not active</TD>
+    <TD class=ph15>Get and optionally reset the count of hits from the master 
+      account</TD></TR>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0 to only read count<BR>1 to read and reset count</TD>
+    <TD class=ph15>getunauthcnt</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>Returns the total count of unauthorized hits<BR>-1 if the 
+      webserver is not active</TD>
+    <TD class=ph15>Get and optionally reset the count of unauthorized 
+  hits</TD></TR>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0 to only read count<BR>1 to read and reset count</TD>
+    <TD class=ph15>gethitcnt</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>Returns the total hit count of all access types<BR>-1 if 
+      the webserver is not active</TD>
+    <TD class=ph15>Get and optionally reset the total count of hits</TD></TR>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0 to only read count<BR>1 to read and reset count</TD>
+    <TD class=ph15>gethitovercnt</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>Returns the total overflows of the gethitcnt counter.<BR>-1 
+      if the webserver is not active</TD>
+    <TD class=ph15>The gethitcnt value overflows and is reset to 0 at 
+      4,200,000,000 and this counter is incremented by 1.</TD></TR>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>clearcounts</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>0 if successful<BR>-1 if the webserver is not active</TD>
+    <TD class=ph15>Clears all above counts</TD></TR>
+  <TR>
+    <TD class=ph15>ws</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>getallcounts</TD>
+    <TD class=ph15>1 thru 10. The number of the LOCAL variable to return the 
+      counts in.</TD>
+    <TD class=ph15>0 if successful<BR>-1 if the webserver 
+      is not active</TD>
+    <TD class=ph15>Retrieves all the counts into a formatted string and 
+      returns it in the specified LOCAL variable.</TD></TR>
+  <TR>
+    <TD class=ph15>userdata</TD>
+    <TD class=ph15>1 thru 5 for table userdata1 thru userdata5</TD>
+    <TD class=ph15>truncate</TD>
+    <TD class=ph15>0</TD>
+    <TD class=ph15>0 if successful<BR>-1 if parm1 is out of range<BR>-2 if 
+      parm2 is out of range</TD>
+    <TD class=ph15>Truncates the specified userdata (1 - 5) table. Keep in 
+      mind a truncate will delete all existing data. Useful resetting the 
+      autoincrement count in the userdata2 thru userdata5 
+tables.</TD></TR>
+</table>
+
+</div>
+
+<div class=ph18>Examples</div>
+<div class=ph19>The following examples demonstrate typical syntax/usage for this function.</div>
+
+<div class=ph20>
+
+ph_system("ws",0,"enable",0) - Enable the 
+webserver<BR>ph_system("ws",0,"disable",0) - Disable the 
+webserver<BR>         
+         ph_system("ws,1,"getbadlogincnt",0) - 
+Retrieve the bad login attempts count and reset the count to 
+
+0.
+
+</div>
+
+</body>
+</html>
