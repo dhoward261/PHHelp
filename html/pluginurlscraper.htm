@@ -88,13 +88,18 @@ Classname):</STRONG>     PH_URLScraper.phurlscraper &nbsp;or &nbsp;PH_URLScraper
         <span class="indent4">&lt;td&gt;Temperature&lt;/td&gt;[\s\S]*?&lt;b&gt;(.+)&lt;/b&gt;</span> <br>
         <br>
 
- will match both entries but if you want the second one, you need to change the regexoccur parameter (or change the regex search itself to specifically state Orlando). <br>
+ will match both entries but if you want the second one, you need to change the regexoccur parameter (or change the regex search itself to specifically state Orlando).<br>
  <br>
- The <strong>[\s\S]*?</strong> will allow you to match any text that appears between the <strong>&lt;/td&gt;</strong> and <strong>&lt;b&gt;</strong> tags . The <strong>(.+)</strong> denotes what will be "snapped" out of the regex (the temperature in this case) for this regex search.
-
+ In the weather data INI code above, the regexsearch looks for <strong>&lt;div id=&quot;main&quot;&gt;</strong> then skips over everything, with the <strong>[\s\S]*?</strong> which  matchs any text that appears up to the next <strong>&lt;span&gt;</strong> tag.<br>
  <br>
+ The <strong>[\s\S]</strong> matches &quot;<strong>\s</strong>&quot; any &quot;whitespace&quot; character (ie, space, tab, line break, form feed) and the &quot;<strong>\S</strong>&quot; matches any non-whitespace character (ie, all characters). <br>
  <br>
- The default <em><strong>regexflags</strong></em> parameter of 0, can have a 1, or 2 (or both) added to it, where the &quot;1&quot; determines case sensitivity, and a &quot;2&quot; determines plugin trigger firing conditions, as follows ... 
+ The <strong>*?</strong> makes this a non-greedy (ie, lazy) search that stops at the first match found. <br>
+        <br>
+        The <strong>(.+)</strong> denotes that everything between the &quot;&lt;/span&quot;&gt; and &quot;&lt;/h4&gt;&quot; tags be "snapped" out of the data string (the temperature in this case) for this regex search. This is a greedy search that will find the last occurance on a line. We are safe using it here because there are no data repeats before the next Return code. <br>
+        <br>
+        The default <em><strong>regexflags</strong></em> parameter of 0, can have a 1, or 2 (or both) added to it, where the &quot;1&quot; determines case sensitivity, and a &quot;2&quot; determines plugin trigger firing conditions, as follows ... 
+    
       <li>Adding 1 makes the search case sensitive, otherwise searches are case insensitive.      
       <li>Adding 2   causes the plugin to ONLY fire the generic plugin trigger if the snapped value has changed (the plugin stores the last "snap" of each scrape and if the new "snap" is different from the last snap, then the trigger will be fired. If 2 is not added to the flags parameter, then the trigger will fire everytime even if the value is the same as the last scrape). <br>
         <br><br><br>
