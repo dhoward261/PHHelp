@@ -135,8 +135,15 @@
   parm1, Keynum in parm2. Data returned in ret3. 
       <li> Request Zone Definition - 350. No parms. Data 
   returned in ret3. 
-      <li> Request Change User Code - 360. Codenum in parm1, areamask in parm2,
-        oldcode in parm3, newcode in parm4. Return data in ret1. </li>
+      <li> Request Change User Code - 360. Codenum in parm1, 
+  areamask in parm2, oldcode in parm3, newcode in parm4. Return 
+  data in ret1. 
+      <li>  Manual  Refresh of Elk&nbsp;statuses - 1000. 0 in parm1 will retrieve 
+  all statuses, 1 in parm1 will get input zone status, 2 in parm1 will get 
+  output status, 3 in parm1 will get analog status, 4 in parm1 will get temperature 
+  status, 5 in parm1 will get arm status, 6 in parm1 will get variables, 
+  7 in parm1 will get counters. 0 in parm2 will fire triggers as a result of any differences, values &gt;
+        0 in parm2 will cause triggers to NOT be fired. </li>
     </ul>
     
     <div class="indent2 padtop1"> In addition to the above Controller commands supported

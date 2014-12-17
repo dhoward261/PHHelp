@@ -9,6 +9,124 @@
     <div class="ph1"> FAQ: Changelog for PowerHome 2.1.5b</div>
     <div class="ph2">Knowledge Notes</div>
     <div class="ph3"><br>
+      <span style="FONT-WEIGHT: bold">Here is the changelog for 2.1.5b:</span><br>
+      <br>
+      Fixed major bug with PowerHome execution queue that resulted in random errors manifesting as queued <br>
+actions never being executed and disappearing, actions being executed multiple times when they were only submitted once, and actions being executed with the wrong parameters and variables (such as a formula trying to be executed as a macro). This fix should take care of all known execution queue problems.<br>
+<br>
+Added new ini parameter priority under section [Device Status] allowing user to select the priority that device status actions are queued at.<br>
+<br>
+Added new ini parameter priority under section [Control Center] allowing user to select the priority that control center actions are queue at.<br>
+<br>
+Modified the Remove Device Status program to make use of the new Device Status priority setting.<br>
+<br>
+Webserver processing modified to respect new control center and device status priorities. Also modified internal processing so there is a better chance that the change in status will be reflected when next page is loaded.<br>
+<br>
+Modified webserver device status page to remove unnecessary form data for devices which are display only.<br>
+<br>
+Modifed the webserver device status screen to allow for specifying the desired columns and order. Added new INI parameter DSCOLUMNS under the [WebServer] section to store this setting. The current allowed columns are numbered 1 thru 7 and are: Control, Status, Device Name, Location, Type, ID, Last Changed. The default is blank which is equivalent to 1,2,3,4,5,6,7<br>
+<br>
+Added internal variables to webserver to track total requests, bad logins, trusted logins, etc. Also added the ability to programmatically enable and disable the webserver. Access these new variables and functions using the new ph_system function. See the help file for more details.<br>
+<br>
+Added new DEVICECONTROL command to socketserver. Made this command use the new device status priority setting. Also modified the CCACTION command so that it uses the new control center button priority setting.<br>
+<br>
+Added INI setting to store the status bar height for the PowerHome Multi-Editor.<br>
+<br>
+Added code to prevent a critical error that could occur while using menu options in the PowerHome Multi-Editor.<br>
+<br>
+Modified ph_webds function to allow for specifiying the device status columns and desired order for the web based Device Status screen.<br>
+<br>
+Added new ini parameter reinitmethod under the [System] section allowing user to select the method used to reinitialize PowerHome. Setting parameter to 0 will use the current method where a portion of PowerHome stays active. Setting parameter to 1 will cause PowerHome to fully shutdown and then restart itself. The default is 1.<br>
+<br>
+Modified PowerHome Status screen to allow for the hiding of titles and resize borders to maximize screen space. Modified some of the windows for a better fit. Also modified so that window size/position is saved automatically upon exiting. Minor changes to some screens.<br>
+<br>
+Fixed bug in URLScraper plugin where a overflow runtime error 6 can occur with certain frequencies.<br>
+<br>
+Created new URLScraper1 plugin that uses a raw socket vs an HTTP control in the URLScraper plugin. Solves obscure problems with certain websites that refuse to work with the HTTP control. URLScraper is still the preferred plugin to use since it supports SSL.<br>
+<br>
+Added small mod to the load plugin routine to trim any leading/trailing spaces for the launch data string. If the launch data has an extraneous leading or trailing space then the plugin will not load properly and return -2.<br>
+<br>
+Documented the SALOGDIR environment variable for the ph_backupdb function.<br>
+<br>
+Modified w_msgbox window so that if oversized, it will fit on the screen and add a vertical scrollbar. <br>
+<br>
+Fixed timeout issue associated with ph_getitcurl function.<br>
+<br>
+Modified PowerHome Explorer macro detail window to allow for comments field to fit on screen. Currently, the formula field resizes to fill the screen pushing the comments field off to the right. The comments field size is not taken into account when doing a window resize. Also added a button to show/hide comments.<br>
+<br>
+Modified PowerHome Explorer window title to reflect the actual screen type currently active. This has the benefit of being able to distinguish between multiple open Explorer windows under the open window list in the "Windows" menu option.<br>
+<br>
+Rewrote the PowerHome Virtual serial port plugin to no longer be an activex exe. New version has gone back to being a standard OCX and previous issues have been fixed.<br>
+<br>
+Corrected issue in Global Cache reconnect code. Critical error should no longer appear.<br>
+<br>
+Added new Elk controller command 
+to perform a full refresh of all Elk devices (also fires device change triggers 
+as necessary if requested). New Elk controller command 1000. parm1 = 0 retrieves 
+all. parm1 =
+                          1 thru 7  retrieves individual sections. parm2 =       0  will fire triggers, parm2 &gt;  0 will not fire triggers. See help file for more info.<br>
+<br>
+Rewrote eventlog viewer to correct all known issues introduced with version 2.1.5. Viewer is still a multi-threaded viewer.<br>
+<br>
+Completely rewrote Device Status screen update mechanism. This fixes an issue where the Device Status screen would require manually closing and reopening in order for changes made via Insteon group or group cleanup commands (and others) to appear. Changes now all appear in realtime.<br>
+<br>
+Corrected reported errors concerning Timedevents. Rewrote the entire timedevents section. You can no longer create a timed event in the past (they will always have logic applied to bring them in the future). Also, when executing past due events, the past due event will ONLY be executed once and the reftime/starttime brought to the next logical event in the future.<br>
+<br>
+Updated Insteon thermostat code to add support for the new extended insteon discrete get cool setpoint and get heat setpoint commands of the 2441 thermostat. Also added extended command support for older thermostats as well.<br>
+<br>
+Added support for the 1-wire DS18B20 devices (family code 0x28) to the 1-wire controller.<br>
+<br>
+Added the ability to have the formula builder popup window (the window that opens when double-clicking the formula field within macrodetail and other screens) resizeable. The current size will be stored when the window is closed and reopened at that size. The statusbar height is also saved and restored.<br>
+<br>
+Added ability to Insteon Explorer Links screen so that non-standard Local Ramprates can be entered (0 thru 255) instead of just the dropdown values of 0 thru 31. Also added ability to enter a value in seconds and have it converted to the closest ramprate. To enter a value in seconds follow the value with a lowercase "s". Entering in "20s" would result in the value being changed to the closest ramprate to 20 seconds.<br>
+<br>
+Added code to highlight when a critical error has occurred and that PowerHome must be restarted.<br>
+<br>
+Added the x, y, height, and width info of a selected object to the Control Center design properties window.<br>
+<br>
+Added Copy/Paste capability to the Control Center Objects screen in PowerHome Explorer (same mechanism as used for macro detail). Use control and shift click to highlight rows and then right click and choose desired action from popup menu.<br>
+<br>
+New Plugins:<br>
+URLScraper1<br>
+<br>
+New Functions:<br>
+ph_datetime,ph_system<br>
+<br>
+Changed Functions:<br>
+ph_webds<br>
+<br>
+Removed Functions: <br>
+ph_insteonprodlistimport<br>
+<br>
+PWRHOME.INI Changes:<br>
+[WSH Editor]<br>
+statusheight=348<br>
+<br>
+[WebServer]<br>
+DSCOLUMNS=<br>
+<br>
+[System]<br>
+reinitmethod=1<br>
+<br>
+[Device Status]<br>
+priority=1<br>
+<br>
+[Control Center]<br>
+priority=1<br>
+<br>
+[PowerHome Status]<br>
+titles=no<br>
+<br>
+[FormulaEditor]<br>
+width=2377<br>
+height=1448<br>
+statusheight=348<br>
+<br>
+Database Changes:<br>
+None<br>
+<br>
+    </div>
+    <div class="ph3">
       <span style="FONT-WEIGHT: bold">Here is the changelog for 2.1.5a:</span><br>
       <br>
       Added code to automatically refresh a Control Center tab (if the Control
