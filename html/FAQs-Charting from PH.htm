@@ -86,13 +86,13 @@ FAQ: DateTime data </div>
   </p>
   <ul>
     <LI>uid - Sequentially numbered as a unique index key</LI>
-    <LI>Type - I'm using "1" to mark this as a "Day" table, since I will have "Week" and "Month" and maybe even "Year" tables ( Type=2,3,4) as I replace the LogTemp charts.</LI>
+    <LI>type - In the example "1" is used to mark this as a "Day" table, sincethere could be a "Week" and "Month" and maybe even "Year" charts from the same general Table( Type=2,3,4).</LI>
     <LI>idstring: Not used</LI>
     <LI>idnum: Not used</LI>
     <LI>iddate - not used</LI>
     <LI>valstring1: Time expressed as a number.  Required to make Google Charts use a continuous,, rather than discreet X-Axis so that data is displayed in the correct time position even if there are missing data points. The UPDATE Macro converts true time into discrete numeric bins so that everything is standardized.  See above comment about my 10 minute (1/6th hour) time increments.</LI>
     <LI>valstring2: Holds the current (new) data, since 00:00 hours up to the current viewing time.</LI>
-    <LI>valstring3: This column holds the historic data.  This Day view is a 24 hour cyclic buffer.  So if the current snapshot was at 2PM all of the day from 00:00 - 14:00 hours would be in the Valstring1 column (and displayed as a solid line) while the data from 2PM to midnight would all appear in the Valstring2 column, since that is historic (yesterday's data).}</LI>
+    <LI>valstring3: This column holds the historic data.  This Day view is a 24 hour cyclic buffer.  So if the current snapshot was at 2PM all of the day from 00:00 - 14:00 hours would be in the valstring1 column (and displayed as a solid line) while the data from 2PM to midnight would all appear in the valstring2 column, since that is historic (yesterday's data).}</LI>
     <LI>No other columns are used for Charting data but valnum1 and valnum2 are used as a ring buffer to compute long term average temps for the Frig and Frzr.  This need will disappear with the release of PH 2.1.5c which will have averaging built into the Analog I/O Devices support.</LI>
   </ul>
  
