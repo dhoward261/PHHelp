@@ -84,17 +84,18 @@ FAQ: DateTime data </div>
   <BR>
   The contents of these columns is as follows... <BR>
   </p>
-
-  <OL>
-    <LI>Uid - Sequentially numbered as a unique index key</LI>
+  <ul>
+    <LI>uid - Sequentially numbered as a unique index key</LI>
     <LI>Type - I'm using "1" to mark this as a "Day" table, since I will have "Week" and "Month" and maybe even "Year" tables ( Type=2,3,4) as I replace the LogTemp charts.</LI>
-    <LI>Idstring - not used</LI>
-    <LI>Idnum - not used</LI>
-    <LI>Iddate - not used</LI>
-    <LI>Valstring1 - Time expressed as a number.  Required to make Google Charts use a continuous,,rather than discreet X-Axis so that data is displayed in the correct time position even if there are missing data points. The UPDATE Macro converts true time into discrete numeric bins so that everything is standardized.  See above comment about my 10 minute (1/6th hour) time increments.</LI>
-    <LI>Valstring2: The current (new) data points.</LI>
-    <LI>Valstring3: The historic (old) data points from the same time in the previous period.</LI>
-  </OL>
+    <LI>idstring: Not used</LI>
+    <LI>idnum: Not used</LI>
+    <LI>iddate - not used</LI>
+    <LI>valstring1: Time expressed as a number.  Required to make Google Charts use a continuous,, rather than discreet X-Axis so that data is displayed in the correct time position even if there are missing data points. The UPDATE Macro converts true time into discrete numeric bins so that everything is standardized.  See above comment about my 10 minute (1/6th hour) time increments.</LI>
+    <LI>valstring2: Holds the current (new) data, since 00:00 hours up to the current viewing time.</LI>
+    <LI>valstring3: This column holds the historic data.  This Day view is a 24 hour cyclic buffer.  So if the current snapshot was at 2PM all of the day from 00:00 - 14:00 hours would be in the Valstring1 column (and displayed as a solid line) while the data from 2PM to midnight would all appear in the Valstring2 column, since that is historic (yesterday's data).}</LI>
+    <LI>No other columns are used for Charting data but valnum1 and valnum2 are used as a ring buffer to compute long term average temps for the Frig and Frzr.  This need will disappear with the release of PH 2.1.5c which will have averaging built into the Analog I/O Devices support.</LI>
+  </ul>
+ 
   <p>In addition to these these files, an additional Macro is also useful. It is the &quot;SQL CREATE_DAY_TABLE&quot; which makes sure the userData2 db is cleared out before use, and then creates a set of standard data capture time bins, for use by the &quot;SQL CREATE_DAY_TABLE&quot; routine. NOTE: The <EM>very first formula in this macro (normally disabled) can be enabled to assure an empty database Table. Normally it is disabled to allow just the DAY entries to be rerset, in the event the db is used for multiple charts. This table covers 24 hours and has 6-bins (10 min slots) within each hour. The DAY data is all keyed as Type-1</EM></p>
   <UL><BR>
     <img src="images/chart.createTbl.jpg" alt="createDAY Tbl" width="1306" height="997"><BR>
