@@ -45,7 +45,7 @@ The ID of the analogl I/O as defined within the Analog I/O screen.
 <div class=ph10>Return value</div>
 <div class=ph11>
 
-String. Returns the CALCULATED value of the analog I/O if successful. Returns "- 100" if the ID cannot be found.   When this function is executed, the controller, unit, and point is looked up within the Analog I/O table and these values are then passed to the controller.  If these values are entered improperly in the Analog I/O screen, then the following errors may be returned: " - 1" is returned if the controller is not available, "- 2" is returned if the controller does not support analog I/O, "- 3" is returned if the unit is out of range, "- 4" is returned if the point is out of range.
+String. Returns the CALCULATED value of the analog I/O if successful. Returns "- 100" if the ID cannot be found.   When this function is executed, the controller, unit, and point is looked up within the Analog I/O table and these values are then passed to the controller.  If these values are entered improperly in the Analog I/O screen, then the following errors may be returned: " - 1" is returned if the controller is not available, "- 2" is returned if an error ocurred while retrieving the analog value, "- 3" is returned if the controller does not support analog I/O, "- 4" is returned if the unit is out of range, "- 5" is returned if the point is out of range.
 
 </div>
 <div class=ph12>Usage</div>
