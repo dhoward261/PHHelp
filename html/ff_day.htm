@@ -1,6 +1,7 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="ph-help.css">
 <title>day</title>
 </head>
@@ -12,9 +13,12 @@ day PowerHome formula function
 </div>
 <div class=ph2>Description</div>
 <div class=ph3>
-
-Obtains the day of the month in a date value.
-
+Obtains 
+the day of the month from a date value 
+(formula eg, today()) or date 'literal' value. See the&nbsp; <A 
+href="html\datetime_functions.htm">Date / Time Functions</A>
+                
+                                             &nbsp;section for detailed information concerning literals.
 </div>
 <div class=ph4>Syntax</div>
 <div class=ph5>
@@ -23,7 +27,7 @@ day ( date )
 
 </div>
 <div>
-<table width=100%>
+<table width="100%">
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
@@ -36,7 +40,7 @@ date
 </td>
 <td class=ph9>
 
-The date from which you want the day
+The date value (formula), or date literal value from which you want the day
 
 </td>
 </tr>
@@ -46,7 +50,24 @@ The date from which you want the day
 <div class=ph11>
 
 Integer. Returns an integer (1-31) representing the day of the month in date.
+</div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+•&nbsp; day(today()) --&gt; returns: 15<br>
+•&nbsp; day(2010-12-15) --&gt; returns: 15<br>
+•&nbsp; day(relativedate(date(year(today()),if(month(today())=12,1,month(today())+1),1), -1))  --&gt;Finds the last day of the current month. <br>
+•&nbsp; day(12-15-2010) --&gt; Fails <br>
+•&nbsp; day("2010-12-15") --&gt;Fails<br>
+<br>
+<br>
+
+</div>
 
 </body>
 </html>
-
