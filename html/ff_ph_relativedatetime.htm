@@ -13,15 +13,23 @@ ph_relativedatetime PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Returns a datetime value relative to the passed datetime value.
+ Given  a valid datetime value (formula eg, today()) or datetime 'literal' value (such as<em><strong> 2010-12-15 12:30:00 </strong></em>) and a number representing the number of minutes to be calculated in the future (positive number) or in the past (negative number) this function determines a new datetime value. Partial minutes are expressed as decimal numerbs (eg 2 minutes and 30 seconds would be 2.5). If only a date is given in the first argument, the time is assumed to be 00:00:00. <br>
+<br>
+See the&nbsp; <A 
+href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.<br>
+<br>
+Returns a new datetime value relative to the passed datetime and offset values.<br>
+<br>
+If greater time accuracy is needed, see the <strong>ph_relativedtprecise()</strong> function.<br>
 
 </div>
-<div class=ph4>Syntax</div>
+<div class=ph4><br>
+Syntax</div>
+
 <div class=ph5>
-
 ph_relativedatetime ( dt, n )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
@@ -54,12 +62,24 @@ A double value representing the number of minutes (partial minutes are in decima
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
+
+<div class=ph10><br>
+Return value</div>
 <div class=ph11>
-
 Datetime.  Returns a new datetime value relative to the starting datetime.
-
 </div>
+
+<div class=ph10><br>
+Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+<div class=ph20>
+  
+• ph_relativedatetime(2015-01-15 00:00:00, 10)--&gt; evaluates to: 12/15/2015 00:10:00 <BR>
+• ph_relativedatetime(today(), 10) --&gt; evaluates to: 01/15/2015 14:37:08 <br>
+</div>
+
 </body>
 </html>
 

@@ -13,15 +13,18 @@ daynumber PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Gets the day of the week of a date value and returns the number of the weekday.
-
+  Gets the  week day number (Sun=1, Sat=7) of a valid date value (formula eg, today()) or date 'literal' value (such as<em><strong> 2010-12-15</strong></em>) and returns the number of the weekday.  <br>
+<br>
+See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.
 </div>
-<div class=ph4>Syntax</div>
+
+<div class=ph4><br>
+Syntax</div>
+
 <div class=ph5>
-
 daynumber ( date )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
@@ -30,22 +33,32 @@ daynumber ( date )
 </tr>
 <tr>
 <td class=ph8>
-
 date
-
 </td>
 <td class=ph9>
-
-The date from which you want the number of the day of the week
-
+The date value/literal from which you want the number of the day of the week
 </td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
-<div class=ph11>
 
+<div class=ph10><br>
+Return value</div>
+
+<div class=ph11>
 Integer. Returns an integer (1-7) representing the day of the week of date. Sunday is day 1, Monday is day 2, and so on.
+</div>
+
+<div class=ph10><br>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;daynumber(today()) --&gt; evaluates to: 5 <br>
+&bull;&nbsp;daynumber(2010-12-15) --&gt; evaluates to: 4 <br>
+&bull;&nbsp;daynumber(&quot;2010-12-15&quot;) --&gt; Fails </div>
 
 </body>
 </html>

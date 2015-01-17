@@ -5,23 +5,32 @@
 <title>relativedate</title>
 </head>
 <body>
+
 <div class=ph1>
-
 relativedate PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
+
 <div class=ph3>
+  <p>Obtains the datetime that occurs a specified number of days after or before a given date (and optional time).
+    <br>
+    <br>
+    See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.<br>
+<br>
+If only a date value is given the returned value will be only a date (see first example below), but if a datetime value is given then the retuned value will also be a datetime. (See examples 2-3 below).
+</div>
 
-Obtains the date that occurs a specified number of days after or before another date.
 
 </div>
-<div class=ph4>Syntax</div>
+
+<div class=ph4><br>
+Syntax</div>
+
 <div class=ph5>
-
 relativedate ( date, n )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
@@ -30,34 +39,44 @@ relativedate ( date, n )
 </tr>
 <tr>
 <td class=ph8>
-
 date
-
 </td>
 <td class=ph9>
-
-A date value
-
+A date or datetime value
 </td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 n
-
 </td>
 <td class=ph9>
-
 An integer indicating the number of days
-
 </td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
-<div class=ph11>
 
+<div class=ph10><br>
+Return value</div>
+<div class=ph11>
 Date. Returns the date that occurs n days after date if n is greater than 0. Returns the date that occurs n days before date if n is less than 0.
+</div>
+
+<div class=ph10><br>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+•&nbsp; relativedate(2015-01-15, 2) --&gt; evaluates to: 01/17/2015 <br>
+&bull;&nbsp; relativedate(2015-01-15 10:05:00, 2) --&gt; evaluates to: 01/17/2015 10:05:00 <br>
+•&nbsp; relativedate(today(), 2) --&gt; evaluates to: 01/17/2015 10:12:31:654 <br>
+•&nbsp; <br>
+<br>
+<br>
+</div>
 
 </body>
 </html>

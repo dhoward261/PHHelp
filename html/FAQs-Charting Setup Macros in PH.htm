@@ -69,7 +69,7 @@ FAQ: DateTime data </div>
   <p>This CSV Day file contains specific DAY CHART data and timing information. There will be similar csv files for the WEEK and MONTH charts. </p>
   <p>The PH &quot;SQL UPDATE_DAY_TBL&quot; macro produces the data for this CSV file. Whenever the chart viewing web page &quot;chartTemps.html&quot; is opened, it  calls the Google charting API functions to chart the data from this CSV file.</p>
   <p>The  &quot;SQL UPDATE_DAY_TBL&quot; PH Macro is called from a Timed Event that runs every 10 minutes, thus populating 6 time bins per hour, over a 24 hour day. This macro looks like this...</p>
- <img src="images/Chart-Update DayTbl.jpg" alt="Update Day Tbl"><BR><br>
+  <p><img src="images/chart.sqlday.jpg" alt="Create chartDAY macro" width="1302" height="1255"><BR><br>
 
   All of the collected data is stored in the PowrHome &quot;userData2&quot; database Table, and all of the database management is done using PowerHome standard SQL functions See this PH Forum link for information on that table (search for "userdata2" to find the info in this large Thread). It is on page 1.. <BR>
   <BR>
@@ -97,21 +97,17 @@ FAQ: DateTime data </div>
   </ul>
  
   <p>In addition to these these files, an additional Macro is also useful. It is the &quot;SQL CREATE_DAY_TABLE&quot; which makes sure the userData2 db is cleared out before use, and then creates a set of standard data capture time bins, for use by the &quot;SQL CREATE_DAY_TABLE&quot; routine. NOTE: The <EM>very first formula in this macro (normally disabled) can be enabled to assure an empty database Table. Normally it is disabled to allow just the DAY entries to be rerset, in the event the db is used for multiple charts. This table covers 24 hours and has 6-bins (10 min slots) within each hour. The DAY data is all keyed as Type-1</EM></p>
-  <UL>
-  <p><BR>
+  <UL><BR>
     <img src="images/chart.createTbl.jpg" alt="createDAY Tbl" width="1306" height="997"><BR>
     
  
-    <BR>
+  <BR>
   ============================ <BR>
   OK. All the background stuff is defined, how do you use this? <BR>
   <BR>
-1. Create Timed Events to capture your Chart data over the desired period (Day/Week/Month/etc)</p>
-  <p><img src="../../../../../../Desktop/PH Help Projects/Charting FAQ/TimedEvents.jpg" alt="Timed Events"><br>
-    <br>
-    2. Create a web link from your Web Center page to <STRONG><EM>chartTemps.html</EM></STRONG> ! 
-    
-    This will create the actual chart(s) when you click on the web page. <br>
-  </p>
+  Just create a web link from your Web Center page to <STRONG><EM>chartTemps.html</EM></STRONG> ! <br>
+<br>
+
+
 </body>
 </html>

@@ -1,0 +1,155 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-help.css">
+<link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+<title>DateTime data</title>
+</head>
+<body>
+<div class=ph1>
+FAQ: Timed Events &amp; Formulas </div>
+
+<div class=ph2>Knowledge Notes </div>
+
+<div class=ph3>
+  One of the most useful functions of PH is its ability to schedule Timed Events in the future on a one-shot, or repeating basis.<br>
+<br>
+  The Timed Event control window is accessed via PH Explorer, and offers a wide range of control choices.<br>
+<br>
+  <img src="images/FAQ-TmdEventWin.jpg" alt="Timed Event Window" width="1238" height="198"> <br>
+<br>
+To set up a Timed Event right-click on any row and select &quot;Insert&quot; from the pop-up menu. This will create a new row, where you clicked, so you can enter a new event. The rows are sorted by the ID column. If you wish to update the window and have it sorted after you have made entry(s), press F5 on your keyboard.<br>
+<br>
+Start by entering a descriptive name for your event  in the <strong>ID</strong> column. <br>
+<br>
+ NOTE: The <strong>Disabled</strong> column lets you enable or disable a timed event. If Disabled the Event Scheduling will be ignored by PH.<br>
+<br>
+The <strong>Start Time</strong> column cells are grayed out because they are not user accecssible, but are the sytem calculated datetime value representing the actual scheduled event time based on the user entered Reference Time/Offset/Offset Amount data values.<br>
+<br>
+Select a fixed or dynamic <strong>Timing</strong> property depending on whether the event is to be scheduled to occur at a specific time or at a varying time related to day/night cycles. NOTE: if the later, in order for sunrise/sunset calculations to be correct, your geographic location MUST be setup in the PH Explorer&gt;Setup&gt;Sun window. <br>
+    <br>
+
+    <img src="images/FAQ-TmdEventTimingMenu.jpg" alt="Timing"></p>
+  <p>Next set the <strong>Frequency</strong> the event should occur. The frequency can be directly specified in (integer) Minutes (eg, 10) or in a variety of predefined time periods such as Hourly, Daily, Weekly, etc.<br>
+    <br>
+    The Frequency pull-down menu can be used to select one of an extensive number of these predefined periods, including special days like &quot;4th of July&quot;. <br>
+      <br>
+    The last part of this FAQ document describes how to create your own custom special periods, such as &quot;Every Other Tuesday&quot; using Timed Event Formulas. <br>
+    <br>
+    <img src="images/FAQ-TmdEventFreqMenu.jpg" alt="Event Frequency" width="107" height="334">    <br>
+    <br>
+    The specified Frequency can have an <strong>Offset</strong> associated with it to create a &quot;lived in&quot; appearance for lighting ( the Random attributes to keep perps at bay) or Absolute offsets (eg, to schedule something for 20 minutes after sunrise). Most often the default &quot;None&quot; choice will be used. <br>
+    <br>
+  <img src="images/FAQ-TmdEventOffsetMenu.jpg" alt="Offset" width="80" height="152"><br>
+  <br>
+  If an Offset  (other than None) is selected, then a value in (integer) minutes must also be specified in the <strong>Offset Amnt</strong> column.<br>
+  <br>
+  If you select &quot;Exact&quot; in the Timing column then you must enter a datetime in the <strong>Reference Time</strong> column. You can enter a datetime value directly in the Reference Time cell or you can double-click the cell which will open up a dialog window where you can pick a calendar date and edit the time values. <br>
+  <br>
+  You can skip this step if your Timing column entry is one of the dynamic time choices, since the Reference Time will be automatically determined, and will vary every day. </p>
+  <p> <img src="images/FAQ-TmdEventRefMenu.jpg" alt="Reference Time" width="434" height="284"><br>
+    <br>
+      After setting up the datetime parameters, you now specify how you want to take action(s) at the scheduled time. You can choose from four different <strong>Type</strong>s of action as exampled below. <br>
+      <br>
+      <img src="images/FAQ-TmdEventTypeMenu.jpg" alt="Event Type" width="308" height="169"><br>
+        <br>
+    Finally NOTE that the Boolean field (as in many other PH configuration Windows) can be used to selectively enable/disable the Timed Event. The example Boolean entry here only allows the Timed Even to occur if the Global value of HOME is true. If HOME is not true, then the Timed Event will be skipped. <br>
+      <br>
+      <img src="images/FAQ-TmdEventBoolean.jpg" alt="TE Boolean" width="97" height="38"> <br>
+</div>
+
+<br>
+<br>
+<span class="topic">Timed Event Formulas</span><br>
+<div class=ph3>
+  <p>The following dialog explains how to creatre your own Timed Event Formulas, that will allow you to design your own custom event schedules, such as scheduling an alert every other Tuesday.<br>
+    <br>
+    The Timed Event Formulas can be tricky, but aren't too bad once you get used to it. It helps to know how it works internally though. <br>
+    <br>
+  A Timed Event formula MUST evaluate to a datetime type. This is a MUST. Other than that, it's just a formula and the functions under the Date/Time section of the Help file are extremely useful.<br>
+  <br>
+  Timed Event Formulas have two special variables that come into play.<br>
+  <br>
+  The first one is [REFTIME]. [REFTIME] is substituted for the datetime value in the &quot;Reference Time&quot; column of a timed event. When you are creating a brand new Timed Event, the &quot;Reference Time&quot; field defaults to the current date and time. If it's an existing Timed Event that has just fired and the Timed Event formula is being evaluated to determine the <em>next</em> reference time, it is the date and time in the reference field which is the datetime that the Timed Event was just executed at. <br>
+    <br>
+    In a normal Timed Event with a &quot;Daily&quot; frequency, the reference time will be increased by 10080 which will be a full day forward. When that Timed Event is fired, all things being normal, the reference time will be current date and time. The frequency will then be &quot;added&quot; to the reference time to determine the new reference time. If the Frequency is a Timed Event Formula, the formula will be evaluated to determine the new reference time.<br>
+    <br> 
+  Which brings us to our second special variable. <br>
+    <br>
+    The [INCREMENT] variable. [INCREMENT] initially starts as a value of 0 and the Timed Event formula is evaluated. If the datetime returned is less than the current datetime, 1 is added to [INCREMENT] and the Timed Event formula is evaluated again. This continues until the returned datetime is greater than the current datetime and this value becomes the new &quot;Reference Time&quot;. So the [INCREMENT] is just a number that can be used anywhere within the Timed Event formula and increases by 1 until the formula returns a datetime in the future. You can use this [INCREMENT] value to increment the year, the day, an hour, etc. </span>
+    <br>
+    <br>
+    So, if we were to create a custom Timed Event Formula to schedule an "Every Other Tuesday at 6:30AM" occurance, it would go like this: <br>
+    <br>
+    <span class="code">datetime(relativedate([REFTIME],[INCREMENT] * 14 + 3 - daynumber([REFTIME]) - if(daynumber([REFTIME]) &gt; 3,0,7)),time([REFTIME]))</span><br>
+    <br>
+    <br>
+[REFTIME] is substituted for whatever value is currently in the Reference Time. If this a brand new Timed Event, it will be the current date and time.<br>
+<br> 
+If the Timed Event has already been working, it should be the Date and Time that the Timed Event has fired which should be Tuesday. <br>
+<br>
+Since [REFTIME] is the &quot;Reference Time&quot; value which is actually a date AND a time, we should extract out the invidual date and time components using the date() and time() functions respectively. <br>
+<br>
+The relativedate function accepts a date and an offset amount in days to determine a new date. <br>
+<br>
+The daynumber function accepts a date and tells you what number of the day in the week that date falls on. Sunday is 1, Monday is 2, and so on to Saturday, which is 7.<br>
+<br>
+&nbsp;&nbsp;Sun Mon Tue Wed Thu Fri Sat<br>
+&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;6&nbsp;&nbsp;&nbsp;&nbsp;7<br>
+<br> 
+  If you are creating the Timed Event for the first time, the reference time will the current date and time which may be either before Tuesday of the current week or after Tuesday of the current week. Since it makes no sense to create a Timed Event in the past, the formula is designed to set the Reference Time to whatever the next Tuesday is. <br>
+  <br>
+So, lets walk our way through it for the case where the example formula is assumed to be <u>created on Sunday 01/18/2015</u>. <br>
+<br>
+Tuesdays are the 3rd day of the week (thus the &quot;3&quot; occuring in the Timed Event Formula example above). <br>
+<br>
+We're creating the Timed Event for the first time, so [INCREMENT] will start out as 0. <br>
+<br>
+Substituting  0 for <strong>[INCREMENT]</strong>, we have 0 * 14 + 3 --&gt; <strong>3</strong> </p>
+  <p>Substituting 1  for <em><strong>daynumber(2015-01-18)</strong></em> &nbsp;&nbsp;(where 2015-01-18 is the formula creation time [REFTIME])&nbsp; we have --&gt; <strong>1</strong>    <br>
+    <br>
+    The next part of the equation contains an if statement which looks like: <strong>if(daynumber(date([REFTIME])) &gt; 3,7,0)</strong>. <br>
+    <br>
+    This is basically trying to determine if we're evaluating this formula on a day before or on Tuesday (Sun, Mon, Tue) or a day after Tuesday (Wed, Thurs, Fri, Sat). <br>
+    <br>
+    If the daynumber of [REFTIME] (2015-01-18 in our case or 1) is greater than 4, then return 7 else return 0. Since 1 is less than 4, we have --&gt; <strong>0</strong>. <br>
+    <br>
+    So our formula is now 3 - 1 - 0 &nbsp;&nbsp;which equals 2. <br>
+    <br>
+    Thus our relativedate function will take the Sunday initial date (2015-01-18) and add 2 which will give us a date of 2015-01-20 (Tuesday). <br>
+    <br>
+    We take that date as well as the time component of the [REFTIME] and create a datetime value for 2015-01-20. <br>
+    <br>
+    Now, lets say the Timed Event is running as normal, it's Tuesday and the Timed Event has just executed. <br>
+    <br>
+    We now need to evaluate the formula to determine the new Reference Time for when the Timed Event will run again.<br>
+    <br> 
+  Lets say the date is 2015-01-20 (Tuesday). Lets also say the [REFTIME] time component was 13:00:00. [INCREMENT] of course starts at 0. </p>
+  <p>So we have 0 * 14 + 3 - 3 (for this part of the formula: [INCREMENT] * 14 + 4 - daynumber(date([REFTIME]))). This equates to 0. <br>
+    <br>
+  The if statement also equates to 0 since the daynumber of the current reftime is 3 and 3 is not greater than 4.<br>
+  <br>
+  So our offset amount for the relativedate function is 0 and the date portion is today. <br>
+  <br>
+  So the relativedate function will return 2015-01-20 and the time component of reftime is 13:00:00.<br>
+  <br>
+  Thus the total datetime value returned is <strong>2015-01-20 13:00:00</strong>. <br>
+  <br>
+  This is compared to the current date/time. Since all Timed Events are actually executed 1 second after their scheduled time (this is by design), this returned time will automatically be less than the current time (the soonest of which would be 2015-01-20 13:00:01). <br>
+  <br>
+  Now 1 is added to the [INCREMENT] variable, resulting in a value of 1 and we repeat the formula. <br>
+  <br>
+  <span class="indent3">[INCREMENT] * 14 + 3 - daynumber(date([REFTIME])) </span><br>
+  <br>
+  which substitutes out to: 1 * 14 + 3 - 3 which equals 14. The if statement still evaluates to 0. The result of the relativedate function will therefore be 14 days in the future (2 weeks) from the current date which will be Tuesday, 2015-02-03. <br>
+  <br>
+  This is combined with the time component of reftime which is 13:00:00 yielding a new datetime of 2015-02-03 13:00:00. This is compared with the current date/time and since it's in the future, evaluation stops and the new reference time is set. <br>
+  <br>
+    <br>
+  </p>
+  <p></p>
+</div>
+
+</body>
+</html>

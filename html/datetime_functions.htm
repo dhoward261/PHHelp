@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ph-helpstd.css">
+<title>Date / Time</title>
+</head>
+<body>
+<div class=ph1>
+
+Date / Time&nbsp;Functions
+
+</div>
+
+<div class="indent2 padtop1">      
+        PowerHome supports a number of functions that&nbsp;return date, time,
+      or datetime datatypes as well as functions that accept these
+      data types as parameters. This has sometimes been a source of confusion
+      as to exactly what these datatypes are. Details concerning these unique types
+      are below.</div>
+
+<div class="indent2 padtop1">      
+ All 3 datatypes (date, time, datetime) support a "literal" representation. This is essentially a hard-coded representation of the value (similar to a string but without quotes). Its not often used as most of the time you'll pass date, time, and datetime parameters within a string to a conversion function before using as a parameter in a function that requires a date, time, or datetime value.<br><br>Functions that return these datatypes, if not used as an input to another function that requires these datatypes, will have the value converted to a string for storage within a global, local, or temp variable. PowerHome has no concept of date, time, or datetime variables and stores ALL values as a string datatype.<br><br>Literal values for these three 
+datatypes must appear in the same format as specified in the Windows Region and 
+Language Localization control panel. In the US, this is typically 
+<STRONG><EM>yyyy-mm-dd</EM></STRONG> for date values and 
+<STRONG><EM>hh:mm:ss</EM></STRONG>                                   for time values. In a different country or region, its likely to be something different.</div>
+
+<div class="indent3 topic"><br>
+        Date</div>
+<div class="indent3">The date datatype contains only date 
+values. You can use a date literal such as <STRONG>2015-01-15</STRONG>                (see literal format above) or a function that returns a date value such as date() or relativedate()</div>
+
+<div class="indent3 topic"><br>
+        Time</div>
+<div class="indent3">The&nbsp;time datatype contains only time 
+values. You can use a&nbsp;time literal such as&nbsp;<STRONG>22:15:45</STRONG>                 (see literal format above) or a function that returns a&nbsp;time value such as time() or relativetime()</div>
+
+<div class="indent3 topic"><br>
+        Datetime</div>
+<div class="indent3">The datetime datatype contains both a 
+date and a time value. A datetime literal is made by combining a date literal with a time literal and separating the two with a space (see literal formats above). A valid datetime literal would look like this:</div>
+<div class="indent4 padtop1 code">2014-07-15 17:40:00</div>
+<div class="indent3 padtop1">You can also get a datetime value by using a function that returns a datetime value such as datetime() or ph_relativedatetime()</div>
+<div class="indent2 padtop2">Examples of valid date, time, and datetime functions can be seen below:</div>
+<p class="indent2 padtop1 code">
+• date("1-23-15") --> evaluates to: 01/13/2015 <br>
+• date("Jan 23 2015") --> evaluates to: 01/13/2015<br>
+• datetime(today(),08:15:00:0000) --> evaluates to: 01/11/2015 08:15:00 <br>
+• datetime(2010-12-15, 10:49:00) --> evaluates to: 12/15/2010 10:49:00 <br>
+• dayname(2010-12-15) --> evaluates to: Wednesday<br>
+• month(2014-12-15) --> evaluates to: 12<br>
+• month(date("02/14/2015")) --> evaluates to: 2 <br>
+• ph_relativedatetime(today(), 10) --> evaluates to: 01/15/2015 14:37:08 </p>
+</body>
+</html>
+

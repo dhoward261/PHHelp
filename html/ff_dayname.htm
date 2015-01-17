@@ -5,23 +5,27 @@
 <title>dayname</title>
 </head>
 <body>
+
 <div class=ph1>
 
 dayname PowerHome formula function
-
 </div>
-<div class=ph2>Description</div>
+
+<div class=ph2><br>
+Description</div>
 <div class=ph3>
-
-Gets the day of the week in a date value and returns the weekday's name.
-
+Given a valid date value (formula eg, today()) or date 'literal' value (such as<em><strong> 2010-12-15</strong></em>) this function returns the <strong>name</strong> of the weekday. <br>
+<br>
+See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.
 </div>
-<div class=ph4>Syntax</div>
+
+<div class=ph4><br>
+Syntax</div>
+
 <div class=ph5>
-
 dayname ( date )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
@@ -30,22 +34,32 @@ dayname ( date )
 </tr>
 <tr>
 <td class=ph8>
-
 date
-
 </td>
 <td class=ph9>
-
-The date for which you want the name of the day
-
+The date value/literal for which you want the name of the day
 </td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
-<div class=ph11>
 
+<div class=ph10><br>
+Return value</div>
+
+<div class=ph11>
 String. Returns a string whose value is the name of the weekday (Sunday, Monday, and so on) for date.
+</div>
+
+<div class=ph10><br>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;dayname(today()) --&gt; evaluates to: Thursday <br>
+&bull;&nbsp;dayname(2010-12-15) --&gt; evaluates to: Wednesday<br>
+&bull;&nbsp;dayname(&quot;2010-12-15&quot;) --&gt; Fails </div>
 
 </body>
 </html>

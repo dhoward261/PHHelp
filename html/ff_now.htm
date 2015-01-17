@@ -5,28 +5,46 @@
 <title>now</title>
 </head>
 <body>
+
 <div class=ph1>
-
 now PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
+
 <div class=ph3>
+  Obtains the current time as a time value, based on the system time of the client machine.  <br>
+<br>
+The time is expressed as hh:mm:ss:nnn (where 'nnn' are milliseconds) 
+<br>
+<br>
+See the&nbsp; <A 
+href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.</div>
 
-Obtains the current time based on the system time of the client machine.
+<div class=ph4><br>
+Syntax</div>
 
-</div>
-<div class=ph4>Syntax</div>
 <div class=ph5>
-
 now ( )
-
 </div>
-<div class=ph10>Return value</div>
-<div class=ph11>
 
+<div class=ph10><br>
+Return value</div>
+<div class=ph11>
 Time. Returns the current time based on the system time of the client machine.
+</div>
+
+<div class=ph10><br>
+Examples
+</div>
+
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>&bull;&nbsp;now() --&gt; evaluates to: 13:49:25:102 <br>
+&bull;&nbsp;string(now(),&quot;hh:mm:ss&quot;) --&gt; evaluates to: 13:49:25<br>
+</div>
 
 </body>
 </html>
-

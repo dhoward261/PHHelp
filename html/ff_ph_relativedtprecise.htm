@@ -13,15 +13,25 @@ ph_relativedtprecise PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Returns a datetime value relative to the passed datetime value.  The time value will be to millisecond precision.
+  Returns a datetime value relative to the passed  offset and datetime value (formula eg, today()) or date/time 'literal' value &nbsp;(such as<em><strong>&nbsp;2010-12-15 14:37:00</strong></em>). 
+ <br>
+<br>
+The returned time value will be to millisecond precision.<br>
+<br>
+See the&nbsp; <A 
+href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.<br>
 
+
+<br>
+Similar to the ph_relativedatetime() function but with greater time accuracy. 
 </div>
-<div class=ph4>Syntax</div>
+
+<div class=ph2><br>
+Syntax</div>
 <div class=ph5>
-
 ph_relativedtprecise ( dt, n )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
@@ -54,11 +64,23 @@ A double value representing the number of seconds (partial seconds are in decima
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
+<div class=ph2><br>
+Return value</div>
+
 <div class=ph11>
-
 Datetime.  Returns a new datetime value relative to the starting datetime with the time component to millisecond precision.
-
 </div>
+
+<div class=ph2><br>
+Examples</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage  for this function. <br>
+</div>
+<div class=ph20>
+  
+• ph_relativedtprecise(2015-01-15 00:00:00, 10.167)--&gt; evaluates to: 12/15/2015 00:10:167 <BR>
+• ph_relativedtprecise(today(), 10.33) --&gt; evaluates to: 01/15/2015 16:30:05:375 <br>
+</div>
+
 </body>
 </html>

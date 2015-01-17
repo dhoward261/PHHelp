@@ -6,25 +6,22 @@
 <title>ph_datetime</title>
 </head>
 <body>
+
 <div class=ph1>
-
 ph_datetime PowerHome formula function
-
 </div>
+
 <div class=ph2>Description</div>
 <div class=ph3>
-
-Takes a datetime value 
-
-stored within a string and returns it as a datetime variable.
-
+Takes date and time values stored within a string and returns it as a datetime variable.
 </div>
-<div class=ph4>Syntax</div>
+
+<div class=ph4><br>
+Syntax</div>
 <div class=ph5>
-
-  ph_datetime&nbsp;( s )
-
+ph_datetime&nbsp;( s )
 </div>
+
 <div>
 <table width="100%">
 <tr>
@@ -39,40 +36,44 @@ s
 </td>
 <td class=ph9>
 
-A string containing a datetime value.
+A string containing a date and/or time value.
 
 </td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
+<div class=ph10><br>
+Return value</div>
 <div class=ph11>
 
 Datetime.&nbsp;Returns the string parameter 
 as a datetime value. This parameter should contain a date in the format of 
 mm/dd/yyyy or mm-dd-yyyy or yyyy-mm-dd without spaces followed by a space and 
 then the time value in hh:mm:ss format. If you pass only a time value, then the 
-returned datetime will be todays date plus the&nbsp;passed time. If the 
+returned datetime will be Today's date plus the&nbsp;passed time. If the 
 parameter only contains 
 
 a  date, you'll get a datetime with&nbsp;a date value of the passed date and a  time value of 00:00:00. If the data  cannot be interpreted as a datetime, then a datetime value of 1900-01-01 00:00:00 will be returned.&nbsp;
 
 </div>
 
-<div class=ph10>Examples</div>
+<div class=ph10><br>
+Examples</div>
 <div class=ph11>
 The following examples demonstrate typical syntax/usage  for this function. <br>
 </div>
 <div class=ph20>
   
-• ph_datetime("2014-12-11 20:54:38")<BR> • 
-ph_datetime("2014-12-11")<BR>
+• ph_datetime("2014-12-11 20:54:38") --&gt; evaluates to: 12/11/2014 20:54:38 <BR>
+ • 
+ph_datetime("2014-12-11")  --&gt; evaluates to: 12/11/2014 00:00:00 <BR>
   
   
  
 • ph_datetime("20:54:38")
 
-</div>
+--&gt; evaluates to: 01/14/2015 20:54:38&nbsp;&nbsp; {today() is implied}<br>
+• ph_datetime(&quot;1/14/2015&quot;)   --&gt; evaluates to: 1/14/2015 00:00:00</div>
 
 </body>
 </html>

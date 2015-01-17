@@ -12,8 +12,12 @@ FAQ: DateTime data </div>
 <div class=ph2>Knowledge Notes </div>
 
 <div class=ph3>
-  Date/Time variables are stored internally as a string.  
-  <p>The ph_getvar_XX   functions will take these strings and perform the proper data conversion (if possible).  This is generally safer and goes a long way into insuring you don’t get syntax errors from data types that dont match.  The [LOCALXX] form of a variable is a “search and replace” type of mechanism.  If you’re certain that the var contains the datatype that you’re interested in, you can use this form.</p>
+  Date/Time variables are stored internally as a string. <br>
+  <br>
+  See also the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A>                
+&nbsp;section for detailed information concerning date / time input-output formats.<br>
+<br>
+The ph_getvar_XX   functions will take these strings and perform the proper data conversion (if possible).  This is generally safer and goes a long way into insuring you don’t get syntax errors from data types that dont match.  The [LOCALXX] form of a variable is a “search and replace” type of mechanism.  If you’re certain that the var contains the datatype that you’re interested in, you can use this form.</p>
   <p> Some examples to help make things clear...<br>   
     if [LOCAL1] contains 5 then...<br>
     &nbsp;&nbsp;[LOCAL1] + 8  &gt;&gt;  Returns a number type that equals 13<br>

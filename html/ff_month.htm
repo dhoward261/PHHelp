@@ -13,15 +13,18 @@ month PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Gets the month of a date value.
-
+Given a valid date value (formula eg, today()) or date 'literal' value (such as<em><strong> 2010-12-15</strong></em>) this function extracts the month.<br>
+<br>
+See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.
 </div>
-<div class=ph4>Syntax</div>
+
+<div class=ph4><br>
+Syntax</div>
+
 <div class=ph5>
-
 month ( date )
-
 </div>
+
 <div>
 <table width=100%>
 <tr>
@@ -30,22 +33,32 @@ month ( date )
 </tr>
 <tr>
 <td class=ph8>
-
 date
-
 </td>
 <td class=ph9>
-
-The date from which you want the month
-
-</td>
+The date value/literal from which you want the month</td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
-<div class=ph11>
 
+<div class=ph10><br>
+Return value</div>
+
+<div class=ph11>
 Integer. Returns an integer (1 to 12) whose value is the month portion of date.
+</div>
+
+<div class=ph10><br>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+
+<div class=ph20>&bull;&nbsp;month(today()) --&gt; evaluates to: 1 <br>
+&bull;&nbsp;month(2014-12-15) --&gt; evaluates to: 12<br>
+&bull;&nbsp;month(date(&quot;02/14/2015&quot;)) --&gt; evaluates to: 2 <br>
+&bull;&nbsp;month(&quot;2014-12-15&quot;) --&gt; Fails</div>
 
 </body>
 </html>

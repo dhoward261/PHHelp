@@ -2,8 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="ph-help.css">
-<title>datetime</title>
-</head>
+<title>datetime</title></head>
 <body>
 <div class=ph1>
 
@@ -13,51 +12,100 @@ datetime PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Combines a date and a time value into a DateTime value.
-
+  Combines  separate date and a time  values into a DateTime value.<br>
+<br>
+  The function supports two different types of data syntax, either a &quot;literal&quot; or a &quot;string&quot; <br>
+<br>
+ See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.<br>
+<br>
+Syntax 1: A Date and optional Time "literal."  This syntax expects a date datatype and an optional time datatype. If the optional time datatype is specified, the values MUST be seperated with a comma. <br>
+<br>
+Syntax 2: A date and optional time string, where the string contains a valid date or datetime. This   string can usually contain the date in a variety of formats and can have   the optional time separated by a comma or a space character. 
 </div>
-<div class=ph4>Syntax</div>
-<div class=ph5>
-
-datetime ( date {, time } )
-
-</div>
+<div class=ph4><br>
+Syntax 1 (Literal) </div>
+<div class=ph5>&nbsp;datetime ( date {, time } )</div>
 <div>
 <table width=100%>
 <tr>
 <td><span class=ph6>Argument</span></td>
 <td><span class=ph7>Description</span></td>
 </tr>
+
 <tr>
 <td class=ph8>
-
 date
-
 </td>
-<td class=ph9>
-
-A valid date (such as Jan 1, 1998, or 12-31-99) or a blob variable whose first value is a date that you want included in the value returned by DateTime.
-
-</td>
+<td class=ph9> A valid date value (formula eg, today()) or date 'literal' value (such as<em><strong> 2010-12-15</strong></em>) The year/month values must appear in the same order as specified in the Windows Region and Language Locatization control panel.</td>
 </tr>
+
 <tr>
 <td class=ph8>
-
-time (optional)
-
+, time (optional)
 </td>
 <td class=ph9>
-
-A valid time (such as 8am or 10:25:23:456799) or a blob variable whose first value is a time that you want included in the value returned by DateTime. If you include a time, only the hour portion is required. If you omit the minutes, seconds, or microseconds, they are assumed to be zeros. If you omit am or pm, the hour is determined according to the 24-hour clock
-
-</td>
+A valid time value (such as 8am or 10:25:23:456799). If you include a time, only the hour portion is required. If you omit the minutes, seconds, or microseconds, they are assumed to be zeros. If you omit am or pm, the hour is determined according to the 24-hour clock.</td>
 </tr>
 </table>
 </div>
-<div class=ph10>Return value</div>
-<div class=ph11>
 
-DateTime. Returns a DateTime value based on the values in date and optionally time. If time is omitted, DateTime uses 00:00:00.000000 (midnight).
+<div class=ph4><br>
+Syntax 2 (String) </div>
+
+<div class=ph5>&nbsp;datetime ( dtstring )</div>
+
+<div>
+<table width=100%>
+<tr>
+<td><span class=ph6>Argument</span></td>
+<td><span class=ph7>Description</span></td>
+</tr>
+
+<tr>
+<td class=ph8>
+dtstring</td>
+<td class=ph9>A string containing a valid date or datetime. This string can    contain the date in a variety of formats and can have the optional time   separated by a comma or a space  character. The date format can have the year first or last (such as "2015/01/14,08:15:00" or "01-10-2015, 14:08:32")</td>
+</tr>
+
+</tr>
+</table>
+</div>
+
+<div class=ph10><br>
+Return value</div>
+<div class=ph11>
+ Returns a DateTime value based on the values passed in the function parameters. If time is omitted,  00:00:00.000000 (midnight) is used by default.</div>
+
+<div class=ph10><br>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+  <u>Syntax 1</u><br>
+  &bull;&nbsp; datetime(relativedate(today(),5),17:00:00)  --&gt; evaluates to: 01/18/2015 17:00:00 <br>
+  &bull;&nbsp; datetime(date("01/01/2015"))   --&gt; evaluates to: 01/01/2015 00:00:00 <br>
+  &bull;&nbsp; datetime(today(),08:15:00:0000) --&gt; evaluates to: 01/11/2015 08:15:00 (Note the seconds are rounded off without fractional seconds.) <br>
+  &bull;&nbsp; datetime(2010-12-15, 10:49:00) --&gt; evaluates to: 12/15/2010 10:49:00 <br><br>
+
+  <u>Syntax 2</u><br>
+  &bull;&nbsp; datetime(&quot;01/14/2015,08:15:00&quot;) --&gt; evaluates to: 01/14/2015 08:15:00 <br>
+  &bull;&nbsp; datetime("01-14-15 08:15:05")  &nbsp;&nbsp;&nbsp;--&gt; evaluates to: 01/14/2015 08:15:05 <br>
+  &bull;&nbsp; datetime("2015/01/14,08:15:00") ---> evaluates to: 01/14/2015 08:15:00<br>
+  &bull;&nbsp; datetime("01-10-2015, 14:08:32") ---> evaluates to: 01/10/2015 14:08:32<br>
+  &bull;&nbsp; datetime("jan 10 2015 17:00:00") ---> evaluates to: 01/10/2015 17:00:00 <br>
+  &bull;&nbsp; datetime("01/10/2015") ---> evaluates to: 01/10/2015 00:00:00 
+  </p>
+  <p>At first inspection one might think that Syntax 2 is easier and much more flexible so why even bother with Syntax 1?</p>
+  <p>However, using Syntax 2, the following function would have to be written as:
+    
+    datetime(string(relativedate(today(),5),"mm/dd/yyyy") + " 17:00:00")    </p>
+  <p>Using syntax 1, the same function looks like this:
+    
+    datetime(relativedate(today(),5),17:00:00)</p>
+</div>
+</div>
 
 </body>
 </html>

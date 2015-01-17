@@ -13,9 +13,7 @@ date PowerHome formula function
 <div class=ph2>Description</div>
 <div class=ph3>
 
-Converts a string whose value is a valid date to a value of data type date.
-
-</div>
+Converts a <em>string</em> whose value is a valid date to  a data type value of <em>date</em>.</div>
 <div class=ph4>Syntax</div>
 <div class=ph5>
 
@@ -51,14 +49,31 @@ Date. Returns the date in string as a date. If string does not contain a valid d
 <div class=ph12>Usage</div>
 <div class=ph13>
 
-The value of the string must be a valid date.
-<br><br>
+  <p>The value of the string must be a valid date.
+    <br>
+    <br>
 Valid dates can include any combination of day (1-31), month (1-12 or the name or abbreviation of a month), and year (two or four digits). Leading zeros are optional for month and day. If the month is a name or an abbreviation, it can come before or after the day; if it is a number, it must be in the month location specified in the Windows control panel. A 4-digit number is assumed to be a year.
 
-<br><br>
-An expression has a more limited set of data types than the functions that can be part of the expression. Although the Date function returns a date value, the whole expression is promoted to a DateTime value. Therefore, if your expression consists of a single Date function, it will appear that Date returns the wrong data type. 
+<br>
+<br>
+An expression has a more limited set of data types than the functions that can be part of the expression. </p>
 
+<p>Although the Date function returns a date value, the whole expression is promoted to a DateTime value. Therefore, if your expression consists of a single Date function, it will appear that Date returns the wrong data type. </p>
 </div>
+
+<div class=ph10>
+Examples
+</div>
+<div class=ph11>
+The following examples demonstrate typical syntax/usage for this function. <br>
+</div>
+<div class=ph20>
+&bull;&nbsp;date(&quot;1-23-15&quot;) --&gt; evaluates to: 01/13/2015 <br>
+&bull;&nbsp;date(&quot;Jan 23 2015&quot;) --&gt; evaluates to: 01/13/2015<br>
+&bull;&nbsp;date(month(today())+"-1-"+year(today()))  --> returns: the first day of the current month eg, 01/01/2015<br>
+&bull;&nbsp;relativedate(date(year(today()),if(month(today())=12,1,month(today())+1),1), -1)  --> returns: the last day of the current month eg, 01/31/2015<br>
+</div>
+
 </body>
 </html>
 
