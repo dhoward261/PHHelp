@@ -6,8 +6,87 @@
     <title>Changelog for PowerHome 2.1.5b</title>
   </head>
   <body>
-    <div class="ph1"> FAQ: Changelog for PowerHome 2.1.5b</div>
+    <div class="ph1"> FAQ: Changelog for PowerHome 2.1.5c</div>
     <div class="ph2">Knowledge Notes</div>
+    <div class="ph3"><br>
+      <span style="FONT-WEIGHT: bold">Here is the changelog for 2.1.5c:</span><br>
+      <br>
+Changed 1-wire 
+controller to support an exponential moving average for 1-wire sensor values. 
+The user can choose the number of samples from 1 to 99 by modifying the "Point" 
+column in the Analog I/O screen. Sensors that normally use a value of 0 can now 
+have a value from 101 to 199 with 101 being 1 sample (effectively the same as no 
+averaging) and 199 being 99 samples. For a normal point value of 1 the averaging 
+point values are 201 - 299. Normal point values of 2 have averaging values of 
+301 - 399. Changed 1-wire controller to support the "Raw to Calculated" formula 
+column so that adjustments to the calculated value can be performed. This is 
+useful in adding offsets to sensors that don't read properly.<BR><BR> Added 
+bounds checking for the f_char function so that a critical error is prevented. 
+When an out of range parameter is passed, an automessage will now appear along 
+with an entry in the eventlog. The result of the out of bound function will 
+return a 0.<BR><BR> Rewrote the Global Cache socket disconnect detection code 
+and automatic reconnect routines. Also fixed an error that could cause the 
+Global Cache to hang requiring a disconnect/reconnect when an unknown command 
+was sent.<BR><BR> Rewrote the macro messagebox and inputbox routines so that 
+blank parameters will no longer cause a hang or a messagebox that won't go away. 
+Now an automessage error will appear when required parameters are blank.<BR><BR> 
+Corrected a serious bug introduced in version 2.1.5b that prevented links from 
+being created in the Insteon Explorer.<BR><BR> Modified webserver to reverse a 
+change introduced in 2.1.5b that effected the viewport meta tag and how 
+PowerHome webpages are displayed on iphone and android devices.<BR><BR> 
+Corrected problem in PowerHome Explorer that prevented the window from staying 
+maximized and always reverted to a windowed mode.<BR><BR> Added code to prevent 
+a critical error that sometimes occurred in the ue_trayevent executing the 
+OpenIcon function. <BR><BR>Corrected a problem in the PowerHome Remote Control 
+Center application that would cause the system to crash when executed in the 
+non-tab mode and global variables were updated. This also fixes the problem 
+where the wrong data would sometimes be displayed in various global variable 
+fields. <BR><BR>New Plugins:<BR> None <BR><BR>New Functions:<BR> None<BR><BR> 
+Changed Functions:<BR> None<BR><BR> Removed Functions: <BR>None 
+<BR><BR>PWRHOME.INI Changes:<BR> None<BR><BR> Database Changes: <BR>None 
+<BR>
+                                                                                              
+
+                                
+
+                                             
+
+                                
+
+                                  
+
+                 
+
+                         
+
+                  
+
+                
+
+                                             
+
+ 
+
+
+ 
+
+
+ 
+
+
+  
+
+
+ 
+
+
+ 
+
+
+
+
+
+    </div>
     <div class="ph3"><br>
       <span style="FONT-WEIGHT: bold">Here is the changelog for 2.1.5b:</span><br>
       <br>
