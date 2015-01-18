@@ -6,15 +6,13 @@
 <title>day</title>
 </head>
 <body>
-<div class=ph1>
-day PowerHome formula function
+<div class=ph1>day PowerHome formula function
 </div>
 
-<div class=ph2><br>
-Description</div>
+<div class=ph2>Description</div>
 <div class=ph3>
-Obtains the day of the month from a date value 
-(formula eg, today()) or date 'literal' value. <br>
+Obtains the day of the month from a date value  
+(either the output of a function eg, today() or a date 'literal' value). <br>
 <br>
 See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A>                
 &nbsp;section for detailed information concerning date / time formats.</div>
@@ -39,7 +37,7 @@ date
 </td>
 <td class=ph9>
 
-The date value (formula), or date literal value from which you want the day
+The date value (function output or literal) from which you want the day
 
 </td>
 </tr>
@@ -63,8 +61,8 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 •&nbsp; day(today()) --&gt; evaluates to: 15<br>
 •&nbsp; day(2010-12-15) --&gt; evaluates to: 15<br>
 •&nbsp; day(relativedate(date(year(today()),if(month(today())=12,1,month(today())+1),1), -1))  --&gt;Finds the last day of the current month. <br>
-•&nbsp; day(12-15-2010) --&gt; Fails <br>
-•&nbsp; day("2010-12-15") --&gt;Fails<br>
+•&nbsp; day(12-15-2010) --&gt; Fails (improper literal syntax)<br>
+•&nbsp; day("2010-12-15") --&gt;Fails (String value instead of date value)<br>
 <br>
 </div>
 

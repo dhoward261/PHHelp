@@ -14,16 +14,16 @@ datetime PowerHome formula function
 
   Combines  separate date and a time  values into a DateTime value.<br>
 <br>
-  The function supports two different types of data syntax, either a &quot;literal&quot; or a &quot;string&quot; <br>
+  The function supports two different types of data syntax; either a separate <em><strong>date</strong></em> and optional <em><strong>time</strong></em> value or a single <em><strong>string</strong></em> containing a valid date and optional time.<br>
 <br>
  See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.<br>
 <br>
-Syntax 1: A Date and optional Time "literal."  This syntax expects a date datatype and an optional time datatype. If the optional time datatype is specified, the values MUST be seperated with a comma. <br>
+Syntax 1: A Date and optional Time datatypes.  This syntax expects a date datatype and an optional time datatype. If the optional time datatype is specified, the values MUST be seperated with a comma. <br>
 <br>
-Syntax 2: A date and optional time string, where the string contains a valid date or datetime. This   string can usually contain the date in a variety of formats and can have   the optional time separated by a comma or a space character. 
+Syntax 2: A string containing a valid date and optionally a valid time. The date and time formats supported are the same as those in the date() and time() functions respectively. You can separate the date and time values by either a comma or a space.
 </div>
 <div class=ph4><br>
-Syntax 1 (Literal) </div>
+Syntax 1 (Separate date and time datatypes) </div>
 <div class=ph5>&nbsp;datetime ( date {, time } )</div>
 <div>
 <table width=100%>
@@ -36,21 +36,21 @@ Syntax 1 (Literal) </div>
 <td class=ph8>
 date
 </td>
-<td class=ph9> A valid date value (formula eg, today()) or date 'literal' value (such as<em><strong> 2010-12-15</strong></em>) The year/month values must appear in the same order as specified in the Windows Region and Language Locatization control panel.</td>
+<td class=ph9> A valid date value (function output eg, date() or a date 'literal' value such as <em><strong>2010-12-15</strong></em>)</td>
 </tr>
 
 <tr>
 <td class=ph8>
-, time (optional)
+time (optional)
 </td>
 <td class=ph9>
-A valid time value (such as 8am or 10:25:23:456799). If you include a time, only the hour portion is required. If you omit the minutes, seconds, or microseconds, they are assumed to be zeros. If you omit am or pm, the hour is determined according to the 24-hour clock.</td>
+A valid time value (function output eg, time() or time 'literal' such as <em><strong>10:25:23:456</strong></em>).</td>
 </tr>
 </table>
 </div>
 
 <div class=ph4><br>
-Syntax 2 (String) </div>
+Syntax 2 (A single string) </div>
 
 <div class=ph5>&nbsp;datetime ( dtstring )</div>
 
@@ -64,7 +64,7 @@ Syntax 2 (String) </div>
 <tr>
 <td class=ph8>
 dtstring</td>
-<td class=ph9>A string containing a valid date or datetime. This string can    contain the date in a variety of formats and can have the optional time   separated by a comma or a space  character. The date format can have the year first or last (such as "2015/01/14,08:15:00" or "01-10-2015, 14:08:32")</td>
+<td class=ph9>A string containing a valid date or datetime. This string can contain the date in a variety of formats and can have the optional time separated by a comma or a space  character. See the <a href="html\ff_date.htm">date()</a> and <a href="html\ff_time.htm">time()</a> functions for valid formats</td>
 </tr>
 
 </tr>

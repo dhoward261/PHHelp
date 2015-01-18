@@ -11,10 +11,10 @@
 dayname PowerHome formula function
 </div>
 
-<div class=ph2><br>
+<div class=ph2>
 Description</div>
 <div class=ph3>
-Given a valid date value (formula eg, today()) or date 'literal' value (such as<em><strong> 2010-12-15</strong></em>) this function returns the <strong>name</strong> of the weekday. <br>
+Given a valid date value (either the output of a function eg, today() or a date 'literal' value such as<em><strong> 2010-12-15</strong></em>) this function returns the <strong>name</strong> of the weekday. <br>
 <br>
 See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.
 </div>
@@ -37,7 +37,7 @@ dayname ( date )
 date
 </td>
 <td class=ph9>
-The date value/literal for which you want the name of the day
+The date value for which you want the name of the day
 </td>
 </tr>
 </table>
@@ -59,7 +59,7 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 <div class=ph20>
 &bull;&nbsp;dayname(today()) --&gt; evaluates to: Thursday <br>
 &bull;&nbsp;dayname(2010-12-15) --&gt; evaluates to: Wednesday<br>
-&bull;&nbsp;dayname(&quot;2010-12-15&quot;) --&gt; Fails </div>
+&bull;&nbsp;dayname(&quot;2010-12-15&quot;) --&gt; Fails (string value vs date value. Use dayname(date(&quot;2010-12-15&quot;)) for this format)</div>
 
 </body>
 </html>

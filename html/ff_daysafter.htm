@@ -12,8 +12,7 @@ daysafter PowerHome formula function
 </div>
 <div class=ph2>Description</div>
 <div class=ph3>
-
- Given a valid date value (formula eg, today()) or date 'literal' value (such as<em><strong> 2010-12-15</strong></em>) this function determines the number of days one date occurs after another.<br>
+Given a valid date value (either the output of a function eg, today() or a date 'literal' value such as<em><strong> 2010-12-15</strong></em>) this function determines the number of days one date occurs after another.<br>
 <br>
 See the&nbsp; <A href="html\datetime_functions.htm">Date / Time Functions</A> &nbsp;section for detailed information concerning date / time formats.
 </div>
@@ -35,7 +34,7 @@ daysafter ( date1, date2 )
 date1
 </td>
 <td class=ph9>
-A date value/literal that is the start date of the interval being measured
+A date value that is the start date of the interval being measured
 </td>
 </tr>
 
@@ -44,7 +43,7 @@ A date value/literal that is the start date of the interval being measured
 date2
 </td>
 <td class=ph9>
-A date value/literal that is the end date of the interval
+A date value that is the end date of the interval
 </td>
 </tr>
 </table>
@@ -66,7 +65,7 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 
 <div class=ph20>
 &bull;&nbsp;daysafter(date(today()), date(&quot;2015-1-17&quot;)) --&gt; evaluates to: 2 <br>
-&bull;&nbsp;daysafter(2015-01-15, date(&quot;2015-1-17&quot;)) --&gt; evaluates to: 2  {NOTE: if a date literal value is used, the year MUST be first and 4-digits,  the month (2 digits) next followed by the day (2 digits)} <br>
+&bull;&nbsp;daysafter(2015-01-15, date(&quot;2015-1-17&quot;)) --&gt; evaluates to: 2  <br>
 &bull;&nbsp;dayafter(2015-01-15,2015-01-17) --&gt; evaluates to: 2</div>
 
 
