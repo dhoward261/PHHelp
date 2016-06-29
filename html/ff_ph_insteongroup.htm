@@ -39,7 +39,7 @@ Integer. Returns a 0 if successful. -1 is returned if the controller is not avai
 
 <div class=ph12>Usage</div>
 <div class=ph13>
-Use this funciton to send Insteon commands to a PLC group. Valid commands are 17 for on, 18 for fast on, 19 for off, 20 for fast off, 21 to brighten, and 22 to dim. You can also use the enumerated values: ion, ifaston, ioff, ifastoff, ibright, idim. Set cmd2 to 0 for all cmd1 values. Using a cmd1 value of 17 will cause the group to turn on to their individual group values using their individual ramprates. An 18 command (ifaston) causes all devices in the group to go full on ignoring the ramprate.  Add 1000 to the standard Insteon commands to always force a group cleanup regardless of the controller setting.  Add 2000 to the standard Insteon commands to never send a group cleanup regardless of the controller setting.
+Use this funciton to send Insteon commands to a PLC group. Valid commands are 17 for on, 18 for fast on, 19 for off, 20 for fast off, 21 to brighten, 22 to dim, 23 to Start Manual Change, and 24 to Stop Manual Change. You can also use the enumerated values: ion, ifaston, ioff, ifastoff, ibright, idim for commands 17 thru 22 respectively. Set cmd2 to 0 for all cmd1 values except 23 (Start Manual Change). For a cmd1 value of 23, set cmd2 to 1 for brighten and cmd2 to 0 for dim. Using a cmd1 value of 17 will cause the group to turn on to their individual group values using their individual ramprates. An 18 command (ifaston) causes all devices in the group to go full on ignoring the ramprate.  Add 1000 to the standard Insteon commands to always force a group cleanup regardless of the controller setting.  Add 2000 to the standard Insteon commands to never send a group cleanup regardless of the controller setting.
 </div>
 
 <div class=ph10>
@@ -50,9 +50,9 @@ The following examples demonstrate typical syntax/usage for this function. <br>
 </div>
 <div class=ph20>
 &bull;&nbsp;ph_insteongroup(&quot;ROOM OFF&quot;, ifastoff, 0) <br>
-&bull;&nbsp;ph_insteongroup(&quot;ROOM ON&quot;, ion, 128) <br>
-&bull;&nbsp;ph_insteongroup(&quot;ROOM ON&quot;, ion, 0.5*255) <br>
-&bull;&nbsp;ph_insteongroup(&quot;[TEMP1]&quot;, 17, 200) <br>
+&bull;&nbsp;ph_insteongroup(&quot;ROOM ON&quot;, ion, 0) <br>
+&bull;&nbsp;ph_insteongroup(&quot;ROOM ON&quot;, 23, 1) <br>
+&bull;&nbsp;ph_insteongroup(&quot;[TEMP1]&quot;, 17, 0) <br>
 
 </div>
 
